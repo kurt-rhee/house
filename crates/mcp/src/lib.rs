@@ -52,6 +52,8 @@ pub struct DoorInput {
 }
 #[derive(Deserialize, JsonSchema)]
 pub struct DoorUpdate {
+    /// Omit to preserve the existing type; "hinged" or "sliding_glass".
+    pub kind: Option<String>,
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
     pub id: String,
@@ -59,6 +61,38 @@ pub struct DoorUpdate {
     pub position: f64,
     pub width: f64,
     pub swing: String,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct OpeningInput {
+    pub expected_revision: Option<u64>,
+    pub wall_id: String,
+    /// Center distance along the host wall, in millimeters.
+    pub position: f64,
+    pub width: f64,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct WindowUpdate {
+    pub id: String,
+    #[serde(flatten)]
+    pub opening: OpeningInput,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct FixtureInput {
+    pub expected_revision: Option<u64>,
+    /// Origin (local top-left before clockwise rotation), in millimeters.
+    pub x: f64,
+    pub y: f64,
+    pub width: f64,
+    pub depth: f64,
+    /// Clockwise degrees about the origin; defaults to zero.
+    #[serde(default)]
+    pub rotation: f64,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct FixtureUpdate {
+    pub id: String,
+    #[serde(flatten)]
+    pub geometry: FixtureInput,
 }
 #[derive(Deserialize, JsonSchema)]
 pub struct IdInput {
@@ -97,6 +131,27 @@ impl CadServer {
             None => Action::Edit(command),
         };
         self.handle.request(action).await
+    }
+    async fn create_fixture(&self, p: FixtureInput, kind: FixtureKind) -> Reply {
+        let id = Id::new_v4();
+        let layer = *self.handle.snapshot().layers.keys().next().unwrap();
+        self.edit(
+            Command::CreateFixture(Fixture {
+                id,
+                kind,
+                origin: Point::new(p.x, p.y),
+                width: p.width,
+                depth: p.depth,
+                rotation: p.rotation,
+                layer,
+            }),
+            p.expected_revision,
+        )
+        .await
+        .map(|mut v| {
+            v["id"] = json!(id);
+            v
+        })
     }
     pub fn new(handle: DocumentHandle) -> Self {
         Self {
@@ -175,6 +230,7 @@ impl CadServer {
                         wall,
                         position: p.position,
                         width: p.width,
+                        kind: house_core::DoorKind::Hinged,
                         swing,
                     }),
                     p.expected_revision,
@@ -193,6 +249,18 @@ impl CadServer {
         description = "Replace door properties, retaining its stable ID. Invalid edits are rejected atomically."
     )]
     async fn update_door(&self, Parameters(p): Parameters<DoorUpdate>) -> CallToolResult {
+        let kind = match p.kind.as_deref() {
+            Some("hinged") => DoorKind::Hinged,
+            Some("sliding_glass") => DoorKind::SlidingGlass,
+            None => match parse_id(&p.id)
+                .ok()
+                .and_then(|id| self.handle.snapshot().doors.get(&id).map(|v| v.kind))
+            {
+                Some(kind) => kind,
+                None => return result(Err("Door not found".into())),
+            },
+            _ => return result(Err("Door kind must be hinged or sliding_glass".into())),
+        };
         let r = match (parse_id(&p.id), parse_id(&p.wall_id), swing(&p.swing)) {
             (Ok(id), Ok(wall), Ok(swing)) => {
                 self.edit(
@@ -201,6 +269,7 @@ impl CadServer {
                         wall,
                         position: p.position,
                         width: p.width,
+                        kind,
                         swing,
                     }),
                     p.expected_revision,
@@ -208,6 +277,114 @@ impl CadServer {
                 .await
             }
             _ => Err("Invalid ID or swing".into()),
+        };
+        result(r)
+    }
+    #[tool(
+        description = "Create a wall-hosted window. Position and width are millimeters; overlapping openings are rejected."
+    )]
+    async fn create_window(&self, Parameters(p): Parameters<OpeningInput>) -> CallToolResult {
+        let id = Id::new_v4();
+        let r = match parse_id(&p.wall_id) {
+            Ok(wall) => {
+                self.edit(
+                    Command::CreateWindow(Window {
+                        id,
+                        wall,
+                        position: p.position,
+                        width: p.width,
+                    }),
+                    p.expected_revision,
+                )
+                .await
+            }
+            Err(e) => Err(e),
+        };
+        result(r.map(|mut v| {
+            v["id"] = json!(id);
+            v
+        }))
+    }
+    #[tool(
+        description = "Update a window's host, center station and width atomically; millimeters."
+    )]
+    async fn update_window(&self, Parameters(p): Parameters<WindowUpdate>) -> CallToolResult {
+        let r = match (parse_id(&p.id), parse_id(&p.opening.wall_id)) {
+            (Ok(id), Ok(wall)) => {
+                self.edit(
+                    Command::UpdateWindow(Window {
+                        id,
+                        wall,
+                        position: p.opening.position,
+                        width: p.opening.width,
+                    }),
+                    p.opening.expected_revision,
+                )
+                .await
+            }
+            _ => Err("Invalid window or host ID".into()),
+        };
+        result(r)
+    }
+    #[tool(
+        description = "Create a sliding glass door on a host wall. Position is center station; width is total opening width, in millimeters. No swing arc."
+    )]
+    async fn create_sliding_glass_door(
+        &self,
+        Parameters(p): Parameters<OpeningInput>,
+    ) -> CallToolResult {
+        let id = Id::new_v4();
+        let r = match parse_id(&p.wall_id) {
+            Ok(wall) => {
+                self.edit(
+                    Command::CreateDoor(Door {
+                        id,
+                        wall,
+                        position: p.position,
+                        width: p.width,
+                        swing: Swing::Left,
+                        kind: DoorKind::SlidingGlass,
+                    }),
+                    p.expected_revision,
+                )
+                .await
+            }
+            Err(e) => Err(e),
+        };
+        result(r.map(|mut v| {
+            v["id"] = json!(id);
+            v
+        }))
+    }
+    #[tool(
+        description = "Place a bath footprint. x/y, width and depth are millimeters; rotation is clockwise degrees. Freestanding, with no automatic wall attachment."
+    )]
+    async fn create_bath(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Bath).await)
+    }
+    #[tool(
+        description = "Place a shower footprint. x/y, width and depth are millimeters; rotation is clockwise degrees. Freestanding, with no automatic wall attachment."
+    )]
+    async fn create_shower(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Shower).await)
+    }
+    #[tool(
+        description = "Move, resize or rotate an existing bath or shower, preserving its type and ID. Millimeters and clockwise degrees."
+    )]
+    async fn update_fixture(&self, Parameters(p): Parameters<FixtureUpdate>) -> CallToolResult {
+        let r = match parse_id(&p.id)
+            .ok()
+            .and_then(|id| self.handle.snapshot().fixtures.get(&id).cloned())
+        {
+            Some(mut f) => {
+                f.origin = Point::new(p.geometry.x, p.geometry.y);
+                f.width = p.geometry.width;
+                f.depth = p.geometry.depth;
+                f.rotation = p.geometry.rotation;
+                self.edit(Command::UpdateFixture(f), p.geometry.expected_revision)
+                    .await
+            }
+            None => Err("Fixture not found".into()),
         };
         result(r)
     }

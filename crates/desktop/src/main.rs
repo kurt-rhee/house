@@ -1,4 +1,5 @@
 mod canvas;
+mod fixtures;
 use eframe::egui::{self, Color32, Pos2, Sense, Stroke, Vec2};
 use house_commands::Command;
 use house_core::*;
@@ -12,6 +13,7 @@ struct HouseApp {
     pan: Vec2,
     selected: Option<Id>,
     drawing: bool,
+    placing: Option<FixtureKind>,
     first: Option<Point>,
     drag: Option<(Id, Point)>,
     path: String,
@@ -19,6 +21,8 @@ struct HouseApp {
     imperial: bool,
     draft_wall: Option<Wall>,
     draft_door: Option<Door>,
+    draft_fixture: Option<Fixture>,
+    draft_window: Option<Window>,
     draft_revision: u64,
     move_x: String,
     move_y: String,
@@ -61,6 +65,7 @@ impl HouseApp {
             pan: Vec2::new(100.0, 100.0),
             selected: None,
             drawing: false,
+            placing: None,
             first: None,
             drag: None,
             path: "bathroom.house.json".into(),
@@ -68,6 +73,8 @@ impl HouseApp {
             imperial: false,
             draft_wall: None,
             draft_door: None,
+            draft_fixture: None,
+            draft_window: None,
             draft_revision: u64::MAX,
             move_x: "6 in".into(),
             move_y: "0".into(),
@@ -117,10 +124,14 @@ impl HouseApp {
                 .as_ref()
                 .map(|w| w.id)
                 .or(self.draft_door.as_ref().map(|v| v.id))
+                .or(self.draft_fixture.as_ref().map(|v| v.id))
+                .or(self.draft_window.as_ref().map(|v| v.id))
                 != self.selected
         {
             self.draft_wall = self.selected.and_then(|id| d.walls.get(&id).cloned());
             self.draft_door = self.selected.and_then(|id| d.doors.get(&id).cloned());
+            self.draft_fixture = self.selected.and_then(|id| d.fixtures.get(&id).cloned());
+            self.draft_window = self.selected.and_then(|id| d.windows.get(&id).cloned());
             self.draft_revision = d.revision;
         }
         let mut apply = None;
@@ -155,6 +166,10 @@ impl HouseApp {
                 ui.add(egui::DragValue::new(&mut v.width));
             });
             ui.horizontal(|ui| {
+                ui.selectable_value(&mut v.kind, DoorKind::Hinged, "Hinged");
+                ui.selectable_value(&mut v.kind, DoorKind::SlidingGlass, "Sliding glass");
+            });
+            ui.horizontal(|ui| {
                 ui.selectable_value(&mut v.swing, Swing::Left, "Left");
                 ui.selectable_value(&mut v.swing, Swing::Right, "Right");
             });
@@ -162,6 +177,7 @@ impl HouseApp {
                 apply = Some(Command::UpdateDoor(v.clone()));
             }
         }
+        self.fixture_properties(ui, &mut apply);
         if let Some(command) = apply {
             self.apply_properties(command);
         }
@@ -207,7 +223,28 @@ impl HouseApp {
                         wall: id,
                         position: length(w) / 2.0,
                         width: inches(28.0),
+                        kind: house_core::DoorKind::Hinged,
                         swing: Swing::Left,
+                    }));
+                }
+            }
+            if let Some(w) = d.walls.get(&id) {
+                if ui.button("Add centered 36 in window").clicked() {
+                    self.edit(Command::CreateWindow(Window {
+                        id: Id::new_v4(),
+                        wall: id,
+                        position: length(w) / 2.0,
+                        width: inches(36.0),
+                    }));
+                }
+                if ui.button("Add centered 60 in sliding glass door").clicked() {
+                    self.edit(Command::CreateDoor(Door {
+                        id: Id::new_v4(),
+                        wall: id,
+                        position: length(w) / 2.0,
+                        width: inches(60.0),
+                        swing: Swing::Left,
+                        kind: DoorKind::SlidingGlass,
                     }));
                 }
             }
@@ -215,7 +252,7 @@ impl HouseApp {
                 self.edit(Command::DeleteObject { id });
             }
         } else {
-            ui.label("Click a wall or door to select.");
+            ui.label("Click a wall, opening or fixture to select.");
         }
         ui.separator();
         ui.heading("Rooms");
@@ -264,6 +301,7 @@ impl HouseApp {
         }
         if ctx.input(|i| i.key_pressed(egui::Key::Escape)) {
             self.first = None;
+            self.placing = None;
             self.drawing = false;
         }
         let d = self.handle.snapshot();
@@ -271,11 +309,16 @@ impl HouseApp {
             ui.horizontal_wrapped(|ui| {
                 ui.heading("House");
                 ui.label(format!("rev {}", d.revision));
-                if ui.selectable_label(!self.drawing, "Select").clicked() {
+                if ui
+                    .selectable_label(!self.drawing && self.placing.is_none(), "Select")
+                    .clicked()
+                {
+                    self.placing = None;
                     self.drawing = false;
                     self.first = None;
                 }
                 if ui.selectable_label(self.drawing, "Draw wall").clicked() {
+                    self.placing = None;
                     self.drawing = true;
                 }
                 if ui.button("Undo").clicked() {
@@ -294,6 +337,16 @@ impl HouseApp {
                 }
                 if ui.button("Save").clicked() {
                     self.send(Action::Save(self.path.clone().into()));
+                }
+                if ui.button("Place bath").clicked() {
+                    self.placing = Some(FixtureKind::Bath);
+                    self.drawing = false;
+                    self.first = None;
+                }
+                if ui.button("Place shower").clicked() {
+                    self.placing = Some(FixtureKind::Shower);
+                    self.drawing = false;
+                    self.first = None;
                 }
                 if ui.button("SVG").clicked() {
                     self.send(Action::Export(

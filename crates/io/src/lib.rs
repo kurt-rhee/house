@@ -9,7 +9,10 @@ pub fn to_json(d: &Document) -> Result<String, String> {
     serde_json::to_string_pretty(d).map_err(|e| e.to_string())
 }
 pub fn from_json(s: &str) -> Result<Document, String> {
-    let d: Document = serde_json::from_str(s).map_err(|e| e.to_string())?;
+    let mut d: Document = serde_json::from_str(s).map_err(|e| e.to_string())?;
+    if d.schema_version == 1 {
+        d.schema_version = SCHEMA_VERSION;
+    }
     validate(&d)?;
     Ok(d)
 }
@@ -56,6 +59,14 @@ pub fn svg(d: &Document) -> Result<String, String> {
             max.y = max.y.max(p.y);
         }
     }
+    for f in d.fixtures.values() {
+        for p in house_geometry::fixture_corners(f) {
+            min.x = min.x.min(p.x);
+            min.y = min.y.min(p.y);
+            max.x = max.x.max(p.x);
+            max.y = max.y.max(p.y);
+        }
+    }
     let mut s = format!(
         "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"{} {} {} {}\" width=\"{}mm\" height=\"{}mm\">\n<rect x=\"{}\" y=\"{}\" width=\"{}\" height=\"{}\" fill=\"white\"/>\n",
         min.x - 200.0,
@@ -77,7 +88,7 @@ pub fn svg(d: &Document) -> Result<String, String> {
             .join(" ");
         writeln!(s, "<polygon points=\"{points}\" fill=\"#444\"/>").unwrap();
     }
-    for door in d.doors.values() {
+    for door in d.doors.values().filter(|v| v.kind == DoorKind::Hinged) {
         let w = &d.walls[&door.wall];
         if !d.layers[&w.layer].visible {
             continue;
@@ -92,6 +103,56 @@ pub fn svg(d: &Document) -> Result<String, String> {
         let angle = uy.atan2(ux).to_degrees();
         let sign = if door.swing == Swing::Left { 1.0 } else { -1.0 };
         writeln!(s,"<g transform=\"translate({} {}) rotate({})\"><path d=\"M 0 0 H {}\" stroke=\"white\" stroke-width=\"{}\"/><path d=\"M 0 0 V {} M {} 0 A {} {} 0 0 {} 0 {}\" fill=\"none\" stroke=\"#168\" stroke-width=\"8\"/></g>",p.x,p.y,angle,door.width,w.thickness+2.0,door.width*sign,door.width,door.width,door.width,if sign>0.0{1}else{0},door.width*sign).unwrap();
+    }
+    for (wall, position, width) in d
+        .windows
+        .values()
+        .map(|v| (v.wall, v.position, v.width))
+        .chain(
+            d.doors
+                .values()
+                .filter(|v| v.kind == DoorKind::SlidingGlass)
+                .map(|v| (v.wall, v.position, v.width)),
+        )
+    {
+        let w = &d.walls[&wall];
+        if !d.layers[&w.layer].visible {
+            continue;
+        }
+        let l = length(w);
+        let p = |station: f64| {
+            Point::new(
+                w.start.x + (w.end.x - w.start.x) * station / l,
+                w.start.y + (w.end.y - w.start.y) * station / l,
+            )
+        };
+        let a = p(position - width / 2.0);
+        let b = p(position + width / 2.0);
+        writeln!(
+            s,
+            "<path d=\"M {} {} L {} {}\" stroke=\"white\" stroke-width=\"{}\"/>",
+            a.x,
+            a.y,
+            b.x,
+            b.y,
+            w.thickness + 2.0
+        )
+        .unwrap();
+    }
+    for symbol in house_geometry::plan_symbols(d) {
+        if !d.layers[&symbol.layer].visible {
+            continue;
+        }
+        writeln!(
+            s,
+            "<g id=\"object-{}\" fill=\"none\" stroke=\"#168\" stroke-width=\"8\">",
+            symbol.id
+        )
+        .unwrap();
+        for (a, b) in symbol.lines {
+            writeln!(s, "<path d=\"M {} {} L {} {}\"/>", a.x, a.y, b.x, b.y).unwrap();
+        }
+        s.push_str("</g>\n");
     }
     for r in d.rooms.values() {
         let b = room_bounds(d, r)?;
@@ -127,7 +188,7 @@ mod tests {
         let d = bathroom();
         assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
         let mut bad = d.clone();
-        bad.schema_version = 2;
+        bad.schema_version = SCHEMA_VERSION + 1;
         assert!(from_json(&serde_json::to_string(&bad).unwrap()).is_err());
         let s = svg(&d).unwrap();
         assert!(s.contains("<polygon"));
@@ -180,5 +241,53 @@ mod sample_fixture_tests {
         assert_eq!(d.doors.len(), 2);
         assert_eq!(d.rooms.len(), 2);
         assert_eq!(d.dimensions.len(), 4);
+    }
+}
+
+#[cfg(test)]
+mod fixture_tests {
+    use super::*;
+    #[test]
+    fn version_one_migrates_and_new_symbols_round_trip_exactly() {
+        let legacy = include_str!("../../../examples/bathroom.house.json");
+        let mut json: serde_json::Value = serde_json::from_str(legacy).unwrap();
+        json["schema_version"] = serde_json::json!(1);
+        json.as_object_mut().unwrap().remove("fixtures");
+        for door in json["doors"].as_object_mut().unwrap().values_mut() {
+            door.as_object_mut().unwrap().remove("kind");
+        }
+        let migrated = from_json(&json.to_string()).unwrap();
+        assert_eq!(migrated.schema_version, SCHEMA_VERSION);
+        assert!(migrated.fixtures.is_empty());
+        assert!(migrated.doors.values().all(|v| v.kind == DoorKind::Hinged));
+        let mut d = Document::default();
+        let layer = *d.layers.keys().next().unwrap();
+        let f = Fixture {
+            id: Id::new_v4(),
+            kind: FixtureKind::Bath,
+            origin: Point::new(-5000.0, 200.0),
+            width: 1524.0,
+            depth: 762.0,
+            rotation: 90.0,
+            layer,
+        };
+        d.fixtures.insert(f.id, f.clone());
+        assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
+        let output = svg(&d).unwrap();
+        assert!(output.contains(&format!("object-{}", f.id)));
+        // The viewBox includes the full rotated fixture, even without walls.
+        let bounds: Vec<f64> = output
+            .split("viewBox=\"")
+            .nth(1)
+            .unwrap()
+            .split('"')
+            .next()
+            .unwrap()
+            .split_whitespace()
+            .map(|n| n.parse().unwrap())
+            .collect();
+        for (actual, expected) in bounds.iter().zip([-5962.0, -200.0, 6262.0, 2124.0]) {
+            assert!((actual - expected).abs() < 1e-9);
+        }
     }
 }

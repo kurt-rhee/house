@@ -2,7 +2,7 @@
 
 ## Source of truth and crate boundaries
 
-- **core** owns semantic wall/door/window/room/dimension/layer types, stable UUIDs,
+- **core** owns semantic wall/door/window/fixture/room/dimension/layer types, stable UUIDs,
   millimeter input, schema version, and the sample constructor. No renderer types.
 - **geometry** derives wall polygons, opening stations, rectangular room bounds,
   areas, dimension values, hit distances, and document validation. It uses kurbo
@@ -27,11 +27,11 @@ thread-safe queue. Save/export observes the document at that queue position.
 The engine also accepts revision-checked edits. A request based on revision R
 commits only if R is still current when the worker processes it. The check and
 mutation run together on the owning worker, avoiding a check/commit race. GUI
-wall/door property replacement uses the draft's source revision; MCP object
+object property replacement uses the draft's source revision; MCP object
 editing tools expose an optional expected_revision. Conflicts change neither
 the document nor either history stack. Unconditional commands remain available
 for deliberate serialized edits. Revision guards are transport/command metadata;
-the persisted schema remains v1.
+the persisted schema is independent of these revision guards.
 
 Each transaction clones the document, applies typed edits, then validates the
 complete candidate. Any error discards it, including attached-opening changes.
@@ -76,6 +76,31 @@ Arbitrary polygons, intersection cleanup, automatically splitting room boundarie
 and general constraints would expand the milestone. Geometric contact between
 unrelated walls and door swing clearance are not currently solved or validated.
 
+## Fixtures and door types
+
+DoorKind distinguishes Hinged and SlidingGlass while retaining the existing host,
+station and width relationship. Swing is used only for hinged doors. Both types
+share wall attachment, resize, overlap validation and history behavior.
+The update_door MCP tool preserves kind when its optional kind argument is omitted.
+Windows use the same opening fit/overlap and wall-following rules.
+
+Baths and showers are Fixture objects with kind, layer, origin, width, depth and
+clockwise rotation in degrees. They are freestanding; moving a wall does not
+move them. The origin is the local top-left corner before rotation. Positive
+finite sizes, bounded finite coordinates/rotation, valid IDs and layers are
+validated transactionally. Plumbing, room containment, collisions and clearance
+are not inferred. The symbols deliberately represent planning footprints rather
+than detailed products.
+
+Geometry derives rotated outlines, hit tests and plan symbol line segments. The
+desktop, SVG and DXF consume the same plan symbols, preventing different fixture
+or sliding-door shapes across interfaces. Native property drafts remain guarded
+by the source revision. The MCP create_bath/create_shower/create_window/
+create_sliding_glass_door/update_fixture/update_window tools dispatch the same
+typed commands as the GUI. No image processing or vision inference runs inside
+the server; an image-capable client can interpret a screenshot and dispatch
+semantic edits after establishing scale from measured dimensions.
+
 ## Precision and deterministic behavior
 
 The model uses f64 **millimeters**, not pixels or rounded display units. Imperial
@@ -103,9 +128,11 @@ DXF export uses the dxf crate; PDF dependencies remain deferred.
 
 ## Persistence and export
 
-Schema v1 is a human-readable serde JSON document with named semantic maps.
-Unknown schema versions fail rather than being interpreted optimistically.
-There are no migrations yet. Reads validate before replacing the live document.
+Schema v2 is a human-readable serde JSON document with named semantic maps.
+Loading v1 fills the empty fixtures map and default Hinged door kind, then upgrades
+the version to v2 before validation. Coordinates, identities and stored revisions
+are preserved. Unknown schema versions fail rather than being interpreted
+optimistically. Reads validate before replacing the live document.
 Save writes and syncs a unique adjacent temporary file and then renames it over
 the destination; errors clean up the temporary file. This protects a prior file
 from serialization/write failures, but directory fsync and crash recovery are
@@ -124,7 +151,8 @@ Wall intervals are split around validated door/window stations before deriving
 closed LWPOLYLINE outlines, giving genuine opening gaps. Doors are LINE leaves
 and ARC swings; reflection reverses the original swing's arc traversal, so start
 and end angles are explicitly ordered for CAD's counterclockwise convention.
-Windows add opening centerlines. Labels use upright UTF-8 TEXT entities; control
+Windows add frame/glazing lines; sliding glass doors add panel lines without swing arcs.
+Bath and shower symbols export as lines on source-derived FIXTURES layers. Labels use upright UTF-8 TEXT entities; control
 characters become spaces so a label cannot introduce DXF group-code lines.
 Dimensions are exported as LINE/tick/TEXT annotations computed from the current
 room references, without claiming CAD associativity.
@@ -196,7 +224,7 @@ Unit tests check typed operations and geometry; persisted snapshots are compared
 by exact model equality. The bathroom integration test checks the partition's
 numeric translation, each room's signed width/area delta, dimension values, door
 identity/station retention, revision sequencing, rollback, and exact undo.
-A real HTTP client lists and calls all twelve tools, mixes native-style queue
+A real HTTP client lists and calls all eighteen tools, mixes native-style queue
 requests with MCP undo, saves/loads the document, and exports SVG. DXF has an additional live HTTP move/export/undo/export test
 checking numeric partition polygons and dimension values. Separate
 requests exercise authorization, Host, and Origin rejection. Two independent HTTP

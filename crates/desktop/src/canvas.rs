@@ -51,7 +51,7 @@ impl HouseApp {
                 Stroke::NONE,
             ));
         }
-        for door in d.doors.values() {
+        for door in d.doors.values().filter(|v| v.kind == DoorKind::Hinged) {
             let w = &d.walls[&door.wall];
             if !d.layers[&w.layer].visible {
                 continue;
@@ -94,6 +94,7 @@ impl HouseApp {
                 .collect();
             painter.add(egui::Shape::line(arc, Stroke::new(1.0, color)));
         }
+        self.draw_plan_symbols(d, &painter, origin);
         for r in d.rooms.values() {
             if let Ok(b) = room_bounds(d, r) {
                 painter.text(
@@ -158,7 +159,24 @@ impl HouseApp {
                 );
             }
             if response.clicked() {
-                if self.drawing {
+                if let Some(kind) = self.placing.take() {
+                    let layer = *d.layers.keys().next().unwrap();
+                    let (width, depth) = match kind {
+                        FixtureKind::Bath => (inches(60.0), inches(30.0)),
+                        FixtureKind::Shower => (inches(36.0), inches(36.0)),
+                    };
+                    let id = Id::new_v4();
+                    self.edit(Command::CreateFixture(Fixture {
+                        id,
+                        kind,
+                        origin: Self::snap(world),
+                        width,
+                        depth,
+                        rotation: 0.0,
+                        layer,
+                    }));
+                    self.selected = Some(id);
+                } else if self.drawing {
                     let point = Self::snap(world);
                     if let Some(start) = self.first.take() {
                         let layer = *d.layers.keys().next().unwrap();
@@ -174,33 +192,36 @@ impl HouseApp {
                         self.first = Some(point);
                     }
                 } else {
-                    self.selected = d
-                        .doors
-                        .values()
-                        .filter(|v| d.layers[&d.walls[&v.wall].layer].visible)
-                        .find(|v| {
-                            let w = &d.walls[&v.wall];
-                            let l = length(w);
-                            let center = Point::new(
-                                w.start.x + (w.end.x - w.start.x) * v.position / l,
-                                w.start.y + (w.end.y - w.start.y) * v.position / l,
-                            );
-                            (center.x - world.x).hypot(center.y - world.y)
-                                < 15.0 / self.scale as f64
-                        })
-                        .map(|v| v.id)
-                        .or_else(|| {
-                            d.walls
-                                .values()
-                                .filter(|w| d.layers[&w.layer].visible)
-                                .filter_map(|w| {
-                                    let dist = distance(w, world);
-                                    (dist < w.thickness / 2.0 + 8.0 / self.scale as f64)
-                                        .then_some((w.id, dist))
-                                })
-                                .min_by(|a, b| a.1.total_cmp(&b.1))
-                                .map(|v| v.0)
-                        });
+                    self.selected = self.pick_fixture_or_window(d, world).or_else(|| {
+                        d.doors
+                            .values()
+                            .filter(|v| d.layers[&d.walls[&v.wall].layer].visible)
+                            .find(|v| {
+                                let w = &d.walls[&v.wall];
+                                let l = length(w);
+                                let center = Point::new(
+                                    w.start.x + (w.end.x - w.start.x) * v.position / l,
+                                    w.start.y + (w.end.y - w.start.y) * v.position / l,
+                                );
+                                (center.x - world.x).hypot(center.y - world.y)
+                                    < v.width / 2.0 + 8.0 / self.scale as f64
+                                    && distance(w, world)
+                                        < w.thickness / 2.0 + 12.0 / self.scale as f64
+                            })
+                            .map(|v| v.id)
+                            .or_else(|| {
+                                d.walls
+                                    .values()
+                                    .filter(|w| d.layers[&w.layer].visible)
+                                    .filter_map(|w| {
+                                        let dist = distance(w, world);
+                                        (dist < w.thickness / 2.0 + 8.0 / self.scale as f64)
+                                            .then_some((w.id, dist))
+                                    })
+                                    .min_by(|a, b| a.1.total_cmp(&b.1))
+                                    .map(|v| v.0)
+                            })
+                    });
                 }
             }
             if response.drag_started_by(egui::PointerButton::Primary)

@@ -189,6 +189,7 @@ fn reflected_door_arcs_and_leaves_match_both_swing_directions() {
                 wall: wall.id,
                 position: 800.0,
                 width: 600.0,
+                kind: house_core::DoorKind::Hinged,
                 swing,
             };
             d.walls.insert(wall.id, wall);
@@ -311,4 +312,87 @@ fn table_headers_have_unique_handles_and_entities_are_opaque() {
             .entities()
             .all(|e| e.common.transparency == 0x0200_00ff)
     );
+}
+
+#[test]
+fn new_symbols_export_exact_rotated_coordinates_without_sliding_arcs() {
+    let mut d = Document::default();
+    let layer = *d.layers.keys().next().unwrap();
+    let w = house_core::Wall {
+        id: Id::new_v4(),
+        name: "Host".into(),
+        start: Point::new(0.0, 0.0),
+        end: Point::new(4000.0, 3000.0),
+        thickness: 100.0,
+        layer,
+    };
+    d.walls.insert(w.id, w.clone());
+    let door = house_core::Door {
+        id: Id::new_v4(),
+        wall: w.id,
+        position: 3000.0,
+        width: 1200.0,
+        swing: Swing::Right,
+        kind: house_core::DoorKind::SlidingGlass,
+    };
+    d.doors.insert(door.id, door.clone());
+    let window = house_core::Window {
+        id: Id::new_v4(),
+        wall: w.id,
+        position: 1000.0,
+        width: 600.0,
+    };
+    d.windows.insert(window.id, window.clone());
+    for kind in [
+        house_core::FixtureKind::Bath,
+        house_core::FixtureKind::Shower,
+    ] {
+        let f = house_core::Fixture {
+            id: Id::new_v4(),
+            kind,
+            origin: Point::new(-1000.0, 500.0),
+            width: 1524.0,
+            depth: 762.0,
+            rotation: 37.0,
+            layer,
+        };
+        d.fixtures.insert(f.id, f);
+    }
+    let bytes = dxf_bytes(&d).unwrap();
+    let drawing = dxf::Drawing::load(&mut bytes.as_slice()).unwrap();
+    assert!(
+        !drawing
+            .entities()
+            .any(|e| matches!(e.specific, dxf::entities::EntityType::Arc(_)))
+    );
+    for symbol in house_geometry::plan_symbols(&d) {
+        let lines: Vec<_> = drawing
+            .entities()
+            .filter(|e| {
+                e.common.x_data.iter().any(|data| {
+                    data.items
+                        .contains(&dxf::XDataItem::Str(symbol.id.to_string()))
+                })
+            })
+            .map(|e| match &e.specific {
+                dxf::entities::EntityType::Line(l) => l,
+                _ => panic!("Expected symbol line"),
+            })
+            .collect();
+        assert_eq!(lines.len(), symbol.lines.len());
+        for (actual, (a, b)) in lines.iter().zip(symbol.lines) {
+            for (actual, expected) in [
+                (actual.p1.x, a.x),
+                (actual.p1.y, -a.y),
+                (actual.p2.x, b.x),
+                (actual.p2.y, -b.y),
+            ] {
+                assert!((actual - expected).abs() < 1e-9);
+            }
+        }
+    }
+    d.layers.get_mut(&layer).unwrap().visible = false;
+    let bytes = dxf_bytes(&d).unwrap();
+    let hidden = dxf::Drawing::load(&mut bytes.as_slice()).unwrap();
+    assert_eq!(hidden.entities().count(), 0);
 }

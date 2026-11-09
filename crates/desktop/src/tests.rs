@@ -179,3 +179,82 @@ fn stale_inspector_apply_cannot_overwrite_a_remote_wall_move() {
         moved.walls[&app.selected.unwrap()].start
     );
 }
+
+#[test]
+fn place_select_and_edit_bath_and_shower() {
+    let ctx = egui::Context::default();
+    let mut app = HouseApp::with_context(ctx.clone(), 0);
+    frame(&ctx, &mut app, vec![]);
+    for (kind, x) in [(FixtureKind::Bath, 300.0), (FixtureKind::Shower, 2100.0)] {
+        app.placing = Some(kind);
+        let origin = Point::new(x, 1700.0);
+        let p = app.screen(origin, app.canvas_origin);
+        click(&ctx, &mut app, p);
+        barrier(&app);
+        let d = app.handle.snapshot();
+        let f = d
+            .fixtures
+            .values()
+            .find(|v| v.kind == kind)
+            .unwrap()
+            .clone();
+        assert_eq!(f.origin, HouseApp::snap(origin));
+        assert_eq!(app.selected, Some(f.id));
+        assert!(app.placing.is_none());
+        let p = app.screen(
+            Point::new(f.origin.x + 100.0, f.origin.y + 100.0),
+            app.canvas_origin,
+        );
+        click(&ctx, &mut app, p);
+        assert_eq!(app.selected, Some(f.id));
+        frame(&ctx, &mut app, vec![]);
+        let mut edited = app.draft_fixture.clone().unwrap();
+        edited.origin.x += 152.4;
+        edited.rotation = 90.0;
+        app.apply_properties(Command::UpdateFixture(edited.clone()));
+        barrier(&app);
+        assert_eq!(app.handle.snapshot().fixtures[&f.id], edited);
+        app.send(Action::Undo);
+        barrier(&app);
+        assert_eq!(app.handle.snapshot().fixtures[&f.id], f);
+    }
+}
+
+#[test]
+fn select_window_and_sliding_glass_door() {
+    let ctx = egui::Context::default();
+    let mut app = HouseApp::with_context(ctx.clone(), 0);
+    let d = app.handle.snapshot();
+    let host = d.walls.values().find(|w| w.name == "South").unwrap();
+    let window = Window {
+        id: Id::new_v4(),
+        wall: host.id,
+        position: 600.0,
+        width: 600.0,
+    };
+    let door = Door {
+        id: Id::new_v4(),
+        wall: host.id,
+        position: 2400.0,
+        width: 1200.0,
+        swing: Swing::Left,
+        kind: DoorKind::SlidingGlass,
+    };
+    app.edit(Command::CreateWindow(window.clone()));
+    app.edit(Command::CreateDoor(door.clone()));
+    barrier(&app);
+    frame(&ctx, &mut app, vec![]);
+    for (id, station) in [(window.id, window.position), (door.id, door.position)] {
+        let p = app.screen(
+            Point::new(host.start.x + station, host.start.y),
+            app.canvas_origin,
+        );
+        click(&ctx, &mut app, p);
+        assert_eq!(app.selected, Some(id));
+        frame(&ctx, &mut app, vec![]);
+    }
+    assert_eq!(
+        app.draft_door.as_ref().unwrap().kind,
+        DoorKind::SlidingGlass
+    );
+}

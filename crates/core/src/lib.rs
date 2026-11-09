@@ -2,7 +2,7 @@
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
 pub use uuid::Uuid as Id;
-pub const SCHEMA_VERSION: u32 = 1;
+pub const SCHEMA_VERSION: u32 = 2;
 #[derive(Clone, Copy, Debug, Default, PartialEq, Serialize, Deserialize)]
 pub struct Point {
     pub x: f64,
@@ -27,6 +27,12 @@ pub enum Swing {
     Left,
     Right,
 }
+#[derive(Clone, Copy, Debug, Default, PartialEq, Serialize, Deserialize)]
+pub enum DoorKind {
+    #[default]
+    Hinged,
+    SlidingGlass,
+}
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Door {
     pub id: Id,
@@ -35,6 +41,8 @@ pub struct Door {
     pub position: f64,
     pub width: f64,
     pub swing: Swing,
+    #[serde(default)]
+    pub kind: DoorKind,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Window {
@@ -42,6 +50,22 @@ pub struct Window {
     pub wall: Id,
     pub position: f64,
     pub width: f64,
+}
+/// Freestanding rectangular footprint; rotation is clockwise degrees about origin.
+#[derive(Clone, Copy, Debug, PartialEq, Serialize, Deserialize)]
+pub enum FixtureKind {
+    Bath,
+    Shower,
+}
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct Fixture {
+    pub id: Id,
+    pub kind: FixtureKind,
+    pub origin: Point,
+    pub width: f64,
+    pub depth: f64,
+    pub rotation: f64,
+    pub layer: Id,
 }
 /// Rectangular room bounded by the inside faces of axis-aligned walls.
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -77,6 +101,8 @@ pub struct Document {
     pub walls: BTreeMap<Id, Wall>,
     pub doors: BTreeMap<Id, Door>,
     pub windows: BTreeMap<Id, Window>,
+    #[serde(default)]
+    pub fixtures: BTreeMap<Id, Fixture>,
     pub rooms: BTreeMap<Id, Room>,
     pub dimensions: BTreeMap<Id, Dimension>,
     pub layers: BTreeMap<Id, Layer>,
@@ -94,6 +120,7 @@ impl Default for Document {
             walls: BTreeMap::new(),
             doors: BTreeMap::new(),
             windows: BTreeMap::new(),
+            fixtures: BTreeMap::new(),
             rooms: BTreeMap::new(),
             dimensions: BTreeMap::new(),
             layers: BTreeMap::from([(layer.id, layer)]),
@@ -220,6 +247,7 @@ pub fn bathroom() -> Document {
             wall,
             position,
             width: inches(28.0),
+            kind: DoorKind::Hinged,
             swing: if wall == west {
                 Swing::Right
             } else {

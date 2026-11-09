@@ -95,6 +95,7 @@ pub fn validate(d: &Document) -> Result<(), String> {
     ids!(&d.walls);
     ids!(&d.doors);
     ids!(&d.windows);
+    ids!(&d.fixtures);
     ids!(&d.rooms);
     ids!(&d.dimensions);
     ids!(&d.layers);
@@ -107,6 +108,17 @@ pub fn validate(d: &Document) -> Result<(), String> {
             || !d.layers.contains_key(&w.layer)
         {
             return Err("Invalid wall geometry or layer".into());
+        }
+    }
+    for f in d.fixtures.values() {
+        if ![f.origin.x, f.origin.y, f.width, f.depth, f.rotation]
+            .iter()
+            .all(|n| n.is_finite() && n.abs() < 1e9)
+            || f.width <= 0.0
+            || f.depth <= 0.0
+            || !d.layers.contains_key(&f.layer)
+        {
+            return Err("Invalid fixture geometry or layer".into());
         }
     }
     let mut openings = Vec::new();
@@ -155,3 +167,6 @@ mod tests {
         assert_eq!(wall_polygon(w).len(), 4);
     }
 }
+
+mod symbols;
+pub use symbols::{PlanSymbol, fixture_contains, fixture_corners, plan_symbols};

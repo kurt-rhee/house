@@ -18,14 +18,20 @@ With mise installed, `mise dev` runs the same desktop command.
 
 The app opens a sample bathroom. Save/open use the editable path in the toolbar
 (relative to the working directory or absolute). Open replaces the document and
-resets history; save uses versioned JSON and an adjacent temporary file plus rename.
+resets history; schema v1 projects migrate automatically to v2 on load. Save uses versioned JSON and an adjacent temporary file plus rename.
 **SVG** and **DXF** in the toolbar export beside the project with `.svg` and
 `.dxf` extensions. Both export the current committed document without changing
 undo history.
 
 - Middle/right drag to pan; scroll over the canvas to zoom about the pointer.
-- Click a wall or a door center to select it. The inspector edits wall endpoints,
-  thickness/name, door station/width/swing, and creates a centered door.
+- Click a wall, opening, bath or shower to select it. The inspector edits wall
+  endpoints/thickness/name, opening station/width, door type/swing, and fixture
+  position/size/rotation. Select a wall to add a centered hinged door, window,
+  or sliding glass door; overlapping openings are rejected.
+- **Place bath** and **Place shower** place one fixture at the next canvas click.
+  Defaults are 60 × 30 inches for baths and 36 × 36 inches for showers; edit exact
+  dimensions in the inspector. Rotation is clockwise about the fixture's local
+  top-left origin. Escape cancels placement.
 - Click **Draw wall**, then two points. Escape cancels. Drawing and dragging snap
   to one-inch increments; property fields accept precise millimeters.
 - To move the partition, select the central vertical wall and click **6 in →**.
@@ -110,7 +116,7 @@ Create, move, update, and delete tools accept optional `expected_revision`.
 A mismatched revision returns a conflict without changing the document or undo
 history. Read the current document and reconsider the edit before retrying.
 Existing clients can omit the field for an unconditional serialized edit.
-The inspector uses this guard automatically when applying wall/door properties,
+The inspector uses this guard automatically when applying object properties,
 and the included Rust client supplies it for partition moves.
 
 All tool lengths are millimeters. The app itself does not contain an LLM or
@@ -122,10 +128,18 @@ natural-language parser; a compatible agent maps the request to tools.
 | create_wall | name, x1, y1, x2, y2, thickness |
 | move_wall | id, dx, dy |
 | create_door | wall_id, position (center station), width, swing ("left"/"right") |
-| update_door | id, wall_id, position, width, swing |
+| update_door | id, wall_id, position, width, swing; optional kind ("hinged"/"sliding_glass", omitted preserves type) |
+| create_sliding_glass_door | wall_id, position (center station), width (total opening) |
+| create_window | wall_id, position (center station), width |
+| update_window | id, wall_id, position, width |
+| create_bath / create_shower | x, y, width, depth; optional rotation (clockwise degrees, defaults to 0) |
+| update_fixture | id, x, y, width, depth; optional rotation (defaults to 0) |
 | delete_object | id |
 | undo / redo | none |
 | save_project / export_svg / export_dxf | path |
+
+There are 18 tools. After updating the app, restart House and refresh your agent’s
+MCP tool discovery to load the new tools.
 
 Tool validation failures return MCP `isError: true` without committing an edit.
 Mutating tools return the committed revision; create tools also return the new ID.
@@ -133,6 +147,24 @@ The local token grants editing and local save/export access. The server binds
 only to IPv4 loopback, checks the exact Host authority, rejects every present
 Origin header, and does not enable CORS. Native/local HTTP clients work; browser
 agents need a local native connector rather than a cross-origin browser request.
+
+## Recreating a screenshot with an agent
+
+Attach the screenshot to an image-capable agent connected to House, and give it
+at least one measured length (preferably labeled horizontal and vertical dimensions).
+The agent can interpret the image, convert the measured layout into millimeters,
+and call the semantic creation tools. For example:
+
+> Recreate this bathroom in House. The inside footprint is 134 × 96 inches.
+> Use the visible dimensions, add the bath, shower, windows and sliding glass door,
+> and ask about dimensions that cannot be read.
+
+House does not run a vision model, accept screenshot uploads, or automatically
+trace raster images. Image input belongs to the agent client; MCP carries the
+resulting typed edits. The workflow needs a client that can both inspect the
+attached image and call MCP tools. Perspective, unlabeled dimensions and obscured
+wall edges require interpretation; check the resulting numeric dimensions.
+There is no paid service or model dependency inside House.
 
 ## DXF export
 
@@ -146,8 +178,9 @@ Export writes an ASCII DXF 2007 (AC1021) file at 1:1 scale in **millimeters**.
 The app's (x, y) becomes CAD (x, -y), so north points up in CAD without reflecting
 the plan's appearance. The export contains real-thickness closed wall outlines
 split around door/window openings, door leaf lines and quarter-circle swing arcs,
-window centerlines, room names/areas, and dimension lines/ticks/text. Walls, doors,
-and windows use separate CAD layers derived from their source layer name and UUID;
+window frames/glazing, sliding glass panels (without swing arcs), bath/shower
+footprints, room names/areas, and dimension lines/ticks/text. Walls, doors,
+windows and fixtures use separate CAD layers derived from their source layer name and UUID;
 hidden source layers are omitted. Room/dimension annotations follow the desktop's
 visibility behavior.
 
@@ -205,10 +238,12 @@ comparison is required.
 Rooms are explicit rectangles referencing axis-aligned wall faces. Moves that
 break their enclosure or make them nonpositive are rejected. There is no general
 constraint solver, automatic room detection, snapping index, sophisticated wall
-join/cleanup, DXF import, PDF, sheets, window editing in the desktop, arbitrary room boundaries,
-file picker, recovery/autosave, or native application bundle/installer. Window
-and layer semantics are present; this milestone's interactive tools cover walls
-and doors. Layer visibility is respected by wall/door rendering, SVG, and DXF.
+join/cleanup, DXF import, PDF, sheets, arbitrary room boundaries,
+file picker, recovery/autosave, or native application bundle/installer.
+Baths/showers are rectangular plan symbols with no plumbing, clearance checks,
+room containment validation or automatic wall attachment. Sliding glass doors
+represent two glazed panels; panel handing/operability is not modeled.
+Layer visibility is respected by object rendering, SVG, and DXF.
 
 See [architecture](docs/architecture.md) for module boundaries, precision,
 transactions, and threading. Current APIs were checked against

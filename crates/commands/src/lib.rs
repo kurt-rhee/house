@@ -9,6 +9,10 @@ pub enum Command {
     MoveWall { id: Id, dx: f64, dy: f64 },
     CreateDoor(Door),
     UpdateDoor(Door),
+    CreateWindow(Window),
+    UpdateWindow(Window),
+    CreateFixture(Fixture),
+    UpdateFixture(Fixture),
     DeleteObject { id: Id },
 }
 pub struct Engine {
@@ -128,11 +132,36 @@ fn apply(d: &mut Document, c: &Command) -> Result<(), String> {
             }
             d.doors.insert(v.id, v.clone());
         }
+        Command::CreateWindow(v) => {
+            if d.windows.contains_key(&v.id) {
+                return Err("Window already exists".into());
+            }
+            d.windows.insert(v.id, v.clone());
+        }
+        Command::UpdateWindow(v) => {
+            if !d.windows.contains_key(&v.id) {
+                return Err("Window not found".into());
+            }
+            d.windows.insert(v.id, v.clone());
+        }
+        Command::CreateFixture(v) => {
+            if d.fixtures.contains_key(&v.id) {
+                return Err("Fixture already exists".into());
+            }
+            d.fixtures.insert(v.id, v.clone());
+        }
+        Command::UpdateFixture(v) => {
+            if !d.fixtures.contains_key(&v.id) {
+                return Err("Fixture not found".into());
+            }
+            d.fixtures.insert(v.id, v.clone());
+        }
         Command::DeleteObject { id } => {
             // Referenced objects cannot be deleted silently; delete dependents in the same transaction first.
             if d.walls.remove(id).is_none()
                 && d.doors.remove(id).is_none()
                 && d.windows.remove(id).is_none()
+                && d.fixtures.remove(id).is_none()
                 && d.rooms.remove(id).is_none()
                 && d.dimensions.remove(id).is_none()
                 && d.layers.remove(id).is_none()
@@ -296,6 +325,7 @@ mod operation_tests {
             wall: Id::new_v4(),
             position: 1000.0,
             width: 700.0,
+            kind: house_core::DoorKind::Hinged,
             swing: Swing::Left,
         };
         assert!(e.execute(Command::CreateDoor(door)).is_err());
@@ -320,6 +350,7 @@ mod operation_tests {
             wall: id,
             position: 1000.0,
             width: 700.0,
+            kind: house_core::DoorKind::Hinged,
             swing: Swing::Left,
         };
         d.doors.insert(v.id, v.clone());
@@ -394,3 +425,6 @@ mod revision_tests {
         assert_eq!(engine.document().revision, 4);
     }
 }
+
+#[cfg(test)]
+mod fixtures_tests;

@@ -10,7 +10,7 @@ use dxf::{
     },
     tables::{AppId, Layer as CadLayer},
 };
-use house_core::{DimensionKind, Document, Id, Layer, Point, Swing, Wall};
+use house_core::{DimensionKind, Document, DoorKind, Id, Layer, Point, Swing, Wall};
 use house_geometry::{dimension_value, length, room_bounds, validate, wall_polygon};
 use std::path::Path;
 mod compatibility;
@@ -20,7 +20,7 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
     validate(document)?;
     let mut output = Export::new();
     for layer in document.layers.values().filter(|layer| layer.visible) {
-        for (kind, color) in [("WALLS", 7), ("DOORS", 4), ("WINDOWS", 5)] {
+        for (kind, color) in [("WALLS", 7), ("DOORS", 4), ("WINDOWS", 5), ("FIXTURES", 3)] {
             output.layer(&layer_name(kind, layer), color);
         }
     }
@@ -54,7 +54,11 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
         }
         output.wall_span(wall, station, length(wall), &layer);
     }
-    for door in document.doors.values() {
+    for door in document
+        .doors
+        .values()
+        .filter(|v| v.kind == DoorKind::Hinged)
+    {
         let host = &document.walls[&door.wall];
         if !document.layers[&host.layer].visible {
             continue;
@@ -88,18 +92,22 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
             door.id,
         );
     }
-    for window in document.windows.values() {
-        let host = &document.walls[&window.wall];
-        if !document.layers[&host.layer].visible {
+    for symbol in house_geometry::plan_symbols(document) {
+        let source = &document.layers[&symbol.layer];
+        if !source.visible {
             continue;
         }
-        let layer = layer_name("WINDOWS", &document.layers[&host.layer]);
-        output.line(
-            on_wall(host, window.position - window.width / 2.0),
-            on_wall(host, window.position + window.width / 2.0),
-            &layer,
-            window.id,
-        );
+        let kind = if document.fixtures.contains_key(&symbol.id) {
+            "FIXTURES"
+        } else if document.windows.contains_key(&symbol.id) {
+            "WINDOWS"
+        } else {
+            "DOORS"
+        };
+        let layer = layer_name(kind, source);
+        for (a, b) in symbol.lines {
+            output.line(a, b, &layer, symbol.id);
+        }
     }
     for room in document.rooms.values() {
         let b = room_bounds(document, room)?;
