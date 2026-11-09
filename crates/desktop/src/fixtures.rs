@@ -42,7 +42,7 @@ impl HouseApp {
             .chain(
                 d.doors
                     .values()
-                    .filter(|v| v.kind == DoorKind::SlidingGlass)
+                    .filter(|v| v.kind != DoorKind::Hinged)
                     .map(|v| (v.wall, v.position, v.width)),
             )
         {

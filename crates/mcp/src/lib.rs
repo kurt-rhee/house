@@ -52,7 +52,7 @@ pub struct DoorInput {
 }
 #[derive(Deserialize, JsonSchema)]
 pub struct DoorUpdate {
-    /// Omit to preserve the existing type; "hinged" or "sliding_glass".
+    /// Omit to preserve the existing type; "hinged", "sliding_glass", or "garage".
     pub kind: Option<String>,
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
@@ -99,6 +99,13 @@ pub struct IdInput {
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
     pub id: String,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct RoomLabelInput {
+    pub expected_revision: Option<u64>,
+    pub name: String,
+    pub x: f64,
+    pub y: f64,
 }
 #[derive(Deserialize, JsonSchema)]
 pub struct RoomInput {
@@ -270,6 +277,7 @@ impl CadServer {
         let kind = match p.kind.as_deref() {
             Some("hinged") => DoorKind::Hinged,
             Some("sliding_glass") => DoorKind::SlidingGlass,
+            Some("garage") => DoorKind::Garage,
             None => match parse_id(&p.id)
                 .ok()
                 .and_then(|id| self.handle.snapshot().doors.get(&id).map(|v| v.kind))
@@ -277,7 +285,11 @@ impl CadServer {
                 Some(kind) => kind,
                 None => return result(Err("Door not found".into())),
             },
-            _ => return result(Err("Door kind must be hinged or sliding_glass".into())),
+            _ => {
+                return result(Err(
+                    "Door kind must be hinged, sliding_glass, or garage".into()
+                ));
+            }
         };
         let r = match (parse_id(&p.id), parse_id(&p.wall_id), swing(&p.swing)) {
             (Ok(id), Ok(wall), Ok(swing)) => {
@@ -431,6 +443,27 @@ impl CadServer {
         }
         .await;
         result(r)
+    }
+    #[tool(
+        description = "Place a room name at x/y millimeters for open or irregular spaces, without adding walls or claiming measured area. Rename with rename_room; delete with delete_object."
+    )]
+    async fn create_room_label(&self, Parameters(p): Parameters<RoomLabelInput>) -> CallToolResult {
+        let id = Id::new_v4();
+        result(
+            self.edit(
+                Command::CreateRoomLabel(RoomLabel {
+                    id,
+                    name: p.name,
+                    position: Point::new(p.x, p.y),
+                }),
+                p.expected_revision,
+            )
+            .await
+            .map(|mut value| {
+                value["id"] = json!(id);
+                value
+            }),
+        )
     }
     #[tool(
         description = "Rename an existing room using its ID from get_document. Updates the label on the live drawing and SVG/DXF exports, preserving boundaries and dimensions. Undoable."

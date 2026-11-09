@@ -111,7 +111,7 @@ pub fn svg(d: &Document) -> Result<String, String> {
         .chain(
             d.doors
                 .values()
-                .filter(|v| v.kind == DoorKind::SlidingGlass)
+                .filter(|v| v.kind != DoorKind::Hinged)
                 .map(|v| (v.wall, v.position, v.width)),
         )
     {
@@ -153,6 +153,9 @@ pub fn svg(d: &Document) -> Result<String, String> {
             writeln!(s, "<path d=\"M {} {} L {} {}\"/>", a.x, a.y, b.x, b.y).unwrap();
         }
         s.push_str("</g>\n");
+    }
+    for label in d.room_labels.values() {
+        writeln!(s, "<text x=\"{}\" y=\"{}\" font-family=\"sans-serif\" font-size=\"160\" text-anchor=\"middle\">{}</text>", label.position.x, label.position.y, escape(&label.name)).unwrap();
     }
     for r in d.rooms.values() {
         let b = room_bounds(d, r)?;
@@ -289,5 +292,64 @@ mod fixture_tests {
         for (actual, expected) in bounds.iter().zip([-5962.0, -200.0, 6262.0, 2124.0]) {
             assert!((actual - expected).abs() < 1e-9);
         }
+    }
+}
+
+#[cfg(test)]
+mod room_label_tests {
+    use super::*;
+    #[test]
+    fn garage_door_round_trips_and_exports_as_solid_panels() {
+        let mut d = house_core::bathroom();
+        let id = *d.doors.keys().next().unwrap();
+        for door in d.doors.values_mut() {
+            door.kind = DoorKind::Garage;
+        }
+        assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
+        let symbol = house_geometry::plan_symbols(&d)
+            .into_iter()
+            .find(|s| s.id == id)
+            .unwrap();
+        assert_eq!(symbol.lines.len(), 13);
+        let door = &d.doors[&id];
+        let wall = &d.walls[&door.wall];
+        assert!(
+            symbol
+                .lines
+                .iter()
+                .flat_map(|(a, b)| [a, b])
+                .all(|p| house_geometry::distance(wall, *p) <= wall.thickness / 2.0 + 0.001)
+        );
+        let bytes = dxf_bytes(&d).unwrap();
+        let drawing = dxf::Drawing::load(&mut bytes.as_slice()).unwrap();
+        assert!(
+            !drawing
+                .entities()
+                .any(|e| matches!(e.specific, dxf::entities::EntityType::Arc(_)))
+        );
+    }
+    #[test]
+    fn labels_round_trip_and_export_with_escaped_names() {
+        let mut d = Document::default();
+        let id = Id::new_v4();
+        d.room_labels.insert(
+            id,
+            RoomLabel {
+                id,
+                name: "Kitchen & dining".into(),
+                position: Point::new(150.0, 200.0),
+            },
+        );
+        assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
+        let path = std::env::temp_dir().join(format!("room-label-{id}.svg"));
+        export_svg(&d, &path).unwrap();
+        assert!(
+            std::fs::read_to_string(&path)
+                .unwrap()
+                .contains("Kitchen &amp; dining")
+        );
+        std::fs::remove_file(path).unwrap();
+        let drawing = dxf_bytes(&d).unwrap();
+        assert!(String::from_utf8_lossy(&drawing).contains("Kitchen & dining"));
     }
 }

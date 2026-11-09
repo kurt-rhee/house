@@ -32,6 +32,7 @@ pub enum DoorKind {
     #[default]
     Hinged,
     SlidingGlass,
+    Garage,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Door {
@@ -66,6 +67,13 @@ pub struct Fixture {
     pub depth: f64,
     pub rotation: f64,
     pub layer: Id,
+}
+/// A room name anchored on the plan without implying measured rectangular boundaries.
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct RoomLabel {
+    pub id: Id,
+    pub name: String,
+    pub position: Point,
 }
 /// Rectangular room bounded by the inside faces of axis-aligned walls.
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
@@ -104,6 +112,8 @@ pub struct Document {
     #[serde(default)]
     pub fixtures: BTreeMap<Id, Fixture>,
     pub rooms: BTreeMap<Id, Room>,
+    #[serde(default)]
+    pub room_labels: BTreeMap<Id, RoomLabel>,
     pub dimensions: BTreeMap<Id, Dimension>,
     pub layers: BTreeMap<Id, Layer>,
 }
@@ -122,6 +132,7 @@ impl Default for Document {
             windows: BTreeMap::new(),
             fixtures: BTreeMap::new(),
             rooms: BTreeMap::new(),
+            room_labels: BTreeMap::new(),
             dimensions: BTreeMap::new(),
             layers: BTreeMap::from([(layer.id, layer)]),
         }

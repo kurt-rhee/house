@@ -95,6 +95,15 @@ impl HouseApp {
             painter.add(egui::Shape::line(arc, Stroke::new(1.0, color)));
         }
         self.draw_plan_symbols(d, &painter, origin);
+        for label in d.room_labels.values() {
+            painter.text(
+                self.screen(label.position, origin),
+                egui::Align2::CENTER_CENTER,
+                &label.name,
+                egui::FontId::proportional((220.0 * self.scale).clamp(6.0, 14.0)),
+                Color32::from_gray(45),
+            );
+        }
         for r in d.rooms.values() {
             if let Ok(b) = room_bounds(d, r) {
                 painter.text(

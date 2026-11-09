@@ -109,6 +109,9 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
             output.line(a, b, &layer, symbol.id);
         }
     }
+    for label in document.room_labels.values() {
+        output.text(&label.name, label.position, 160.0, "ROOMS", label.id);
+    }
     for room in document.rooms.values() {
         let b = room_bounds(document, room)?;
         let center = Point::new(b.x + b.width / 2.0, b.y + b.height / 2.0);

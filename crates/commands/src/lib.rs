@@ -14,6 +14,7 @@ pub enum Command {
     CreateFixture(Fixture),
     UpdateFixture(Fixture),
     CreateRoom(Room),
+    CreateRoomLabel(RoomLabel),
     RenameRoom { id: Id, name: String },
     DeleteObject { id: Id },
 }
@@ -158,6 +159,12 @@ fn apply(d: &mut Document, c: &Command) -> Result<(), String> {
             }
             d.fixtures.insert(v.id, v.clone());
         }
+        Command::CreateRoomLabel(label) => {
+            if d.room_labels.contains_key(&label.id) {
+                return Err("Room label already exists".into());
+            }
+            d.room_labels.insert(label.id, label.clone());
+        }
         Command::CreateRoom(room) => {
             if d.rooms.contains_key(&room.id) {
                 return Err("Room already exists".into());
@@ -165,7 +172,11 @@ fn apply(d: &mut Document, c: &Command) -> Result<(), String> {
             d.rooms.insert(room.id, room.clone());
         }
         Command::RenameRoom { id, name } => {
-            d.rooms.get_mut(id).ok_or("Room not found")?.name = name.clone();
+            if let Some(room) = d.rooms.get_mut(id) {
+                room.name = name.clone();
+            } else {
+                d.room_labels.get_mut(id).ok_or("Room not found")?.name = name.clone();
+            }
         }
         Command::DeleteObject { id } => {
             // Referenced objects cannot be deleted silently; delete dependents in the same transaction first.
@@ -174,6 +185,7 @@ fn apply(d: &mut Document, c: &Command) -> Result<(), String> {
                 && d.windows.remove(id).is_none()
                 && d.fixtures.remove(id).is_none()
                 && d.rooms.remove(id).is_none()
+                && d.room_labels.remove(id).is_none()
                 && d.dimensions.remove(id).is_none()
                 && d.layers.remove(id).is_none()
             {
@@ -439,3 +451,6 @@ mod revision_tests {
 
 #[cfg(test)]
 mod fixtures_tests;
+
+#[cfg(test)]
+mod room_labels_tests;

@@ -16,7 +16,7 @@ cargo run --locked -p house-desktop
 
 With mise installed, `mise dev` runs the same desktop command.
 
-The app opens a sample bathroom. Save/open use the editable path in the toolbar
+The app opens `output/floor-plan.house.json` by default, using the checkout path even when launched from another directory. If it cannot be loaded, the app shows the error and a sample bathroom. Save/open use the editable path in the toolbar
 (relative to the working directory or absolute). Open replaces the document and
 resets history; schema v1 projects migrate automatically to v2 on load. Save uses versioned JSON and an adjacent temporary file plus rename.
 **SVG** and **DXF** in the toolbar export beside the project with `.svg` and
@@ -25,7 +25,7 @@ undo history.
 
 - Middle/right drag to pan; scroll over the canvas to zoom about the pointer.
 - Click a wall, opening, bath or shower to select it. The inspector edits wall
-  endpoints/thickness/name, opening station/width, door type/swing, and fixture
+  endpoints/thickness/name, opening station/width, door type (hinged, sliding glass, garage)/swing, and fixture
   position/size/rotation. Select a wall to add a centered hinged door, window,
   or sliding glass door; overlapping openings are rejected.
 - **Place bath** and **Place shower** place one fixture at the next canvas click.
@@ -135,7 +135,8 @@ natural-language parser; a compatible agent maps the request to tools.
 | create_bath / create_shower | x, y, width, depth; optional rotation (clockwise degrees, defaults to 0) |
 | update_fixture | id, x, y, width, depth; optional rotation (defaults to 0) |
 | create_room | name, west, east, north, south (existing boundary wall IDs) |
-| rename_room | id (room ID), name |
+| rename_room | id (room or room label ID), name |
+| create_room_label | name, x, y; label for an open or irregular space without measured boundaries |
 | delete_object | id |
 | undo / redo | none |
 | save_project / export_svg / export_dxf | path |

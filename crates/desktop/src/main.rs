@@ -31,6 +31,20 @@ struct HouseApp {
 impl HouseApp {
     fn new(cc: &eframe::CreationContext<'_>) -> Self {
         let mut app = Self::with_context(cc.egui_ctx.clone(), 3847);
+        let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+            .join("../../output/floor-plan.house.json");
+        app.path = path.to_string_lossy().into_owned();
+        match app
+            .handle
+            .submit(Action::Open(path))
+            .and_then(|rx| rx.blocking_recv().map_err(|e| e.to_string())?)
+        {
+            Ok(_) => {
+                app.scale = 0.034;
+                app.pan = Vec2::new(20.0, 20.0);
+            }
+            Err(error) => app.status = format!("Could not open saved floor plan: {error}"),
+        }
         if let Ok(server) = &mut app.server {
             let result = std::env::var_os("HOME")
                 .ok_or("Home directory is unavailable".to_string())
@@ -168,6 +182,7 @@ impl HouseApp {
             ui.horizontal(|ui| {
                 ui.selectable_value(&mut v.kind, DoorKind::Hinged, "Hinged");
                 ui.selectable_value(&mut v.kind, DoorKind::SlidingGlass, "Sliding glass");
+                ui.selectable_value(&mut v.kind, DoorKind::Garage, "Garage door");
             });
             ui.horizontal(|ui| {
                 ui.selectable_value(&mut v.swing, Swing::Left, "Left");
@@ -256,6 +271,9 @@ impl HouseApp {
         }
         ui.separator();
         ui.heading("Rooms");
+        for label in d.room_labels.values() {
+            ui.label(&label.name);
+        }
         for r in d.rooms.values() {
             if let Ok(b) = room_bounds(d, r) {
                 ui.label(format!(

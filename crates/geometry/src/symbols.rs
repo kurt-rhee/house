@@ -74,14 +74,14 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
     let openings = d
         .windows
         .values()
-        .map(|w| (w.id, w.wall, w.position, w.width, false))
+        .map(|w| (w.id, w.wall, w.position, w.width, None))
         .chain(
             d.doors
                 .values()
-                .filter(|v| v.kind == DoorKind::SlidingGlass)
-                .map(|v| (v.id, v.wall, v.position, v.width, true)),
+                .filter(|v| v.kind != DoorKind::Hinged)
+                .map(|v| (v.id, v.wall, v.position, v.width, Some(v.kind))),
         );
-    for (id, wall, position, width, sliding) in openings {
+    for (id, wall, position, width, kind) in openings {
         let w = &d.walls[&wall];
         let l = length(w);
         let ux = (w.end.x - w.start.x) / l;
@@ -92,24 +92,54 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
         let b = position + width / 2.0;
         let t = w.thickness * 0.25;
         let mut lines = vec![
-            (p(a, -t), p(b, -t)),
-            (p(a, t), p(b, t)),
             (p(a, -w.thickness / 2.0), p(a, w.thickness / 2.0)),
             (p(b, -w.thickness / 2.0), p(b, w.thickness / 2.0)),
         ];
-        if sliding {
-            // Two overlapping glazed panels; no swing arc.
-            lines.push((
-                p(position - width * 0.05, -t),
-                p(position - width * 0.05, 0.0),
-            ));
-            lines.push((
-                p(position + width * 0.05, 0.0),
-                p(position + width * 0.05, t),
-            ));
-            lines.push((p(a, 0.0), p(b, 0.0)));
+        if kind == Some(DoorKind::Garage) {
+            // A solid sectional overhead door, distinct from glazed sliding panels.
+            let depth = w.thickness * 0.4;
+            lines.extend(rectangle([
+                p(a, -depth),
+                p(b, -depth),
+                p(b, depth),
+                p(a, depth),
+            ]));
+            for index in 1..4 {
+                let station = a + width * index as f64 / 4.0;
+                lines.push((p(station, -depth), p(station, depth)));
+            }
+            // Short diagonal panel marks indicate solid door leaves rather than glazing.
+            for index in 0..4 {
+                let middle = a + width * (index as f64 + 0.5) / 4.0;
+                lines.push((p(middle - depth, -depth), p(middle + depth, depth)));
+            }
+        } else if kind == Some(DoorKind::SlidingGlass) {
+            // Separate, overlapping panel footprints reveal the two sliding tracks.
+            for (left, right, near, far) in [
+                (a, position + width * 0.05, -t, -t * 0.3),
+                (position - width * 0.05, b, t * 0.3, t),
+            ] {
+                lines.extend(rectangle([
+                    p(left, near),
+                    p(right, near),
+                    p(right, far),
+                    p(left, far),
+                ]));
+            }
+            // A direction arrow beside the wall remains legible at plan scale.
+            let arrow_y = -w.thickness / 2.0 - 120.0;
+            let tail = position - width * 0.22;
+            let tip = position + width * 0.22;
+            let head = (width * 0.07).min(140.0);
+            lines.extend([
+                (p(tail, arrow_y), p(tip, arrow_y)),
+                (p(tip - head, arrow_y - head * 0.5), p(tip, arrow_y)),
+                (p(tip - head, arrow_y + head * 0.5), p(tip, arrow_y)),
+            ]);
         } else {
-            lines.push((p(a, 0.0), p(b, 0.0)));
+            for offset in [-t, 0.0, t] {
+                lines.push((p(a, offset), p(b, offset)));
+            }
         }
         symbols.push(PlanSymbol {
             id,

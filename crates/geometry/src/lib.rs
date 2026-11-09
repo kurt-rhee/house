@@ -97,6 +97,16 @@ pub fn validate(d: &Document) -> Result<(), String> {
     ids!(&d.windows);
     ids!(&d.fixtures);
     ids!(&d.rooms);
+    ids!(&d.room_labels);
+    for label in d.room_labels.values() {
+        if label.name.trim().is_empty()
+            || ![label.position.x, label.position.y]
+                .iter()
+                .all(|v| v.is_finite() && v.abs() < 1e9)
+        {
+            return Err("Invalid room label".into());
+        }
+    }
     ids!(&d.dimensions);
     ids!(&d.layers);
     for w in d.walls.values() {
