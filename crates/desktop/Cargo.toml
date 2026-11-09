@@ -1,0 +1,14 @@
+[package]
+name = "house-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+house-core.workspace = true
+house-geometry.workspace = true
+house-commands.workspace = true
+house-io.workspace = true
+house-mcp.workspace = true
+eframe.workspace = true
+uuid.workspace = true

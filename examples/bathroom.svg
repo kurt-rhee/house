@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-300 -300 4003.6 3038.4" width="4003.6mm" height="3038.4mm">
+<rect x="-300" y="-300" width="4003.6" height="3038.4" fill="white"/>
+<polygon points="1626.4,-50 1626.4,2488.4 1726.4,2488.4 1726.4,-50" fill="#444"/>
+<polygon points="-100,-50 -100,2488.4 0,2488.4 0,-50" fill="#444"/>
+<polygon points="-50,0 3453.6,0 3453.6,-100 -50,-100" fill="#444"/>
+<polygon points="-50,2538.4 3453.6,2538.4 3453.6,2438.4 -50,2438.4" fill="#444"/>
+<polygon points="3403.6,-50 3403.6,2488.4 3503.6,2488.4 3503.6,-50" fill="#444"/>
+<g transform="translate(-50 863.6) rotate(90)"><path d="M 0 0 H 711.2" stroke="white" stroke-width="102"/><path d="M 0 0 V -711.2 M 711.2 0 A 711.2 711.2 0 0 0 0 -711.2" fill="none" stroke="#168" stroke-width="8"/></g>
+<g transform="translate(2387.6 -50) rotate(0)"><path d="M 0 0 H 711.2" stroke="white" stroke-width="102"/><path d="M 0 0 V 711.2 M 711.2 0 A 711.2 711.2 0 0 1 0 711.2" fill="none" stroke="#168" stroke-width="8"/></g>
+<text x="813.2" y="1219.2" font-family="sans-serif" font-size="65" text-anchor="middle">Bathroom · 3.97 m²</text>
+<text x="2565" y="1219.2" font-family="sans-serif" font-size="65" text-anchor="middle">Utility · 4.09 m²</text>
+<path d="M 1846.4 0 L 1846.4 2438.4" stroke="#678" stroke-width="5"/><text x="1861.4" y="1204.2" font-family="sans-serif" font-size="45">2438.4 mm</text>
+<path d="M 120 0 L 120 2438.4" stroke="#678" stroke-width="5"/><text x="135" y="1204.2" font-family="sans-serif" font-size="45">2438.4 mm</text>
+<path d="M 1726.4 120 L 3403.6 120" stroke="#678" stroke-width="5"/><text x="2580" y="105" font-family="sans-serif" font-size="45">1677.2 mm</text>
+<path d="M 0 120 L 1626.4 120" stroke="#678" stroke-width="5"/><text x="828.2" y="105" font-family="sans-serif" font-size="45">1626.4 mm</text>
+</svg>

@@ -1,0 +1,3 @@
+[tasks.dev]
+description = "Run the native desktop application with local MCP"
+run = "cargo run --locked -p house-desktop"

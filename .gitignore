@@ -1,0 +1,6 @@
+/target/
+.DS_Store
+/bathroom.house.json
+/bathroom.house.svg
+/bathroom.house.dxf
+*.tmp

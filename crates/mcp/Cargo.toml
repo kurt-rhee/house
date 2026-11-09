@@ -1,0 +1,22 @@
+[package]
+name = "house-mcp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+house-core.workspace = true
+house-commands.workspace = true
+house-io.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+rmcp.workspace = true
+tokio.workspace = true
+axum.workspace = true
+schemars.workspace = true
+house-geometry.workspace = true
+
+[dev-dependencies]
+dxf.workspace = true
+reqwest = { version = "0.13", default-features = false, features = ["json"] }

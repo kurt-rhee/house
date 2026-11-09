@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "revision": 0,
+  "walls": {
+    "29f50473-5e34-4edf-ba20-0c9e464af7f6": {
+      "id": "29f50473-5e34-4edf-ba20-0c9e464af7f6",
+      "name": "Partition",
+      "start": {
+        "x": 1676.4,
+        "y": -50.0
+      },
+      "end": {
+        "x": 1676.4,
+        "y": 2488.4
+      },
+      "thickness": 100.0,
+      "layer": "91424db6-ee2a-4109-bba2-65300dfaaa22"
+    },
+    "5cce8ae8-8ff5-4204-89a1-2dc3ce89a815": {
+      "id": "5cce8ae8-8ff5-4204-89a1-2dc3ce89a815",
+      "name": "West",
+      "start": {
+        "x": -50.0,
+        "y": -50.0
+      },
+      "end": {
+        "x": -50.0,
+        "y": 2488.4
+      },
+      "thickness": 100.0,
+      "layer": "91424db6-ee2a-4109-bba2-65300dfaaa22"
+    },
+    "62de65b1-f62e-4192-ad28-3251bf74d36e": {
+      "id": "62de65b1-f62e-4192-ad28-3251bf74d36e",
+      "name": "North",
+      "start": {
+        "x": -50.0,
+        "y": -50.0
+      },
+      "end": {
+        "x": 3453.6,
+        "y": -50.0
+      },
+      "thickness": 100.0,
+      "layer": "91424db6-ee2a-4109-bba2-65300dfaaa22"
+    },
+    "d9cdf3f7-b2a4-42fb-a123-ea047f928fdd": {
+      "id": "d9cdf3f7-b2a4-42fb-a123-ea047f928fdd",
+      "name": "South",
+      "start": {
+        "x": -50.0,
+        "y": 2488.4
+      },
+      "end": {
+        "x": 3453.6,
+        "y": 2488.4
+      },
+      "thickness": 100.0,
+      "layer": "91424db6-ee2a-4109-bba2-65300dfaaa22"
+    },
+    "f9b7600e-f964-4631-bfd3-c48c5820fa95": {
+      "id": "f9b7600e-f964-4631-bfd3-c48c5820fa95",
+      "name": "East",
+      "start": {
+        "x": 3453.6,
+        "y": -50.0
+      },
+      "end": {
+        "x": 3453.6,
+        "y": 2488.4
+      },
+      "thickness": 100.0,
+      "layer": "91424db6-ee2a-4109-bba2-65300dfaaa22"
+    }
+  },
+  "doors": {
+    "80ce849e-1bdb-4cdd-905f-ad3744cce224": {
+      "id": "80ce849e-1bdb-4cdd-905f-ad3744cce224",
+      "wall": "5cce8ae8-8ff5-4204-89a1-2dc3ce89a815",
+      "position": 1269.2,
+      "width": 711.2,
+      "swing": "Right"
+    },
+    "b0f19163-9097-4913-89f3-cb4ec38795a7": {
+      "id": "b0f19163-9097-4913-89f3-cb4ec38795a7",
+      "wall": "62de65b1-f62e-4192-ad28-3251bf74d36e",
+      "position": 2793.2,
+      "width": 711.2,
+      "swing": "Left"
+    }
+  },
+  "windows": {},
+  "rooms": {
+    "14aec19c-5bd6-4d87-9ec0-e997e783e9ab": {
+      "id": "14aec19c-5bd6-4d87-9ec0-e997e783e9ab",
+      "name": "Bathroom",
+      "west": "5cce8ae8-8ff5-4204-89a1-2dc3ce89a815",
+      "east": "29f50473-5e34-4edf-ba20-0c9e464af7f6",
+      "north": "62de65b1-f62e-4192-ad28-3251bf74d36e",
+      "south": "d9cdf3f7-b2a4-42fb-a123-ea047f928fdd"
+    },
+    "b7ec5908-886e-4303-a111-38537f0a393c": {
+      "id": "b7ec5908-886e-4303-a111-38537f0a393c",
+      "name": "Utility",
+      "west": "29f50473-5e34-4edf-ba20-0c9e464af7f6",
+      "east": "f9b7600e-f964-4631-bfd3-c48c5820fa95",
+      "north": "62de65b1-f62e-4192-ad28-3251bf74d36e",
+      "south": "d9cdf3f7-b2a4-42fb-a123-ea047f928fdd"
+    }
+  },
+  "dimensions": {
+    "134520d0-a82e-4417-929d-659648298f3a": {
+      "id": "134520d0-a82e-4417-929d-659648298f3a",
+      "room": "b7ec5908-886e-4303-a111-38537f0a393c",
+      "kind": "Height"
+    },
+    "a3274f26-8ff3-405c-ad72-76b290b674fa": {
+      "id": "a3274f26-8ff3-405c-ad72-76b290b674fa",
+      "room": "14aec19c-5bd6-4d87-9ec0-e997e783e9ab",
+      "kind": "Height"
+    },
+    "bde4407b-d559-428f-a8a8-164d6951ce9c": {
+      "id": "bde4407b-d559-428f-a8a8-164d6951ce9c",
+      "room": "b7ec5908-886e-4303-a111-38537f0a393c",
+      "kind": "Width"
+    },
+    "de54a3f2-1206-4b40-a887-57988ba2174c": {
+      "id": "de54a3f2-1206-4b40-a887-57988ba2174c",
+      "room": "14aec19c-5bd6-4d87-9ec0-e997e783e9ab",
+      "kind": "Width"
+    }
+  },
+  "layers": {
+    "91424db6-ee2a-4109-bba2-65300dfaaa22": {
+      "id": "91424db6-ee2a-4109-bba2-65300dfaaa22",
+      "name": "Architecture",
+      "visible": true
+    }
+  }
+}

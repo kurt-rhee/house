@@ -1,0 +1,11 @@
+[package]
+name = "house-commands"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+house-core.workspace = true
+house-geometry.workspace = true
+serde.workspace = true
+uuid.workspace = true
