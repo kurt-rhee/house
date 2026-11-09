@@ -52,7 +52,7 @@ async fn bathroom_over_real_http() {
         );
         let client = ().serve(transport).await.unwrap();
         let tools = client.list_all_tools().await.unwrap();
-        assert_eq!(tools.len(), 18);
+        assert_eq!(tools.len(), 20);
         let before = value(call!(client, "get_document", json!({})));
         assert_eq!(before["revision"], 0);
         value(call!(client, "list_objects", json!({})));
@@ -483,4 +483,82 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         std::fs::remove_dir_all(dir).unwrap();
         client.cancel().await.unwrap();
     }).await.expect("Fixture HTTP workflow timed out");
+}
+
+#[tokio::test(flavor = "multi_thread", worker_threads = 2)]
+async fn named_rooms_over_real_http() {
+    tokio::time::timeout(std::time::Duration::from_secs(30), async {
+        let original = bathroom();
+        let existing = original.rooms.values().next().unwrap().clone();
+        let handle = DocumentHandle::spawn(original, || {}).unwrap();
+        let server = start_local(handle.clone(), 0).unwrap();
+        let config = StreamableHttpClientTransportConfig::with_uri(format!("http://{}/mcp", server.address))
+            .auth_header(&server.token);
+        let client = ().serve(StreamableHttpClientTransport::from_config(config)).await.unwrap();
+        let tools = client.list_all_tools().await.unwrap();
+        for name in ["create_room", "rename_room"] {
+            assert!(tools.iter().any(|t| t.name == name));
+        }
+        let name = "Guest bath & <Laundry>";
+        value(call!(client, "rename_room", json!({"id":existing.id,"name":name,"expected_revision":0})));
+        assert_eq!(handle.snapshot().rooms[&existing.id].name, name);
+        assert_eq!(handle.snapshot().dimensions.len(), 4);
+        let before = handle.snapshot();
+        for args in [
+            json!({"id":existing.id,"name":"Stale","expected_revision":0}),
+            json!({"id":Id::new_v4(),"name":"Missing"}),
+            json!({"id":"invalid","name":"Invalid"}),
+        ] {
+            assert_eq!(call!(client, "rename_room", args).is_error, Some(true));
+            assert_eq!(*handle.snapshot(), *before);
+        }
+        value(call!(client, "undo", json!({})));
+        assert_eq!(handle.snapshot().rooms[&existing.id], existing);
+        value(call!(client, "redo", json!({})));
+        assert_eq!(handle.snapshot().rooms[&existing.id].name, name);
+
+        // Start with only walls to exercise naming a newly drawn enclosure.
+        let mut empty = (*handle.snapshot()).clone();
+        empty.rooms.clear();
+        empty.dimensions.clear();
+        let fresh = DocumentHandle::spawn(empty, || {}).unwrap();
+        let fresh_server = start_local(fresh.clone(), 0).unwrap();
+        let config = StreamableHttpClientTransportConfig::with_uri(format!("http://{}/mcp", fresh_server.address))
+            .auth_header(&fresh_server.token);
+        let creator = ().serve(StreamableHttpClientTransport::from_config(config)).await.unwrap();
+        let revision = fresh.snapshot().revision;
+        let args = json!({"name":name,"west":existing.west,"east":existing.east,"north":existing.north,"south":existing.south,"expected_revision":revision});
+        for key in ["west", "north"] {
+            let mut invalid = args.clone();
+            invalid[key] = json!(existing.south);
+            assert_eq!(call!(creator, "create_room", invalid).is_error, Some(true));
+            assert_eq!(fresh.snapshot().revision, revision);
+            assert!(fresh.snapshot().rooms.is_empty());
+        }
+        let created = value(call!(creator, "create_room", args));
+        let id = Id::parse_str(created["id"].as_str().unwrap()).unwrap();
+        assert_eq!(fresh.snapshot().rooms[&id].name, name);
+        let described = value(call!(creator, "get_document", json!({})));
+        assert_eq!(described["room_measurements"][0]["name"], name);
+        value(call!(creator, "undo", json!({})));
+        assert!(fresh.snapshot().rooms.is_empty());
+        value(call!(creator, "redo", json!({})));
+        assert_eq!(fresh.snapshot().rooms[&id].name, name);
+
+        let dir = std::env::temp_dir().join(format!("house-rooms-{}", Id::new_v4()));
+        std::fs::create_dir(&dir).unwrap();
+        value(call!(creator, "save_project", json!({"path":dir.join("plan.json")})));
+        value(call!(creator, "export_svg", json!({"path":dir.join("plan.svg")})));
+        value(call!(creator, "export_dxf", json!({"path":dir.join("plan.dxf")})));
+        assert_eq!(house_io::load(&dir.join("plan.json")).unwrap(), *fresh.snapshot());
+        let svg = std::fs::read_to_string(dir.join("plan.svg")).unwrap();
+        assert!(svg.contains("Guest bath &amp; &lt;Laundry&gt;"));
+        let drawing = dxf::Drawing::load_file(dir.join("plan.dxf")).unwrap();
+        assert!(drawing.entities().any(|e| matches!(&e.specific, dxf::entities::EntityType::Text(t) if t.value == name)));
+        value(call!(creator, "delete_object", json!({"id":id})));
+        assert!(fresh.snapshot().rooms.is_empty());
+        std::fs::remove_dir_all(dir).unwrap();
+        creator.cancel().await.unwrap();
+        client.cancel().await.unwrap();
+    }).await.expect("Room HTTP workflow timed out");
 }

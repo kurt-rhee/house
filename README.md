@@ -134,12 +134,21 @@ natural-language parser; a compatible agent maps the request to tools.
 | update_window | id, wall_id, position, width |
 | create_bath / create_shower | x, y, width, depth; optional rotation (clockwise degrees, defaults to 0) |
 | update_fixture | id, x, y, width, depth; optional rotation (defaults to 0) |
+| create_room | name, west, east, north, south (existing boundary wall IDs) |
+| rename_room | id (room ID), name |
 | delete_object | id |
 | undo / redo | none |
 | save_project / export_svg / export_dxf | path |
 
-There are 18 tools. After updating the app, restart House and refresh your agent’s
+There are 20 tools. After updating the app, restart House and refresh your agent’s
 MCP tool discovery to load the new tools.
+
+Create a room after drawing its four enclosing axis-aligned walls, using their
+IDs from `get_document`. Rooms are explicit rectangles; enclosed wall outlines
+do not automatically become rooms. Room names appear at the center on the live
+drawing and in SVG/DXF exports. Use `rename_room` to change a label while keeping
+its boundaries and dimensions. Both tools support undo/redo and optional
+`expected_revision` checks; labels follow boundary wall moves.
 
 Tool validation failures return MCP `isError: true` without committing an edit.
 Mutating tools return the committed revision; create tools also return the new ID.

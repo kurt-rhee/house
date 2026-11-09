@@ -258,3 +258,34 @@ fn select_window_and_sliding_glass_door() {
         DoorKind::SlidingGlass
     );
 }
+
+#[test]
+fn renamed_room_is_painted_on_the_live_drawing() {
+    let ctx = egui::Context::default();
+    let mut app = HouseApp::with_context(ctx.clone(), 0);
+    let room = app.handle.snapshot().rooms.values().next().unwrap().id;
+    let name = "Guest bathroom";
+    app.handle
+        .submit(Action::Edit(Command::RenameRoom {
+            id: room,
+            name: name.into(),
+        }))
+        .unwrap()
+        .blocking_recv()
+        .unwrap()
+        .unwrap();
+    let input = egui::RawInput {
+        screen_rect: Some(egui::Rect::from_min_size(
+            Pos2::ZERO,
+            Vec2::new(1280.0, 850.0),
+        )),
+        ..Default::default()
+    };
+    let mut output = ctx.run_ui(input, |ui| app.show(ui));
+    output.textures_delta.clear();
+    // The canvas paints name + area together; the sidebar uses a different label.
+    assert!(output.shapes.iter().any(|s| match &s.shape {
+        egui::Shape::Text(text) => text.galley.job.text.starts_with(&format!("{name}\n")),
+        _ => false,
+    }));
+}

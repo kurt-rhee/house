@@ -101,6 +101,24 @@ pub struct IdInput {
     pub id: String,
 }
 #[derive(Deserialize, JsonSchema)]
+pub struct RoomInput {
+    pub expected_revision: Option<u64>,
+    /// Name displayed at the center of the room on the drawing and exports.
+    pub name: String,
+    /// Stable IDs of the four enclosing axis-aligned walls, from get_document.
+    pub west: String,
+    pub east: String,
+    pub north: String,
+    pub south: String,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct RenameRoomInput {
+    pub expected_revision: Option<u64>,
+    /// Stable room ID from get_document.
+    pub id: String,
+    pub name: String,
+}
+#[derive(Deserialize, JsonSchema)]
 pub struct PathInput {
     /// Absolute or working-directory-relative local path.
     pub path: String,
@@ -385,6 +403,48 @@ impl CadServer {
                     .await
             }
             None => Err("Fixture not found".into()),
+        };
+        result(r)
+    }
+    #[tool(
+        description = "Create a named rectangular room bounded by the inside faces of four existing axis-aligned walls. Use wall IDs from get_document for west/east/north/south. The name appears at the room center on the live drawing and SVG/DXF exports; it follows boundary wall moves. Invalid boundaries are rejected atomically."
+    )]
+    async fn create_room(&self, Parameters(p): Parameters<RoomInput>) -> CallToolResult {
+        let r = async {
+            let id = Id::new_v4();
+            self.edit(
+                Command::CreateRoom(Room {
+                    id,
+                    name: p.name,
+                    west: parse_id(&p.west)?,
+                    east: parse_id(&p.east)?,
+                    north: parse_id(&p.north)?,
+                    south: parse_id(&p.south)?,
+                }),
+                p.expected_revision,
+            )
+            .await
+            .map(|mut v| {
+                v["id"] = json!(id);
+                v
+            })
+        }
+        .await;
+        result(r)
+    }
+    #[tool(
+        description = "Rename an existing room using its ID from get_document. Updates the label on the live drawing and SVG/DXF exports, preserving boundaries and dimensions. Undoable."
+    )]
+    async fn rename_room(&self, Parameters(p): Parameters<RenameRoomInput>) -> CallToolResult {
+        let r = match parse_id(&p.id) {
+            Ok(id) => {
+                self.edit(
+                    Command::RenameRoom { id, name: p.name },
+                    p.expected_revision,
+                )
+                .await
+            }
+            Err(e) => Err(e),
         };
         result(r)
     }

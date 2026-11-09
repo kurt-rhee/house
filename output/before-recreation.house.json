@@ -1,0 +1,143 @@
+{
+  "dimensions": {
+    "0ac99f42-fe3e-4f4c-ad6f-e364cb3647c4": {
+      "id": "0ac99f42-fe3e-4f4c-ad6f-e364cb3647c4",
+      "kind": "Height",
+      "room": "2ccb6aac-e533-4e63-944d-03e9a07ad846"
+    },
+    "b26a4055-6551-4eef-9825-b3b456420c5c": {
+      "id": "b26a4055-6551-4eef-9825-b3b456420c5c",
+      "kind": "Width",
+      "room": "2ccb6aac-e533-4e63-944d-03e9a07ad846"
+    },
+    "c9d5ee5e-c389-48bf-9ab4-7f987f37d430": {
+      "id": "c9d5ee5e-c389-48bf-9ab4-7f987f37d430",
+      "kind": "Width",
+      "room": "3d410534-cde6-4e7c-825a-27fc64fe0e9d"
+    },
+    "ffd07df9-e62a-4b2e-ad16-a24901e862f4": {
+      "id": "ffd07df9-e62a-4b2e-ad16-a24901e862f4",
+      "kind": "Height",
+      "room": "3d410534-cde6-4e7c-825a-27fc64fe0e9d"
+    }
+  },
+  "doors": {
+    "22f4d94b-f169-4b4a-a342-855b3629e6e7": {
+      "id": "22f4d94b-f169-4b4a-a342-855b3629e6e7",
+      "kind": "Hinged",
+      "position": 2793.2,
+      "swing": "Left",
+      "wall": "2e8c2355-cf08-47e9-b625-c211a5eb5142",
+      "width": 711.2
+    },
+    "ae0587a9-23f4-4d48-9968-7fc80acd5eaa": {
+      "id": "ae0587a9-23f4-4d48-9968-7fc80acd5eaa",
+      "kind": "Hinged",
+      "position": 1269.2,
+      "swing": "Right",
+      "wall": "5bed3c73-327d-4468-9e82-5155026d852e",
+      "width": 711.2
+    }
+  },
+  "fixtures": {},
+  "layers": {
+    "bc63b5af-8736-466d-9628-b6e9f2fabd26": {
+      "id": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Architecture",
+      "visible": true
+    }
+  },
+  "revision": 0,
+  "rooms": {
+    "2ccb6aac-e533-4e63-944d-03e9a07ad846": {
+      "east": "d09b6733-d320-4e0a-a8d3-07cedb9e55c0",
+      "id": "2ccb6aac-e533-4e63-944d-03e9a07ad846",
+      "name": "Bathroom",
+      "north": "2e8c2355-cf08-47e9-b625-c211a5eb5142",
+      "south": "60c23b09-2b3b-4793-bd9e-1f4a9aea9214",
+      "west": "5bed3c73-327d-4468-9e82-5155026d852e"
+    },
+    "3d410534-cde6-4e7c-825a-27fc64fe0e9d": {
+      "east": "ab72b552-19d2-47cb-8ffe-b7674cffd929",
+      "id": "3d410534-cde6-4e7c-825a-27fc64fe0e9d",
+      "name": "Utility",
+      "north": "2e8c2355-cf08-47e9-b625-c211a5eb5142",
+      "south": "60c23b09-2b3b-4793-bd9e-1f4a9aea9214",
+      "west": "d09b6733-d320-4e0a-a8d3-07cedb9e55c0"
+    }
+  },
+  "schema_version": 2,
+  "walls": {
+    "2e8c2355-cf08-47e9-b625-c211a5eb5142": {
+      "end": {
+        "x": 3453.6,
+        "y": -50.0
+      },
+      "id": "2e8c2355-cf08-47e9-b625-c211a5eb5142",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "North",
+      "start": {
+        "x": -50.0,
+        "y": -50.0
+      },
+      "thickness": 100.0
+    },
+    "5bed3c73-327d-4468-9e82-5155026d852e": {
+      "end": {
+        "x": -50.0,
+        "y": 2488.4
+      },
+      "id": "5bed3c73-327d-4468-9e82-5155026d852e",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "West",
+      "start": {
+        "x": -50.0,
+        "y": -50.0
+      },
+      "thickness": 100.0
+    },
+    "60c23b09-2b3b-4793-bd9e-1f4a9aea9214": {
+      "end": {
+        "x": 3453.6,
+        "y": 2488.4
+      },
+      "id": "60c23b09-2b3b-4793-bd9e-1f4a9aea9214",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "South",
+      "start": {
+        "x": -50.0,
+        "y": 2488.4
+      },
+      "thickness": 100.0
+    },
+    "ab72b552-19d2-47cb-8ffe-b7674cffd929": {
+      "end": {
+        "x": 3453.6,
+        "y": 2488.4
+      },
+      "id": "ab72b552-19d2-47cb-8ffe-b7674cffd929",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "East",
+      "start": {
+        "x": 3453.6,
+        "y": -50.0
+      },
+      "thickness": 100.0
+    },
+    "d09b6733-d320-4e0a-a8d3-07cedb9e55c0": {
+      "end": {
+        "x": 1676.4,
+        "y": 2488.4
+      },
+      "id": "d09b6733-d320-4e0a-a8d3-07cedb9e55c0",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Partition",
+      "start": {
+        "x": 1676.4,
+        "y": -50.0
+      },
+      "thickness": 100.0
+    }
+  },
+  "windows": {}
+}

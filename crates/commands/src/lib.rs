@@ -13,6 +13,8 @@ pub enum Command {
     UpdateWindow(Window),
     CreateFixture(Fixture),
     UpdateFixture(Fixture),
+    CreateRoom(Room),
+    RenameRoom { id: Id, name: String },
     DeleteObject { id: Id },
 }
 pub struct Engine {
@@ -155,6 +157,15 @@ fn apply(d: &mut Document, c: &Command) -> Result<(), String> {
                 return Err("Fixture not found".into());
             }
             d.fixtures.insert(v.id, v.clone());
+        }
+        Command::CreateRoom(room) => {
+            if d.rooms.contains_key(&room.id) {
+                return Err("Room already exists".into());
+            }
+            d.rooms.insert(room.id, room.clone());
+        }
+        Command::RenameRoom { id, name } => {
+            d.rooms.get_mut(id).ok_or("Room not found")?.name = name.clone();
         }
         Command::DeleteObject { id } => {
             // Referenced objects cannot be deleted silently; delete dependents in the same transaction first.
