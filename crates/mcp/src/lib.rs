@@ -52,7 +52,9 @@ pub struct DoorInput {
 }
 #[derive(Deserialize, JsonSchema)]
 pub struct DoorUpdate {
-    /// Omit to preserve the existing type; "hinged", "sliding_glass", or "garage".
+    /// True places the hinge at the opening end; omit to preserve the current hinge.
+    pub hinge_at_end: Option<bool>,
+    /// Omit to preserve the existing type; "hinged", "sliding_glass", "garage", or "pocket".
     pub kind: Option<String>,
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
@@ -251,6 +253,7 @@ impl CadServer {
                 let id = Id::new_v4();
                 self.edit(
                     Command::CreateDoor(Door {
+                        hinge_at_end: false,
                         id,
                         wall,
                         position: p.position,
@@ -278,6 +281,7 @@ impl CadServer {
             Some("hinged") => DoorKind::Hinged,
             Some("sliding_glass") => DoorKind::SlidingGlass,
             Some("garage") => DoorKind::Garage,
+            Some("pocket") => DoorKind::Pocket,
             None => match parse_id(&p.id)
                 .ok()
                 .and_then(|id| self.handle.snapshot().doors.get(&id).map(|v| v.kind))
@@ -287,7 +291,7 @@ impl CadServer {
             },
             _ => {
                 return result(Err(
-                    "Door kind must be hinged, sliding_glass, or garage".into()
+                    "Door kind must be hinged, sliding_glass, garage, or pocket".into(),
                 ));
             }
         };
@@ -295,6 +299,13 @@ impl CadServer {
             (Ok(id), Ok(wall), Ok(swing)) => {
                 self.edit(
                     Command::UpdateDoor(Door {
+                        hinge_at_end: p.hinge_at_end.unwrap_or_else(|| {
+                            self.handle
+                                .snapshot()
+                                .doors
+                                .get(&id)
+                                .is_some_and(|d| d.hinge_at_end)
+                        }),
                         id,
                         wall,
                         position: p.position,
@@ -368,6 +379,7 @@ impl CadServer {
             Ok(wall) => {
                 self.edit(
                     Command::CreateDoor(Door {
+                        hinge_at_end: false,
                         id,
                         wall,
                         position: p.position,
@@ -399,7 +411,32 @@ impl CadServer {
         result(self.create_fixture(p, FixtureKind::Shower).await)
     }
     #[tool(
-        description = "Move, resize or rotate an existing bath or shower, preserving its type and ID. Millimeters and clockwise degrees."
+        description = "Place a toilet footprint. Local top is the tank against the wall; depth extends forward. Millimeters, clockwise rotation."
+    )]
+    async fn create_toilet(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Toilet).await)
+    }
+    #[tool(
+        description = "Place a sink vanity footprint. Local top is the back against the wall. Millimeters, clockwise rotation."
+    )]
+    async fn create_sink(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Sink).await)
+    }
+    #[tool(
+        description = "Place a countertop footprint. Millimeters and clockwise rotation; local top is the back against the wall."
+    )]
+    async fn create_countertop(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Countertop).await)
+    }
+    #[tool(
+        description = "Place a four-burner stove footprint. Millimeters and clockwise rotation; local top is the back against the wall."
+    )]
+    async fn create_stove(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Stove).await)
+    }
+
+    #[tool(
+        description = "Move, resize or rotate an existing fixture, preserving its type and ID. Millimeters and clockwise degrees."
     )]
     async fn update_fixture(&self, Parameters(p): Parameters<FixtureUpdate>) -> CallToolResult {
         let r = match parse_id(&p.id)

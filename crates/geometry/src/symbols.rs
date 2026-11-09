@@ -37,6 +37,82 @@ fn rectangle(points: [Point; 4]) -> Vec<(Point, Point)> {
 pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
     let mut symbols = Vec::new();
     for f in d.fixtures.values() {
+        if matches!(f.kind, FixtureKind::Countertop | FixtureKind::Stove) {
+            let mut lines = rectangle(fixture_corners(f));
+            if f.kind == FixtureKind::Stove {
+                lines.push((
+                    transform(f, 0.0, f.depth * 0.12),
+                    transform(f, f.width, f.depth * 0.12),
+                ));
+                for (cx, cy) in [(0.27, 0.36), (0.73, 0.36), (0.27, 0.76), (0.73, 0.76)] {
+                    let radius = f.width.min(f.depth) * 0.14;
+                    for i in 0..32 {
+                        let a = i as f64 * std::f64::consts::TAU / 32.0;
+                        let b = (i + 1) as f64 * std::f64::consts::TAU / 32.0;
+                        lines.push((
+                            transform(
+                                f,
+                                cx * f.width + radius * a.cos(),
+                                cy * f.depth + radius * a.sin(),
+                            ),
+                            transform(
+                                f,
+                                cx * f.width + radius * b.cos(),
+                                cy * f.depth + radius * b.sin(),
+                            ),
+                        ));
+                    }
+                }
+            }
+            symbols.push(PlanSymbol {
+                id: f.id,
+                layer: f.layer,
+                lines,
+            });
+            continue;
+        }
+        if matches!(f.kind, FixtureKind::Toilet | FixtureKind::Sink) {
+            let rect = |x1, y1, x2, y2| {
+                rectangle([
+                    transform(f, x1, y1),
+                    transform(f, x2, y1),
+                    transform(f, x2, y2),
+                    transform(f, x1, y2),
+                ])
+            };
+            let mut lines = if f.kind == FixtureKind::Sink {
+                rectangle(fixture_corners(f))
+            } else {
+                rect(0.0, 0.0, f.width, f.depth * 0.28)
+            };
+            let (cx, cy, rx, ry) = if f.kind == FixtureKind::Sink {
+                (f.width * 0.5, f.depth * 0.55, f.width * 0.32, f.depth * 0.3)
+            } else {
+                (
+                    f.width * 0.5,
+                    f.depth * 0.62,
+                    f.width * 0.45,
+                    f.depth * 0.36,
+                )
+            };
+            for i in 0..32 {
+                let a = i as f64 * std::f64::consts::TAU / 32.0;
+                let b = (i + 1) as f64 * std::f64::consts::TAU / 32.0;
+                lines.push((
+                    transform(f, cx + rx * a.cos(), cy + ry * a.sin()),
+                    transform(f, cx + rx * b.cos(), cy + ry * b.sin()),
+                ));
+            }
+            if f.kind == FixtureKind::Sink {
+                lines.push((transform(f, cx, 0.0), transform(f, cx, f.depth * 0.25)));
+            }
+            symbols.push(PlanSymbol {
+                id: f.id,
+                layer: f.layer,
+                lines,
+            });
+            continue;
+        }
         let mut lines = rectangle(fixture_corners(f));
         let inset = f.width.min(f.depth) * 0.08;
         lines.extend(rectangle([
@@ -47,7 +123,11 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
         ]));
         let drain = match f.kind {
             FixtureKind::Bath => (f.width * 0.85, f.depth / 2.0),
-            FixtureKind::Shower => (f.width / 2.0, f.depth / 2.0),
+            FixtureKind::Shower
+            | FixtureKind::Toilet
+            | FixtureKind::Sink
+            | FixtureKind::Countertop
+            | FixtureKind::Stove => (f.width / 2.0, f.depth / 2.0),
         };
         if f.kind == FixtureKind::Shower {
             for (x, y) in [
@@ -95,7 +175,40 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
             (p(a, -w.thickness / 2.0), p(a, w.thickness / 2.0)),
             (p(b, -w.thickness / 2.0), p(b, w.thickness / 2.0)),
         ];
-        if kind == Some(DoorKind::Garage) {
+        if kind == Some(DoorKind::Pocket) {
+            let sign = if d.doors[&id].swing == Swing::Left {
+                1.0
+            } else {
+                -1.0
+            };
+            let jamb = if sign > 0.0 { b } else { a };
+            // A single solid leaf shown half retracted into a dashed wall pocket.
+            let leaf_start = jamb - sign * width * 0.5;
+            let leaf_end = jamb + sign * width * 0.5;
+            lines.extend(rectangle([
+                p(leaf_start, -t * 0.55),
+                p(leaf_end, -t * 0.55),
+                p(leaf_end, t * 0.55),
+                p(leaf_start, t * 0.55),
+            ]));
+            for i in 0..8 {
+                let from = jamb + sign * width * i as f64 / 8.0;
+                let to = from + sign * width * 0.55 / 8.0;
+                for offset in [-t, t] {
+                    lines.push((p(from, offset), p(to, offset)));
+                }
+            }
+            let end = jamb + sign * width;
+            lines.push((p(end, -t), p(end, t)));
+            let arrow_y = -w.thickness / 2.0 - 100.0;
+            let tail = position - sign * width * 0.25;
+            let tip = position + sign * width * 0.25;
+            lines.extend([
+                (p(tail, arrow_y), p(tip, arrow_y)),
+                (p(tip - sign * 65.0, arrow_y - 35.0), p(tip, arrow_y)),
+                (p(tip - sign * 65.0, arrow_y + 35.0), p(tip, arrow_y)),
+            ]);
+        } else if kind == Some(DoorKind::Garage) {
             // A solid sectional overhead door, distinct from glazed sliding panels.
             let depth = w.thickness * 0.4;
             lines.extend(rectangle([
@@ -153,6 +266,30 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn kitchen_symbols_have_counter_outline_and_four_stove_burners() {
+        for (kind, segments) in [(FixtureKind::Countertop, 4), (FixtureKind::Stove, 133)] {
+            let mut d = Document::default();
+            let f = Fixture {
+                id: Id::new_v4(),
+                kind,
+                origin: Point::new(100.0, 200.0),
+                width: 762.0,
+                depth: 635.0,
+                rotation: 270.0,
+                layer: *d.layers.keys().next().unwrap(),
+            };
+            d.fixtures.insert(f.id, f.clone());
+            let symbols = plan_symbols(&d);
+            assert_eq!(symbols[0].lines.len(), segments);
+            for (a, b) in &symbols[0].lines {
+                for p in [a, b] {
+                    assert!(p.x >= 100.0 - 0.001 && p.x <= 735.0 + 0.001);
+                    assert!(p.y >= -562.0 - 0.001 && p.y <= 200.0 + 0.001);
+                }
+            }
+        }
+    }
     #[test]
     fn rotated_fixture_hit_test_and_symbols_are_derived_without_mutation() {
         let mut d = Document::default();

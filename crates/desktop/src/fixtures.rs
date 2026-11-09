@@ -68,6 +68,31 @@ impl HouseApp {
                 ),
             );
         }
+        for door in d.doors.values().filter(|v| v.kind == DoorKind::Pocket) {
+            let wall = &d.walls[&door.wall];
+            if !d.layers[&wall.layer].visible {
+                continue;
+            }
+            let sign = if door.swing == Swing::Left { 1.0 } else { -1.0 };
+            let start = door.position + sign * door.width / 2.0;
+            let end = start + sign * door.width;
+            let point = |station| {
+                self.screen(
+                    Point::new(
+                        wall.start.x + (wall.end.x - wall.start.x) * station / length(wall),
+                        wall.start.y + (wall.end.y - wall.start.y) * station / length(wall),
+                    ),
+                    origin,
+                )
+            };
+            painter.line_segment(
+                [point(start), point(end)],
+                Stroke::new(
+                    wall.thickness as f32 * self.scale * 0.6,
+                    Color32::from_rgb(248, 248, 244),
+                ),
+            );
+        }
         for symbol in house_geometry::plan_symbols(d) {
             if !d.layers[&symbol.layer].visible {
                 continue;

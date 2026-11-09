@@ -344,6 +344,7 @@ mod operation_tests {
         bad.end = bad.start;
         assert!(e.execute(Command::CreateWall(bad)).is_err());
         let door = Door {
+            hinge_at_end: false,
             id: Id::new_v4(),
             wall: Id::new_v4(),
             position: 1000.0,
@@ -369,6 +370,7 @@ mod operation_tests {
         };
         d.walls.insert(id, wall.clone());
         let v = Door {
+            hinge_at_end: false,
             id: Id::new_v4(),
             wall: id,
             position: 1000.0,

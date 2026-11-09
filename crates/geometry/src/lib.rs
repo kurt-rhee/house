@@ -133,7 +133,13 @@ pub fn validate(d: &Document) -> Result<(), String> {
     }
     let mut openings = Vec::new();
     for v in d.doors.values() {
-        openings.push((v.wall, v.position, v.width));
+        if v.kind == DoorKind::Pocket {
+            let sign = if v.swing == Swing::Left { 1.0 } else { -1.0 };
+            // Reserve both the opening and the concealed leaf against other openings.
+            openings.push((v.wall, v.position + sign * v.width / 2.0, v.width * 2.0));
+        } else {
+            openings.push((v.wall, v.position, v.width));
+        }
     }
     for v in d.windows.values() {
         openings.push((v.wall, v.position, v.width));

@@ -233,6 +233,7 @@ fn select_window_and_sliding_glass_door() {
         width: 600.0,
     };
     let door = Door {
+        hinge_at_end: false,
         id: Id::new_v4(),
         wall: host.id,
         position: 2400.0,

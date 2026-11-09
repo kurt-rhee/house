@@ -59,9 +59,10 @@ impl HouseApp {
             let l = length(w);
             let ux = (w.end.x - w.start.x) / l;
             let uy = (w.end.y - w.start.y) / l;
+            let direction = if door.hinge_at_end { -1.0 } else { 1.0 };
             let hinge = Point::new(
-                w.start.x + ux * (door.position - door.width / 2.0),
-                w.start.y + uy * (door.position - door.width / 2.0),
+                w.start.x + ux * (door.position - direction * door.width / 2.0),
+                w.start.y + uy * (door.position - direction * door.width / 2.0),
             );
             let point = |x: f64, y: f64| {
                 self.screen(
@@ -70,7 +71,7 @@ impl HouseApp {
                 )
             };
             painter.line_segment(
-                [point(0.0, 0.0), point(door.width, 0.0)],
+                [point(0.0, 0.0), point(direction * door.width, 0.0)],
                 Stroke::new(
                     (w.thickness as f32 + 2.0) * self.scale,
                     Color32::from_rgb(248, 248, 244),
@@ -89,7 +90,10 @@ impl HouseApp {
             let arc = (0..=24)
                 .map(|i| {
                     let a = i as f64 / 24.0 * std::f64::consts::FRAC_PI_2;
-                    point(a.cos() * door.width, a.sin() * door.width * sign)
+                    point(
+                        direction * a.cos() * door.width,
+                        a.sin() * door.width * sign,
+                    )
                 })
                 .collect();
             painter.add(egui::Shape::line(arc, Stroke::new(1.0, color)));
@@ -173,6 +177,10 @@ impl HouseApp {
                     let (width, depth) = match kind {
                         FixtureKind::Bath => (inches(60.0), inches(30.0)),
                         FixtureKind::Shower => (inches(36.0), inches(36.0)),
+                        FixtureKind::Toilet => (inches(15.0), inches(28.0)),
+                        FixtureKind::Sink => (inches(24.0), inches(18.0)),
+                        FixtureKind::Countertop => (inches(60.0), inches(25.0)),
+                        FixtureKind::Stove => (inches(30.0), inches(25.0)),
                     };
                     let id = Id::new_v4();
                     self.edit(Command::CreateFixture(Fixture {

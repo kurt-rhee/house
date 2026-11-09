@@ -64,7 +64,8 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
             continue;
         }
         let layer = layer_name("DOORS", &document.layers[&host.layer]);
-        let hinge = on_wall(host, door.position - door.width / 2.0);
+        let direction = if door.hinge_at_end { -1.0 } else { 1.0 };
+        let hinge = on_wall(host, door.position - direction * door.width / 2.0);
         let l = length(host);
         let (ux, uy) = (
             (host.end.x - host.start.x) / l,
@@ -77,8 +78,8 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
         );
         output.line(hinge, open, &layer, door.id);
         // DXF arcs run counterclockwise. Reflecting Y reverses the model's swing direction.
-        let base = (-uy).atan2(ux).to_degrees();
-        let (start, end) = if door.swing == Swing::Left {
+        let base = (-uy * direction).atan2(ux * direction).to_degrees();
+        let (start, end) = if sign * direction > 0.0 {
             (base - 90.0, base)
         } else {
             (base, base + 90.0)

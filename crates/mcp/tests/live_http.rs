@@ -52,7 +52,7 @@ async fn bathroom_over_real_http() {
         );
         let client = ().serve(transport).await.unwrap();
         let tools = client.list_all_tools().await.unwrap();
-        assert_eq!(tools.len(), 21);
+        assert_eq!(tools.len(), 25);
         let before = value(call!(client, "get_document", json!({})));
         assert_eq!(before["revision"], 0);
         value(call!(client, "list_objects", json!({})));
@@ -435,7 +435,7 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
             StreamableHttpClientTransportConfig::with_uri(format!("http://{}/mcp",server.address))
                 .auth_header(&server.token))).await.unwrap();
         let tools=client.list_all_tools().await.unwrap();
-        for name in ["create_bath","create_shower","update_fixture","create_window","update_window","create_sliding_glass_door"] {
+        for name in ["create_bath","create_shower","create_sink","create_toilet","update_fixture","create_window","update_window","create_sliding_glass_door"] {
             assert!(tools.iter().any(|t| t.name==name));
         }
         let bath=value(call!(client,"create_bath",json!({"x":100.0,"y":200.0,"width":1524.0,"depth":762.0})))["id"].as_str().unwrap().to_owned();
@@ -463,6 +463,15 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         let before_invalid=handle.snapshot();
         assert_eq!(call!(client,"update_window",json!({"id":window,"wall_id":wall,"position":3400.0,"width":900.0})).is_error,Some(true));
         assert_eq!(*handle.snapshot(),*before_invalid);
+        value(call!(client,"update_door",json!({"id":door,"wall_id":wall,"position":2500.0,"width":900.0,"swing":"left","kind":"hinged","hinge_at_end":true})));
+        assert!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].hinge_at_end);
+        value(call!(client,"update_door",json!({"id":door,"wall_id":wall,"position":2500.0,"width":900.0,"swing":"left","kind":"pocket"})));
+        assert!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].hinge_at_end);
+        assert_eq!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].kind,DoorKind::Pocket);
+        let sink=value(call!(client,"create_sink",json!({"x":1000.0,"y":3000.0,"width":609.6,"depth":457.2,"rotation":270.0})))["id"].as_str().unwrap().to_owned();
+        let toilet=value(call!(client,"create_toilet",json!({"x":2000.0,"y":3000.0,"width":381.0,"depth":711.2,"rotation":90.0})))["id"].as_str().unwrap().to_owned();
+        assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&sink).unwrap()].kind,house_core::FixtureKind::Sink);
+        assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&toilet).unwrap()].kind,house_core::FixtureKind::Toilet);
         let dir=std::env::temp_dir().join(format!("house-fixtures-{}",Id::new_v4()));
         std::fs::create_dir(&dir).unwrap();
         value(call!(client,"save_project",json!({"path":dir.join("plan.json")})));
@@ -470,16 +479,16 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         value(call!(client,"export_dxf",json!({"path":dir.join("plan.dxf")})));
         assert_eq!(house_io::load(&dir.join("plan.json")).unwrap(),*handle.snapshot());
         let svg=std::fs::read_to_string(dir.join("plan.svg")).unwrap();
-        for id in [&bath,&shower,&window,&door] {assert!(svg.contains(id));}
+        for id in [&bath,&shower,&sink,&toilet,&window,&door] {assert!(svg.contains(id));}
         let drawing=dxf::Drawing::load_file(dir.join("plan.dxf")).unwrap();
-        for id in [&bath,&shower,&window,&door] {
+        for id in [&bath,&shower,&sink,&toilet,&window,&door] {
             assert!(drawing.entities().any(|e| e.common.x_data.iter().any(|data|
                 data.items.contains(&dxf::XDataItem::Str(id.to_string())))));
         }
         value(call!(client,"delete_object",json!({"id":shower})));
-        assert_eq!(handle.snapshot().fixtures.len(),1);
+        assert_eq!(handle.snapshot().fixtures.len(),3);
         value(call!(client,"undo",json!({})));
-        assert_eq!(handle.snapshot().fixtures.len(),2);
+        assert_eq!(handle.snapshot().fixtures.len(),4);
         std::fs::remove_dir_all(dir).unwrap();
         client.cancel().await.unwrap();
     }).await.expect("Fixture HTTP workflow timed out");

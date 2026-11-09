@@ -173,67 +173,81 @@ fn reflected_door_arcs_and_leaves_match_both_swing_directions() {
         ),
     ];
     for (end, hinge, closed, left, right) in cases {
-        for swing in [Swing::Left, Swing::Right] {
-            let mut d = Document::default();
-            let layer = *d.layers.keys().next().unwrap();
-            let wall = Wall {
-                id: Id::new_v4(),
-                name: "Test".into(),
-                start: Point::new(0.0, 0.0),
-                end,
-                thickness: 100.0,
-                layer,
-            };
-            let door = Door {
-                id: Id::new_v4(),
-                wall: wall.id,
-                position: 800.0,
-                width: 600.0,
-                kind: house_core::DoorKind::Hinged,
-                swing,
-            };
-            d.walls.insert(wall.id, wall);
-            d.doors.insert(door.id, door.clone());
-            let drawing = parsed(&d);
-            let arc = drawing
-                .entities()
-                .find_map(|e| match &e.specific {
-                    EntityType::Arc(a) if has_id(e, door.id) => Some(a),
-                    _ => None,
-                })
-                .unwrap();
-            near(arc.center.x, hinge.x);
-            near(arc.center.y, hinge.y);
-            near(arc.radius, 600.0);
-            near((arc.end_angle - arc.start_angle).rem_euclid(360.0), 90.0);
-            let endpoint = |degrees: f64| {
-                Point::new(
-                    arc.center.x + arc.radius * degrees.to_radians().cos(),
-                    arc.center.y + arc.radius * degrees.to_radians().sin(),
+        for hinge_at_end in [false, true] {
+            let delta = Point::new(closed.x - hinge.x, closed.y - hinge.y);
+            let (hinge, closed, left, right) = if hinge_at_end {
+                (
+                    closed,
+                    hinge,
+                    Point::new(left.x + delta.x, left.y + delta.y),
+                    Point::new(right.x + delta.x, right.y + delta.y),
                 )
-            };
-            let open = if swing == Swing::Left { left } else { right };
-            let (expected_start, expected_end) = if swing == Swing::Left {
-                (open, closed)
             } else {
-                (closed, open)
+                (hinge, closed, left, right)
             };
-            let (a, b) = (endpoint(arc.start_angle), endpoint(arc.end_angle));
-            near(a.x, expected_start.x);
-            near(a.y, expected_start.y);
-            near(b.x, expected_end.x);
-            near(b.y, expected_end.y);
-            let leaf = drawing
-                .entities()
-                .find_map(|e| match &e.specific {
-                    EntityType::Line(l) if has_id(e, door.id) => Some(l),
-                    _ => None,
-                })
-                .unwrap();
-            near(leaf.p1.x, hinge.x);
-            near(leaf.p1.y, hinge.y);
-            near(leaf.p2.x, open.x);
-            near(leaf.p2.y, open.y);
+            for swing in [Swing::Left, Swing::Right] {
+                let mut d = Document::default();
+                let layer = *d.layers.keys().next().unwrap();
+                let wall = Wall {
+                    id: Id::new_v4(),
+                    name: "Test".into(),
+                    start: Point::new(0.0, 0.0),
+                    end,
+                    thickness: 100.0,
+                    layer,
+                };
+                let door = Door {
+                    hinge_at_end,
+                    id: Id::new_v4(),
+                    wall: wall.id,
+                    position: 800.0,
+                    width: 600.0,
+                    kind: house_core::DoorKind::Hinged,
+                    swing,
+                };
+                d.walls.insert(wall.id, wall);
+                d.doors.insert(door.id, door.clone());
+                let drawing = parsed(&d);
+                let arc = drawing
+                    .entities()
+                    .find_map(|e| match &e.specific {
+                        EntityType::Arc(a) if has_id(e, door.id) => Some(a),
+                        _ => None,
+                    })
+                    .unwrap();
+                near(arc.center.x, hinge.x);
+                near(arc.center.y, hinge.y);
+                near(arc.radius, 600.0);
+                near((arc.end_angle - arc.start_angle).rem_euclid(360.0), 90.0);
+                let endpoint = |degrees: f64| {
+                    Point::new(
+                        arc.center.x + arc.radius * degrees.to_radians().cos(),
+                        arc.center.y + arc.radius * degrees.to_radians().sin(),
+                    )
+                };
+                let open = if swing == Swing::Left { left } else { right };
+                let (expected_start, expected_end) = if (swing == Swing::Left) != hinge_at_end {
+                    (open, closed)
+                } else {
+                    (closed, open)
+                };
+                let (a, b) = (endpoint(arc.start_angle), endpoint(arc.end_angle));
+                near(a.x, expected_start.x);
+                near(a.y, expected_start.y);
+                near(b.x, expected_end.x);
+                near(b.y, expected_end.y);
+                let leaf = drawing
+                    .entities()
+                    .find_map(|e| match &e.specific {
+                        EntityType::Line(l) if has_id(e, door.id) => Some(l),
+                        _ => None,
+                    })
+                    .unwrap();
+                near(leaf.p1.x, hinge.x);
+                near(leaf.p1.y, hinge.y);
+                near(leaf.p2.x, open.x);
+                near(leaf.p2.y, open.y);
+            }
         }
     }
 }
@@ -328,6 +342,7 @@ fn new_symbols_export_exact_rotated_coordinates_without_sliding_arcs() {
     };
     d.walls.insert(w.id, w.clone());
     let door = house_core::Door {
+        hinge_at_end: false,
         id: Id::new_v4(),
         wall: w.id,
         position: 3000.0,

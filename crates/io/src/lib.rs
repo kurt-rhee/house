@@ -96,13 +96,14 @@ pub fn svg(d: &Document) -> Result<String, String> {
         let l = length(w);
         let ux = (w.end.x - w.start.x) / l;
         let uy = (w.end.y - w.start.y) / l;
+        let direction = if door.hinge_at_end { -1.0 } else { 1.0 };
         let p = Point::new(
-            w.start.x + ux * (door.position - door.width / 2.0),
-            w.start.y + uy * (door.position - door.width / 2.0),
+            w.start.x + ux * (door.position - direction * door.width / 2.0),
+            w.start.y + uy * (door.position - direction * door.width / 2.0),
         );
         let angle = uy.atan2(ux).to_degrees();
         let sign = if door.swing == Swing::Left { 1.0 } else { -1.0 };
-        writeln!(s,"<g transform=\"translate({} {}) rotate({})\"><path d=\"M 0 0 H {}\" stroke=\"white\" stroke-width=\"{}\"/><path d=\"M 0 0 V {} M {} 0 A {} {} 0 0 {} 0 {}\" fill=\"none\" stroke=\"#168\" stroke-width=\"8\"/></g>",p.x,p.y,angle,door.width,w.thickness+2.0,door.width*sign,door.width,door.width,door.width,if sign>0.0{1}else{0},door.width*sign).unwrap();
+        writeln!(s,"<g transform=\"translate({} {}) rotate({})\"><path d=\"M 0 0 H {}\" stroke=\"white\" stroke-width=\"{}\"/><path d=\"M 0 0 V {} M {} 0 A {} {} 0 0 {} 0 {}\" fill=\"none\" stroke=\"#168\" stroke-width=\"8\"/></g>",p.x,p.y,angle,door.width*direction,w.thickness+2.0,door.width*sign,door.width*direction,door.width,door.width,if sign*direction>0.0{1}else{0},door.width*sign).unwrap();
     }
     for (wall, position, width) in d
         .windows
@@ -136,6 +137,33 @@ pub fn svg(d: &Document) -> Result<String, String> {
             b.x,
             b.y,
             w.thickness + 2.0
+        )
+        .unwrap();
+    }
+    for door in d.doors.values().filter(|v| v.kind == DoorKind::Pocket) {
+        let wall = &d.walls[&door.wall];
+        if !d.layers[&wall.layer].visible {
+            continue;
+        }
+        let sign = if door.swing == Swing::Left { 1.0 } else { -1.0 };
+        let start = door.position + sign * door.width / 2.0;
+        let end = start + sign * door.width;
+        let point = |station| {
+            Point::new(
+                wall.start.x + (wall.end.x - wall.start.x) * station / length(wall),
+                wall.start.y + (wall.end.y - wall.start.y) * station / length(wall),
+            )
+        };
+        let a = point(start);
+        let b = point(end);
+        writeln!(
+            s,
+            "<path d=\"M {} {} L {} {}\" stroke=\"white\" stroke-width=\"{}\"/>",
+            a.x,
+            a.y,
+            b.x,
+            b.y,
+            wall.thickness * 0.6
         )
         .unwrap();
     }

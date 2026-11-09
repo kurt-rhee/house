@@ -1,0 +1,1315 @@
+{
+  "dimension_measurements": [],
+  "dimensions": {},
+  "doors": {
+    "24a31300-284d-45b2-900e-99d8a56f1068": {
+      "hinge_at_end": false,
+      "id": "24a31300-284d-45b2-900e-99d8a56f1068",
+      "kind": "SlidingGlass",
+      "position": 1748.9499999999998,
+      "swing": "Left",
+      "wall": "231ea206-9a1c-442f-9ff1-b29882656d79",
+      "width": 1828.8
+    },
+    "264c6705-d2c3-4128-b0b1-77b758022bf0": {
+      "hinge_at_end": false,
+      "id": "264c6705-d2c3-4128-b0b1-77b758022bf0",
+      "kind": "Hinged",
+      "position": 4780.025000000001,
+      "swing": "Right",
+      "wall": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+      "width": 802.15
+    },
+    "41377aba-4800-4979-ba18-b9d5a31fe6a5": {
+      "hinge_at_end": false,
+      "id": "41377aba-4800-4979-ba18-b9d5a31fe6a5",
+      "kind": "Hinged",
+      "position": 1716.075,
+      "swing": "Left",
+      "wall": "625a2c30-d92e-4474-816b-d387a75c9f65",
+      "width": 775.85
+    },
+    "4c82f11d-cd5e-436b-ace2-09f490c87146": {
+      "hinge_at_end": true,
+      "id": "4c82f11d-cd5e-436b-ace2-09f490c87146",
+      "kind": "Hinged",
+      "position": 9612.65,
+      "swing": "Left",
+      "wall": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+      "width": 552.3
+    },
+    "5cc81c53-7984-4388-8dbf-8d2ce644635d": {
+      "hinge_at_end": false,
+      "id": "5cc81c53-7984-4388-8dbf-8d2ce644635d",
+      "kind": "Hinged",
+      "position": 1512.25,
+      "swing": "Left",
+      "wall": "a85f107b-4e67-4489-a58f-49ac3f31f7c9",
+      "width": 762.7
+    },
+    "6c88355d-3d3e-495b-867b-e437bedc835d": {
+      "hinge_at_end": false,
+      "id": "6c88355d-3d3e-495b-867b-e437bedc835d",
+      "kind": "Hinged",
+      "position": 1965.925,
+      "swing": "Right",
+      "wall": "d86510d8-aa5d-4f4d-9326-53e7b6a425d0",
+      "width": 775.85
+    },
+    "7787ed89-7080-4e56-81ef-7499a54c1204": {
+      "hinge_at_end": true,
+      "id": "7787ed89-7080-4e56-81ef-7499a54c1204",
+      "kind": "Hinged",
+      "position": 2889.5,
+      "swing": "Left",
+      "wall": "db42f8d2-7bac-4e61-ab4a-89b5a9209859",
+      "width": 762
+    },
+    "7e9e2af4-5ecc-4800-bb7c-572312a3dbac": {
+      "hinge_at_end": false,
+      "id": "7e9e2af4-5ecc-4800-bb7c-572312a3dbac",
+      "kind": "Hinged",
+      "position": 499.7,
+      "swing": "Left",
+      "wall": "f59c3e90-5761-4814-978d-baebc0243feb",
+      "width": 775.85
+    },
+    "862d92a8-b4be-4526-b8c9-f2461f36b83a": {
+      "hinge_at_end": false,
+      "id": "862d92a8-b4be-4526-b8c9-f2461f36b83a",
+      "kind": "SlidingGlass",
+      "position": 1084.875,
+      "swing": "Left",
+      "wall": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
+      "width": 1065.15
+    },
+    "8c5607bb-19e7-46e0-8b67-e9f3e7f843d9": {
+      "hinge_at_end": false,
+      "id": "8c5607bb-19e7-46e0-8b67-e9f3e7f843d9",
+      "kind": "Hinged",
+      "position": 5897.775000000001,
+      "swing": "Left",
+      "wall": "ec330efe-86e7-4c41-b664-9ae847be48f2",
+      "width": 775.85
+    },
+    "93d61222-5d11-46bc-9da0-63eeb7354896": {
+      "hinge_at_end": false,
+      "id": "93d61222-5d11-46bc-9da0-63eeb7354896",
+      "kind": "Hinged",
+      "position": 506.27500000000003,
+      "swing": "Right",
+      "wall": "8071d128-b525-406b-b839-87b24230ca1c",
+      "width": 802.15
+    },
+    "956038be-7613-4839-9eed-5c2a0acea2a2": {
+      "hinge_at_end": false,
+      "id": "956038be-7613-4839-9eed-5c2a0acea2a2",
+      "kind": "Hinged",
+      "position": 506.27500000000003,
+      "swing": "Left",
+      "wall": "95a31876-8718-4029-aee7-31665058e3d2",
+      "width": 802.15
+    },
+    "9c1b496b-4286-48cf-8f83-344c38e44935": {
+      "hinge_at_end": false,
+      "id": "9c1b496b-4286-48cf-8f83-344c38e44935",
+      "kind": "Pocket",
+      "position": 1532.15,
+      "swing": "Left",
+      "wall": "95a31876-8718-4029-aee7-31665058e3d2",
+      "width": 762
+    },
+    "a475fa64-38e3-4975-bf7d-63cab8f5b854": {
+      "hinge_at_end": false,
+      "id": "a475fa64-38e3-4975-bf7d-63cab8f5b854",
+      "kind": "Hinged",
+      "position": 2682.6,
+      "swing": "Left",
+      "wall": "2fb5ffe9-233e-4c78-9373-40de45874090",
+      "width": 762.7
+    },
+    "bb72351a-bcc9-44a1-b4b2-0566824f56e9": {
+      "hinge_at_end": false,
+      "id": "bb72351a-bcc9-44a1-b4b2-0566824f56e9",
+      "kind": "SlidingGlass",
+      "position": 2373.5750000000003,
+      "swing": "Left",
+      "wall": "9d64280f-e2ec-4e62-970c-d7a196e40478",
+      "width": 1828.8
+    },
+    "cc43cf8c-c0c1-4fd2-b7a7-3043bd5a7a84": {
+      "hinge_at_end": false,
+      "id": "cc43cf8c-c0c1-4fd2-b7a7-3043bd5a7a84",
+      "kind": "Hinged",
+      "position": 401.075,
+      "swing": "Right",
+      "wall": "d2aa4c22-8a5f-4f72-96a7-6ed6e1a0bc9d",
+      "width": 618.0500000000001
+    },
+    "e6cd9cd0-ed73-4318-8941-e660ca238c26": {
+      "hinge_at_end": true,
+      "id": "e6cd9cd0-ed73-4318-8941-e660ca238c26",
+      "kind": "Hinged",
+      "position": 499.7,
+      "swing": "Left",
+      "wall": "bac994e1-0176-404f-86b3-7a45ca7a96c6",
+      "width": 815.3000000000001
+    },
+    "e80c0bfc-988b-46cc-aefd-52c4227fab91": {
+      "hinge_at_end": false,
+      "id": "e80c0bfc-988b-46cc-aefd-52c4227fab91",
+      "kind": "Garage",
+      "position": 2544.525,
+      "swing": "Left",
+      "wall": "ec330efe-86e7-4c41-b664-9ae847be48f2",
+      "width": 4431.55
+    },
+    "ea47a63a-2d6e-42df-a4fd-5672d8c2b2fc": {
+      "hinge_at_end": false,
+      "id": "ea47a63a-2d6e-42df-a4fd-5672d8c2b2fc",
+      "kind": "Hinged",
+      "position": 3793.775,
+      "swing": "Right",
+      "wall": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+      "width": 802.15
+    },
+    "eb18d247-b087-40d6-8d0c-725d74e2dcad": {
+      "hinge_at_end": false,
+      "id": "eb18d247-b087-40d6-8d0c-725d74e2dcad",
+      "kind": "Hinged",
+      "position": 407.65000000000043,
+      "swing": "Left",
+      "wall": "3a3a7598-5322-4ab6-a443-eaf269caac69",
+      "width": 683.8000000000001
+    }
+  },
+  "fixtures": {
+    "2b1d29a5-7b8e-49c6-9c16-5c6d8150d992": {
+      "depth": 635,
+      "id": "2b1d29a5-7b8e-49c6-9c16-5c6d8150d992",
+      "kind": "Countertop",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 19762,
+        "y": 2288.1
+      },
+      "rotation": 0,
+      "width": 594.2
+    },
+    "4be42708-ac78-437e-8895-9042270f0235": {
+      "depth": 584.2,
+      "id": "4be42708-ac78-437e-8895-9042270f0235",
+      "kind": "Sink",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 17383.4,
+        "y": 3278.3
+      },
+      "rotation": 270,
+      "width": 838.2
+    },
+    "88a2f140-ab56-42f4-a001-ad68688f8038": {
+      "depth": 762,
+      "id": "88a2f140-ab56-42f4-a001-ad68688f8038",
+      "kind": "Bath",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 22637.025,
+        "y": 13136.85
+      },
+      "rotation": 180,
+      "width": 1524
+    },
+    "99d32ea4-059c-446d-88e9-0b9d8f0ce016": {
+      "depth": 762,
+      "id": "99d32ea4-059c-446d-88e9-0b9d8f0ce016",
+      "kind": "Bath",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 19416.675,
+        "y": 12374.85
+      },
+      "rotation": 0,
+      "width": 1524
+    },
+    "9addeb36-1b09-4c3e-babc-e569bc6d8599": {
+      "depth": 457.2,
+      "id": "9addeb36-1b09-4c3e-babc-e569bc6d8599",
+      "kind": "Sink",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 21144.1,
+        "y": 10783
+      },
+      "rotation": 0,
+      "width": 609.6
+    },
+    "a110bdae-e37e-4c6c-b1c8-8e537a664fae": {
+      "depth": 711.2,
+      "id": "a110bdae-e37e-4c6c-b1c8-8e537a664fae",
+      "kind": "Toilet",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 21079.45,
+        "y": 12080
+      },
+      "rotation": 270,
+      "width": 381
+    },
+    "c08078d4-006c-4eba-8032-0bf18c432cec": {
+      "depth": 3030,
+      "id": "c08078d4-006c-4eba-8032-0bf18c432cec",
+      "kind": "Countertop",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 17358,
+        "y": 2288.1
+      },
+      "rotation": 0,
+      "width": 635
+    },
+    "c0c93320-283f-4d94-bc6e-b11ec56a989a": {
+      "depth": 635,
+      "id": "c0c93320-283f-4d94-bc6e-b11ec56a989a",
+      "kind": "Countertop",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 17993,
+        "y": 2288.1
+      },
+      "rotation": 0,
+      "width": 1007
+    },
+    "c40f5550-c32f-446b-8617-900a1695731a": {
+      "depth": 711.2,
+      "id": "c40f5550-c32f-446b-8617-900a1695731a",
+      "kind": "Toilet",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 20974.25,
+        "y": 11699
+      },
+      "rotation": 90,
+      "width": 381
+    },
+    "e332d192-50d9-4bec-adaf-f254b1ee4c52": {
+      "depth": 457.2,
+      "id": "e332d192-50d9-4bec-adaf-f254b1ee4c52",
+      "kind": "Sink",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 20300,
+        "y": 10783
+      },
+      "rotation": 0,
+      "width": 609.6
+    },
+    "f6bd213e-4f0b-4b20-8167-2b0e1436cc5a": {
+      "depth": 635,
+      "id": "f6bd213e-4f0b-4b20-8167-2b0e1436cc5a",
+      "kind": "Stove",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "origin": {
+        "x": 19000,
+        "y": 2288.1
+      },
+      "rotation": 0,
+      "width": 762
+    }
+  },
+  "layers": {
+    "bc63b5af-8736-466d-9628-b6e9f2fabd26": {
+      "id": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Architecture",
+      "visible": true
+    }
+  },
+  "revision": 7,
+  "room_labels": {
+    "08f4249f-8ab1-4962-89bd-e0b4d7694356": {
+      "id": "08f4249f-8ab1-4962-89bd-e0b4d7694356",
+      "name": "ADU bedroom",
+      "position": {
+        "x": 7930,
+        "y": 7520
+      }
+    },
+    "0fe1ece0-897e-41be-8365-8c1ba272acea": {
+      "id": "0fe1ece0-897e-41be-8365-8c1ba272acea",
+      "name": "Living room",
+      "position": {
+        "x": 18600,
+        "y": 8200
+      }
+    },
+    "163d8584-e814-479a-8414-27b308fdc13c": {
+      "id": "163d8584-e814-479a-8414-27b308fdc13c",
+      "name": "Bathroom 1",
+      "position": {
+        "x": 20178.675,
+        "y": 11570
+      }
+    },
+    "1b0ccd2a-90b6-4344-8c5c-677d79532aae": {
+      "id": "1b0ccd2a-90b6-4344-8c5c-677d79532aae",
+      "name": "Guest bedroom",
+      "position": {
+        "x": 24400,
+        "y": 11500
+      }
+    },
+    "284fef06-ac49-4657-a78d-47a81f28d2c0": {
+      "id": "284fef06-ac49-4657-a78d-47a81f28d2c0",
+      "name": "Porch",
+      "position": {
+        "x": 24800,
+        "y": 6600
+      }
+    },
+    "29e5339c-5cd3-4bb5-8e81-54648b5d0d96": {
+      "id": "29e5339c-5cd3-4bb5-8e81-54648b5d0d96",
+      "name": "Bathroom 2",
+      "position": {
+        "x": 21875.025,
+        "y": 11570
+      }
+    },
+    "48777fc9-30b0-4498-b836-493dc3ff4844": {
+      "id": "48777fc9-30b0-4498-b836-493dc3ff4844",
+      "name": "Bathroom",
+      "position": {
+        "x": 5050,
+        "y": 6540
+      }
+    },
+    "4f4afa40-92c1-417b-898b-3f3cded7db58": {
+      "id": "4f4afa40-92c1-417b-898b-3f3cded7db58",
+      "name": "Tub/shower",
+      "position": {
+        "x": 20178.675,
+        "y": 12755.85
+      }
+    },
+    "51ce176b-e335-4ef0-8b98-3320a6fe1f22": {
+      "id": "51ce176b-e335-4ef0-8b98-3320a6fe1f22",
+      "name": "Living room",
+      "position": {
+        "x": 22300,
+        "y": 7300
+      }
+    },
+    "654a129b-e9f4-4e4b-b4fe-05d9702ebd22": {
+      "id": "654a129b-e9f4-4e4b-b4fe-05d9702ebd22",
+      "name": "Kitchen",
+      "position": {
+        "x": 19000,
+        "y": 3700
+      }
+    },
+    "6777ba24-d731-4a56-b140-22a9fb047204": {
+      "id": "6777ba24-d731-4a56-b140-22a9fb047204",
+      "name": "Office",
+      "position": {
+        "x": 2413,
+        "y": 4000
+      }
+    },
+    "6cc5782f-3983-41fe-8388-6ad2531bc4f7": {
+      "id": "6cc5782f-3983-41fe-8388-6ad2531bc4f7",
+      "name": "Utility",
+      "position": {
+        "x": 5050,
+        "y": 8010
+      }
+    },
+    "73b80b1f-5071-4d85-8950-716cbd706970": {
+      "id": "73b80b1f-5071-4d85-8950-716cbd706970",
+      "name": "Garage",
+      "position": {
+        "x": 6800,
+        "y": 3100
+      }
+    },
+    "7ac13b37-c4b3-400f-90c6-ca172a0ed4a4": {
+      "id": "7ac13b37-c4b3-400f-90c6-ca172a0ed4a4",
+      "name": "Tub/shower",
+      "position": {
+        "x": 21875.025,
+        "y": 12755.85
+      }
+    },
+    "983adad7-8897-4386-8540-6e98ee8da8bb": {
+      "id": "983adad7-8897-4386-8540-6e98ee8da8bb",
+      "name": "Laundry",
+      "position": {
+        "x": 16200,
+        "y": 5180
+      }
+    },
+    "b7f5ab79-3c59-45d5-a74a-7c0772766b94": {
+      "id": "b7f5ab79-3c59-45d5-a74a-7c0772766b94",
+      "name": "Hallway",
+      "position": {
+        "x": 21000,
+        "y": 10220
+      }
+    },
+    "d144252a-7903-48ca-95f1-2d308bc3fe01": {
+      "id": "d144252a-7903-48ca-95f1-2d308bc3fe01",
+      "name": "Dining room",
+      "position": {
+        "x": 22250,
+        "y": 3590
+      }
+    },
+    "f4be00bb-16b0-47c1-b889-6cede1ec9934": {
+      "id": "f4be00bb-16b0-47c1-b889-6cede1ec9934",
+      "name": "Main bedroom",
+      "position": {
+        "x": 17700,
+        "y": 11500
+      }
+    }
+  },
+  "room_measurements": [],
+  "rooms": {},
+  "schema_version": 2,
+  "walls": {
+    "03c0d967-f904-48cc-b581-56eb4b700823": {
+      "end": {
+        "x": 21040,
+        "y": 4694.55
+      },
+      "id": "03c0d967-f904-48cc-b581-56eb4b700823",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Dining opening left",
+      "start": {
+        "x": 20408.8,
+        "y": 4694.55
+      },
+      "thickness": 105.2
+    },
+    "0bc03309-ec63-4353-b251-ff9c49d1eb83": {
+      "end": {
+        "x": 9691.550000000001,
+        "y": 5891.2
+      },
+      "id": "0bc03309-ec63-4353-b251-ff9c49d1eb83",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Garage south",
+      "start": {
+        "x": 3918.7000000000003,
+        "y": 5891.2
+      },
+      "thickness": 105.2
+    },
+    "0c1705fe-1608-42fb-b50f-7788f66258c8": {
+      "end": {
+        "x": 15122.5,
+        "y": 6496.1
+      },
+      "id": "0c1705fe-1608-42fb-b50f-7788f66258c8",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry landing bottom",
+      "start": {
+        "x": 13807.5,
+        "y": 6496.1
+      },
+      "thickness": 13.15
+    },
+    "10170a0b-df5f-47d1-9080-143f6e0c5578": {
+      "end": {
+        "x": 21026.85,
+        "y": 13215.75
+      },
+      "id": "10170a0b-df5f-47d1-9080-143f6e0c5578",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Bathroom dividing wall",
+      "start": {
+        "x": 21026.85,
+        "y": 10730.4
+      },
+      "thickness": 105.2
+    },
+    "1230cb23-6639-4100-9778-7a72e750aa9c": {
+      "end": {
+        "x": 6180.5,
+        "y": 7179.900000000001
+      },
+      "id": "1230cb23-6639-4100-9778-7a72e750aa9c",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Guest bathroom south",
+      "start": {
+        "x": 3918.7000000000003,
+        "y": 7179.900000000001
+      },
+      "thickness": 105.2
+    },
+    "127f11b1-cdfd-4e4d-8510-ac32ff706aa6": {
+      "end": {
+        "x": 25287.45,
+        "y": 9717.85
+      },
+      "id": "127f11b1-cdfd-4e4d-8510-ac32ff706aa6",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Entrance closet west",
+      "start": {
+        "x": 25287.45,
+        "y": 8416
+      },
+      "thickness": 105.2
+    },
+    "183896d6-5d61-4bd2-a620-8d771ae4c6c3": {
+      "end": {
+        "x": 17279.100000000002,
+        "y": 5430.95
+      },
+      "id": "183896d6-5d61-4bd2-a620-8d771ae4c6c3",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Kitchen west",
+      "start": {
+        "x": 17279.100000000002,
+        "y": 2209.2000000000003
+      },
+      "thickness": 157.8
+    },
+    "231ea206-9a1c-442f-9ff1-b29882656d79": {
+      "end": {
+        "x": 16108.75,
+        "y": 13215.75
+      },
+      "id": "231ea206-9a1c-442f-9ff1-b29882656d79",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Main bedroom west",
+      "start": {
+        "x": 16108.75,
+        "y": 9717.85
+      },
+      "thickness": 157.8
+    },
+    "2fb5ffe9-233e-4c78-9373-40de45874090": {
+      "end": {
+        "x": 3918.7000000000003,
+        "y": 5917.5
+      },
+      "id": "2fb5ffe9-233e-4c78-9373-40de45874090",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Garage dividing wall",
+      "start": {
+        "x": 3918.7000000000003,
+        "y": 670.65
+      },
+      "thickness": 105.2
+    },
+    "30d53a14-7d51-478a-9ee7-48627b96f2b1": {
+      "end": {
+        "x": 25471.55,
+        "y": 4089.65
+      },
+      "id": "30d53a14-7d51-478a-9ee7-48627b96f2b1",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps 1",
+      "start": {
+        "x": 24182.850000000002,
+        "y": 4089.65
+      },
+      "thickness": 13.15
+    },
+    "33407ad6-ccf9-441a-850c-218fe8112e4c": {
+      "end": {
+        "x": 26129.05,
+        "y": 13215.75
+      },
+      "id": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Main bedroom south",
+      "start": {
+        "x": 16108.75,
+        "y": 13215.75
+      },
+      "thickness": 157.8
+    },
+    "3a1045bf-ee6c-4c4c-9b53-7398fb585b9c": {
+      "end": {
+        "x": 24103.95,
+        "y": 4694.55
+      },
+      "id": "3a1045bf-ee6c-4c4c-9b53-7398fb585b9c",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Dining opening right",
+      "start": {
+        "x": 23472.75,
+        "y": 4694.55
+      },
+      "thickness": 105.2
+    },
+    "3a3a7598-5322-4ab6-a443-eaf269caac69": {
+      "end": {
+        "x": 6180.5,
+        "y": 8836.800000000001
+      },
+      "id": "3a3a7598-5322-4ab6-a443-eaf269caac69",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "ADU bedroom west",
+      "start": {
+        "x": 6180.5,
+        "y": 5891.2
+      },
+      "thickness": 105.2
+    },
+    "4326aab7-a848-4344-8f6b-bbf4bddcf6fb": {
+      "end": {
+        "x": 15122.5,
+        "y": 4970.7
+      },
+      "id": "4326aab7-a848-4344-8f6b-bbf4bddcf6fb",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry landing outer",
+      "start": {
+        "x": 13807.5,
+        "y": 4970.7
+      },
+      "thickness": 13.15
+    },
+    "4d5e0646-4fdb-4d6d-a558-d208bebd5dd4": {
+      "end": {
+        "x": 25616.2,
+        "y": 4799.75
+      },
+      "id": "4d5e0646-4fdb-4d6d-a558-d208bebd5dd4",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps return",
+      "start": {
+        "x": 25471.55,
+        "y": 4799.75
+      },
+      "thickness": 13.15
+    },
+    "4fc5cc5b-13ca-4b31-9b81-f8056fd8408d": {
+      "end": {
+        "x": 25511,
+        "y": 8337.1
+      },
+      "id": "4fc5cc5b-13ca-4b31-9b81-f8056fd8408d",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Porch outer east",
+      "start": {
+        "x": 25511,
+        "y": 4707.7
+      },
+      "thickness": 13.15
+    },
+    "53e51d28-7254-444d-8206-abe697b57939": {
+      "end": {
+        "x": 3918.7000000000003,
+        "y": 1354.45
+      },
+      "id": "53e51d28-7254-444d-8206-abe697b57939",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Small garage north",
+      "start": {
+        "x": 907.35,
+        "y": 1354.45
+      },
+      "thickness": 157.8
+    },
+    "57466920-cd09-4ba8-ada2-1cce4354061f": {
+      "end": {
+        "x": 17279.100000000002,
+        "y": 3905.55
+      },
+      "id": "57466920-cd09-4ba8-ada2-1cce4354061f",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry north",
+      "start": {
+        "x": 15122.5,
+        "y": 3905.55
+      },
+      "thickness": 157.8
+    },
+    "5878f473-5521-4b92-9658-75df51f17305": {
+      "end": {
+        "x": 15122.5,
+        "y": 6390.900000000001
+      },
+      "id": "5878f473-5521-4b92-9658-75df51f17305",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry step bottom",
+      "start": {
+        "x": 14188.85,
+        "y": 6390.900000000001
+      },
+      "thickness": 13.15
+    },
+    "5ba17380-0894-42c1-942e-547e0cb22819": {
+      "end": {
+        "x": 26129.05,
+        "y": 13215.75
+      },
+      "id": "5ba17380-0894-42c1-942e-547e0cb22819",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Bedroom east exterior",
+      "start": {
+        "x": 26129.05,
+        "y": 8416
+      },
+      "thickness": 157.8
+    },
+    "5c01438a-37a9-4906-b914-fa632a5f108e": {
+      "end": {
+        "x": 15122.5,
+        "y": 5312.6
+      },
+      "id": "5c01438a-37a9-4906-b914-fa632a5f108e",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry step top",
+      "start": {
+        "x": 14188.85,
+        "y": 5312.6
+      },
+      "thickness": 13.15
+    },
+    "60fd50c0-664f-4db1-a7c7-75a56f6fc1b1": {
+      "end": {
+        "x": 13807.5,
+        "y": 6496.1
+      },
+      "id": "60fd50c0-664f-4db1-a7c7-75a56f6fc1b1",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry landing west",
+      "start": {
+        "x": 13807.5,
+        "y": 4970.7
+      },
+      "thickness": 13.15
+    },
+    "625a2c30-d92e-4474-816b-d387a75c9f65": {
+      "end": {
+        "x": 9691.550000000001,
+        "y": 8836.800000000001
+      },
+      "id": "625a2c30-d92e-4474-816b-d387a75c9f65",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Guest wing south",
+      "start": {
+        "x": 3918.7000000000003,
+        "y": 8836.800000000001
+      },
+      "thickness": 157.8
+    },
+    "6b84ccbb-2661-4258-b321-9080027afbe1": {
+      "end": {
+        "x": 9691.550000000001,
+        "y": 670.65
+      },
+      "id": "6b84ccbb-2661-4258-b321-9080027afbe1",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Large garage north",
+      "start": {
+        "x": 3918.7000000000003,
+        "y": 670.65
+      },
+      "thickness": 157.8
+    },
+    "746ae532-71e5-438a-bc40-f8907c28fcae": {
+      "end": {
+        "x": 24103.95,
+        "y": 2209.2000000000003
+      },
+      "id": "746ae532-71e5-438a-bc40-f8907c28fcae",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Main north",
+      "start": {
+        "x": 17279.100000000002,
+        "y": 2209.2000000000003
+      },
+      "thickness": 157.8
+    },
+    "77486976-72cd-4ed7-bffc-3999753a81f7": {
+      "end": {
+        "x": 25471.55,
+        "y": 4392.1
+      },
+      "id": "77486976-72cd-4ed7-bffc-3999753a81f7",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps 2",
+      "start": {
+        "x": 24182.850000000002,
+        "y": 4392.1
+      },
+      "thickness": 13.15
+    },
+    "78f3f022-c230-49ad-a66c-d3b81be79b0e": {
+      "end": {
+        "x": 25511,
+        "y": 8337.1
+      },
+      "id": "78f3f022-c230-49ad-a66c-d3b81be79b0e",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Porch outer south",
+      "start": {
+        "x": 24182.850000000002,
+        "y": 8337.1
+      },
+      "thickness": 13.15
+    },
+    "8071d128-b525-406b-b839-87b24230ca1c": {
+      "end": {
+        "x": 22723.2,
+        "y": 13215.75
+      },
+      "id": "8071d128-b525-406b-b839-87b24230ca1c",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "East bedroom west",
+      "start": {
+        "x": 22723.2,
+        "y": 9717.85
+      },
+      "thickness": 105.2
+    },
+    "80addeaa-577e-4307-90a9-f63d40230866": {
+      "end": {
+        "x": 3918.7000000000003,
+        "y": 8836.800000000001
+      },
+      "id": "80addeaa-577e-4307-90a9-f63d40230866",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Guest wing west",
+      "start": {
+        "x": 3918.7000000000003,
+        "y": 5891.2
+      },
+      "thickness": 157.8
+    },
+    "83bfe4ab-2bdd-4959-9830-d8149722ede6": {
+      "end": {
+        "x": 14188.85,
+        "y": 6390.900000000001
+      },
+      "id": "83bfe4ab-2bdd-4959-9830-d8149722ede6",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry step west",
+      "start": {
+        "x": 14188.85,
+        "y": 5312.6
+      },
+      "thickness": 13.15
+    },
+    "95a31876-8718-4029-aee7-31665058e3d2": {
+      "end": {
+        "x": 19330.5,
+        "y": 13215.75
+      },
+      "id": "95a31876-8718-4029-aee7-31665058e3d2",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "West bedroom east",
+      "start": {
+        "x": 19330.5,
+        "y": 9717.85
+      },
+      "thickness": 105.2
+    },
+    "970ed9db-d98e-400f-8588-d7dbb8c6386f": {
+      "end": {
+        "x": 17331.7,
+        "y": 6430.35
+      },
+      "id": "970ed9db-d98e-400f-8588-d7dbb8c6386f",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry south",
+      "start": {
+        "x": 15122.5,
+        "y": 6430.35
+      },
+      "thickness": 157.8
+    },
+    "9d3f5626-ab84-4765-8db3-b1e78aa937d9": {
+      "end": {
+        "x": 20408.8,
+        "y": 9717.85
+      },
+      "id": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Main center partition",
+      "start": {
+        "x": 20408.8,
+        "y": 2209.2000000000003
+      },
+      "thickness": 105.2
+    },
+    "9d64280f-e2ec-4e62-970c-d7a196e40478": {
+      "end": {
+        "x": 907.35,
+        "y": 6101.6
+      },
+      "id": "9d64280f-e2ec-4e62-970c-d7a196e40478",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Small garage west",
+      "start": {
+        "x": 907.35,
+        "y": 1354.45
+      },
+      "thickness": 157.8
+    },
+    "a85f107b-4e67-4489-a58f-49ac3f31f7c9": {
+      "end": {
+        "x": 20408.8,
+        "y": 6404.05
+      },
+      "id": "a85f107b-4e67-4489-a58f-49ac3f31f7c9",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Kitchen living closet south",
+      "start": {
+        "x": 18344.25,
+        "y": 6404.05
+      },
+      "thickness": 105.2
+    },
+    "b9f1ff36-480e-4f98-ae31-980d272cee44": {
+      "end": {
+        "x": 25616.2,
+        "y": 8337.1
+      },
+      "id": "b9f1ff36-480e-4f98-ae31-980d272cee44",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Porch inner east",
+      "start": {
+        "x": 25616.2,
+        "y": 4799.75
+      },
+      "thickness": 13.15
+    },
+    "bac994e1-0176-404f-86b3-7a45ca7a96c6": {
+      "end": {
+        "x": 26129.05,
+        "y": 8416
+      },
+      "id": "bac994e1-0176-404f-86b3-7a45ca7a96c6",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Entrance north",
+      "start": {
+        "x": 24103.95,
+        "y": 8416
+      },
+      "thickness": 157.8
+    },
+    "bd749d8f-0193-4fc9-a63a-567e6da048d9": {
+      "end": {
+        "x": 26129.05,
+        "y": 9717.85
+      },
+      "id": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Hallway north",
+      "start": {
+        "x": 16108.75,
+        "y": 9717.85
+      },
+      "thickness": 131.5
+    },
+    "c5f562a1-ccdd-40f5-8fdc-0e148e725094": {
+      "end": {
+        "x": 16713.65,
+        "y": 9717.85
+      },
+      "id": "c5f562a1-ccdd-40f5-8fdc-0e148e725094",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "West living exterior",
+      "start": {
+        "x": 16713.65,
+        "y": 6430.35
+      },
+      "thickness": 157.8
+    },
+    "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11": {
+      "end": {
+        "x": 24103.95,
+        "y": 8416
+      },
+      "id": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Main east",
+      "start": {
+        "x": 24103.95,
+        "y": 2209.2000000000003
+      },
+      "thickness": 157.8
+    },
+    "cd7cf004-e392-4289-8325-a75123d44844": {
+      "end": {
+        "x": 25471.55,
+        "y": 4694.55
+      },
+      "id": "cd7cf004-e392-4289-8325-a75123d44844",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps 3",
+      "start": {
+        "x": 24182.850000000002,
+        "y": 4694.55
+      },
+      "thickness": 13.15
+    },
+    "d2aa4c22-8a5f-4f72-96a7-6ed6e1a0bc9d": {
+      "end": {
+        "x": 18344.25,
+        "y": 6404.05
+      },
+      "id": "d2aa4c22-8a5f-4f72-96a7-6ed6e1a0bc9d",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Kitchen living closet west",
+      "start": {
+        "x": 18344.25,
+        "y": 5641.35
+      },
+      "thickness": 105.2
+    },
+    "d6ce4051-080f-47d4-abd1-7c63e57c4384": {
+      "end": {
+        "x": 25471.55,
+        "y": 3800.35
+      },
+      "id": "d6ce4051-080f-47d4-abd1-7c63e57c4384",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps top",
+      "start": {
+        "x": 24182.850000000002,
+        "y": 3800.35
+      },
+      "thickness": 13.15
+    },
+    "d86510d8-aa5d-4f4d-9326-53e7b6a425d0": {
+      "end": {
+        "x": 15122.5,
+        "y": 6430.35
+      },
+      "id": "d86510d8-aa5d-4f4d-9326-53e7b6a425d0",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry west",
+      "start": {
+        "x": 15122.5,
+        "y": 3905.55
+      },
+      "thickness": 157.8
+    },
+    "daa8e24d-2421-4261-a5db-25f763ed86b8": {
+      "end": {
+        "x": 3918.7000000000003,
+        "y": 6101.6
+      },
+      "id": "daa8e24d-2421-4261-a5db-25f763ed86b8",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Small garage south",
+      "start": {
+        "x": 907.35,
+        "y": 6101.6
+      },
+      "thickness": 157.8
+    },
+    "db42f8d2-7bac-4e61-ab4a-89b5a9209859": {
+      "end": {
+        "x": 22723.2,
+        "y": 10730.4
+      },
+      "id": "db42f8d2-7bac-4e61-ab4a-89b5a9209859",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Hallway south",
+      "start": {
+        "x": 19330.5,
+        "y": 10730.4
+      },
+      "thickness": 105.2
+    },
+    "e008f8e1-da4b-49af-8ddf-eceb9b9eebd0": {
+      "end": {
+        "x": 24787.75,
+        "y": 4707.7
+      },
+      "id": "e008f8e1-da4b-49af-8ddf-eceb9b9eebd0",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps rail",
+      "start": {
+        "x": 24787.75,
+        "y": 3800.35
+      },
+      "thickness": 13.15
+    },
+    "ec330efe-86e7-4c41-b664-9ae847be48f2": {
+      "end": {
+        "x": 9691.550000000001,
+        "y": 8836.800000000001
+      },
+      "id": "ec330efe-86e7-4c41-b664-9ae847be48f2",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Large garage east",
+      "start": {
+        "x": 9691.550000000001,
+        "y": 670.65
+      },
+      "thickness": 157.8
+    },
+    "ec817460-b0fc-4e9b-b31b-7a6f859b98a7": {
+      "end": {
+        "x": 20408.8,
+        "y": 5641.35
+      },
+      "id": "ec817460-b0fc-4e9b-b31b-7a6f859b98a7",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Kitchen living closet north",
+      "start": {
+        "x": 18344.25,
+        "y": 5641.35
+      },
+      "thickness": 105.2
+    },
+    "f59c3e90-5761-4814-978d-baebc0243feb": {
+      "end": {
+        "x": 17279.1,
+        "y": 6430.35
+      },
+      "id": "f59c3e90-5761-4814-978d-baebc0243feb",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Laundry east doorway",
+      "start": {
+        "x": 17279.1,
+        "y": 5430.95
+      },
+      "thickness": 157.8
+    },
+    "fa0662ff-c812-4e86-a417-2f49c44ab80c": {
+      "end": {
+        "x": 25471.55,
+        "y": 4799.75
+      },
+      "id": "fa0662ff-c812-4e86-a417-2f49c44ab80c",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "name": "Front steps east",
+      "start": {
+        "x": 25471.55,
+        "y": 3800.35
+      },
+      "thickness": 13.15
+    }
+  },
+  "windows": {
+    "086cec58-d8f2-4e5d-a2fb-b31f3300e9b8": {
+      "id": "086cec58-d8f2-4e5d-a2fb-b31f3300e9b8",
+      "position": 6272.55,
+      "wall": "746ae532-71e5-438a-bc40-f8907c28fcae",
+      "width": 657.5
+    },
+    "12714a0a-742c-4d0f-bdef-848180aff49d": {
+      "id": "12714a0a-742c-4d0f-bdef-848180aff49d",
+      "position": 3635.975,
+      "wall": "746ae532-71e5-438a-bc40-f8907c28fcae",
+      "width": 670.65
+    },
+    "3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4": {
+      "id": "3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4",
+      "position": 1505.675,
+      "wall": "53e51d28-7254-444d-8206-abe697b57939",
+      "width": 775.85
+    },
+    "59d3c0ef-f7be-4886-89f1-6513f27a9a81": {
+      "id": "59d3c0ef-f7be-4886-89f1-6513f27a9a81",
+      "position": 650.9250000000001,
+      "wall": "80addeaa-577e-4307-90a9-f63d40230866",
+      "width": 512.85
+    },
+    "64bda5a3-2ac4-4241-acfd-5753fa12c49a": {
+      "id": "64bda5a3-2ac4-4241-acfd-5753fa12c49a",
+      "position": 749.5500000000001,
+      "wall": "d86510d8-aa5d-4f4d-9326-53e7b6a425d0",
+      "width": 1104.6000000000001
+    },
+    "8944d6ac-2a7a-495b-8e53-f1394cf0c7ac": {
+      "id": "8944d6ac-2a7a-495b-8e53-f1394cf0c7ac",
+      "position": 2505.0750000000003,
+      "wall": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+      "width": 881.0500000000001
+    },
+    "90a8284d-b202-41a7-a59f-ccc40a2822fa": {
+      "id": "90a8284d-b202-41a7-a59f-ccc40a2822fa",
+      "position": 650,
+      "wall": "183896d6-5d61-4bd2-a620-8d771ae4c6c3",
+      "width": 775.85
+    },
+    "95713936-a61e-4b4c-815a-e2a1fb1c524d": {
+      "id": "95713936-a61e-4b4c-815a-e2a1fb1c524d",
+      "position": 1268.9750000000001,
+      "wall": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+      "width": 881.0500000000001
+    },
+    "95b45cc2-b038-4ced-9e3b-8baa13dae2e1": {
+      "id": "95b45cc2-b038-4ced-9e3b-8baa13dae2e1",
+      "position": 900.775,
+      "wall": "daa8e24d-2421-4261-a5db-25f763ed86b8",
+      "width": 775.85
+    },
+    "9b44bb93-1dea-42b1-98cd-26466e14a447": {
+      "id": "9b44bb93-1dea-42b1-98cd-26466e14a447",
+      "position": 565.45,
+      "wall": "746ae532-71e5-438a-bc40-f8907c28fcae",
+      "width": 946.8000000000001
+    },
+    "a97e8375-a032-44f7-aaae-53391169fefb": {
+      "id": "a97e8375-a032-44f7-aaae-53391169fefb",
+      "position": 4069.925,
+      "wall": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+      "width": 631.2
+    },
+    "ae9fea41-2583-4c47-a83f-4b83aa8d5c32": {
+      "id": "ae9fea41-2583-4c47-a83f-4b83aa8d5c32",
+      "position": 2728.625,
+      "wall": "c5f562a1-ccdd-40f5-8fdc-0e148e725094",
+      "width": 775.85
+    },
+    "aff1b521-5dcc-480e-8038-e6056becdabd": {
+      "id": "aff1b521-5dcc-480e-8038-e6056becdabd",
+      "position": 5766.275,
+      "wall": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+      "width": 631.2
+    },
+    "baf7ae37-de75-40d6-a38e-37af2a50ad15": {
+      "id": "baf7ae37-de75-40d6-a38e-37af2a50ad15",
+      "position": 841.6,
+      "wall": "57466920-cd09-4ba8-ada2-1cce4354061f",
+      "width": 1315
+    },
+    "bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a": {
+      "id": "bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a",
+      "position": 5121.925,
+      "wall": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+      "width": 907.35
+    },
+    "d26b3520-ab06-4a4e-8256-440313ab2f5c": {
+      "id": "d26b3520-ab06-4a4e-8256-440313ab2f5c",
+      "position": 644.35,
+      "wall": "c5f562a1-ccdd-40f5-8fdc-0e148e725094",
+      "width": 789
+    },
+    "d90cccdb-1e62-43c5-adfd-503af697c947": {
+      "id": "d90cccdb-1e62-43c5-adfd-503af697c947",
+      "position": 3471.6,
+      "wall": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+      "width": 894.2
+    },
+    "db40b496-1570-493e-89c0-1be6c7ad4178": {
+      "id": "db40b496-1570-493e-89c0-1be6c7ad4178",
+      "position": 1104.6,
+      "wall": "970ed9db-d98e-400f-8588-d7dbb8c6386f",
+      "width": 1104.6
+    },
+    "e9a24776-fc99-451c-8b7c-bfe52a6edb74": {
+      "id": "e9a24776-fc99-451c-8b7c-bfe52a6edb74",
+      "position": 7580.975,
+      "wall": "ec330efe-86e7-4c41-b664-9ae847be48f2",
+      "width": 907.35
+    },
+    "f0e9da68-b0a8-41d3-823f-62bd98ed0593": {
+      "id": "f0e9da68-b0a8-41d3-823f-62bd98ed0593",
+      "position": 5161.375,
+      "wall": "625a2c30-d92e-4474-816b-d387a75c9f65",
+      "width": 881.0500000000001
+    }
+  }
+}

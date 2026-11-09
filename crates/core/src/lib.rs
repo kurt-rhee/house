@@ -33,14 +33,19 @@ pub enum DoorKind {
     Hinged,
     SlidingGlass,
     Garage,
+    Pocket,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Door {
+    /// Hinge at the opening end instead of its start; swing side stays independent.
+    #[serde(default)]
+    pub hinge_at_end: bool,
     pub id: Id,
     pub wall: Id,
     /// Distance from wall start to opening center, in mm.
     pub position: f64,
     pub width: f64,
+    /// For pocket doors: Left pockets toward wall end; Right toward wall start.
     pub swing: Swing,
     #[serde(default)]
     pub kind: DoorKind,
@@ -57,6 +62,10 @@ pub struct Window {
 pub enum FixtureKind {
     Bath,
     Shower,
+    Toilet,
+    Sink,
+    Countertop,
+    Stove,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Fixture {
@@ -254,6 +263,7 @@ pub fn bathroom() -> Document {
         (north, inches(108.0) + t / 2.0),
     ] {
         let door = Door {
+            hinge_at_end: false,
             id: Id::new_v4(),
             wall,
             position,

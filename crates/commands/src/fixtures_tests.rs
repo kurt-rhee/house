@@ -2,7 +2,14 @@ use super::*;
 
 #[test]
 fn bath_and_shower_create_transform_delete_and_exact_history() {
-    for kind in [FixtureKind::Bath, FixtureKind::Shower] {
+    for kind in [
+        FixtureKind::Bath,
+        FixtureKind::Shower,
+        FixtureKind::Toilet,
+        FixtureKind::Sink,
+        FixtureKind::Countertop,
+        FixtureKind::Stove,
+    ] {
         let mut e = Engine::new(Document::default()).unwrap();
         let layer = *e.document().layers.keys().next().unwrap();
         let mut f = Fixture {
@@ -74,6 +81,7 @@ fn windows_and_sliding_doors_follow_host_resize_and_reject_overlap_atomically() 
     };
     e.execute(Command::CreateWindow(window.clone())).unwrap();
     let door = Door {
+        hinge_at_end: false,
         id: Id::new_v4(),
         wall: wall.id,
         position: 2500.0,
@@ -116,4 +124,47 @@ fn windows_and_sliding_doors_follow_host_resize_and_reject_overlap_atomically() 
     window.position = -1.0;
     assert!(e.execute(Command::UpdateWindow(window)).is_err());
     assert_eq!(*e.document(), valid);
+}
+
+#[test]
+fn pocket_door_reserves_leaf_space_and_rejects_overlap_atomically() {
+    let mut e = Engine::new(Document::default()).unwrap();
+    let wall = Wall {
+        id: Id::new_v4(),
+        name: "Pocket host".into(),
+        start: Point::new(0.0, 0.0),
+        end: Point::new(3000.0, 0.0),
+        thickness: 114.3,
+        layer: *e.document().layers.keys().next().unwrap(),
+    };
+    e.execute(Command::CreateWall(wall.clone())).unwrap();
+    let mut door = Door {
+        hinge_at_end: false,
+        id: Id::new_v4(),
+        wall: wall.id,
+        position: 1000.0,
+        width: 762.0,
+        swing: Swing::Left,
+        kind: DoorKind::Pocket,
+    };
+    e.execute(Command::CreateDoor(door.clone())).unwrap();
+    let before = e.document().clone();
+    assert!(
+        e.execute(Command::CreateWindow(Window {
+            id: Id::new_v4(),
+            wall: wall.id,
+            position: 1850.0,
+            width: 300.0
+        }))
+        .is_err()
+    );
+    assert_eq!(e.document(), &before);
+    door.position = 2200.0;
+    assert!(e.execute(Command::UpdateDoor(door.clone())).is_err());
+    assert_eq!(e.document(), &before);
+    door.position = 1000.0;
+    door.swing = Swing::Right;
+    assert!(e.execute(Command::UpdateDoor(door.clone())).is_err());
+    door.position = 1500.0;
+    e.execute(Command::UpdateDoor(door)).unwrap();
 }

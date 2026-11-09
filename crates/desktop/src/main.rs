@@ -183,11 +183,13 @@ impl HouseApp {
                 ui.selectable_value(&mut v.kind, DoorKind::Hinged, "Hinged");
                 ui.selectable_value(&mut v.kind, DoorKind::SlidingGlass, "Sliding glass");
                 ui.selectable_value(&mut v.kind, DoorKind::Garage, "Garage door");
+                ui.selectable_value(&mut v.kind, DoorKind::Pocket, "Pocket door");
             });
             ui.horizontal(|ui| {
                 ui.selectable_value(&mut v.swing, Swing::Left, "Left");
                 ui.selectable_value(&mut v.swing, Swing::Right, "Right");
             });
+            ui.checkbox(&mut v.hinge_at_end, "Hinge at opposite jamb");
             if ui.button("Apply door properties").clicked() {
                 apply = Some(Command::UpdateDoor(v.clone()));
             }
@@ -234,6 +236,7 @@ impl HouseApp {
                 if ui.button("Add centered 28 in door").clicked() {
                     let w = &d.walls[&id];
                     self.edit(Command::CreateDoor(Door {
+                        hinge_at_end: false,
                         id: Id::new_v4(),
                         wall: id,
                         position: length(w) / 2.0,
@@ -254,6 +257,7 @@ impl HouseApp {
                 }
                 if ui.button("Add centered 60 in sliding glass door").clicked() {
                     self.edit(Command::CreateDoor(Door {
+                        hinge_at_end: false,
                         id: Id::new_v4(),
                         wall: id,
                         position: length(w) / 2.0,
