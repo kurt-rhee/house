@@ -68,6 +68,22 @@ undo history.
    Client configuration field names vary; URL, transport, and header are the
    connection contract. No stdio server starts a separate document.
 
+For Codex, add this entry to `~/.codex/config.toml` (substitute the absolute
+path to your checkout):
+
+```toml
+[mcp_servers.house]
+url = "http://127.0.0.1:3847/mcp"
+http_headers_helper = 'python3 "/absolute/path/to/house/scripts/codex-mcp-headers.py"'
+```
+
+The desktop publishes its current connection to
+`~/Library/Application Support/House/mcp.json`, readable only by your account.
+The helper reads that file so there is no token to copy into Codex's configuration.
+The token still rotates on every app launch. Keep `mise dev` running; reload MCP
+servers or restart Codex after adding the entry. This uses Codex's supported
+[HTTP header helper](https://learn.chatgpt.com/docs/extend/mcp#streamable-http-servers).
+
 A small working Rust MCP client is included. To connect and perform the move
 without any external agent or service, copy the token and run:
 

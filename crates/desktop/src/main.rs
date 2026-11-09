@@ -26,7 +26,21 @@ struct HouseApp {
 }
 impl HouseApp {
     fn new(cc: &eframe::CreationContext<'_>) -> Self {
-        Self::with_context(cc.egui_ctx.clone(), 3847)
+        let mut app = Self::with_context(cc.egui_ctx.clone(), 3847);
+        if let Ok(server) = &mut app.server {
+            let result = std::env::var_os("HOME")
+                .ok_or("Home directory is unavailable".to_string())
+                .and_then(|home| {
+                    server.publish_connection(
+                        std::path::PathBuf::from(home)
+                            .join("Library/Application Support/House/mcp.json"),
+                    )
+                });
+            if let Err(error) = result {
+                app.status = format!("Agent connection file failed: {error}");
+            }
+        }
+        app
     }
     fn with_context(ctx: egui::Context, mcp_port: u16) -> Self {
         let handle =

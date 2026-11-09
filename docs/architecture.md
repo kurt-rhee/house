@@ -167,6 +167,21 @@ rmcp's request-body limit; this prototype assumes trusted local agents possessin
 the token. There are no per-tool filesystem restrictions. Do not expose or proxy
 this listener publicly.
 
+The desktop also atomically publishes {url, token} to the local
+~/Library/Application Support/House/mcp.json file. Its newly created directory
+has mode 0700 and the connection file has mode 0600. Headless UI tests do not
+publish this production file. On normal shutdown it is removed only if it still
+contains this server's token, so a terminating old instance cannot remove a
+replacement instance's connection. A stale file after a crash contains no valid
+credential once its server has stopped and is overwritten by the next launch.
+
+Codex's local http_headers_helper runs scripts/codex-mcp-headers.py to discover
+the current token. User configuration contains only the endpoint and helper path.
+No credential or per-user Codex configuration belongs in the repository.
+The helper validates the endpoint and UUID and reports a startup instruction
+when no connection file exists. Native token rotation and loopback-only access
+remain unchanged.
+
 Quitting the application revokes the token immediately, signals shutdown, and cancels active
 sessions on the HTTP thread. The UI does not join that thread or wait for clients.
 Dropping the HTTP runtime also cancels idle connections. The document

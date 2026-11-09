@@ -12,6 +12,7 @@ use serde::Deserialize;
 use serde_json::json;
 use std::sync::Arc;
 use tokio::sync::oneshot;
+mod connection;
 mod document;
 pub use document::{Action, DocumentHandle, Pending, PendingError, Reply};
 #[derive(Clone)]
@@ -258,11 +259,13 @@ pub struct LocalServer {
     pub token: String,
     stop: Option<oneshot::Sender<()>>,
     enabled: Arc<std::sync::atomic::AtomicBool>,
+    connection_file: Option<std::path::PathBuf>,
 }
 impl Drop for LocalServer {
     fn drop(&mut self) {
         self.enabled
             .store(false, std::sync::atomic::Ordering::Release);
+        self.remove_connection_file();
         if let Some(s) = self.stop.take() {
             let _ = s.send(());
         }
@@ -331,5 +334,6 @@ pub fn start_local(handle: DocumentHandle, port: u16) -> Result<LocalServer, Str
         token,
         stop: Some(stop),
         enabled,
+        connection_file: None,
     })
 }
