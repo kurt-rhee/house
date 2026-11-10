@@ -32,6 +32,12 @@ pub struct WallInput {
     pub thickness: f64,
 }
 #[derive(Deserialize, JsonSchema)]
+pub struct WallUpdate {
+    pub id: String,
+    #[serde(flatten)]
+    pub wall: WallInput,
+}
+#[derive(Deserialize, JsonSchema)]
 pub struct MoveInput {
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
@@ -95,6 +101,15 @@ pub struct FixtureUpdate {
     pub id: String,
     #[serde(flatten)]
     pub geometry: FixtureInput,
+}
+#[derive(Deserialize, JsonSchema)]
+pub struct FixtureFinishInput {
+    pub id: String,
+    pub expected_revision: Option<u64>,
+    /// Finish description; omit to preserve, empty string clears it.
+    pub material: Option<String>,
+    /// Fixture style; omit to preserve, empty string clears it.
+    pub style: Option<String>,
 }
 #[derive(Deserialize, JsonSchema)]
 pub struct IdInput {
@@ -164,6 +179,8 @@ impl CadServer {
         let layer = *self.handle.snapshot().layers.keys().next().unwrap();
         self.edit(
             Command::CreateFixture(Fixture {
+                material: None,
+                style: None,
                 id,
                 kind,
                 origin: Point::new(p.x, p.y),
@@ -222,6 +239,20 @@ impl CadServer {
                 v["id"] = json!(id);
                 v
             });
+        result(r)
+    }
+    #[tool(description = "Update wall endpoints, name and thickness, preserving ID and layer. Attached opening stations scale with wall length; reposition openings afterward when preserving world positions. Millimeters.")]
+    async fn update_wall(&self, Parameters(p): Parameters<WallUpdate>) -> CallToolResult {
+        let r = match parse_id(&p.id).ok().and_then(|id| self.handle.snapshot().walls.get(&id).cloned()) {
+            Some(mut w) => {
+                w.name = p.wall.name;
+                w.start = Point::new(p.wall.x1, p.wall.y1);
+                w.end = Point::new(p.wall.x2, p.wall.y2);
+                w.thickness = p.wall.thickness;
+                self.edit(Command::UpdateWall(w), p.wall.expected_revision).await
+            }
+            None => Err("Wall not found".into()),
+        };
         result(r)
     }
     #[tool(
@@ -450,6 +481,83 @@ impl CadServer {
         Parameters(p): Parameters<FixtureInput>,
     ) -> CallToolResult {
         result(self.create_fixture(p, FixtureKind::ApplianceGarage).await)
+    }
+
+    #[tool(
+        description = "Place a single dishwasher drawer footprint. Local top is the back; drawer opens toward local bottom. Millimeters and clockwise rotation."
+    )]
+    async fn create_dishwasher_drawer(
+        &self,
+        Parameters(p): Parameters<FixtureInput>,
+    ) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::DishwasherDrawer).await)
+    }
+    #[tool(
+        description = "Place an all-in-one front-loading washer-dryer footprint. Local top is the back. Millimeters and clockwise rotation."
+    )]
+    async fn create_washer_dryer(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::WasherDryer).await)
+    }
+    #[tool(
+        description = "Place a cabinet containing separate pull-out trash and recycling bins. Local top is the back. Millimeters and clockwise rotation."
+    )]
+    async fn create_waste_cabinet(
+        &self,
+        Parameters(p): Parameters<FixtureInput>,
+    ) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::WasteCabinet).await)
+    }
+
+    #[tool(
+        description = "Place a bed footprint with headboard at local top. Millimeters and clockwise rotation. Standard king is 1930.4 wide by 2032 deep."
+    )]
+    async fn create_bed(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Bed).await)
+    }
+
+    #[tool(
+        description = "Place an overhead hanging wardrobe footprint with a schematic pull-down rail. Dashed plan outline; mounting height and mechanism travel require separate elevation verification. Local top is the back. Millimeters and clockwise rotation."
+    )]
+    async fn create_overhead_wardrobe(
+        &self,
+        Parameters(p): Parameters<FixtureInput>,
+    ) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::OverheadWardrobe).await)
+    }
+
+    #[tool(description = "Place a floor-standing wardrobe with bypass fronts and fixed hanging rail. Local top is the back. Millimeters and clockwise rotation.")]
+    async fn create_wardrobe(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Wardrobe).await)
+    }
+    #[tool(description = "Place quarter-round open shelves, attached at the local left edge with back at local top. Equal width and depth give a quarter circle. Millimeters and clockwise rotation.")]
+    async fn create_quarter_round_shelves(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::QuarterRoundShelves).await)
+    }
+
+    #[tool(
+        description = "Assign material and style to an existing fixture, preserving geometry and ID. Saved in the house document and included in SVG/DXF export metadata. Omitted fields are preserved; empty strings clear them."
+    )]
+    async fn set_fixture_finish(
+        &self,
+        Parameters(p): Parameters<FixtureFinishInput>,
+    ) -> CallToolResult {
+        let r = match parse_id(&p.id)
+            .ok()
+            .and_then(|id| self.handle.snapshot().fixtures.get(&id).cloned())
+        {
+            Some(mut f) => {
+                if let Some(v) = p.material {
+                    f.material = if v.trim().is_empty() { None } else { Some(v) };
+                }
+                if let Some(v) = p.style {
+                    f.style = if v.trim().is_empty() { None } else { Some(v) };
+                }
+                self.edit(Command::UpdateFixture(f), p.expected_revision)
+                    .await
+            }
+            None => Err("Fixture not found".into()),
+        };
+        result(r)
     }
 
     #[tool(

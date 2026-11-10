@@ -70,9 +70,23 @@ pub enum FixtureKind {
     Stove,
     Refrigerator,
     ApplianceGarage,
+    DishwasherDrawer,
+    WasherDryer,
+    WasteCabinet,
+    Bed,
+    /// Overhead hanging cabinet footprint; mounting height is not specified by plan geometry.
+    OverheadWardrobe,
+    /// Floor-standing wardrobe, with its back at local top.
+    Wardrobe,
+    /// Open shelving with a quarter-ellipse footprint, attached at its local left edge.
+    QuarterRoundShelves,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Fixture {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub material: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub style: Option<String>,
     pub id: Id,
     pub kind: FixtureKind,
     pub origin: Point,

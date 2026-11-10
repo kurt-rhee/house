@@ -156,6 +156,31 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
             dimension.id,
         );
     }
+    for entity in output.drawing.entities_mut() {
+        for data in entity
+            .common
+            .x_data
+            .iter_mut()
+            .filter(|d| d.application_name == "HOUSE")
+        {
+            let fixture = data
+                .items
+                .first()
+                .and_then(|v| match v {
+                    XDataItem::Str(id) => Id::parse_str(id).ok(),
+                    _ => None,
+                })
+                .and_then(|id| document.fixtures.get(&id));
+            if let Some(f) = fixture {
+                if let Some(v) = &f.material {
+                    data.items.push(XDataItem::Str(format!("material:{v}")));
+                }
+                if let Some(v) = &f.style {
+                    data.items.push(XDataItem::Str(format!("style:{v}")));
+                }
+            }
+        }
+    }
     output.drawing.header.minimum_drawing_extents = output.min;
     output.drawing.header.maximum_drawing_extents = output.max;
     let mut bytes = Vec::new();

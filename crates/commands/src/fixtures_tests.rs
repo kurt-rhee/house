@@ -11,10 +11,19 @@ fn bath_and_shower_create_transform_delete_and_exact_history() {
         FixtureKind::Stove,
         FixtureKind::Refrigerator,
         FixtureKind::ApplianceGarage,
+        FixtureKind::Bed,
+        FixtureKind::OverheadWardrobe,
+        FixtureKind::Wardrobe,
+        FixtureKind::QuarterRoundShelves,
+        FixtureKind::DishwasherDrawer,
+        FixtureKind::WasherDryer,
+        FixtureKind::WasteCabinet,
     ] {
         let mut e = Engine::new(Document::default()).unwrap();
         let layer = *e.document().layers.keys().next().unwrap();
         let mut f = Fixture {
+            material: None,
+            style: None,
             id: Id::new_v4(),
             kind,
             origin: Point::new(25.4, 50.8),

@@ -177,6 +177,16 @@ pub fn svg(d: &Document) -> Result<String, String> {
             symbol.id
         )
         .unwrap();
+        if let Some(f) = d.fixtures.get(&symbol.id) {
+            writeln!(
+                s,
+                "<title>{:?} · {} · {}</title>",
+                f.kind,
+                escape(f.material.as_deref().unwrap_or("")),
+                escape(f.style.as_deref().unwrap_or(""))
+            )
+            .unwrap();
+        }
         for (a, b) in symbol.lines {
             writeln!(s, "<path d=\"M {} {} L {} {}\"/>", a.x, a.y, b.x, b.y).unwrap();
         }
@@ -294,6 +304,8 @@ mod fixture_tests {
         let mut d = Document::default();
         let layer = *d.layers.keys().next().unwrap();
         let f = Fixture {
+            material: None,
+            style: None,
             id: Id::new_v4(),
             kind: FixtureKind::Bath,
             origin: Point::new(-5000.0, 200.0),

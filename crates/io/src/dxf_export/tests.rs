@@ -363,6 +363,8 @@ fn new_symbols_export_exact_rotated_coordinates_without_sliding_arcs() {
         house_core::FixtureKind::Shower,
     ] {
         let f = house_core::Fixture {
+            material: None,
+            style: None,
             id: Id::new_v4(),
             kind,
             origin: Point::new(-1000.0, 500.0),

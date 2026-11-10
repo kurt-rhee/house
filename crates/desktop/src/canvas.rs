@@ -183,9 +183,18 @@ impl HouseApp {
                         FixtureKind::Stove => (inches(30.0), inches(25.0)),
                         FixtureKind::Refrigerator => (inches(36.0), inches(32.0)),
                         FixtureKind::ApplianceGarage => (inches(18.0), inches(25.0)),
+                        FixtureKind::DishwasherDrawer => (inches(24.0), inches(25.0)),
+                        FixtureKind::WasherDryer => (inches(27.0), inches(34.0)),
+                        FixtureKind::WasteCabinet => (inches(24.0), inches(25.0)),
+                        FixtureKind::Bed => (inches(76.0), inches(80.0)),
+                        FixtureKind::OverheadWardrobe => (inches(38.0), inches(24.0)),
+                        FixtureKind::Wardrobe => (inches(66.0), inches(24.0)),
+                        FixtureKind::QuarterRoundShelves => (inches(24.0), inches(24.0)),
                     };
                     let id = Id::new_v4();
                     self.edit(Command::CreateFixture(Fixture {
+                        material: None,
+                        style: None,
                         id,
                         kind,
                         origin: Self::snap(world),

@@ -52,7 +52,7 @@ async fn bathroom_over_real_http() {
         );
         let client = ().serve(transport).await.unwrap();
         let tools = client.list_all_tools().await.unwrap();
-        assert_eq!(tools.len(), 27);
+        assert_eq!(tools.len(), 36);
         let before = value(call!(client, "get_document", json!({})));
         assert_eq!(before["revision"], 0);
         value(call!(client, "list_objects", json!({})));
@@ -453,6 +453,10 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         value(call!(client,"update_window",json!({"id":window,"wall_id":wall,"position":1100.0,"width":900.0})));
         value(call!(client,"update_door",json!({"id":door,"wall_id":wall,"position":3400.0,"width":1500.0,"swing":"left"})));
         assert_eq!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].kind,DoorKind::SlidingGlass);
+        value(call!(client,"update_wall",json!({"id":wall,"name":"Resized glazing","x1":0.0,"y1":0.0,"x2":5500.0,"y2":0.0,"thickness":100.0})));
+        assert_eq!(handle.snapshot().walls[&Id::parse_str(&wall).unwrap()].end.x,5500.0);
+        assert!((handle.snapshot().windows[&Id::parse_str(&window).unwrap()].position-1210.0).abs()<0.001);
+        value(call!(client,"undo",json!({})));
         let before_move=handle.snapshot();
         value(call!(client,"move_wall",json!({"id":wall,"dx":152.4,"dy":25.4})));
         assert_eq!(handle.snapshot().windows,before_move.windows);
@@ -470,10 +474,20 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         assert_eq!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].kind,DoorKind::Pocket);
         value(call!(client,"update_door",json!({"id":door,"wall_id":wall,"position":2500.0,"width":1200.0,"swing":"left","kind":"french_glass"})));
         assert_eq!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].kind,DoorKind::FrenchGlass);
+        let bed=value(call!(client,"create_bed",json!({"x":5000.0,"y":6000.0,"width":1930.4,"depth":2032.0,"rotation":180.0})))["id"].as_str().unwrap().to_owned();
+        assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&bed).unwrap()].kind,house_core::FixtureKind::Bed);
         let sink=value(call!(client,"create_sink",json!({"x":1000.0,"y":3000.0,"width":609.6,"depth":457.2,"rotation":270.0})))["id"].as_str().unwrap().to_owned();
         let toilet=value(call!(client,"create_toilet",json!({"x":2000.0,"y":3000.0,"width":381.0,"depth":711.2,"rotation":90.0})))["id"].as_str().unwrap().to_owned();
         assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&sink).unwrap()].kind,house_core::FixtureKind::Sink);
         assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&toilet).unwrap()].kind,house_core::FixtureKind::Toilet);
+        let mut appliances = Vec::new();
+        for (name, kind) in [("create_dishwasher_drawer", FixtureKind::DishwasherDrawer), ("create_washer_dryer", FixtureKind::WasherDryer), ("create_waste_cabinet", FixtureKind::WasteCabinet), ("create_wardrobe", FixtureKind::Wardrobe), ("create_quarter_round_shelves", FixtureKind::QuarterRoundShelves)] {
+            let id=value(call!(client,name,json!({"x":7000.0,"y":8000.0,"width":609.6,"depth":635.0,"rotation":0.0})))["id"].as_str().unwrap().to_owned();
+            assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&id).unwrap()].kind,kind);
+            appliances.push(id);
+        }
+        value(call!(client,"set_fixture_finish",json!({"id":sink,"material":"White fireclay","style":"farmhouse_apron_front"})));
+        assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&sink).unwrap()].material.as_deref(),Some("White fireclay"));
         let dir=std::env::temp_dir().join(format!("house-fixtures-{}",Id::new_v4()));
         std::fs::create_dir(&dir).unwrap();
         value(call!(client,"save_project",json!({"path":dir.join("plan.json")})));
@@ -481,16 +495,17 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         value(call!(client,"export_dxf",json!({"path":dir.join("plan.dxf")})));
         assert_eq!(house_io::load(&dir.join("plan.json")).unwrap(),*handle.snapshot());
         let svg=std::fs::read_to_string(dir.join("plan.svg")).unwrap();
-        for id in [&bath,&shower,&sink,&toilet,&window,&door] {assert!(svg.contains(id));}
+        assert!(svg.contains("White fireclay"));
+        for id in [&bath,&shower,&sink,&toilet,&bed,&window,&door].into_iter().chain(appliances.iter()) {assert!(svg.contains(id));}
         let drawing=dxf::Drawing::load_file(dir.join("plan.dxf")).unwrap();
-        for id in [&bath,&shower,&sink,&toilet,&window,&door] {
+        for id in [&bath,&shower,&sink,&toilet,&bed,&window,&door].into_iter().chain(appliances.iter()) {
             assert!(drawing.entities().any(|e| e.common.x_data.iter().any(|data|
                 data.items.contains(&dxf::XDataItem::Str(id.to_string())))));
         }
         value(call!(client,"delete_object",json!({"id":shower})));
-        assert_eq!(handle.snapshot().fixtures.len(),3);
+        assert_eq!(handle.snapshot().fixtures.len(),9);
         value(call!(client,"undo",json!({})));
-        assert_eq!(handle.snapshot().fixtures.len(),4);
+        assert_eq!(handle.snapshot().fixtures.len(),10);
         std::fs::remove_dir_all(dir).unwrap();
         client.cancel().await.unwrap();
     }).await.expect("Fixture HTTP workflow timed out");

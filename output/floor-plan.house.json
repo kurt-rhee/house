@@ -48,11 +48,11 @@
       "id": "10170a0b-df5f-47d1-9080-143f6e0c5578",
       "name": "Bathroom dividing wall",
       "start": {
-        "x": 21026.85,
+        "x": 21179.25,
         "y": 10730.4
       },
       "end": {
-        "x": 21026.85,
+        "x": 21179.25,
         "y": 13215.75
       },
       "thickness": 105.2,
@@ -354,10 +354,10 @@
     },
     "743fa984-048d-48a9-923a-a99198a7c60e": {
       "id": "743fa984-048d-48a9-923a-a99198a7c60e",
-      "name": "Laundry French doorway",
+      "name": "Laundry pocket-door partition",
       "start": {
         "x": 17279.1,
-        "y": 4953.75
+        "y": 4300.0
       },
       "end": {
         "x": 17279.1,
@@ -529,7 +529,7 @@
       },
       "end": {
         "x": 17279.1,
-        "y": 4953.75
+        "y": 4300.0
       },
       "thickness": 157.8,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
@@ -802,7 +802,7 @@
       "position": 1084.875,
       "width": 1065.15,
       "swing": "Left",
-      "kind": "SlidingGlass"
+      "kind": "Pocket"
     },
     "8c5607bb-19e7-46e0-8b67-e9f3e7f843d9": {
       "hinge_at_end": false,
@@ -817,10 +817,10 @@
       "hinge_at_end": false,
       "id": "9150da68-b336-4060-bdae-30eb0d80deca",
       "wall": "743fa984-048d-48a9-923a-a99198a7c60e",
-      "position": 698.85,
-      "width": 1397.7,
-      "swing": "Left",
-      "kind": "FrenchGlass"
+      "position": 1594.25,
+      "width": 914.4,
+      "swing": "Right",
+      "kind": "Pocket"
     },
     "93d61222-5d11-46bc-9da0-63eeb7354896": {
       "hinge_at_end": false,
@@ -895,7 +895,7 @@
       "kind": "Garage"
     },
     "ea47a63a-2d6e-42df-a4fd-5672d8c2b2fc": {
-      "hinge_at_end": false,
+      "hinge_at_end": true,
       "id": "ea47a63a-2d6e-42df-a4fd-5672d8c2b2fc",
       "wall": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
       "position": 3793.775,
@@ -944,12 +944,6 @@
       "position": 749.5500000000001,
       "width": 1104.6000000000001
     },
-    "8944d6ac-2a7a-495b-8e53-f1394cf0c7ac": {
-      "id": "8944d6ac-2a7a-495b-8e53-f1394cf0c7ac",
-      "wall": "33407ad6-ccf9-441a-850c-218fe8112e4c",
-      "position": 2505.0750000000003,
-      "width": 881.0500000000001
-    },
     "90a8284d-b202-41a7-a59f-ccc40a2822fa": {
       "id": "90a8284d-b202-41a7-a59f-ccc40a2822fa",
       "wall": "ad218721-76be-4635-81dc-048de2d8bdae",
@@ -971,8 +965,8 @@
     "9b44bb93-1dea-42b1-98cd-26466e14a447": {
       "id": "9b44bb93-1dea-42b1-98cd-26466e14a447",
       "wall": "746ae532-71e5-438a-bc40-f8907c28fcae",
-      "position": 565.45,
-      "width": 946.8000000000001
+      "position": 1895.5,
+      "width": 1828.8
     },
     "a97e8375-a032-44f7-aaae-53391169fefb": {
       "id": "a97e8375-a032-44f7-aaae-53391169fefb",
@@ -1037,14 +1031,29 @@
   },
   "fixtures": {
     "0a136254-797b-44fe-b369-8f6e98f33bc0": {
+      "material": "Natural oak cabinet with honed charcoal soapstone worktop",
+      "style": "left_facing_tambour_appliance_garage_aligned_with_refrigerator_height_2260mm",
       "id": "0a136254-797b-44fe-b369-8f6e98f33bc0",
       "kind": "ApplianceGarage",
       "origin": {
         "x": 19390.6,
-        "y": 5588.75
+        "y": 4775.95
       },
-      "width": 457.2,
-      "depth": 635.0,
+      "width": 812.8,
+      "depth": 457.2,
+      "rotation": 90.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "1b621dde-f0da-44d7-90a1-3a31bb2ed549": {
+      "style": "floor_mattress_no_headboard",
+      "id": "1b621dde-f0da-44d7-90a1-3a31bb2ed549",
+      "kind": "Bed",
+      "origin": {
+        "x": 18697.975,
+        "y": 13136.85
+      },
+      "width": 1930.4,
+      "depth": 2032.0,
       "rotation": 180.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
@@ -1060,7 +1069,37 @@
       "rotation": 180.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
+    "38ef2eef-84c6-449f-8e20-a1cd630d0cb6": {
+      "material": "Warm white enamel",
+      "style": "all_in_one_front_loading",
+      "id": "38ef2eef-84c6-449f-8e20-a1cd630d0cb6",
+      "kind": "WasherDryer",
+      "origin": {
+        "x": 15239.5,
+        "y": 4035.25
+      },
+      "width": 685.8,
+      "depth": 841.375,
+      "rotation": 0.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "48ec0675-2eeb-408b-8963-b812d1d37be3": {
+      "material": "Natural oak cabinet with pale worktop",
+      "style": "separate_trash_and_recycling_pullouts",
+      "id": "48ec0675-2eeb-408b-8963-b812d1d37be3",
+      "kind": "WasteCabinet",
+      "origin": {
+        "x": 15963.4,
+        "y": 3984.45
+      },
+      "width": 609.6,
+      "depth": 889.0,
+      "rotation": 0.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
     "4be42708-ac78-437e-8895-9042270f0235": {
+      "material": "White fireclay",
+      "style": "farmhouse_apron_front",
       "id": "4be42708-ac78-437e-8895-9042270f0235",
       "kind": "Sink",
       "origin": {
@@ -1068,27 +1107,67 @@
         "y": 2313.5
       },
       "width": 838.2,
-      "depth": 584.2,
+      "depth": 635.0,
       "rotation": 0.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
-    "88a2f140-ab56-42f4-a001-ad68688f8038": {
-      "id": "88a2f140-ab56-42f4-a001-ad68688f8038",
-      "kind": "Bath",
+    "6291f99a-befa-434b-8d36-146037153183": {
+      "id": "6291f99a-befa-434b-8d36-146037153183",
+      "kind": "Bed",
       "origin": {
-        "x": 22637.025,
-        "y": 13136.85
+        "x": 20356.2,
+        "y": 7292.375
       },
       "width": 1524.0,
-      "depth": 762.0,
+      "depth": 2032.0,
+      "rotation": 90.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "6a7fcd08-0a59-4502-a677-383252e0ad4b": {
+      "material": "Warm ivory lacquer and natural oak",
+      "style": "floor_standing_bypass_wardrobe_height_2286mm",
+      "id": "6a7fcd08-0a59-4502-a677-383252e0ad4b",
+      "kind": "Wardrobe",
+      "origin": {
+        "x": 16213.05,
+        "y": 9783.6
+      },
+      "width": 1676.4,
+      "depth": 609.6,
+      "rotation": 0.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "7e83e0f0-ad12-4183-bccd-2784ebcb85f2": {
+      "id": "7e83e0f0-ad12-4183-bccd-2784ebcb85f2",
+      "kind": "Bed",
+      "origin": {
+        "x": 25378.175,
+        "y": 13136.85
+      },
+      "width": 1930.4,
+      "depth": 2032.0,
       "rotation": 180.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "9795d0d2-7db7-411f-91b8-ecbebec3fb30": {
+      "material": "Natural oak cabinet front",
+      "style": "panel_ready_single_drawer",
+      "id": "9795d0d2-7db7-411f-91b8-ecbebec3fb30",
+      "kind": "DishwasherDrawer",
+      "origin": {
+        "x": 18145.9,
+        "y": 2288.1
+      },
+      "width": 609.6,
+      "depth": 635.0,
+      "rotation": 0.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "99d32ea4-059c-446d-88e9-0b9d8f0ce016": {
       "id": "99d32ea4-059c-446d-88e9-0b9d8f0ce016",
       "kind": "Bath",
       "origin": {
-        "x": 19416.675,
+        "x": 19492.875,
         "y": 12374.85
       },
       "width": 1524.0,
@@ -1100,7 +1179,7 @@
       "id": "9addeb36-1b09-4c3e-babc-e569bc6d8599",
       "kind": "Sink",
       "origin": {
-        "x": 21079.45,
+        "x": 21231.850000000002,
         "y": 11468.8
       },
       "width": 609.6,
@@ -1112,8 +1191,8 @@
       "id": "a110bdae-e37e-4c6c-b1c8-8e537a664fae",
       "kind": "Toilet",
       "origin": {
-        "x": 21079.45,
-        "y": 12112.325
+        "x": 21231.850000000002,
+        "y": 12082.75
       },
       "width": 381.0,
       "depth": 711.2,
@@ -1121,6 +1200,7 @@
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "c08078d4-006c-4eba-8032-0bf18c432cec": {
+      "material": "Honed charcoal soapstone with pale veining",
       "id": "c08078d4-006c-4eba-8032-0bf18c432cec",
       "kind": "Countertop",
       "origin": {
@@ -1133,6 +1213,7 @@
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "c0c93320-283f-4d94-bc6e-b11ec56a989a": {
+      "material": "Honed charcoal soapstone with pale veining",
       "id": "c0c93320-283f-4d94-bc6e-b11ec56a989a",
       "kind": "Countertop",
       "origin": {
@@ -1148,19 +1229,45 @@
       "id": "c40f5550-c32f-446b-8617-900a1695731a",
       "kind": "Toilet",
       "origin": {
-        "x": 20974.25,
-        "y": 11731.325
+        "x": 21126.65,
+        "y": 11701.75
       },
       "width": 381.0,
       "depth": 711.2,
       "rotation": 90.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
+    "df91bdf7-f8bd-4318-b7f3-980f7103444d": {
+      "id": "df91bdf7-f8bd-4318-b7f3-980f7103444d",
+      "kind": "Shower",
+      "origin": {
+        "x": 21231.85,
+        "y": 12273.25
+      },
+      "width": 1438.75,
+      "depth": 863.6,
+      "rotation": 0.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "e291dd5c-2063-4410-bae0-dbe79733ffe6": {
+      "material": "Natural oak full-height pantry",
+      "style": "floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors",
+      "id": "e291dd5c-2063-4410-bae0-dbe79733ffe6",
+      "kind": "ApplianceGarage",
+      "origin": {
+        "x": 16649.2,
+        "y": 3984.45
+      },
+      "width": 533.4,
+      "depth": 457.2,
+      "rotation": 0.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
     "e332d192-50d9-4bec-adaf-f254b1ee4c52": {
       "id": "e332d192-50d9-4bec-adaf-f254b1ee4c52",
       "kind": "Sink",
       "origin": {
-        "x": 20974.25,
+        "x": 21126.65,
         "y": 10859.2
       },
       "width": 609.6,
@@ -1179,6 +1286,20 @@
       "depth": 635.0,
       "rotation": 270.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "fcdf6c81-87d2-4953-b726-0e756a8cfa00": {
+      "material": "Warm ivory lacquer and natural oak",
+      "style": "attached_quarter_round_open_shelves_height_2286mm_6_levels",
+      "id": "fcdf6c81-87d2-4953-b726-0e756a8cfa00",
+      "kind": "QuarterRoundShelves",
+      "origin": {
+        "x": 17889.45,
+        "y": 9783.6
+      },
+      "width": 609.6,
+      "depth": 609.6,
+      "rotation": 0.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     }
   },
   "rooms": {},
@@ -1191,28 +1312,12 @@
         "y": 7520.0
       }
     },
-    "0fe1ece0-897e-41be-8365-8c1ba272acea": {
-      "id": "0fe1ece0-897e-41be-8365-8c1ba272acea",
-      "name": "Bedroom 3",
+    "1582df18-6fbd-44a4-b70d-eea821c05bf0": {
+      "id": "1582df18-6fbd-44a4-b70d-eea821c05bf0",
+      "name": "Main bedroom",
       "position": {
-        "x": 18600.0,
-        "y": 8200.0
-      }
-    },
-    "163d8584-e814-479a-8414-27b308fdc13c": {
-      "id": "163d8584-e814-479a-8414-27b308fdc13c",
-      "name": "Bathroom 1",
-      "position": {
-        "x": 20178.675,
-        "y": 11570.0
-      }
-    },
-    "1b0ccd2a-90b6-4344-8c5c-677d79532aae": {
-      "id": "1b0ccd2a-90b6-4344-8c5c-677d79532aae",
-      "name": "Guest bedroom",
-      "position": {
-        "x": 24400.0,
-        "y": 11500.0
+        "x": 17732.775,
+        "y": 10700.0
       }
     },
     "284fef06-ac49-4657-a78d-47a81f28d2c0": {
@@ -1223,12 +1328,12 @@
         "y": 6600.0
       }
     },
-    "29e5339c-5cd3-4bb5-8e81-54648b5d0d96": {
-      "id": "29e5339c-5cd3-4bb5-8e81-54648b5d0d96",
-      "name": "Bathroom 2",
+    "333d1df1-45c6-4e09-8bdb-af342e48d1e2": {
+      "id": "333d1df1-45c6-4e09-8bdb-af342e48d1e2",
+      "name": "Tub/shower",
       "position": {
-        "x": 21875.025,
-        "y": 11570.0
+        "x": 20254.875,
+        "y": 12755.85
       }
     },
     "48777fc9-30b0-4498-b836-493dc3ff4844": {
@@ -1237,14 +1342,6 @@
       "position": {
         "x": 5050.0,
         "y": 6540.0
-      }
-    },
-    "4f4afa40-92c1-417b-898b-3f3cded7db58": {
-      "id": "4f4afa40-92c1-417b-898b-3f3cded7db58",
-      "name": "Tub/shower",
-      "position": {
-        "x": 20178.675,
-        "y": 12755.85
       }
     },
     "51ce176b-e335-4ef0-8b98-3320a6fe1f22": {
@@ -1287,12 +1384,20 @@
         "y": 3100.0
       }
     },
-    "7ac13b37-c4b3-400f-90c6-ca172a0ed4a4": {
-      "id": "7ac13b37-c4b3-400f-90c6-ca172a0ed4a4",
-      "name": "Tub/shower",
+    "8bce27dc-6e4a-4eec-95ad-b64d80a697f9": {
+      "id": "8bce27dc-6e4a-4eec-95ad-b64d80a697f9",
+      "name": "Bathroom 2",
       "position": {
-        "x": 21875.025,
-        "y": 12755.85
+        "x": 21951.225,
+        "y": 11570.0
+      }
+    },
+    "92a0e0a0-822c-4871-94b8-7988865e34da": {
+      "id": "92a0e0a0-822c-4871-94b8-7988865e34da",
+      "name": "Bathroom 1",
+      "position": {
+        "x": 20254.875,
+        "y": 11570.0
       }
     },
     "983adad7-8897-4386-8540-6e98ee8da8bb": {
@@ -1311,6 +1416,22 @@
         "y": 10220.0
       }
     },
+    "bc2d57e0-5e82-45c0-9992-b78ad27fa2a8": {
+      "id": "bc2d57e0-5e82-45c0-9992-b78ad27fa2a8",
+      "name": "Guest bedroom",
+      "position": {
+        "x": 24412.975,
+        "y": 10450.0
+      }
+    },
+    "c2f308a6-9e93-477b-8b3e-cbf8e6485169": {
+      "id": "c2f308a6-9e93-477b-8b3e-cbf8e6485169",
+      "name": "Shower",
+      "position": {
+        "x": 21951.225,
+        "y": 12705.05
+      }
+    },
     "d144252a-7903-48ca-95f1-2d308bc3fe01": {
       "id": "d144252a-7903-48ca-95f1-2d308bc3fe01",
       "name": "Dining room",
@@ -1327,12 +1448,12 @@
         "y": 5210.0
       }
     },
-    "f4be00bb-16b0-47c1-b889-6cede1ec9934": {
-      "id": "f4be00bb-16b0-47c1-b889-6cede1ec9934",
-      "name": "Main bedroom",
+    "fa73b556-4a54-415b-a32d-82e631cea826": {
+      "id": "fa73b556-4a54-415b-a32d-82e631cea826",
+      "name": "Bedroom 3",
       "position": {
-        "x": 17700.0,
-        "y": 11500.0
+        "x": 17550.0,
+        "y": 7990.0
       }
     }
   },

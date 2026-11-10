@@ -4,6 +4,12 @@ impl HouseApp {
     pub(super) fn fixture_properties(&mut self, ui: &mut egui::Ui, apply: &mut Option<Command>) {
         if let Some(f) = &mut self.draft_fixture {
             ui.label(format!("{:?} {}", f.kind, f.id));
+            if let Some(v) = &f.material {
+                ui.label(format!("Material: {v}"));
+            }
+            if let Some(v) = &f.style {
+                ui.label(format!("Style: {v}"));
+            }
             for (label, value) in [
                 ("X", &mut f.origin.x),
                 ("Y", &mut f.origin.y),
