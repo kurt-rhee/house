@@ -327,6 +327,16 @@ mod fixture_tests {
 mod room_label_tests {
     use super::*;
     #[test]
+    fn french_glass_doors_round_trip_and_export_shared_symbols() {
+        let mut d = house_core::bathroom();
+        for door in d.doors.values_mut() {
+            door.kind = DoorKind::FrenchGlass;
+        }
+        assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
+        assert!(svg(&d).is_ok());
+        assert!(dxf_export::dxf_bytes(&d).is_ok());
+    }
+    #[test]
     fn garage_door_round_trips_and_exports_as_solid_panels() {
         let mut d = house_core::bathroom();
         let id = *d.doors.keys().next().unwrap();

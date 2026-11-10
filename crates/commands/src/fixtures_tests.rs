@@ -9,6 +9,8 @@ fn bath_and_shower_create_transform_delete_and_exact_history() {
         FixtureKind::Sink,
         FixtureKind::Countertop,
         FixtureKind::Stove,
+        FixtureKind::Refrigerator,
+        FixtureKind::ApplianceGarage,
     ] {
         let mut e = Engine::new(Document::default()).unwrap();
         let layer = *e.document().layers.keys().next().unwrap();

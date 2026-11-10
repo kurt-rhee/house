@@ -54,7 +54,7 @@ pub struct DoorInput {
 pub struct DoorUpdate {
     /// True places the hinge at the opening end; omit to preserve the current hinge.
     pub hinge_at_end: Option<bool>,
-    /// Omit to preserve the existing type; "hinged", "sliding_glass", "garage", or "pocket".
+    /// Omit to preserve the existing type; "hinged", "sliding_glass", "french_glass", "garage", or "pocket".
     pub kind: Option<String>,
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
@@ -280,6 +280,7 @@ impl CadServer {
         let kind = match p.kind.as_deref() {
             Some("hinged") => DoorKind::Hinged,
             Some("sliding_glass") => DoorKind::SlidingGlass,
+            Some("french_glass") => DoorKind::FrenchGlass,
             Some("garage") => DoorKind::Garage,
             Some("pocket") => DoorKind::Pocket,
             None => match parse_id(&p.id)
@@ -291,7 +292,8 @@ impl CadServer {
             },
             _ => {
                 return result(Err(
-                    "Door kind must be hinged, sliding_glass, garage, or pocket".into(),
+                    "Door kind must be hinged, sliding_glass, french_glass, garage, or pocket"
+                        .into(),
                 ));
             }
         };
@@ -433,6 +435,21 @@ impl CadServer {
     )]
     async fn create_stove(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
         result(self.create_fixture(p, FixtureKind::Stove).await)
+    }
+    #[tool(
+        description = "Place a refrigerator footprint. Local top is the back; doors face local bottom. Millimeters and clockwise rotation."
+    )]
+    async fn create_refrigerator(&self, Parameters(p): Parameters<FixtureInput>) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::Refrigerator).await)
+    }
+    #[tool(
+        description = "Place a countertop appliance garage cabinet with a roll-up front. Local top is the back; front faces local bottom. Millimeters and clockwise rotation."
+    )]
+    async fn create_appliance_garage(
+        &self,
+        Parameters(p): Parameters<FixtureInput>,
+    ) -> CallToolResult {
+        result(self.create_fixture(p, FixtureKind::ApplianceGarage).await)
     }
 
     #[tool(

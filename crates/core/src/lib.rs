@@ -32,6 +32,8 @@ pub enum DoorKind {
     #[default]
     Hinged,
     SlidingGlass,
+    /// Two glazed hinged leaves meeting at the center of the opening.
+    FrenchGlass,
     Garage,
     Pocket,
 }
@@ -66,6 +68,8 @@ pub enum FixtureKind {
     Sink,
     Countertop,
     Stove,
+    Refrigerator,
+    ApplianceGarage,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Fixture {

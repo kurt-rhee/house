@@ -52,7 +52,7 @@ async fn bathroom_over_real_http() {
         );
         let client = ().serve(transport).await.unwrap();
         let tools = client.list_all_tools().await.unwrap();
-        assert_eq!(tools.len(), 25);
+        assert_eq!(tools.len(), 27);
         let before = value(call!(client, "get_document", json!({})));
         assert_eq!(before["revision"], 0);
         value(call!(client, "list_objects", json!({})));
@@ -468,6 +468,8 @@ async fn fixtures_windows_and_sliding_doors_through_http() {
         value(call!(client,"update_door",json!({"id":door,"wall_id":wall,"position":2500.0,"width":900.0,"swing":"left","kind":"pocket"})));
         assert!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].hinge_at_end);
         assert_eq!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].kind,DoorKind::Pocket);
+        value(call!(client,"update_door",json!({"id":door,"wall_id":wall,"position":2500.0,"width":1200.0,"swing":"left","kind":"french_glass"})));
+        assert_eq!(handle.snapshot().doors[&Id::parse_str(&door).unwrap()].kind,DoorKind::FrenchGlass);
         let sink=value(call!(client,"create_sink",json!({"x":1000.0,"y":3000.0,"width":609.6,"depth":457.2,"rotation":270.0})))["id"].as_str().unwrap().to_owned();
         let toilet=value(call!(client,"create_toilet",json!({"x":2000.0,"y":3000.0,"width":381.0,"depth":711.2,"rotation":90.0})))["id"].as_str().unwrap().to_owned();
         assert_eq!(handle.snapshot().fixtures[&Id::parse_str(&sink).unwrap()].kind,house_core::FixtureKind::Sink);

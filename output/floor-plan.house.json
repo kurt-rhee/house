@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 21,
+  "revision": 4,
   "walls": {
     "03c0d967-f904-48cc-b581-56eb4b700823": {
       "id": "03c0d967-f904-48cc-b581-56eb4b700823",
@@ -42,20 +42,6 @@
         "y": 6496.1
       },
       "thickness": 13.15,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
-    },
-    "0ea5f41b-8d87-449b-b6ec-823f38b72b28": {
-      "id": "0ea5f41b-8d87-449b-b6ec-823f38b72b28",
-      "name": "Living room closet south",
-      "start": {
-        "x": 19376.525,
-        "y": 6404.05
-      },
-      "end": {
-        "x": 20408.8,
-        "y": 6404.05
-      },
-      "thickness": 105.2,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "10170a0b-df5f-47d1-9080-143f6e0c5578": {
@@ -100,20 +86,6 @@
       "thickness": 105.2,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
-    "183896d6-5d61-4bd2-a620-8d771ae4c6c3": {
-      "id": "183896d6-5d61-4bd2-a620-8d771ae4c6c3",
-      "name": "Kitchen west",
-      "start": {
-        "x": 17279.100000000002,
-        "y": 2209.2000000000003
-      },
-      "end": {
-        "x": 17279.100000000002,
-        "y": 5430.95
-      },
-      "thickness": 157.8,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
-    },
     "231ea206-9a1c-442f-9ff1-b29882656d79": {
       "id": "231ea206-9a1c-442f-9ff1-b29882656d79",
       "name": "Main bedroom west",
@@ -132,11 +104,11 @@
       "id": "2a7914ad-b327-461e-a0fd-15917798dc60",
       "name": "Living room closet west",
       "start": {
-        "x": 19376.525,
+        "x": 18895.4875,
         "y": 5641.35
       },
       "end": {
-        "x": 19376.525,
+        "x": 18895.4875,
         "y": 6404.05
       },
       "thickness": 105.2,
@@ -366,6 +338,34 @@
       "thickness": 157.8,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
+    "6f2881cb-4409-44a5-8680-1167d580461e": {
+      "id": "6f2881cb-4409-44a5-8680-1167d580461e",
+      "name": "Bedroom 3 closet south",
+      "start": {
+        "x": 18895.4875,
+        "y": 6404.05
+      },
+      "end": {
+        "x": 20408.8,
+        "y": 6404.05
+      },
+      "thickness": 105.2,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "743fa984-048d-48a9-923a-a99198a7c60e": {
+      "id": "743fa984-048d-48a9-923a-a99198a7c60e",
+      "name": "Laundry French doorway",
+      "start": {
+        "x": 17279.1,
+        "y": 4953.75
+      },
+      "end": {
+        "x": 17279.1,
+        "y": 6430.35
+      },
+      "thickness": 157.8,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
     "746ae532-71e5-438a-bc40-f8907c28fcae": {
       "id": "746ae532-71e5-438a-bc40-f8907c28fcae",
       "name": "Main north",
@@ -450,20 +450,6 @@
       "thickness": 13.15,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
-    "913a2c3a-8b80-4b5d-9733-04112244e175": {
-      "id": "913a2c3a-8b80-4b5d-9733-04112244e175",
-      "name": "Living room closet north",
-      "start": {
-        "x": 19376.525,
-        "y": 5641.35
-      },
-      "end": {
-        "x": 20408.8,
-        "y": 5641.35
-      },
-      "thickness": 105.2,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
-    },
     "95a31876-8718-4029-aee7-31665058e3d2": {
       "id": "95a31876-8718-4029-aee7-31665058e3d2",
       "name": "West bedroom east",
@@ -518,6 +504,48 @@
         "y": 6101.6
       },
       "thickness": 157.8,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "a6fc6d62-576a-46fe-960d-c0e370708400": {
+      "id": "a6fc6d62-576a-46fe-960d-c0e370708400",
+      "name": "Bedroom 3 closet north",
+      "start": {
+        "x": 18895.4875,
+        "y": 5641.35
+      },
+      "end": {
+        "x": 20408.8,
+        "y": 5641.35
+      },
+      "thickness": 105.2,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "ad218721-76be-4635-81dc-048de2d8bdae": {
+      "id": "ad218721-76be-4635-81dc-048de2d8bdae",
+      "name": "Kitchen west",
+      "start": {
+        "x": 17279.1,
+        "y": 2209.2
+      },
+      "end": {
+        "x": 17279.1,
+        "y": 4953.75
+      },
+      "thickness": 157.8,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "b88afdbc-83c7-436b-a52b-374da2f48e67": {
+      "id": "b88afdbc-83c7-436b-a52b-374da2f48e67",
+      "name": "Kitchen Bedroom 3 partition",
+      "start": {
+        "x": 16713.65,
+        "y": 6404.05
+      },
+      "end": {
+        "x": 18895.4875,
+        "y": 6404.05
+      },
+      "thickness": 105.2,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "b9f1ff36-480e-4f98-ae31-980d272cee44": {
@@ -688,20 +716,6 @@
       "thickness": 157.8,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
-    "f59c3e90-5761-4814-978d-baebc0243feb": {
-      "id": "f59c3e90-5761-4814-978d-baebc0243feb",
-      "name": "Laundry east doorway",
-      "start": {
-        "x": 17279.1,
-        "y": 5430.95
-      },
-      "end": {
-        "x": 17279.1,
-        "y": 6430.35
-      },
-      "thickness": 157.8,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
-    },
     "fa0662ff-c812-4e86-a417-2f49c44ab80c": {
       "id": "fa0662ff-c812-4e86-a417-2f49c44ab80c",
       "name": "Front steps east",
@@ -757,8 +771,8 @@
     "5cc81c53-7984-4388-8dbf-8d2ce644635d": {
       "hinge_at_end": false,
       "id": "5cc81c53-7984-4388-8dbf-8d2ce644635d",
-      "wall": "0ea5f41b-8d87-449b-b6ec-823f38b72b28",
-      "position": 479.975,
+      "wall": "6f2881cb-4409-44a5-8680-1167d580461e",
+      "position": 961.0125,
       "width": 762.7,
       "swing": "Left",
       "kind": "Hinged"
@@ -781,15 +795,6 @@
       "swing": "Left",
       "kind": "Hinged"
     },
-    "7e9e2af4-5ecc-4800-bb7c-572312a3dbac": {
-      "hinge_at_end": false,
-      "id": "7e9e2af4-5ecc-4800-bb7c-572312a3dbac",
-      "wall": "f59c3e90-5761-4814-978d-baebc0243feb",
-      "position": 499.7,
-      "width": 775.85,
-      "swing": "Left",
-      "kind": "Hinged"
-    },
     "862d92a8-b4be-4526-b8c9-f2461f36b83a": {
       "hinge_at_end": false,
       "id": "862d92a8-b4be-4526-b8c9-f2461f36b83a",
@@ -807,6 +812,15 @@
       "width": 775.85,
       "swing": "Left",
       "kind": "Hinged"
+    },
+    "9150da68-b336-4060-bdae-30eb0d80deca": {
+      "hinge_at_end": false,
+      "id": "9150da68-b336-4060-bdae-30eb0d80deca",
+      "wall": "743fa984-048d-48a9-923a-a99198a7c60e",
+      "position": 698.85,
+      "width": 1397.7,
+      "swing": "Left",
+      "kind": "FrenchGlass"
     },
     "93d61222-5d11-46bc-9da0-63eeb7354896": {
       "hinge_at_end": false,
@@ -843,6 +857,15 @@
       "width": 762.7,
       "swing": "Left",
       "kind": "Hinged"
+    },
+    "a7b3e93c-b39c-4986-80a4-2aa7550e9a38": {
+      "hinge_at_end": false,
+      "id": "a7b3e93c-b39c-4986-80a4-2aa7550e9a38",
+      "wall": "b88afdbc-83c7-436b-a52b-374da2f48e67",
+      "position": 1090.918749999999,
+      "width": 1828.8,
+      "swing": "Left",
+      "kind": "SlidingGlass"
     },
     "bb72351a-bcc9-44a1-b4b2-0566824f56e9": {
       "hinge_at_end": false,
@@ -929,7 +952,7 @@
     },
     "90a8284d-b202-41a7-a59f-ccc40a2822fa": {
       "id": "90a8284d-b202-41a7-a59f-ccc40a2822fa",
-      "wall": "183896d6-5d61-4bd2-a620-8d771ae4c6c3",
+      "wall": "ad218721-76be-4635-81dc-048de2d8bdae",
       "position": 650.0,
       "width": 775.85
     },
@@ -1013,6 +1036,30 @@
     }
   },
   "fixtures": {
+    "0a136254-797b-44fe-b369-8f6e98f33bc0": {
+      "id": "0a136254-797b-44fe-b369-8f6e98f33bc0",
+      "kind": "ApplianceGarage",
+      "origin": {
+        "x": 19390.6,
+        "y": 5588.75
+      },
+      "width": 457.2,
+      "depth": 635.0,
+      "rotation": 180.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "34b8ac75-afa6-4ae6-a9b6-db3765c13087": {
+      "id": "34b8ac75-afa6-4ae6-a9b6-db3765c13087",
+      "kind": "Refrigerator",
+      "origin": {
+        "x": 20305.0,
+        "y": 5588.75
+      },
+      "width": 914.4,
+      "depth": 812.8,
+      "rotation": 180.0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
     "4be42708-ac78-437e-8895-9042270f0235": {
       "id": "4be42708-ac78-437e-8895-9042270f0235",
       "kind": "Sink",
@@ -1053,12 +1100,12 @@
       "id": "9addeb36-1b09-4c3e-babc-e569bc6d8599",
       "kind": "Sink",
       "origin": {
-        "x": 21144.1,
-        "y": 10783.0
+        "x": 21079.45,
+        "y": 11468.8
       },
       "width": 609.6,
       "depth": 457.2,
-      "rotation": 0.0,
+      "rotation": 270.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "a110bdae-e37e-4c6c-b1c8-8e537a664fae": {
@@ -1066,7 +1113,7 @@
       "kind": "Toilet",
       "origin": {
         "x": 21079.45,
-        "y": 12080.0
+        "y": 12112.325
       },
       "width": 381.0,
       "depth": 711.2,
@@ -1081,7 +1128,7 @@
         "y": 2288.1
       },
       "width": 635.0,
-      "depth": 3030.0,
+      "depth": 2665.65,
       "rotation": 0.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
@@ -1102,7 +1149,7 @@
       "kind": "Toilet",
       "origin": {
         "x": 20974.25,
-        "y": 11699.0
+        "y": 11731.325
       },
       "width": 381.0,
       "depth": 711.2,
@@ -1113,12 +1160,12 @@
       "id": "e332d192-50d9-4bec-adaf-f254b1ee4c52",
       "kind": "Sink",
       "origin": {
-        "x": 20300.0,
-        "y": 10783.0
+        "x": 20974.25,
+        "y": 10859.2
       },
       "width": 609.6,
       "depth": 457.2,
-      "rotation": 0.0,
+      "rotation": 90.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "f6bd213e-4f0b-4b20-8167-2b0e1436cc5a": {
@@ -1126,7 +1173,7 @@
       "kind": "Stove",
       "origin": {
         "x": 17358.0,
-        "y": 4184.1
+        "y": 4001.925
       },
       "width": 762.0,
       "depth": 635.0,
@@ -1146,7 +1193,7 @@
     },
     "0fe1ece0-897e-41be-8365-8c1ba272acea": {
       "id": "0fe1ece0-897e-41be-8365-8c1ba272acea",
-      "name": "Living room",
+      "name": "Bedroom 3",
       "position": {
         "x": 18600.0,
         "y": 8200.0
@@ -1270,6 +1317,14 @@
       "position": {
         "x": 22250.0,
         "y": 3590.0
+      }
+    },
+    "f2febc00-c0cd-4dd3-8062-a495f23a2076": {
+      "id": "f2febc00-c0cd-4dd3-8062-a495f23a2076",
+      "name": "Fridge",
+      "position": {
+        "x": 19847.8,
+        "y": 5210.0
       }
     },
     "f4be00bb-16b0-47c1-b889-6cede1ec9934": {

@@ -181,6 +181,8 @@ impl HouseApp {
                         FixtureKind::Sink => (inches(24.0), inches(18.0)),
                         FixtureKind::Countertop => (inches(60.0), inches(25.0)),
                         FixtureKind::Stove => (inches(30.0), inches(25.0)),
+                        FixtureKind::Refrigerator => (inches(36.0), inches(32.0)),
+                        FixtureKind::ApplianceGarage => (inches(18.0), inches(25.0)),
                     };
                     let id = Id::new_v4();
                     self.edit(Command::CreateFixture(Fixture {

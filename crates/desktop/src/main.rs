@@ -182,6 +182,7 @@ impl HouseApp {
             ui.horizontal(|ui| {
                 ui.selectable_value(&mut v.kind, DoorKind::Hinged, "Hinged");
                 ui.selectable_value(&mut v.kind, DoorKind::SlidingGlass, "Sliding glass");
+                ui.selectable_value(&mut v.kind, DoorKind::FrenchGlass, "Glass French doors");
                 ui.selectable_value(&mut v.kind, DoorKind::Garage, "Garage door");
                 ui.selectable_value(&mut v.kind, DoorKind::Pocket, "Pocket door");
             });

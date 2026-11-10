@@ -37,7 +37,13 @@ fn rectangle(points: [Point; 4]) -> Vec<(Point, Point)> {
 pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
     let mut symbols = Vec::new();
     for f in d.fixtures.values() {
-        if matches!(f.kind, FixtureKind::Countertop | FixtureKind::Stove) {
+        if matches!(
+            f.kind,
+            FixtureKind::Countertop
+                | FixtureKind::Stove
+                | FixtureKind::Refrigerator
+                | FixtureKind::ApplianceGarage
+        ) {
             let mut lines = rectangle(fixture_corners(f));
             if f.kind == FixtureKind::Stove {
                 lines.push((
@@ -62,6 +68,32 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
                             ),
                         ));
                     }
+                }
+            }
+            if f.kind == FixtureKind::ApplianceGarage {
+                for y in [0.84, 0.88, 0.92] {
+                    lines.push((
+                        transform(f, 0.0, f.depth * y),
+                        transform(f, f.width, f.depth * y),
+                    ));
+                }
+                lines.push((
+                    transform(f, f.width * 0.35, f.depth * 0.96),
+                    transform(f, f.width * 0.65, f.depth * 0.96),
+                ));
+            }
+            if f.kind == FixtureKind::Refrigerator {
+                let front = f.depth * 0.88;
+                lines.push((transform(f, 0.0, front), transform(f, f.width, front)));
+                lines.push((
+                    transform(f, f.width * 0.5, front),
+                    transform(f, f.width * 0.5, f.depth),
+                ));
+                for x in [0.44, 0.56] {
+                    lines.push((
+                        transform(f, f.width * x, f.depth * 0.92),
+                        transform(f, f.width * x, f.depth * 0.97),
+                    ));
                 }
             }
             symbols.push(PlanSymbol {
@@ -127,7 +159,9 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
             | FixtureKind::Toilet
             | FixtureKind::Sink
             | FixtureKind::Countertop
-            | FixtureKind::Stove => (f.width / 2.0, f.depth / 2.0),
+            | FixtureKind::Stove
+            | FixtureKind::Refrigerator
+            | FixtureKind::ApplianceGarage => (f.width / 2.0, f.depth / 2.0),
         };
         if f.kind == FixtureKind::Shower {
             for (x, y) in [
@@ -175,7 +209,44 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
             (p(a, -w.thickness / 2.0), p(a, w.thickness / 2.0)),
             (p(b, -w.thickness / 2.0), p(b, w.thickness / 2.0)),
         ];
-        if kind == Some(DoorKind::Pocket) {
+        if kind == Some(DoorKind::FrenchGlass) {
+            let sign = if d.doors[&id].swing == Swing::Left {
+                1.0
+            } else {
+                -1.0
+            };
+            let leaf = width / 2.0;
+            // Equal leaves at opposite jambs, shown open 90 degrees. Inset parallel
+            // lines identify glazing; each swing reaches the shared closed center.
+            for (hinge, direction) in [(a, 1.0), (b, -1.0)] {
+                lines.extend(rectangle([
+                    p(hinge - 18.0, 0.0),
+                    p(hinge + 18.0, 0.0),
+                    p(hinge + 18.0, sign * leaf),
+                    p(hinge - 18.0, sign * leaf),
+                ]));
+                for offset in [-6.0, 6.0] {
+                    lines.push((
+                        p(hinge + offset, sign * 60.0),
+                        p(hinge + offset, sign * (leaf - 60.0)),
+                    ));
+                }
+                for step in 0..32 {
+                    let angle = step as f64 * std::f64::consts::FRAC_PI_2 / 32.0;
+                    let next = (step + 1) as f64 * std::f64::consts::FRAC_PI_2 / 32.0;
+                    lines.push((
+                        p(
+                            hinge + direction * leaf * angle.cos(),
+                            sign * leaf * angle.sin(),
+                        ),
+                        p(
+                            hinge + direction * leaf * next.cos(),
+                            sign * leaf * next.sin(),
+                        ),
+                    ));
+                }
+            }
+        } else if kind == Some(DoorKind::Pocket) {
             let sign = if d.doors[&id].swing == Swing::Left {
                 1.0
             } else {
@@ -267,8 +338,65 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
 mod tests {
     use super::*;
     #[test]
+    fn french_doors_open_both_glazed_leaves_on_selected_side_of_rotated_wall() {
+        for swing in [Swing::Left, Swing::Right] {
+            let mut d = Document::default();
+            let layer = *d.layers.keys().next().unwrap();
+            let wall = Wall {
+                id: Id::new_v4(),
+                name: "Laundry partition".into(),
+                start: Point::new(1000.0, 0.0),
+                end: Point::new(1000.0, 1800.0),
+                thickness: 100.0,
+                layer,
+            };
+            let door = Door {
+                id: Id::new_v4(),
+                wall: wall.id,
+                position: 900.0,
+                width: 1200.0,
+                swing,
+                kind: DoorKind::FrenchGlass,
+                hinge_at_end: false,
+            };
+            d.walls.insert(wall.id, wall);
+            d.doors.insert(door.id, door.clone());
+            crate::validate(&d).unwrap();
+            let symbols = plan_symbols(&d);
+            let symbol = symbols.iter().find(|s| s.id == door.id).unwrap();
+            let points: Vec<_> = symbol.lines.iter().flat_map(|(a, b)| [a, b]).collect();
+            let tip_x = if swing == Swing::Left { 400.0 } else { 1600.0 };
+            for y in [300.0, 1500.0] {
+                assert!(
+                    points
+                        .iter()
+                        .any(|p| (p.x - tip_x).abs() < 0.001 && (p.y - y).abs() < 0.001)
+                );
+            }
+            // Both arcs reach the closed meeting point, with glazing contained in each leaf.
+            assert!(
+                points
+                    .iter()
+                    .any(|p| (p.x - 1000.0).abs() < 0.001 && (p.y - 900.0).abs() < 0.001)
+            );
+            for p in points {
+                assert!(p.y >= 250.0 && p.y <= 1550.0);
+                if swing == Swing::Left {
+                    assert!(p.x <= 1050.0);
+                } else {
+                    assert!(p.x >= 950.0);
+                }
+            }
+        }
+    }
+    #[test]
     fn kitchen_symbols_have_counter_outline_and_four_stove_burners() {
-        for (kind, segments) in [(FixtureKind::Countertop, 4), (FixtureKind::Stove, 133)] {
+        for (kind, segments) in [
+            (FixtureKind::Countertop, 4),
+            (FixtureKind::Stove, 133),
+            (FixtureKind::Refrigerator, 8),
+            (FixtureKind::ApplianceGarage, 8),
+        ] {
             let mut d = Document::default();
             let f = Fixture {
                 id: Id::new_v4(),
