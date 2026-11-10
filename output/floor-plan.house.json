@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 4,
+  "revision": 5,
   "walls": {
     "03c0d967-f904-48cc-b581-56eb4b700823": {
       "id": "03c0d967-f904-48cc-b581-56eb4b700823",
@@ -1259,7 +1259,7 @@
         "y": 3984.45
       },
       "width": 533.4,
-      "depth": 457.2,
+      "depth": 889.0,
       "rotation": 0.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
