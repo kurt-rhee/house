@@ -485,19 +485,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461355.350243055727
+2461355.367881944403
   9
 $TDUCREATE
  40
-2461355.68357638875
+2461355.701215277892
   9
 $TDUPDATE
  40
-2461355.350243055727
+2461355.367881944403
   9
 $TDUUPDATE
  40
-2461355.68357638875
+2461355.701215277892
   9
 $TDINDWG
  40
@@ -545,7 +545,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-384
+38A
   9
 $SURFTAB1
  70
@@ -925,11 +925,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-67944179-1ea5-41a9-98b0-306f51d9dc96
+5b045f7b-07ee-4b39-b1cd-c3eb4aaf682a
   9
 $VERSIONGUID
   2
-eaa6982b-b25d-4054-8e2c-5dd45e55f072
+85fa6d27-8233-4c94-8745-baceaba14fc2
   9
 $EXTNAMES
 290
@@ -1109,7 +1109,7 @@ TABLE
   2
 APPID
   5
-37D
+383
 330
 0
 100
@@ -1183,7 +1183,7 @@ TABLE
   2
 BLOCK_RECORD
   5
-37E
+384
 330
 0
 100
@@ -1237,7 +1237,7 @@ TABLE
   2
 DIMSTYLE
   5
-37F
+385
 330
 0
 100
@@ -1539,7 +1539,7 @@ TABLE
   2
 LTYPE
   5
-380
+386
 330
 0
 100
@@ -1613,7 +1613,7 @@ TABLE
   2
 LAYER
   5
-381
+387
 330
 0
 100
@@ -1795,7 +1795,7 @@ TABLE
   2
 STYLE
   5
-382
+388
 330
 0
 100
@@ -1861,7 +1861,7 @@ TABLE
   2
 VPORT
   5
-383
+389
 330
 0
 100
@@ -3053,11 +3053,11 @@ AcDbPolyline
  20
 -3984.45
  10
-15306.6
+15306.599999999999
  20
 -3984.45
  10
-15306.6
+15306.599999999999
  20
 -3826.65
  10
@@ -3095,7 +3095,7 @@ AcDbPolyline
  70
      1
  10
-16621.599999999999
+16471.0
  20
 -3984.45
  10
@@ -3107,7 +3107,7 @@ AcDbPolyline
  20
 -3826.65
  10
-16621.599999999999
+16471.0
  20
 -3826.65
 1001
@@ -7187,13 +7187,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19390.599999999999
+19517.599999999999
  20
--4775.95
+-4928.35
  30
 0.0
  11
-19390.599999999999
+19517.599999999999
  21
 -5588.75
  31
@@ -7229,13 +7229,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19390.599999999999
+19517.599999999999
  20
 -5588.75
  30
 0.0
  11
-18933.399999999998
+19060.399999999998
  21
 -5588.75
  31
@@ -7271,15 +7271,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18933.399999999998
+19060.399999999998
  20
 -5588.75
  30
 0.0
  11
-18933.399999999998
+19060.399999999998
  21
--4775.95
+-4928.35
  31
 0.0
 1001
@@ -7313,15 +7313,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18933.399999999998
+19060.399999999998
  20
--4775.95
+-4928.35
  30
 0.0
  11
-19390.599999999999
+19517.599999999999
  21
--4775.95
+-4928.35
  31
 0.0
 1001
@@ -7355,13 +7355,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19006.552
+19133.552
  20
--4775.95
+-4928.35
  30
 0.0
  11
-19006.552
+19133.552
  21
 -5588.75
  31
@@ -7397,13 +7397,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18988.263999999999
+19115.263999999999
  20
--4775.95
+-4928.35
  30
 0.0
  11
-18988.263999999999
+19115.263999999999
  21
 -5588.75
  31
@@ -7439,13 +7439,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18969.975999999999
+19096.975999999999
  20
--4775.95
+-4928.35
  30
 0.0
  11
-18969.975999999999
+19096.975999999999
  21
 -5588.75
  31
@@ -7481,15 +7481,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18951.687999999998
+19078.687999999998
  20
--5060.429999999999
+-5159.490000000001
  30
 0.0
  11
-18951.687999999998
+19078.687999999998
  21
--5304.27
+-5357.610000000001
  31
 0.0
 1001
@@ -8089,7 +8089,7 @@ AcDbLine
  30
 0.0
  11
-19390.599999999999
+19517.599999999999
  21
 -5588.75
  31
@@ -8121,15 +8121,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19390.599999999999
+19517.599999999999
  20
 -5588.75
  30
 0.0
  11
-19390.599999999999
+19517.599999999999
  21
--4775.95
+-4928.35
  31
 0.0
 1001
@@ -8159,15 +8159,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19390.599999999999
+19517.599999999999
  20
--4775.95
+-4928.35
  30
 0.0
  11
 20305.0
  21
--4775.95
+-4928.35
  31
 0.0
 1001
@@ -8199,7 +8199,7 @@ AcDbLine
  10
 20305.0
  20
--4775.95
+-4928.35
  30
 0.0
  11
@@ -8237,13 +8237,13 @@ AcDbLine
  10
 20305.0
  20
--4873.486
+-5007.598
  30
 0.0
  11
-19390.599999999999
+19517.599999999999
  21
--4873.486
+-5007.598
  31
 0.0
 1001
@@ -8273,15 +8273,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19847.799999999999
+19911.299999999999
  20
--4873.486
+-5007.598
  30
 0.0
  11
-19847.799999999999
+19911.299999999999
  21
--4775.95
+-4928.35
  31
 0.0
 1001
@@ -8311,15 +8311,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19902.664000000001
+19958.544000000002
  20
--4840.974
+-4981.182
  30
 0.0
  11
-19902.664000000001
+19958.544000000002
  21
--4800.334
+-4948.162
  31
 0.0
 1001
@@ -8349,15 +8349,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19792.936000000002
+19864.056
  20
--4840.974
+-4981.182
  30
 0.0
  11
-19792.936000000002
+19864.056
  21
--4800.334
+-4948.162
  31
 0.0
 1001
@@ -10661,7 +10661,7 @@ AcDbLine
  30
 0.0
  11
-16573.0
+16344.4
  21
 -3984.45
  31
@@ -10673,7 +10673,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10697,13 +10697,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16573.0
+16344.4
  20
 -3984.45
  30
 0.0
  11
-16573.0
+16344.4
  21
 -4873.45
  31
@@ -10715,7 +10715,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10739,7 +10739,7 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16573.0
+16344.4
  20
 -4873.45
  30
@@ -10757,7 +10757,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10799,7 +10799,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10829,7 +10829,7 @@ AcDbLine
  30
 0.0
  11
-16573.0
+16344.4
  21
 -4766.77
  31
@@ -10841,7 +10841,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10865,13 +10865,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16146.279999999999
+16077.699999999999
  20
 -4829.0
  30
 0.0
  11
-16390.119999999999
+16230.1
  21
 -4829.0
  31
@@ -10883,7 +10883,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10907,15 +10907,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16012.168
+16009.119999999999
  20
--4091.13
+-4268.93
  30
 0.0
  11
-16243.815999999999
+16298.68
  21
--4091.13
+-4268.93
  31
 0.0
 1001
@@ -10925,7 +10925,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10949,15 +10949,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16243.815999999999
+16298.68
  20
--4091.13
+-4268.93
  30
 0.0
  11
-16243.815999999999
+16298.68
  21
--4677.87
+-4553.41
  31
 0.0
 1001
@@ -10967,7 +10967,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -10991,15 +10991,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16243.815999999999
+16298.68
  20
--4677.87
+-4553.41
  30
 0.0
  11
-16012.168
+16009.119999999999
  21
--4677.87
+-4553.41
  31
 0.0
 1001
@@ -11009,7 +11009,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -11033,15 +11033,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16012.168
+16009.119999999999
  20
--4677.87
+-4553.41
  30
 0.0
  11
-16012.168
+16009.119999999999
  21
--4091.13
+-4268.93
  31
 0.0
 1001
@@ -11051,7 +11051,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -11075,15 +11075,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16292.583999999999
+16009.119999999999
  20
--4091.13
+-4571.19
  30
 0.0
  11
-16524.232
+16298.68
  21
--4091.13
+-4571.19
  31
 0.0
 1001
@@ -11093,7 +11093,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -11117,15 +11117,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16524.232
+16298.68
  20
--4091.13
+-4571.19
  30
 0.0
  11
-16524.232
+16298.68
  21
--4677.87
+-4855.67
  31
 0.0
 1001
@@ -11135,7 +11135,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -11159,15 +11159,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16524.232
+16298.68
  20
--4677.87
+-4855.67
  30
 0.0
  11
-16292.583999999999
+16009.119999999999
  21
--4677.87
+-4855.67
  31
 0.0
 1001
@@ -11177,7 +11177,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -11201,15 +11201,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16292.583999999999
+16009.119999999999
  20
--4677.87
+-4855.67
  30
 0.0
  11
-16292.583999999999
+16009.119999999999
  21
--4091.13
+-4571.19
  31
 0.0
 1001
@@ -11219,7 +11219,7 @@ HOUSE
 1000
 material:Natural oak cabinet with pale worktop
 1000
-style:separate_trash_and_recycling_pullouts
+style:single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
   0
 LINE
   5
@@ -18377,21 +18377,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21231.849999999999
+16344.4
  20
--12273.25
+-3984.45
  30
 0.0
  11
-22670.599999999999
+16496.799999999999
  21
--12273.25
+-3984.45
  31
 0.0
 1001
 HOUSE
 1000
-df91bdf7-f8bd-4318-b7f3-980f7103444d
+d3200e76-5060-41a2-b8c6-527fa6d33ef1
+1000
+material:Natural oak pantry pullout with pale worktop
+1000
+style:low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
   0
 LINE
   5
@@ -18415,21 +18419,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-22670.599999999999
+16496.799999999999
  20
--12273.25
+-3984.45
  30
 0.0
  11
-22670.599999999999
+16496.799999999999
  21
--13136.85
+-4873.45
  31
 0.0
 1001
 HOUSE
 1000
-df91bdf7-f8bd-4318-b7f3-980f7103444d
+d3200e76-5060-41a2-b8c6-527fa6d33ef1
+1000
+material:Natural oak pantry pullout with pale worktop
+1000
+style:low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
   0
 LINE
   5
@@ -18453,21 +18461,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-22670.599999999999
+16496.799999999999
  20
--13136.85
+-4873.45
  30
 0.0
  11
-21231.849999999999
+16344.4
  21
--13136.85
+-4873.45
  31
 0.0
 1001
 HOUSE
 1000
-df91bdf7-f8bd-4318-b7f3-980f7103444d
+d3200e76-5060-41a2-b8c6-527fa6d33ef1
+1000
+material:Natural oak pantry pullout with pale worktop
+1000
+style:low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
   0
 LINE
   5
@@ -18491,21 +18503,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21231.849999999999
+16344.4
  20
--13136.85
+-4873.45
  30
 0.0
  11
-21231.849999999999
+16344.4
  21
--12273.25
+-3984.45
  31
 0.0
 1001
 HOUSE
 1000
-df91bdf7-f8bd-4318-b7f3-980f7103444d
+d3200e76-5060-41a2-b8c6-527fa6d33ef1
+1000
+material:Natural oak pantry pullout with pale worktop
+1000
+style:low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
   0
 LINE
   5
@@ -18529,21 +18545,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21300.937999999998
+16344.4
  20
--12342.338
+-4802.33
  30
 0.0
  11
-22601.511999999999
+16496.799999999999
  21
--12342.338
+-4802.33
  31
 0.0
 1001
 HOUSE
 1000
-df91bdf7-f8bd-4318-b7f3-980f7103444d
+d3200e76-5060-41a2-b8c6-527fa6d33ef1
+1000
+material:Natural oak pantry pullout with pale worktop
+1000
+style:low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
   0
 LINE
   5
@@ -18567,21 +18587,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-22601.511999999999
+16397.739999999998
  20
--12342.338
+-4837.889999999999
  30
 0.0
  11
-22601.511999999999
+16443.459999999999
  21
--13067.762000000001
+-4837.889999999999
  31
 0.0
 1001
 HOUSE
 1000
-df91bdf7-f8bd-4318-b7f3-980f7103444d
+d3200e76-5060-41a2-b8c6-527fa6d33ef1
+1000
+material:Natural oak pantry pullout with pale worktop
+1000
+style:low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
   0
 LINE
   5
@@ -18605,15 +18629,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-22601.511999999999
+21231.849999999999
  20
--13067.762000000001
+-12273.25
  30
 0.0
  11
-21300.937999999998
+22670.599999999999
  21
--13067.762000000001
+-12273.25
  31
 0.0
 1001
@@ -18643,15 +18667,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21300.937999999998
+22670.599999999999
  20
--13067.762000000001
+-12273.25
  30
 0.0
  11
-21300.937999999998
+22670.599999999999
  21
--12342.338
+-13136.85
  31
 0.0
 1001
@@ -18681,15 +18705,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21300.937999999998
+22670.599999999999
  20
--12342.338
+-13136.85
  30
 0.0
  11
-21951.224999999999
+21231.849999999999
  21
--12705.049999999999
+-13136.85
  31
 0.0
 1001
@@ -18719,6 +18743,234 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+21231.849999999999
+ 20
+-13136.85
+ 30
+0.0
+ 11
+21231.849999999999
+ 21
+-12273.25
+ 31
+0.0
+1001
+HOUSE
+1000
+df91bdf7-f8bd-4318-b7f3-980f7103444d
+  0
+LINE
+  5
+1B1
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+21300.937999999998
+ 20
+-12342.338
+ 30
+0.0
+ 11
+22601.511999999999
+ 21
+-12342.338
+ 31
+0.0
+1001
+HOUSE
+1000
+df91bdf7-f8bd-4318-b7f3-980f7103444d
+  0
+LINE
+  5
+1B2
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+22601.511999999999
+ 20
+-12342.338
+ 30
+0.0
+ 11
+22601.511999999999
+ 21
+-13067.762000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+df91bdf7-f8bd-4318-b7f3-980f7103444d
+  0
+LINE
+  5
+1B3
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+22601.511999999999
+ 20
+-13067.762000000001
+ 30
+0.0
+ 11
+21300.937999999998
+ 21
+-13067.762000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+df91bdf7-f8bd-4318-b7f3-980f7103444d
+  0
+LINE
+  5
+1B4
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+21300.937999999998
+ 20
+-13067.762000000001
+ 30
+0.0
+ 11
+21300.937999999998
+ 21
+-12342.338
+ 31
+0.0
+1001
+HOUSE
+1000
+df91bdf7-f8bd-4318-b7f3-980f7103444d
+  0
+LINE
+  5
+1B5
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+21300.937999999998
+ 20
+-12342.338
+ 30
+0.0
+ 11
+21951.224999999999
+ 21
+-12705.049999999999
+ 31
+0.0
+1001
+HOUSE
+1000
+df91bdf7-f8bd-4318-b7f3-980f7103444d
+  0
+LINE
+  5
+1B6
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 22601.511999999999
  20
 -12342.338
@@ -18737,7 +18989,7 @@ df91bdf7-f8bd-4318-b7f3-980f7103444d
   0
 LINE
   5
-1B1
+1B7
 100
 AcDbEntity
   8
@@ -18775,7 +19027,7 @@ df91bdf7-f8bd-4318-b7f3-980f7103444d
   0
 LINE
   5
-1B2
+1B8
 100
 AcDbEntity
   8
@@ -18813,7 +19065,7 @@ df91bdf7-f8bd-4318-b7f3-980f7103444d
   0
 LINE
   5
-1B3
+1B9
 100
 AcDbEntity
   8
@@ -18851,7 +19103,7 @@ df91bdf7-f8bd-4318-b7f3-980f7103444d
   0
 LINE
   5
-1B4
+1BA
 100
 AcDbEntity
   8
@@ -18889,258 +19141,6 @@ df91bdf7-f8bd-4318-b7f3-980f7103444d
   0
 LINE
   5
-1B5
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16649.200000000001
- 20
--3984.45
- 30
-0.0
- 11
-17182.600000000002
- 21
--3984.45
- 31
-0.0
-1001
-HOUSE
-1000
-e291dd5c-2063-4410-bae0-dbe79733ffe6
-1000
-material:Natural oak full-height pantry
-1000
-style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
-  0
-LINE
-  5
-1B6
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17182.600000000002
- 20
--3984.45
- 30
-0.0
- 11
-17182.600000000002
- 21
--4873.45
- 31
-0.0
-1001
-HOUSE
-1000
-e291dd5c-2063-4410-bae0-dbe79733ffe6
-1000
-material:Natural oak full-height pantry
-1000
-style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
-  0
-LINE
-  5
-1B7
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17182.600000000002
- 20
--4873.45
- 30
-0.0
- 11
-16649.200000000001
- 21
--4873.45
- 31
-0.0
-1001
-HOUSE
-1000
-e291dd5c-2063-4410-bae0-dbe79733ffe6
-1000
-material:Natural oak full-height pantry
-1000
-style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
-  0
-LINE
-  5
-1B8
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16649.200000000001
- 20
--4873.45
- 30
-0.0
- 11
-16649.200000000001
- 21
--3984.45
- 31
-0.0
-1001
-HOUSE
-1000
-e291dd5c-2063-4410-bae0-dbe79733ffe6
-1000
-material:Natural oak full-height pantry
-1000
-style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
-  0
-LINE
-  5
-1B9
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16649.200000000001
- 20
--4731.21
- 30
-0.0
- 11
-17182.600000000002
- 21
--4731.21
- 31
-0.0
-1001
-HOUSE
-1000
-e291dd5c-2063-4410-bae0-dbe79733ffe6
-1000
-material:Natural oak full-height pantry
-1000
-style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
-  0
-LINE
-  5
-1BA
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16649.200000000001
- 20
--4766.77
- 30
-0.0
- 11
-17182.600000000002
- 21
--4766.77
- 31
-0.0
-1001
-HOUSE
-1000
-e291dd5c-2063-4410-bae0-dbe79733ffe6
-1000
-material:Natural oak full-height pantry
-1000
-style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
-  0
-LINE
-  5
 1BB
 100
 AcDbEntity
@@ -19161,15 +19161,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16649.200000000001
+16509.5
  20
--4802.33
+-3984.45
  30
 0.0
  11
-17182.600000000002
+17182.599999999999
  21
--4802.33
+-3984.45
  31
 0.0
 1001
@@ -19203,15 +19203,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16835.889999999999
+17182.599999999999
  20
--4837.889999999999
+-3984.45
  30
 0.0
  11
-16995.91
+17182.599999999999
  21
--4837.889999999999
+-4873.45
  31
 0.0
 1001
@@ -19245,21 +19245,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21126.650000000001
+17182.599999999999
  20
--10859.200000000001
+-4873.45
  30
 0.0
  11
-21126.650000000001
+16509.5
  21
--11468.800000000001
+-4873.45
  31
 0.0
 1001
 HOUSE
 1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
+e291dd5c-2063-4410-bae0-dbe79733ffe6
+1000
+material:Natural oak full-height pantry
+1000
+style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
   0
 LINE
   5
@@ -19283,21 +19287,25 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21126.650000000001
+16509.5
  20
--11468.800000000001
+-4873.45
  30
 0.0
  11
-20669.450000000001
+16509.5
  21
--11468.800000000001
+-3984.45
  31
 0.0
 1001
 HOUSE
 1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
+e291dd5c-2063-4410-bae0-dbe79733ffe6
+1000
+material:Natural oak full-height pantry
+1000
+style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
   0
 LINE
   5
@@ -19321,6 +19329,250 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+16509.5
+ 20
+-4731.21
+ 30
+0.0
+ 11
+17182.599999999999
+ 21
+-4731.21
+ 31
+0.0
+1001
+HOUSE
+1000
+e291dd5c-2063-4410-bae0-dbe79733ffe6
+1000
+material:Natural oak full-height pantry
+1000
+style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
+  0
+LINE
+  5
+1C0
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16509.5
+ 20
+-4766.77
+ 30
+0.0
+ 11
+17182.599999999999
+ 21
+-4766.77
+ 31
+0.0
+1001
+HOUSE
+1000
+e291dd5c-2063-4410-bae0-dbe79733ffe6
+1000
+material:Natural oak full-height pantry
+1000
+style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
+  0
+LINE
+  5
+1C1
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16509.5
+ 20
+-4802.33
+ 30
+0.0
+ 11
+17182.599999999999
+ 21
+-4802.33
+ 31
+0.0
+1001
+HOUSE
+1000
+e291dd5c-2063-4410-bae0-dbe79733ffe6
+1000
+material:Natural oak full-height pantry
+1000
+style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
+  0
+LINE
+  5
+1C2
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16745.084999999999
+ 20
+-4837.889999999999
+ 30
+0.0
+ 11
+16947.014999999999
+ 21
+-4837.889999999999
+ 31
+0.0
+1001
+HOUSE
+1000
+e291dd5c-2063-4410-bae0-dbe79733ffe6
+1000
+material:Natural oak full-height pantry
+1000
+style:floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
+  0
+LINE
+  5
+1C3
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+21126.650000000001
+ 20
+-10859.200000000001
+ 30
+0.0
+ 11
+21126.650000000001
+ 21
+-11468.800000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1C4
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+21126.650000000001
+ 20
+-11468.800000000001
+ 30
+0.0
+ 11
+20669.450000000001
+ 21
+-11468.800000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1C5
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 20669.450000000001
  20
 -11468.800000000001
@@ -19339,7 +19591,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1C0
+1C6
 100
 AcDbEntity
   8
@@ -19377,7 +19629,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1C1
+1C7
 100
 AcDbEntity
   8
@@ -19415,7 +19667,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1C2
+1C8
 100
 AcDbEntity
   8
@@ -19453,7 +19705,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1C3
+1C9
 100
 AcDbEntity
   8
@@ -19491,7 +19743,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1C4
+1CA
 100
 AcDbEntity
   8
@@ -19529,7 +19781,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1C5
+1CB
 100
 AcDbEntity
   8
@@ -19558,234 +19810,6 @@ AcDbLine
 20761.145627976584
  21
 -11272.376196495601
- 31
-0.0
-1001
-HOUSE
-1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
-  0
-LINE
-  5
-1C6
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20761.145627976584
- 20
--11272.376196495601
- 30
-0.0
- 11
-20748.470683320753
- 21
--11238.650822518324
- 31
-0.0
-1001
-HOUSE
-1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
-  0
-LINE
-  5
-1C7
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20748.470683320753
- 20
--11238.650822518324
- 30
-0.0
- 11
-20740.665490939893
- 21
--11202.056659296331
- 31
-0.0
-1001
-HOUSE
-1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
-  0
-LINE
-  5
-1C8
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20740.665490939893
- 20
--11202.056659296331
- 30
-0.0
- 11
-20738.030000000002
- 21
--11164.0
- 31
-0.0
-1001
-HOUSE
-1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
-  0
-LINE
-  5
-1C9
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20738.030000000002
- 20
--11164.0
- 30
-0.0
- 11
-20740.665490939893
- 21
--11125.94334070367
- 31
-0.0
-1001
-HOUSE
-1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
-  0
-LINE
-  5
-1CA
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20740.665490939893
- 20
--11125.94334070367
- 30
-0.0
- 11
-20748.470683320753
- 21
--11089.349177481678
- 31
-0.0
-1001
-HOUSE
-1000
-e332d192-50d9-4bec-adaf-f254b1ee4c52
-  0
-LINE
-  5
-1CB
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20748.470683320753
- 20
--11089.349177481678
- 30
-0.0
- 11
-20761.145627976584
- 21
--11055.623803504401
  31
 0.0
 1001
@@ -19817,6 +19841,234 @@ AcDbLine
  10
 20761.145627976584
  20
+-11272.376196495601
+ 30
+0.0
+ 11
+20748.470683320753
+ 21
+-11238.650822518324
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1CD
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20748.470683320753
+ 20
+-11238.650822518324
+ 30
+0.0
+ 11
+20740.665490939893
+ 21
+-11202.056659296331
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1CE
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20740.665490939893
+ 20
+-11202.056659296331
+ 30
+0.0
+ 11
+20738.030000000002
+ 21
+-11164.0
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1CF
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20738.030000000002
+ 20
+-11164.0
+ 30
+0.0
+ 11
+20740.665490939893
+ 21
+-11125.94334070367
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1D0
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20740.665490939893
+ 20
+-11125.94334070367
+ 30
+0.0
+ 11
+20748.470683320753
+ 21
+-11089.349177481678
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1D1
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20748.470683320753
+ 20
+-11089.349177481678
+ 30
+0.0
+ 11
+20761.145627976584
+ 21
+-11055.623803504401
+ 31
+0.0
+1001
+HOUSE
+1000
+e332d192-50d9-4bec-adaf-f254b1ee4c52
+  0
+LINE
+  5
+1D2
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20761.145627976584
+ 20
 -11055.623803504401
  30
 0.0
@@ -19833,7 +20085,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1CD
+1D3
 100
 AcDbEntity
   8
@@ -19871,7 +20123,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1CE
+1D4
 100
 AcDbEntity
   8
@@ -19909,7 +20161,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1CF
+1D5
 100
 AcDbEntity
   8
@@ -19947,7 +20199,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D0
+1D6
 100
 AcDbEntity
   8
@@ -19985,7 +20237,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D1
+1D7
 100
 AcDbEntity
   8
@@ -20023,7 +20275,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D2
+1D8
 100
 AcDbEntity
   8
@@ -20061,7 +20313,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D3
+1D9
 100
 AcDbEntity
   8
@@ -20099,7 +20351,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D4
+1DA
 100
 AcDbEntity
   8
@@ -20137,7 +20389,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D5
+1DB
 100
 AcDbEntity
   8
@@ -20175,7 +20427,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D6
+1DC
 100
 AcDbEntity
   8
@@ -20213,7 +20465,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D7
+1DD
 100
 AcDbEntity
   8
@@ -20251,7 +20503,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D8
+1DE
 100
 AcDbEntity
   8
@@ -20289,7 +20541,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1D9
+1DF
 100
 AcDbEntity
   8
@@ -20327,7 +20579,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1DA
+1E0
 100
 AcDbEntity
   8
@@ -20365,7 +20617,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1DB
+1E1
 100
 AcDbEntity
   8
@@ -20403,7 +20655,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1DC
+1E2
 100
 AcDbEntity
   8
@@ -20441,7 +20693,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1DD
+1E3
 100
 AcDbEntity
   8
@@ -20479,7 +20731,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1DE
+1E4
 100
 AcDbEntity
   8
@@ -20517,7 +20769,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1DF
+1E5
 100
 AcDbEntity
   8
@@ -20555,7 +20807,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1E0
+1E6
 100
 AcDbEntity
   8
@@ -20593,7 +20845,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1E1
+1E7
 100
 AcDbEntity
   8
@@ -20631,7 +20883,7 @@ e332d192-50d9-4bec-adaf-f254b1ee4c52
   0
 LINE
   5
-1E2
+1E8
 100
 AcDbEntity
   8
@@ -20669,7 +20921,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E3
+1E9
 100
 AcDbEntity
   8
@@ -20707,7 +20959,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E4
+1EA
 100
 AcDbEntity
   8
@@ -20745,7 +20997,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E5
+1EB
 100
 AcDbEntity
   8
@@ -20783,7 +21035,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E6
+1EC
 100
 AcDbEntity
   8
@@ -20821,7 +21073,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E7
+1ED
 100
 AcDbEntity
   8
@@ -20859,7 +21111,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E8
+1EE
 100
 AcDbEntity
   8
@@ -20897,7 +21149,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1E9
+1EF
 100
 AcDbEntity
   8
@@ -20935,7 +21187,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1EA
+1F0
 100
 AcDbEntity
   8
@@ -20973,7 +21225,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-1EB
+1F1
 100
 AcDbEntity
   8
@@ -21002,234 +21254,6 @@ AcDbLine
 17660.517648533696
  21
 -3746.794806284558
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-1EC
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17660.517648533696
- 20
--3746.794806284558
- 30
-0.0
- 11
-17668.732890440253
- 21
--3762.164442862744
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-1ED
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17668.732890440253
- 20
--3762.164442862744
- 30
-0.0
- 11
-17673.791811427847
- 21
--3778.841470372766
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-1EE
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17673.791811427847
- 20
--3778.841470372766
- 30
-0.0
- 11
-17675.5
- 21
--3796.185
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-1EF
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17675.5
- 20
--3796.185
- 30
-0.0
- 11
-17673.791811427847
- 21
--3813.528529627234
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-1F0
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17673.791811427847
- 20
--3813.528529627234
- 30
-0.0
- 11
-17668.732890440253
- 21
--3830.205557137257
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-1F1
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17668.732890440253
- 20
--3830.205557137257
- 30
-0.0
- 11
-17660.517648533696
- 21
--3845.575193715443
  31
 0.0
 1001
@@ -21261,13 +21285,13 @@ AcDbLine
  10
 17660.517648533696
  20
--3845.575193715443
+-3746.794806284558
  30
 0.0
  11
-17649.461792847484
+17668.732890440253
  21
--3859.046792847484
+-3762.164442862744
  31
 0.0
 1001
@@ -21297,15 +21321,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17649.461792847484
+17668.732890440253
  20
--3859.046792847484
+-3762.164442862744
  30
 0.0
  11
-17635.990193715443
+17673.791811427847
  21
--3870.102648533697
+-3778.841470372766
  31
 0.0
 1001
@@ -21335,15 +21359,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17635.990193715443
+17673.791811427847
  20
--3870.102648533697
+-3778.841470372766
  30
 0.0
  11
-17620.620557137256
+17675.5
  21
--3878.317890440253
+-3796.185
  31
 0.0
 1001
@@ -21373,15 +21397,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17620.620557137256
+17675.5
  20
--3878.317890440253
+-3796.185
  30
 0.0
  11
-17603.943529627235
+17673.791811427847
  21
--3883.376811427847
+-3813.528529627234
  31
 0.0
 1001
@@ -21411,15 +21435,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17603.943529627235
+17673.791811427847
  20
--3883.376811427847
+-3813.528529627234
  30
 0.0
  11
-17586.599999999999
+17668.732890440253
  21
--3885.085
+-3830.205557137257
  31
 0.0
 1001
@@ -21449,15 +21473,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17586.599999999999
+17668.732890440253
  20
--3885.085
+-3830.205557137257
  30
 0.0
  11
-17569.256470372766
+17660.517648533696
  21
--3883.376811427847
+-3845.575193715443
  31
 0.0
 1001
@@ -21487,15 +21511,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17569.256470372766
+17660.517648533696
  20
--3883.376811427847
+-3845.575193715443
  30
 0.0
  11
-17552.579442862745
+17649.461792847484
  21
--3878.317890440253
+-3859.046792847484
  31
 0.0
 1001
@@ -21525,13 +21549,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17552.579442862745
+17649.461792847484
  20
--3878.317890440253
+-3859.046792847484
  30
 0.0
  11
-17537.209806284558
+17635.990193715443
  21
 -3870.102648533697
  31
@@ -21563,15 +21587,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17537.209806284558
+17635.990193715443
  20
 -3870.102648533697
  30
 0.0
  11
-17523.738207152517
+17620.620557137256
  21
--3859.046792847484
+-3878.317890440253
  31
 0.0
 1001
@@ -21601,15 +21625,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17523.738207152517
+17620.620557137256
  20
--3859.046792847484
+-3878.317890440253
  30
 0.0
  11
-17512.682351466305
+17603.943529627235
  21
--3845.575193715443
+-3883.376811427847
  31
 0.0
 1001
@@ -21639,15 +21663,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17512.682351466305
+17603.943529627235
  20
--3845.575193715443
+-3883.376811427847
  30
 0.0
  11
-17504.467109559748
+17586.599999999999
  21
--3830.205557137257
+-3885.085
  31
 0.0
 1001
@@ -21677,15 +21701,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17504.467109559748
+17586.599999999999
  20
--3830.205557137257
+-3885.085
  30
 0.0
  11
-17499.408188572153
+17569.256470372766
  21
--3813.528529627234
+-3883.376811427847
  31
 0.0
 1001
@@ -21715,15 +21739,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17499.408188572153
+17569.256470372766
  20
--3813.528529627234
+-3883.376811427847
  30
 0.0
  11
-17497.700000000001
+17552.579442862745
  21
--3796.185
+-3878.317890440253
  31
 0.0
 1001
@@ -21753,15 +21777,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17497.700000000001
+17552.579442862745
  20
--3796.185
+-3878.317890440253
  30
 0.0
  11
-17499.408188572153
+17537.209806284558
  21
--3778.841470372766
+-3870.102648533697
  31
 0.0
 1001
@@ -21791,15 +21815,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17499.408188572153
+17537.209806284558
  20
--3778.841470372766
+-3870.102648533697
  30
 0.0
  11
-17504.467109559748
+17523.738207152517
  21
--3762.164442862744
+-3859.046792847484
  31
 0.0
 1001
@@ -21829,15 +21853,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17504.467109559748
+17523.738207152517
  20
--3762.164442862744
+-3859.046792847484
  30
 0.0
  11
 17512.682351466305
  21
--3746.794806284558
+-3845.575193715443
  31
 0.0
 1001
@@ -21869,6 +21893,234 @@ AcDbLine
  10
 17512.682351466305
  20
+-3845.575193715443
+ 30
+0.0
+ 11
+17504.467109559748
+ 21
+-3830.205557137257
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+203
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17504.467109559748
+ 20
+-3830.205557137257
+ 30
+0.0
+ 11
+17499.408188572153
+ 21
+-3813.528529627234
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+204
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17499.408188572153
+ 20
+-3813.528529627234
+ 30
+0.0
+ 11
+17497.700000000001
+ 21
+-3796.185
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+205
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17497.700000000001
+ 20
+-3796.185
+ 30
+0.0
+ 11
+17499.408188572153
+ 21
+-3778.841470372766
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+206
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17499.408188572153
+ 20
+-3778.841470372766
+ 30
+0.0
+ 11
+17504.467109559748
+ 21
+-3762.164442862744
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+207
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17504.467109559748
+ 20
+-3762.164442862744
+ 30
+0.0
+ 11
+17512.682351466305
+ 21
+-3746.794806284558
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+208
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17512.682351466305
+ 20
 -3746.794806284558
  30
 0.0
@@ -21885,7 +22137,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-203
+209
 100
 AcDbEntity
   8
@@ -21923,7 +22175,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-204
+20A
 100
 AcDbEntity
   8
@@ -21961,7 +22213,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-205
+20B
 100
 AcDbEntity
   8
@@ -21999,7 +22251,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-206
+20C
 100
 AcDbEntity
   8
@@ -22037,7 +22289,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-207
+20D
 100
 AcDbEntity
   8
@@ -22075,7 +22327,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-208
+20E
 100
 AcDbEntity
   8
@@ -22113,7 +22365,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-209
+20F
 100
 AcDbEntity
   8
@@ -22151,7 +22403,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-20A
+210
 100
 AcDbEntity
   8
@@ -22189,7 +22441,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-20B
+211
 100
 AcDbEntity
   8
@@ -22218,234 +22470,6 @@ AcDbLine
 17660.517648533696
  21
 -3396.274806284558
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-20C
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17660.517648533696
- 20
--3396.274806284558
- 30
-0.0
- 11
-17668.732890440253
- 21
--3411.644442862744
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-20D
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17668.732890440253
- 20
--3411.644442862744
- 30
-0.0
- 11
-17673.791811427847
- 21
--3428.321470372766
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-20E
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17673.791811427847
- 20
--3428.321470372766
- 30
-0.0
- 11
-17675.5
- 21
--3445.665
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-20F
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17675.5
- 20
--3445.665
- 30
-0.0
- 11
-17673.791811427847
- 21
--3463.008529627234
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-210
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17673.791811427847
- 20
--3463.008529627234
- 30
-0.0
- 11
-17668.732890440253
- 21
--3479.685557137257
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-211
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17668.732890440253
- 20
--3479.685557137257
- 30
-0.0
- 11
-17660.517648533696
- 21
--3495.055193715443
  31
 0.0
 1001
@@ -22477,13 +22501,13 @@ AcDbLine
  10
 17660.517648533696
  20
--3495.055193715443
+-3396.274806284558
  30
 0.0
  11
-17649.461792847484
+17668.732890440253
  21
--3508.526792847484
+-3411.644442862744
  31
 0.0
 1001
@@ -22513,15 +22537,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17649.461792847484
+17668.732890440253
  20
--3508.526792847484
+-3411.644442862744
  30
 0.0
  11
-17635.990193715443
+17673.791811427847
  21
--3519.582648533697
+-3428.321470372766
  31
 0.0
 1001
@@ -22551,15 +22575,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17635.990193715443
+17673.791811427847
  20
--3519.582648533697
+-3428.321470372766
  30
 0.0
  11
-17620.620557137256
+17675.5
  21
--3527.797890440253
+-3445.665
  31
 0.0
 1001
@@ -22589,15 +22613,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17620.620557137256
+17675.5
  20
--3527.797890440253
+-3445.665
  30
 0.0
  11
-17603.943529627235
+17673.791811427847
  21
--3532.856811427847
+-3463.008529627234
  31
 0.0
 1001
@@ -22627,15 +22651,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17603.943529627235
+17673.791811427847
  20
--3532.856811427847
+-3463.008529627234
  30
 0.0
  11
-17586.599999999999
+17668.732890440253
  21
--3534.565
+-3479.685557137257
  31
 0.0
 1001
@@ -22665,15 +22689,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17586.599999999999
+17668.732890440253
  20
--3534.565
+-3479.685557137257
  30
 0.0
  11
-17569.256470372766
+17660.517648533696
  21
--3532.856811427847
+-3495.055193715443
  31
 0.0
 1001
@@ -22703,15 +22727,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17569.256470372766
+17660.517648533696
  20
--3532.856811427847
+-3495.055193715443
  30
 0.0
  11
-17552.579442862745
+17649.461792847484
  21
--3527.797890440253
+-3508.526792847484
  31
 0.0
 1001
@@ -22741,13 +22765,13 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17552.579442862745
+17649.461792847484
  20
--3527.797890440253
+-3508.526792847484
  30
 0.0
  11
-17537.209806284558
+17635.990193715443
  21
 -3519.582648533697
  31
@@ -22779,6 +22803,234 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+17635.990193715443
+ 20
+-3519.582648533697
+ 30
+0.0
+ 11
+17620.620557137256
+ 21
+-3527.797890440253
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+21B
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17620.620557137256
+ 20
+-3527.797890440253
+ 30
+0.0
+ 11
+17603.943529627235
+ 21
+-3532.856811427847
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+21C
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17603.943529627235
+ 20
+-3532.856811427847
+ 30
+0.0
+ 11
+17586.599999999999
+ 21
+-3534.565
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+21D
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17586.599999999999
+ 20
+-3534.565
+ 30
+0.0
+ 11
+17569.256470372766
+ 21
+-3532.856811427847
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+21E
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17569.256470372766
+ 20
+-3532.856811427847
+ 30
+0.0
+ 11
+17552.579442862745
+ 21
+-3527.797890440253
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+21F
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17552.579442862745
+ 20
+-3527.797890440253
+ 30
+0.0
+ 11
+17537.209806284558
+ 21
+-3519.582648533697
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+220
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 17537.209806284558
  20
 -3519.582648533697
@@ -22797,7 +23049,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-21B
+221
 100
 AcDbEntity
   8
@@ -22835,7 +23087,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-21C
+222
 100
 AcDbEntity
   8
@@ -22873,7 +23125,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-21D
+223
 100
 AcDbEntity
   8
@@ -22911,7 +23163,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-21E
+224
 100
 AcDbEntity
   8
@@ -22949,7 +23201,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-21F
+225
 100
 AcDbEntity
   8
@@ -22987,7 +23239,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-220
+226
 100
 AcDbEntity
   8
@@ -23025,7 +23277,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-221
+227
 100
 AcDbEntity
   8
@@ -23063,7 +23315,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-222
+228
 100
 AcDbEntity
   8
@@ -23101,7 +23353,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-223
+229
 100
 AcDbEntity
   8
@@ -23139,7 +23391,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-224
+22A
 100
 AcDbEntity
   8
@@ -23177,7 +23429,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-225
+22B
 100
 AcDbEntity
   8
@@ -23215,7 +23467,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-226
+22C
 100
 AcDbEntity
   8
@@ -23253,7 +23505,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-227
+22D
 100
 AcDbEntity
   8
@@ -23291,7 +23543,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-228
+22E
 100
 AcDbEntity
   8
@@ -23329,7 +23581,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-229
+22F
 100
 AcDbEntity
   8
@@ -23367,7 +23619,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-22A
+230
 100
 AcDbEntity
   8
@@ -23405,7 +23657,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-22B
+231
 100
 AcDbEntity
   8
@@ -23434,234 +23686,6 @@ AcDbLine
 17914.517648533696
  21
 -3746.794806284558
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-22C
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17914.517648533696
- 20
--3746.794806284558
- 30
-0.0
- 11
-17922.732890440253
- 21
--3762.164442862744
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-22D
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17922.732890440253
- 20
--3762.164442862744
- 30
-0.0
- 11
-17927.791811427847
- 21
--3778.841470372766
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-22E
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17927.791811427847
- 20
--3778.841470372766
- 30
-0.0
- 11
-17929.5
- 21
--3796.185
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-22F
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17929.5
- 20
--3796.185
- 30
-0.0
- 11
-17927.791811427847
- 21
--3813.528529627234
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-230
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17927.791811427847
- 20
--3813.528529627234
- 30
-0.0
- 11
-17922.732890440253
- 21
--3830.205557137257
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-231
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17922.732890440253
- 20
--3830.205557137257
- 30
-0.0
- 11
-17914.517648533696
- 21
--3845.575193715443
  31
 0.0
 1001
@@ -23693,6 +23717,234 @@ AcDbLine
  10
 17914.517648533696
  20
+-3746.794806284558
+ 30
+0.0
+ 11
+17922.732890440253
+ 21
+-3762.164442862744
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+233
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17922.732890440253
+ 20
+-3762.164442862744
+ 30
+0.0
+ 11
+17927.791811427847
+ 21
+-3778.841470372766
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+234
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17927.791811427847
+ 20
+-3778.841470372766
+ 30
+0.0
+ 11
+17929.5
+ 21
+-3796.185
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+235
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17929.5
+ 20
+-3796.185
+ 30
+0.0
+ 11
+17927.791811427847
+ 21
+-3813.528529627234
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+236
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17927.791811427847
+ 20
+-3813.528529627234
+ 30
+0.0
+ 11
+17922.732890440253
+ 21
+-3830.205557137257
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+237
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17922.732890440253
+ 20
+-3830.205557137257
+ 30
+0.0
+ 11
+17914.517648533696
+ 21
+-3845.575193715443
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+238
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17914.517648533696
+ 20
 -3845.575193715443
  30
 0.0
@@ -23709,7 +23961,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-233
+239
 100
 AcDbEntity
   8
@@ -23747,7 +23999,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-234
+23A
 100
 AcDbEntity
   8
@@ -23785,7 +24037,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-235
+23B
 100
 AcDbEntity
   8
@@ -23823,7 +24075,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-236
+23C
 100
 AcDbEntity
   8
@@ -23861,7 +24113,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-237
+23D
 100
 AcDbEntity
   8
@@ -23899,7 +24151,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-238
+23E
 100
 AcDbEntity
   8
@@ -23937,7 +24189,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-239
+23F
 100
 AcDbEntity
   8
@@ -23975,7 +24227,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-23A
+240
 100
 AcDbEntity
   8
@@ -24013,7 +24265,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-23B
+241
 100
 AcDbEntity
   8
@@ -24051,7 +24303,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-23C
+242
 100
 AcDbEntity
   8
@@ -24089,7 +24341,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-23D
+243
 100
 AcDbEntity
   8
@@ -24127,7 +24379,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-23E
+244
 100
 AcDbEntity
   8
@@ -24165,7 +24417,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-23F
+245
 100
 AcDbEntity
   8
@@ -24203,7 +24455,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-240
+246
 100
 AcDbEntity
   8
@@ -24241,7 +24493,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-241
+247
 100
 AcDbEntity
   8
@@ -24279,7 +24531,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-242
+248
 100
 AcDbEntity
   8
@@ -24317,7 +24569,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-243
+249
 100
 AcDbEntity
   8
@@ -24355,7 +24607,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-244
+24A
 100
 AcDbEntity
   8
@@ -24393,7 +24645,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-245
+24B
 100
 AcDbEntity
   8
@@ -24431,7 +24683,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-246
+24C
 100
 AcDbEntity
   8
@@ -24469,7 +24721,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-247
+24D
 100
 AcDbEntity
   8
@@ -24507,7 +24759,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-248
+24E
 100
 AcDbEntity
   8
@@ -24545,7 +24797,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-249
+24F
 100
 AcDbEntity
   8
@@ -24583,7 +24835,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-24A
+250
 100
 AcDbEntity
   8
@@ -24621,7 +24873,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-24B
+251
 100
 AcDbEntity
   8
@@ -24650,234 +24902,6 @@ AcDbLine
 17914.517648533696
  21
 -3396.274806284558
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-24C
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17914.517648533696
- 20
--3396.274806284558
- 30
-0.0
- 11
-17922.732890440253
- 21
--3411.644442862744
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-24D
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17922.732890440253
- 20
--3411.644442862744
- 30
-0.0
- 11
-17927.791811427847
- 21
--3428.321470372766
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-24E
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17927.791811427847
- 20
--3428.321470372766
- 30
-0.0
- 11
-17929.5
- 21
--3445.665
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-24F
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17929.5
- 20
--3445.665
- 30
-0.0
- 11
-17927.791811427847
- 21
--3463.008529627234
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-250
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17927.791811427847
- 20
--3463.008529627234
- 30
-0.0
- 11
-17922.732890440253
- 21
--3479.685557137257
- 31
-0.0
-1001
-HOUSE
-1000
-f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
-  0
-LINE
-  5
-251
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17922.732890440253
- 20
--3479.685557137257
- 30
-0.0
- 11
-17914.517648533696
- 21
--3495.055193715443
  31
 0.0
 1001
@@ -24909,6 +24933,234 @@ AcDbLine
  10
 17914.517648533696
  20
+-3396.274806284558
+ 30
+0.0
+ 11
+17922.732890440253
+ 21
+-3411.644442862744
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+253
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17922.732890440253
+ 20
+-3411.644442862744
+ 30
+0.0
+ 11
+17927.791811427847
+ 21
+-3428.321470372766
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+254
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17927.791811427847
+ 20
+-3428.321470372766
+ 30
+0.0
+ 11
+17929.5
+ 21
+-3445.665
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+255
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17929.5
+ 20
+-3445.665
+ 30
+0.0
+ 11
+17927.791811427847
+ 21
+-3463.008529627234
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+256
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17927.791811427847
+ 20
+-3463.008529627234
+ 30
+0.0
+ 11
+17922.732890440253
+ 21
+-3479.685557137257
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+257
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17922.732890440253
+ 20
+-3479.685557137257
+ 30
+0.0
+ 11
+17914.517648533696
+ 21
+-3495.055193715443
+ 31
+0.0
+1001
+HOUSE
+1000
+f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
+  0
+LINE
+  5
+258
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17914.517648533696
+ 20
 -3495.055193715443
  30
 0.0
@@ -24925,7 +25177,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-253
+259
 100
 AcDbEntity
   8
@@ -24963,7 +25215,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-254
+25A
 100
 AcDbEntity
   8
@@ -25001,7 +25253,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-255
+25B
 100
 AcDbEntity
   8
@@ -25039,7 +25291,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-256
+25C
 100
 AcDbEntity
   8
@@ -25077,7 +25329,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-257
+25D
 100
 AcDbEntity
   8
@@ -25115,7 +25367,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-258
+25E
 100
 AcDbEntity
   8
@@ -25153,7 +25405,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-259
+25F
 100
 AcDbEntity
   8
@@ -25191,7 +25443,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-25A
+260
 100
 AcDbEntity
   8
@@ -25229,7 +25481,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-25B
+261
 100
 AcDbEntity
   8
@@ -25267,7 +25519,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-25C
+262
 100
 AcDbEntity
   8
@@ -25305,7 +25557,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-25D
+263
 100
 AcDbEntity
   8
@@ -25343,7 +25595,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-25E
+264
 100
 AcDbEntity
   8
@@ -25381,7 +25633,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-25F
+265
 100
 AcDbEntity
   8
@@ -25419,7 +25671,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-260
+266
 100
 AcDbEntity
   8
@@ -25457,7 +25709,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-261
+267
 100
 AcDbEntity
   8
@@ -25495,7 +25747,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-262
+268
 100
 AcDbEntity
   8
@@ -25533,7 +25785,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-263
+269
 100
 AcDbEntity
   8
@@ -25571,7 +25823,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-264
+26A
 100
 AcDbEntity
   8
@@ -25609,7 +25861,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-265
+26B
 100
 AcDbEntity
   8
@@ -25647,7 +25899,7 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-266
+26C
 100
 AcDbEntity
   8
@@ -25685,258 +25937,6 @@ f6bd213e-4f0b-4b20-8167-2b0e1436cc5a
   0
 LINE
   5
-267
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17889.450000000001
- 20
--9783.6
- 30
-0.0
- 11
-18499.049999999999
- 21
--9783.6
- 31
-0.0
-1001
-HOUSE
-1000
-fcdf6c81-87d2-4953-b726-0e756a8cfa00
-1000
-material:Warm ivory lacquer and natural oak
-1000
-style:attached_quarter_round_open_shelves_height_2286mm_6_levels
-  0
-LINE
-  5
-268
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17889.450000000001
- 20
--9783.6
- 30
-0.0
- 11
-17889.450000000001
- 21
--10393.200000000001
- 31
-0.0
-1001
-HOUSE
-1000
-fcdf6c81-87d2-4953-b726-0e756a8cfa00
-1000
-material:Warm ivory lacquer and natural oak
-1000
-style:attached_quarter_round_open_shelves_height_2286mm_6_levels
-  0
-LINE
-  5
-269
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-18499.049999999999
- 20
--9783.6
- 30
-0.0
- 11
-18498.315710102674
- 21
--9813.511654269994
- 31
-0.0
-1001
-HOUSE
-1000
-fcdf6c81-87d2-4953-b726-0e756a8cfa00
-1000
-material:Warm ivory lacquer and natural oak
-1000
-style:attached_quarter_round_open_shelves_height_2286mm_6_levels
-  0
-LINE
-  5
-26A
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-18498.315710102674
- 20
--9813.511654269994
- 30
-0.0
- 11
-18496.114609379372
- 21
--9843.351248744901
- 31
-0.0
-1001
-HOUSE
-1000
-fcdf6c81-87d2-4953-b726-0e756a8cfa00
-1000
-material:Warm ivory lacquer and natural oak
-1000
-style:attached_quarter_round_open_shelves_height_2286mm_6_levels
-  0
-LINE
-  5
-26B
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-18496.114609379372
- 20
--9843.351248744901
- 30
-0.0
- 11
-18492.452000474532
- 21
--9873.046897227989
- 31
-0.0
-1001
-HOUSE
-1000
-fcdf6c81-87d2-4953-b726-0e756a8cfa00
-1000
-material:Warm ivory lacquer and natural oak
-1000
-style:attached_quarter_round_open_shelves_height_2286mm_6_levels
-  0
-LINE
-  5
-26C
-100
-AcDbEntity
-  8
-FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-18492.452000474532
- 20
--9873.046897227989
- 30
-0.0
- 11
-18487.336706933809
- 21
--9902.527060301032
- 31
-0.0
-1001
-HOUSE
-1000
-fcdf6c81-87d2-4953-b726-0e756a8cfa00
-1000
-material:Warm ivory lacquer and natural oak
-1000
-style:attached_quarter_round_open_shelves_height_2286mm_6_levels
-  0
-LINE
-  5
 26D
 100
 AcDbEntity
@@ -25957,15 +25957,15 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18487.336706933809
+17889.450000000001
  20
--9902.527060301032
+-9783.6
  30
 0.0
  11
-18480.781051947393
+18499.049999999999
  21
--9931.72071766903
+-9783.6
  31
 0.0
 1001
@@ -25999,6 +25999,258 @@ FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+17889.450000000001
+ 20
+-9783.6
+ 30
+0.0
+ 11
+17889.450000000001
+ 21
+-10393.200000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+fcdf6c81-87d2-4953-b726-0e756a8cfa00
+1000
+material:Warm ivory lacquer and natural oak
+1000
+style:attached_quarter_round_open_shelves_height_2286mm_6_levels
+  0
+LINE
+  5
+26F
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+18499.049999999999
+ 20
+-9783.6
+ 30
+0.0
+ 11
+18498.315710102674
+ 21
+-9813.511654269994
+ 31
+0.0
+1001
+HOUSE
+1000
+fcdf6c81-87d2-4953-b726-0e756a8cfa00
+1000
+material:Warm ivory lacquer and natural oak
+1000
+style:attached_quarter_round_open_shelves_height_2286mm_6_levels
+  0
+LINE
+  5
+270
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+18498.315710102674
+ 20
+-9813.511654269994
+ 30
+0.0
+ 11
+18496.114609379372
+ 21
+-9843.351248744901
+ 31
+0.0
+1001
+HOUSE
+1000
+fcdf6c81-87d2-4953-b726-0e756a8cfa00
+1000
+material:Warm ivory lacquer and natural oak
+1000
+style:attached_quarter_round_open_shelves_height_2286mm_6_levels
+  0
+LINE
+  5
+271
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+18496.114609379372
+ 20
+-9843.351248744901
+ 30
+0.0
+ 11
+18492.452000474532
+ 21
+-9873.046897227989
+ 31
+0.0
+1001
+HOUSE
+1000
+fcdf6c81-87d2-4953-b726-0e756a8cfa00
+1000
+material:Warm ivory lacquer and natural oak
+1000
+style:attached_quarter_round_open_shelves_height_2286mm_6_levels
+  0
+LINE
+  5
+272
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+18492.452000474532
+ 20
+-9873.046897227989
+ 30
+0.0
+ 11
+18487.336706933809
+ 21
+-9902.527060301032
+ 31
+0.0
+1001
+HOUSE
+1000
+fcdf6c81-87d2-4953-b726-0e756a8cfa00
+1000
+material:Warm ivory lacquer and natural oak
+1000
+style:attached_quarter_round_open_shelves_height_2286mm_6_levels
+  0
+LINE
+  5
+273
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+18487.336706933809
+ 20
+-9902.527060301032
+ 30
+0.0
+ 11
+18480.781051947393
+ 21
+-9931.72071766903
+ 31
+0.0
+1001
+HOUSE
+1000
+fcdf6c81-87d2-4953-b726-0e756a8cfa00
+1000
+material:Warm ivory lacquer and natural oak
+1000
+style:attached_quarter_round_open_shelves_height_2286mm_6_levels
+  0
+LINE
+  5
+274
+100
+AcDbEntity
+  8
+FIXTURES_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 18480.781051947393
  20
 -9931.72071766903
@@ -26021,7 +26273,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-26F
+275
 100
 AcDbEntity
   8
@@ -26063,7 +26315,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-270
+276
 100
 AcDbEntity
   8
@@ -26105,7 +26357,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-271
+277
 100
 AcDbEntity
   8
@@ -26147,7 +26399,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-272
+278
 100
 AcDbEntity
   8
@@ -26189,7 +26441,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-273
+279
 100
 AcDbEntity
   8
@@ -26231,7 +26483,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-274
+27A
 100
 AcDbEntity
   8
@@ -26273,7 +26525,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-275
+27B
 100
 AcDbEntity
   8
@@ -26315,7 +26567,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-276
+27C
 100
 AcDbEntity
   8
@@ -26357,7 +26609,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-277
+27D
 100
 AcDbEntity
   8
@@ -26399,7 +26651,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-278
+27E
 100
 AcDbEntity
   8
@@ -26441,7 +26693,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-279
+27F
 100
 AcDbEntity
   8
@@ -26483,7 +26735,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-27A
+280
 100
 AcDbEntity
   8
@@ -26525,7 +26777,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-27B
+281
 100
 AcDbEntity
   8
@@ -26567,7 +26819,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-27C
+282
 100
 AcDbEntity
   8
@@ -26609,7 +26861,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-27D
+283
 100
 AcDbEntity
   8
@@ -26651,7 +26903,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-27E
+284
 100
 AcDbEntity
   8
@@ -26693,7 +26945,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-27F
+285
 100
 AcDbEntity
   8
@@ -26735,7 +26987,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-280
+286
 100
 AcDbEntity
   8
@@ -26777,7 +27029,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-281
+287
 100
 AcDbEntity
   8
@@ -26819,7 +27071,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-282
+288
 100
 AcDbEntity
   8
@@ -26861,7 +27113,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-283
+289
 100
 AcDbEntity
   8
@@ -26903,7 +27155,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-284
+28A
 100
 AcDbEntity
   8
@@ -26945,7 +27197,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-285
+28B
 100
 AcDbEntity
   8
@@ -26987,7 +27239,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-286
+28C
 100
 AcDbEntity
   8
@@ -27029,7 +27281,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-287
+28D
 100
 AcDbEntity
   8
@@ -27071,7 +27323,7 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-288
+28E
 100
 AcDbEntity
   8
@@ -27113,234 +27365,6 @@ style:attached_quarter_round_open_shelves_height_2286mm_6_levels
   0
 LINE
   5
-289
-100
-AcDbEntity
-  8
-WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-23222.900000000001
- 20
--2130.3
- 30
-0.0
- 11
-23222.900000000001
- 21
--2288.1
- 31
-0.0
-1001
-HOUSE
-1000
-086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
-  0
-LINE
-  5
-28A
-100
-AcDbEntity
-  8
-WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-23880.400000000001
- 20
--2130.3
- 30
-0.0
- 11
-23880.400000000001
- 21
--2288.1
- 31
-0.0
-1001
-HOUSE
-1000
-086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
-  0
-LINE
-  5
-28B
-100
-AcDbEntity
-  8
-WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-23222.900000000001
- 20
--2169.75
- 30
-0.0
- 11
-23880.400000000001
- 21
--2169.75
- 31
-0.0
-1001
-HOUSE
-1000
-086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
-  0
-LINE
-  5
-28C
-100
-AcDbEntity
-  8
-WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-23222.900000000001
- 20
--2209.2
- 30
-0.0
- 11
-23880.400000000001
- 21
--2209.2
- 31
-0.0
-1001
-HOUSE
-1000
-086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
-  0
-LINE
-  5
-28D
-100
-AcDbEntity
-  8
-WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-23222.900000000001
- 20
--2248.65
- 30
-0.0
- 11
-23880.400000000001
- 21
--2248.65
- 31
-0.0
-1001
-HOUSE
-1000
-086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
-  0
-LINE
-  5
-28E
-100
-AcDbEntity
-  8
-WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20579.750000000004
- 20
--2130.3
- 30
-0.0
- 11
-20579.750000000004
- 21
--2288.1
- 31
-0.0
-1001
-HOUSE
-1000
-12714a0a-742c-4d0f-bdef-848180aff49d
-  0
-LINE
-  5
 28F
 100
 AcDbEntity
@@ -27361,13 +27385,13 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21250.400000000001
+23222.900000000001
  20
 -2130.3
  30
 0.0
  11
-21250.400000000001
+23222.900000000001
  21
 -2288.1
  31
@@ -27375,7 +27399,7 @@ AcDbLine
 1001
 HOUSE
 1000
-12714a0a-742c-4d0f-bdef-848180aff49d
+086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
   0
 LINE
   5
@@ -27399,21 +27423,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20579.750000000004
+23880.400000000001
  20
--2169.75
+-2130.3
  30
 0.0
  11
-21250.400000000001
+23880.400000000001
  21
--2169.75
+-2288.1
  31
 0.0
 1001
 HOUSE
 1000
-12714a0a-742c-4d0f-bdef-848180aff49d
+086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
   0
 LINE
   5
@@ -27437,21 +27461,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20579.750000000004
+23222.900000000001
  20
--2209.2
+-2169.75
  30
 0.0
  11
-21250.400000000001
+23880.400000000001
  21
--2209.2
+-2169.75
  31
 0.0
 1001
 HOUSE
 1000
-12714a0a-742c-4d0f-bdef-848180aff49d
+086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
   0
 LINE
   5
@@ -27475,21 +27499,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20579.750000000004
+23222.900000000001
  20
--2248.65
+-2209.2
  30
 0.0
  11
-21250.400000000001
+23880.400000000001
  21
--2248.65
+-2209.2
  31
 0.0
 1001
 HOUSE
 1000
-12714a0a-742c-4d0f-bdef-848180aff49d
+086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
   0
 LINE
   5
@@ -27513,21 +27537,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-2025.1
+23222.900000000001
  20
--1275.55
+-2248.65
  30
 0.0
  11
-2025.1
+23880.400000000001
  21
--1433.35
+-2248.65
  31
 0.0
 1001
 HOUSE
 1000
-3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
+086cec58-d8f2-4e5d-a2fb-b31f3300e9b8
   0
 LINE
   5
@@ -27551,21 +27575,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-2800.95
+20579.750000000004
  20
--1275.55
+-2130.3
  30
 0.0
  11
-2800.95
+20579.750000000004
  21
--1433.35
+-2288.1
  31
 0.0
 1001
 HOUSE
 1000
-3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
+12714a0a-742c-4d0f-bdef-848180aff49d
   0
 LINE
   5
@@ -27589,21 +27613,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-2025.1
+21250.400000000001
  20
--1315.0
+-2130.3
  30
 0.0
  11
-2800.95
+21250.400000000001
  21
--1315.0
+-2288.1
  31
 0.0
 1001
 HOUSE
 1000
-3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
+12714a0a-742c-4d0f-bdef-848180aff49d
   0
 LINE
   5
@@ -27627,21 +27651,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-2025.1
+20579.750000000004
  20
--1354.45
+-2169.75
  30
 0.0
  11
-2800.95
+21250.400000000001
  21
--1354.45
+-2169.75
  31
 0.0
 1001
 HOUSE
 1000
-3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
+12714a0a-742c-4d0f-bdef-848180aff49d
   0
 LINE
   5
@@ -27665,21 +27689,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-2025.1
+20579.750000000004
  20
--1393.9
+-2209.2
  30
 0.0
  11
-2800.95
+21250.400000000001
  21
--1393.9
+-2209.2
  31
 0.0
 1001
 HOUSE
 1000
-3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
+12714a0a-742c-4d0f-bdef-848180aff49d
   0
 LINE
   5
@@ -27703,21 +27727,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-3997.6
+20579.750000000004
  20
--6285.7
+-2248.65
  30
 0.0
  11
-3839.8
+21250.400000000001
  21
--6285.7
+-2248.65
  31
 0.0
 1001
 HOUSE
 1000
-59d3c0ef-f7be-4886-89f1-6513f27a9a81
+12714a0a-742c-4d0f-bdef-848180aff49d
   0
 LINE
   5
@@ -27741,21 +27765,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-3997.6
+2025.1
  20
--6798.55
+-1275.55
  30
 0.0
  11
-3839.8
+2025.1
  21
--6798.55
+-1433.35
  31
 0.0
 1001
 HOUSE
 1000
-59d3c0ef-f7be-4886-89f1-6513f27a9a81
+3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
   0
 LINE
   5
@@ -27779,21 +27803,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-3958.15
+2800.95
  20
--6285.7
+-1275.55
  30
 0.0
  11
-3958.15
+2800.95
  21
--6798.55
+-1433.35
  31
 0.0
 1001
 HOUSE
 1000
-59d3c0ef-f7be-4886-89f1-6513f27a9a81
+3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
   0
 LINE
   5
@@ -27817,21 +27841,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-3918.7
+2025.1
  20
--6285.7
+-1315.0
  30
 0.0
  11
-3918.7
+2800.95
  21
--6798.55
+-1315.0
  31
 0.0
 1001
 HOUSE
 1000
-59d3c0ef-f7be-4886-89f1-6513f27a9a81
+3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
   0
 LINE
   5
@@ -27855,21 +27879,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-3879.25
+2025.1
  20
--6285.7
+-1354.45
  30
 0.0
  11
-3879.25
+2800.95
  21
--6798.55
+-1354.45
  31
 0.0
 1001
 HOUSE
 1000
-59d3c0ef-f7be-4886-89f1-6513f27a9a81
+3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
   0
 LINE
   5
@@ -27893,21 +27917,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15201.4
+2025.1
  20
--4102.8
+-1393.9
  30
 0.0
  11
-15043.6
+2800.95
  21
--4102.8
+-1393.9
  31
 0.0
 1001
 HOUSE
 1000
-64bda5a3-2ac4-4241-acfd-5753fa12c49a
+3a6af7b2-d918-4eb1-9ed8-e78ca957e1c4
   0
 LINE
   5
@@ -27931,21 +27955,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15201.4
+3997.6
  20
--5207.400000000001
+-6285.7
  30
 0.0
  11
-15043.6
+3839.8
  21
--5207.400000000001
+-6285.7
  31
 0.0
 1001
 HOUSE
 1000
-64bda5a3-2ac4-4241-acfd-5753fa12c49a
+59d3c0ef-f7be-4886-89f1-6513f27a9a81
   0
 LINE
   5
@@ -27969,21 +27993,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15161.950000000001
+3997.6
  20
--4102.8
+-6798.55
  30
 0.0
  11
-15161.950000000001
+3839.8
  21
--5207.400000000001
+-6798.55
  31
 0.0
 1001
 HOUSE
 1000
-64bda5a3-2ac4-4241-acfd-5753fa12c49a
+59d3c0ef-f7be-4886-89f1-6513f27a9a81
   0
 LINE
   5
@@ -28007,21 +28031,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15122.5
+3958.15
  20
--4102.8
+-6285.7
  30
 0.0
  11
-15122.5
+3958.15
  21
--5207.400000000001
+-6798.55
  31
 0.0
 1001
 HOUSE
 1000
-64bda5a3-2ac4-4241-acfd-5753fa12c49a
+59d3c0ef-f7be-4886-89f1-6513f27a9a81
   0
 LINE
   5
@@ -28045,21 +28069,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15083.049999999999
+3918.7
  20
--4102.8
+-6285.7
  30
 0.0
  11
-15083.049999999999
+3918.7
  21
--5207.400000000001
+-6798.55
  31
 0.0
 1001
 HOUSE
 1000
-64bda5a3-2ac4-4241-acfd-5753fa12c49a
+59d3c0ef-f7be-4886-89f1-6513f27a9a81
   0
 LINE
   5
@@ -28083,21 +28107,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17358.0
+3879.25
  20
--2471.275
+-6285.7
  30
 0.0
  11
-17200.199999999997
+3879.25
  21
--2471.275
+-6798.55
  31
 0.0
 1001
 HOUSE
 1000
-90a8284d-b202-41a7-a59f-ccc40a2822fa
+59d3c0ef-f7be-4886-89f1-6513f27a9a81
   0
 LINE
   5
@@ -28121,21 +28145,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17358.0
+15201.4
  20
--3247.125
+-4102.8
  30
 0.0
  11
-17200.199999999997
+15043.6
  21
--3247.125
+-4102.8
  31
 0.0
 1001
 HOUSE
 1000
-90a8284d-b202-41a7-a59f-ccc40a2822fa
+64bda5a3-2ac4-4241-acfd-5753fa12c49a
   0
 LINE
   5
@@ -28159,21 +28183,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17318.549999999999
+15201.4
  20
--2471.275
+-5207.400000000001
  30
 0.0
  11
-17318.549999999999
+15043.6
  21
--3247.125
+-5207.400000000001
  31
 0.0
 1001
 HOUSE
 1000
-90a8284d-b202-41a7-a59f-ccc40a2822fa
+64bda5a3-2ac4-4241-acfd-5753fa12c49a
   0
 LINE
   5
@@ -28197,21 +28221,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17279.099999999999
+15161.950000000001
  20
--2471.275
+-4102.8
  30
 0.0
  11
-17279.099999999999
+15161.950000000001
  21
--3247.125
+-5207.400000000001
  31
 0.0
 1001
 HOUSE
 1000
-90a8284d-b202-41a7-a59f-ccc40a2822fa
+64bda5a3-2ac4-4241-acfd-5753fa12c49a
   0
 LINE
   5
@@ -28235,21 +28259,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17239.649999999998
+15122.5
  20
--2471.275
+-4102.8
  30
 0.0
  11
-17239.649999999998
+15122.5
  21
--3247.125
+-5207.400000000001
  31
 0.0
 1001
 HOUSE
 1000
-90a8284d-b202-41a7-a59f-ccc40a2822fa
+64bda5a3-2ac4-4241-acfd-5753fa12c49a
   0
 LINE
   5
@@ -28273,21 +28297,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24182.850000000002
+15083.049999999999
  20
--3037.650000000001
+-4102.8
  30
 0.0
  11
-24025.049999999999
+15083.049999999999
  21
--3037.650000000001
+-5207.400000000001
  31
 0.0
 1001
 HOUSE
 1000
-95713936-a61e-4b4c-815a-e2a1fb1c524d
+64bda5a3-2ac4-4241-acfd-5753fa12c49a
   0
 LINE
   5
@@ -28311,21 +28335,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24182.850000000002
+17358.0
  20
--3918.700000000001
+-2471.275
  30
 0.0
  11
-24025.049999999999
+17200.199999999997
  21
--3918.700000000001
+-2471.275
  31
 0.0
 1001
 HOUSE
 1000
-95713936-a61e-4b4c-815a-e2a1fb1c524d
+90a8284d-b202-41a7-a59f-ccc40a2822fa
   0
 LINE
   5
@@ -28349,21 +28373,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24143.400000000001
+17358.0
  20
--3037.650000000001
+-3247.125
  30
 0.0
  11
-24143.400000000001
+17200.199999999997
  21
--3918.700000000001
+-3247.125
  31
 0.0
 1001
 HOUSE
 1000
-95713936-a61e-4b4c-815a-e2a1fb1c524d
+90a8284d-b202-41a7-a59f-ccc40a2822fa
   0
 LINE
   5
@@ -28387,21 +28411,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24103.950000000001
+17318.549999999999
  20
--3037.650000000001
+-2471.275
  30
 0.0
  11
-24103.950000000001
+17318.549999999999
  21
--3918.700000000001
+-3247.125
  31
 0.0
 1001
 HOUSE
 1000
-95713936-a61e-4b4c-815a-e2a1fb1c524d
+90a8284d-b202-41a7-a59f-ccc40a2822fa
   0
 LINE
   5
@@ -28425,21 +28449,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24064.5
+17279.099999999999
  20
--3037.650000000001
+-2471.275
  30
 0.0
  11
-24064.5
+17279.099999999999
  21
--3918.700000000001
+-3247.125
  31
 0.0
 1001
 HOUSE
 1000
-95713936-a61e-4b4c-815a-e2a1fb1c524d
+90a8284d-b202-41a7-a59f-ccc40a2822fa
   0
 LINE
   5
@@ -28463,21 +28487,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-1420.2
+17239.649999999998
  20
--6022.700000000001
+-2471.275
  30
 0.0
  11
-1420.2
+17239.649999999998
  21
--6180.5
+-3247.125
  31
 0.0
 1001
 HOUSE
 1000
-95b45cc2-b038-4ced-9e3b-8baa13dae2e1
+90a8284d-b202-41a7-a59f-ccc40a2822fa
   0
 LINE
   5
@@ -28501,21 +28525,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-2196.05
+24182.850000000002
  20
--6022.700000000001
+-3037.650000000001
  30
 0.0
  11
-2196.05
+24025.049999999999
  21
--6180.5
+-3037.650000000001
  31
 0.0
 1001
 HOUSE
 1000
-95b45cc2-b038-4ced-9e3b-8baa13dae2e1
+95713936-a61e-4b4c-815a-e2a1fb1c524d
   0
 LINE
   5
@@ -28539,21 +28563,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-1420.2
+24182.850000000002
  20
--6062.150000000001
+-3918.700000000001
  30
 0.0
  11
-2196.05
+24025.049999999999
  21
--6062.150000000001
+-3918.700000000001
  31
 0.0
 1001
 HOUSE
 1000
-95b45cc2-b038-4ced-9e3b-8baa13dae2e1
+95713936-a61e-4b4c-815a-e2a1fb1c524d
   0
 LINE
   5
@@ -28577,21 +28601,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-1420.2
+24143.400000000001
  20
--6101.6
+-3037.650000000001
  30
 0.0
  11
-2196.05
+24143.400000000001
  21
--6101.6
+-3918.700000000001
  31
 0.0
 1001
 HOUSE
 1000
-95b45cc2-b038-4ced-9e3b-8baa13dae2e1
+95713936-a61e-4b4c-815a-e2a1fb1c524d
   0
 LINE
   5
@@ -28615,21 +28639,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-1420.2
+24103.950000000001
  20
--6141.05
+-3037.650000000001
  30
 0.0
  11
-2196.05
+24103.950000000001
  21
--6141.05
+-3918.700000000001
  31
 0.0
 1001
 HOUSE
 1000
-95b45cc2-b038-4ced-9e3b-8baa13dae2e1
+95713936-a61e-4b4c-815a-e2a1fb1c524d
   0
 LINE
   5
@@ -28653,21 +28677,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18260.200000000001
+24064.5
  20
--2130.3
+-3037.650000000001
  30
 0.0
  11
-18260.200000000001
+24064.5
  21
--2288.1
+-3918.700000000001
  31
 0.0
 1001
 HOUSE
 1000
-9b44bb93-1dea-42b1-98cd-26466e14a447
+95713936-a61e-4b4c-815a-e2a1fb1c524d
   0
 LINE
   5
@@ -28691,21 +28715,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20089.000000000004
+1420.2
  20
--2130.3
+-6022.700000000001
  30
 0.0
  11
-20089.000000000004
+1420.2
  21
--2288.1
+-6180.5
  31
 0.0
 1001
 HOUSE
 1000
-9b44bb93-1dea-42b1-98cd-26466e14a447
+95b45cc2-b038-4ced-9e3b-8baa13dae2e1
   0
 LINE
   5
@@ -28729,21 +28753,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18260.200000000001
+2196.05
  20
--2169.75
+-6022.700000000001
  30
 0.0
  11
-20089.000000000004
+2196.05
  21
--2169.75
+-6180.5
  31
 0.0
 1001
 HOUSE
 1000
-9b44bb93-1dea-42b1-98cd-26466e14a447
+95b45cc2-b038-4ced-9e3b-8baa13dae2e1
   0
 LINE
   5
@@ -28767,21 +28791,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18260.200000000001
+1420.2
  20
--2209.2
+-6062.150000000001
  30
 0.0
  11
-20089.000000000004
+2196.05
  21
--2209.2
+-6062.150000000001
  31
 0.0
 1001
 HOUSE
 1000
-9b44bb93-1dea-42b1-98cd-26466e14a447
+95b45cc2-b038-4ced-9e3b-8baa13dae2e1
   0
 LINE
   5
@@ -28805,21 +28829,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-18260.200000000001
+1420.2
  20
--2248.65
+-6101.6
  30
 0.0
  11
-20089.000000000004
+2196.05
  21
--2248.65
+-6101.6
  31
 0.0
 1001
 HOUSE
 1000
-9b44bb93-1dea-42b1-98cd-26466e14a447
+95b45cc2-b038-4ced-9e3b-8baa13dae2e1
   0
 LINE
   5
@@ -28843,21 +28867,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19863.075000000001
+1420.2
  20
--13136.85
+-6141.05
  30
 0.0
  11
-19863.075000000001
+2196.05
  21
--13294.65
+-6141.05
  31
 0.0
 1001
 HOUSE
 1000
-a97e8375-a032-44f7-aaae-53391169fefb
+95b45cc2-b038-4ced-9e3b-8baa13dae2e1
   0
 LINE
   5
@@ -28881,21 +28905,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20494.275000000001
+18260.200000000001
  20
--13136.85
+-2130.3
  30
 0.0
  11
-20494.275000000001
+18260.200000000001
  21
--13294.65
+-2288.1
  31
 0.0
 1001
 HOUSE
 1000
-a97e8375-a032-44f7-aaae-53391169fefb
+9b44bb93-1dea-42b1-98cd-26466e14a447
   0
 LINE
   5
@@ -28919,21 +28943,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19863.075000000001
+20089.000000000004
  20
--13176.299999999999
+-2130.3
  30
 0.0
  11
-20494.275000000001
+20089.000000000004
  21
--13176.299999999999
+-2288.1
  31
 0.0
 1001
 HOUSE
 1000
-a97e8375-a032-44f7-aaae-53391169fefb
+9b44bb93-1dea-42b1-98cd-26466e14a447
   0
 LINE
   5
@@ -28957,21 +28981,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19863.075000000001
+18260.200000000001
  20
--13215.75
+-2169.75
  30
 0.0
  11
-20494.275000000001
+20089.000000000004
  21
--13215.75
+-2169.75
  31
 0.0
 1001
 HOUSE
 1000
-a97e8375-a032-44f7-aaae-53391169fefb
+9b44bb93-1dea-42b1-98cd-26466e14a447
   0
 LINE
   5
@@ -28995,21 +29019,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19863.075000000001
+18260.200000000001
  20
--13255.200000000001
+-2209.2
  30
 0.0
  11
-20494.275000000001
+20089.000000000004
  21
--13255.200000000001
+-2209.2
  31
 0.0
 1001
 HOUSE
 1000
-a97e8375-a032-44f7-aaae-53391169fefb
+9b44bb93-1dea-42b1-98cd-26466e14a447
   0
 LINE
   5
@@ -29033,21 +29057,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16792.550000000003
+18260.200000000001
  20
--8771.049999999999
+-2248.65
  30
 0.0
  11
-16634.75
+20089.000000000004
  21
--8771.049999999999
+-2248.65
  31
 0.0
 1001
 HOUSE
 1000
-ae9fea41-2583-4c47-a83f-4b83aa8d5c32
+9b44bb93-1dea-42b1-98cd-26466e14a447
   0
 LINE
   5
@@ -29071,21 +29095,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16792.550000000003
+19863.075000000001
  20
--9546.900000000001
+-13136.85
  30
 0.0
  11
-16634.75
+19863.075000000001
  21
--9546.900000000001
+-13294.65
  31
 0.0
 1001
 HOUSE
 1000
-ae9fea41-2583-4c47-a83f-4b83aa8d5c32
+a97e8375-a032-44f7-aaae-53391169fefb
   0
 LINE
   5
@@ -29109,21 +29133,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16753.100000000002
+20494.275000000001
  20
--8771.049999999999
+-13136.85
  30
 0.0
  11
-16753.100000000002
+20494.275000000001
  21
--9546.900000000001
+-13294.65
  31
 0.0
 1001
 HOUSE
 1000
-ae9fea41-2583-4c47-a83f-4b83aa8d5c32
+a97e8375-a032-44f7-aaae-53391169fefb
   0
 LINE
   5
@@ -29147,21 +29171,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16713.650000000001
+19863.075000000001
  20
--8771.049999999999
+-13176.299999999999
  30
 0.0
  11
-16713.650000000001
+20494.275000000001
  21
--9546.900000000001
+-13176.299999999999
  31
 0.0
 1001
 HOUSE
 1000
-ae9fea41-2583-4c47-a83f-4b83aa8d5c32
+a97e8375-a032-44f7-aaae-53391169fefb
   0
 LINE
   5
@@ -29185,21 +29209,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16674.200000000001
+19863.075000000001
  20
--8771.049999999999
+-13215.75
  30
 0.0
  11
-16674.200000000001
+20494.275000000001
  21
--9546.900000000001
+-13215.75
  31
 0.0
 1001
 HOUSE
 1000
-ae9fea41-2583-4c47-a83f-4b83aa8d5c32
+a97e8375-a032-44f7-aaae-53391169fefb
   0
 LINE
   5
@@ -29223,21 +29247,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21559.424999999999
+19863.075000000001
  20
--13136.85
+-13255.200000000001
  30
 0.0
  11
-21559.424999999999
+20494.275000000001
  21
--13294.65
+-13255.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-aff1b521-5dcc-480e-8038-e6056becdabd
+a97e8375-a032-44f7-aaae-53391169fefb
   0
 LINE
   5
@@ -29261,21 +29285,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-22190.625
+16792.550000000003
  20
--13136.85
+-8771.049999999999
  30
 0.0
  11
-22190.625
+16634.75
  21
--13294.65
+-8771.049999999999
  31
 0.0
 1001
 HOUSE
 1000
-aff1b521-5dcc-480e-8038-e6056becdabd
+ae9fea41-2583-4c47-a83f-4b83aa8d5c32
   0
 LINE
   5
@@ -29299,21 +29323,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21559.424999999999
+16792.550000000003
  20
--13176.299999999999
+-9546.900000000001
  30
 0.0
  11
-22190.625
+16634.75
  21
--13176.299999999999
+-9546.900000000001
  31
 0.0
 1001
 HOUSE
 1000
-aff1b521-5dcc-480e-8038-e6056becdabd
+ae9fea41-2583-4c47-a83f-4b83aa8d5c32
   0
 LINE
   5
@@ -29337,21 +29361,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21559.424999999999
+16753.100000000002
  20
--13215.75
+-8771.049999999999
  30
 0.0
  11
-22190.625
+16753.100000000002
  21
--13215.75
+-9546.900000000001
  31
 0.0
 1001
 HOUSE
 1000
-aff1b521-5dcc-480e-8038-e6056becdabd
+ae9fea41-2583-4c47-a83f-4b83aa8d5c32
   0
 LINE
   5
@@ -29375,21 +29399,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-21559.424999999999
+16713.650000000001
  20
--13255.200000000001
+-8771.049999999999
  30
 0.0
  11
-22190.625
+16713.650000000001
  21
--13255.200000000001
+-9546.900000000001
  31
 0.0
 1001
 HOUSE
 1000
-aff1b521-5dcc-480e-8038-e6056becdabd
+ae9fea41-2583-4c47-a83f-4b83aa8d5c32
   0
 LINE
   5
@@ -29413,21 +29437,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15306.6
+16674.200000000001
  20
--3826.65
+-8771.049999999999
  30
 0.0
  11
-15306.6
+16674.200000000001
  21
--3984.45
+-9546.900000000001
  31
 0.0
 1001
 HOUSE
 1000
-baf7ae37-de75-40d6-a38e-37af2a50ad15
+ae9fea41-2583-4c47-a83f-4b83aa8d5c32
   0
 LINE
   5
@@ -29451,21 +29475,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16621.599999999999
+21559.424999999999
  20
--3826.65
+-13136.85
  30
 0.0
  11
-16621.599999999999
+21559.424999999999
  21
--3984.45
+-13294.65
  31
 0.0
 1001
 HOUSE
 1000
-baf7ae37-de75-40d6-a38e-37af2a50ad15
+aff1b521-5dcc-480e-8038-e6056becdabd
   0
 LINE
   5
@@ -29489,21 +29513,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15306.6
+22190.625
  20
--3866.1
+-13136.85
  30
 0.0
  11
-16621.599999999999
+22190.625
  21
--3866.1
+-13294.65
  31
 0.0
 1001
 HOUSE
 1000
-baf7ae37-de75-40d6-a38e-37af2a50ad15
+aff1b521-5dcc-480e-8038-e6056becdabd
   0
 LINE
   5
@@ -29527,21 +29551,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15306.6
+21559.424999999999
  20
--3905.55
+-13176.299999999999
  30
 0.0
  11
-16621.599999999999
+22190.625
  21
--3905.55
+-13176.299999999999
  31
 0.0
 1001
 HOUSE
 1000
-baf7ae37-de75-40d6-a38e-37af2a50ad15
+aff1b521-5dcc-480e-8038-e6056becdabd
   0
 LINE
   5
@@ -29565,21 +29589,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15306.6
+21559.424999999999
  20
--3945.0
+-13215.75
  30
 0.0
  11
-16621.599999999999
+22190.625
  21
--3945.0
+-13215.75
  31
 0.0
 1001
 HOUSE
 1000
-baf7ae37-de75-40d6-a38e-37af2a50ad15
+aff1b521-5dcc-480e-8038-e6056becdabd
   0
 LINE
   5
@@ -29603,21 +29627,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24182.850000000002
+21559.424999999999
  20
--6877.450000000001
+-13255.200000000001
  30
 0.0
  11
-24025.049999999999
+22190.625
  21
--6877.450000000001
+-13255.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
+aff1b521-5dcc-480e-8038-e6056becdabd
   0
 LINE
   5
@@ -29641,21 +29665,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24182.850000000002
+15306.599999999999
  20
--7784.800000000001
+-3826.65
  30
 0.0
  11
-24025.049999999999
+15306.599999999999
  21
--7784.800000000001
+-3984.45
  31
 0.0
 1001
 HOUSE
 1000
-bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
+baf7ae37-de75-40d6-a38e-37af2a50ad15
   0
 LINE
   5
@@ -29679,21 +29703,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24143.400000000001
+16471.0
  20
--6877.450000000001
+-3826.65
  30
 0.0
  11
-24143.400000000001
+16471.0
  21
--7784.800000000001
+-3984.45
  31
 0.0
 1001
 HOUSE
 1000
-bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
+baf7ae37-de75-40d6-a38e-37af2a50ad15
   0
 LINE
   5
@@ -29717,21 +29741,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24103.950000000001
+15306.599999999999
  20
--6877.450000000001
+-3866.1
  30
 0.0
  11
-24103.950000000001
+16471.0
  21
--7784.800000000001
+-3866.1
  31
 0.0
 1001
 HOUSE
 1000
-bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
+baf7ae37-de75-40d6-a38e-37af2a50ad15
   0
 LINE
   5
@@ -29755,21 +29779,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24064.5
+15306.599999999999
  20
--6877.450000000001
+-3905.55
  30
 0.0
  11
-24064.5
+16471.0
  21
--7784.800000000001
+-3905.55
  31
 0.0
 1001
 HOUSE
 1000
-bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
+baf7ae37-de75-40d6-a38e-37af2a50ad15
   0
 LINE
   5
@@ -29793,21 +29817,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16792.550000000003
+15306.599999999999
  20
--6680.200000000001
+-3945.0
  30
 0.0
  11
-16634.75
+16471.0
  21
--6680.200000000001
+-3945.0
  31
 0.0
 1001
 HOUSE
 1000
-d26b3520-ab06-4a4e-8256-440313ab2f5c
+baf7ae37-de75-40d6-a38e-37af2a50ad15
   0
 LINE
   5
@@ -29831,21 +29855,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16792.550000000003
+24182.850000000002
  20
--7469.200000000001
+-6877.450000000001
  30
 0.0
  11
-16634.75
+24025.049999999999
  21
--7469.200000000001
+-6877.450000000001
  31
 0.0
 1001
 HOUSE
 1000
-d26b3520-ab06-4a4e-8256-440313ab2f5c
+bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
   0
 LINE
   5
@@ -29869,21 +29893,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16753.100000000002
+24182.850000000002
  20
--6680.200000000001
+-7784.800000000001
  30
 0.0
  11
-16753.100000000002
+24025.049999999999
  21
--7469.200000000001
+-7784.800000000001
  31
 0.0
 1001
 HOUSE
 1000
-d26b3520-ab06-4a4e-8256-440313ab2f5c
+bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
   0
 LINE
   5
@@ -29907,21 +29931,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16713.650000000001
+24143.400000000001
  20
--6680.200000000001
+-6877.450000000001
  30
 0.0
  11
-16713.650000000001
+24143.400000000001
  21
--7469.200000000001
+-7784.800000000001
  31
 0.0
 1001
 HOUSE
 1000
-d26b3520-ab06-4a4e-8256-440313ab2f5c
+bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
   0
 LINE
   5
@@ -29945,21 +29969,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16674.200000000001
+24103.950000000001
  20
--6680.200000000001
+-6877.450000000001
  30
 0.0
  11
-16674.200000000001
+24103.950000000001
  21
--7469.200000000001
+-7784.800000000001
  31
 0.0
 1001
 HOUSE
 1000
-d26b3520-ab06-4a4e-8256-440313ab2f5c
+bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
   0
 LINE
   5
@@ -29983,21 +30007,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24182.850000000002
+24064.5
  20
--5233.700000000001
+-6877.450000000001
  30
 0.0
  11
-24025.049999999999
+24064.5
  21
--5233.700000000001
+-7784.800000000001
  31
 0.0
 1001
 HOUSE
 1000
-d90cccdb-1e62-43c5-adfd-503af697c947
+bf6ed050-0032-4a9f-a9f9-8f3e0cca3d0a
   0
 LINE
   5
@@ -30021,21 +30045,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24182.850000000002
+16792.550000000003
  20
--6127.9
+-6680.200000000001
  30
 0.0
  11
-24025.049999999999
+16634.75
  21
--6127.9
+-6680.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-d90cccdb-1e62-43c5-adfd-503af697c947
+d26b3520-ab06-4a4e-8256-440313ab2f5c
   0
 LINE
   5
@@ -30059,21 +30083,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24143.400000000001
+16792.550000000003
  20
--5233.700000000001
+-7469.200000000001
  30
 0.0
  11
-24143.400000000001
+16634.75
  21
--6127.9
+-7469.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-d90cccdb-1e62-43c5-adfd-503af697c947
+d26b3520-ab06-4a4e-8256-440313ab2f5c
   0
 LINE
   5
@@ -30097,21 +30121,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24103.950000000001
+16753.100000000002
  20
--5233.700000000001
+-6680.200000000001
  30
 0.0
  11
-24103.950000000001
+16753.100000000002
  21
--6127.9
+-7469.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-d90cccdb-1e62-43c5-adfd-503af697c947
+d26b3520-ab06-4a4e-8256-440313ab2f5c
   0
 LINE
   5
@@ -30135,21 +30159,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-24064.5
+16713.650000000001
  20
--5233.700000000001
+-6680.200000000001
  30
 0.0
  11
-24064.5
+16713.650000000001
  21
--6127.9
+-7469.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-d90cccdb-1e62-43c5-adfd-503af697c947
+d26b3520-ab06-4a4e-8256-440313ab2f5c
   0
 LINE
   5
@@ -30173,21 +30197,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15674.799999999999
+16674.200000000001
  20
--6351.450000000001
+-6680.200000000001
  30
 0.0
  11
-15674.799999999999
+16674.200000000001
  21
--6509.25
+-7469.200000000001
  31
 0.0
 1001
 HOUSE
 1000
-db40b496-1570-493e-89c0-1be6c7ad4178
+d26b3520-ab06-4a4e-8256-440313ab2f5c
   0
 LINE
   5
@@ -30211,21 +30235,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16779.400000000001
+24182.850000000002
  20
--6351.450000000001
+-5233.700000000001
  30
 0.0
  11
-16779.400000000001
+24025.049999999999
  21
--6509.25
+-5233.700000000001
  31
 0.0
 1001
 HOUSE
 1000
-db40b496-1570-493e-89c0-1be6c7ad4178
+d90cccdb-1e62-43c5-adfd-503af697c947
   0
 LINE
   5
@@ -30249,21 +30273,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15674.799999999999
+24182.850000000002
  20
--6390.900000000001
+-6127.9
  30
 0.0
  11
-16779.400000000001
+24025.049999999999
  21
--6390.900000000001
+-6127.9
  31
 0.0
 1001
 HOUSE
 1000
-db40b496-1570-493e-89c0-1be6c7ad4178
+d90cccdb-1e62-43c5-adfd-503af697c947
   0
 LINE
   5
@@ -30287,21 +30311,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15674.799999999999
+24143.400000000001
  20
--6430.35
+-5233.700000000001
  30
 0.0
  11
-16779.400000000001
+24143.400000000001
  21
--6430.35
+-6127.9
  31
 0.0
 1001
 HOUSE
 1000
-db40b496-1570-493e-89c0-1be6c7ad4178
+d90cccdb-1e62-43c5-adfd-503af697c947
   0
 LINE
   5
@@ -30325,21 +30349,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-15674.799999999999
+24103.950000000001
  20
--6469.8
+-5233.700000000001
  30
 0.0
  11
-16779.400000000001
+24103.950000000001
  21
--6469.8
+-6127.9
  31
 0.0
 1001
 HOUSE
 1000
-db40b496-1570-493e-89c0-1be6c7ad4178
+d90cccdb-1e62-43c5-adfd-503af697c947
   0
 LINE
   5
@@ -30363,21 +30387,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9770.450000000001
+24064.5
  20
--7797.95
+-5233.700000000001
  30
 0.0
  11
-9612.650000000001
+24064.5
  21
--7797.95
+-6127.9
  31
 0.0
 1001
 HOUSE
 1000
-e9a24776-fc99-451c-8b7c-bfe52a6edb74
+d90cccdb-1e62-43c5-adfd-503af697c947
   0
 LINE
   5
@@ -30401,21 +30425,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9770.450000000001
+15674.799999999999
  20
--8705.300000000001
+-6351.450000000001
  30
 0.0
  11
-9612.650000000001
+15674.799999999999
  21
--8705.300000000001
+-6509.25
  31
 0.0
 1001
 HOUSE
 1000
-e9a24776-fc99-451c-8b7c-bfe52a6edb74
+db40b496-1570-493e-89c0-1be6c7ad4178
   0
 LINE
   5
@@ -30439,21 +30463,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9731.000000000002
+16779.400000000001
  20
--7797.95
+-6351.450000000001
  30
 0.0
  11
-9731.000000000002
+16779.400000000001
  21
--8705.300000000001
+-6509.25
  31
 0.0
 1001
 HOUSE
 1000
-e9a24776-fc99-451c-8b7c-bfe52a6edb74
+db40b496-1570-493e-89c0-1be6c7ad4178
   0
 LINE
   5
@@ -30477,21 +30501,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9691.550000000001
+15674.799999999999
  20
--7797.95
+-6390.900000000001
  30
 0.0
  11
-9691.550000000001
+16779.400000000001
  21
--8705.300000000001
+-6390.900000000001
  31
 0.0
 1001
 HOUSE
 1000
-e9a24776-fc99-451c-8b7c-bfe52a6edb74
+db40b496-1570-493e-89c0-1be6c7ad4178
   0
 LINE
   5
@@ -30515,21 +30539,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9652.1
+15674.799999999999
  20
--7797.95
+-6430.35
  30
 0.0
  11
-9652.1
+16779.400000000001
  21
--8705.300000000001
+-6430.35
  31
 0.0
 1001
 HOUSE
 1000
-e9a24776-fc99-451c-8b7c-bfe52a6edb74
+db40b496-1570-493e-89c0-1be6c7ad4178
   0
 LINE
   5
@@ -30553,21 +30577,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-8639.550000000001
+15674.799999999999
  20
--8757.900000000001
+-6469.8
  30
 0.0
  11
-8639.550000000001
+16779.400000000001
  21
--8915.700000000001
+-6469.8
  31
 0.0
 1001
 HOUSE
 1000
-f0e9da68-b0a8-41d3-823f-62bd98ed0593
+db40b496-1570-493e-89c0-1be6c7ad4178
   0
 LINE
   5
@@ -30591,21 +30615,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9520.6
+9770.450000000001
  20
--8757.900000000001
+-7797.95
  30
 0.0
  11
-9520.6
+9612.650000000001
  21
--8915.700000000001
+-7797.95
  31
 0.0
 1001
 HOUSE
 1000
-f0e9da68-b0a8-41d3-823f-62bd98ed0593
+e9a24776-fc99-451c-8b7c-bfe52a6edb74
   0
 LINE
   5
@@ -30629,21 +30653,21 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-8639.550000000001
+9770.450000000001
  20
--8797.35
+-8705.300000000001
  30
 0.0
  11
-9520.6
+9612.650000000001
  21
--8797.35
+-8705.300000000001
  31
 0.0
 1001
 HOUSE
 1000
-f0e9da68-b0a8-41d3-823f-62bd98ed0593
+e9a24776-fc99-451c-8b7c-bfe52a6edb74
   0
 LINE
   5
@@ -30667,6 +30691,234 @@ WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+9731.000000000002
+ 20
+-7797.95
+ 30
+0.0
+ 11
+9731.000000000002
+ 21
+-8705.300000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+e9a24776-fc99-451c-8b7c-bfe52a6edb74
+  0
+LINE
+  5
+2E7
+100
+AcDbEntity
+  8
+WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9691.550000000001
+ 20
+-7797.95
+ 30
+0.0
+ 11
+9691.550000000001
+ 21
+-8705.300000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+e9a24776-fc99-451c-8b7c-bfe52a6edb74
+  0
+LINE
+  5
+2E8
+100
+AcDbEntity
+  8
+WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9652.1
+ 20
+-7797.95
+ 30
+0.0
+ 11
+9652.1
+ 21
+-8705.300000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+e9a24776-fc99-451c-8b7c-bfe52a6edb74
+  0
+LINE
+  5
+2E9
+100
+AcDbEntity
+  8
+WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+8639.550000000001
+ 20
+-8757.900000000001
+ 30
+0.0
+ 11
+8639.550000000001
+ 21
+-8915.700000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+f0e9da68-b0a8-41d3-823f-62bd98ed0593
+  0
+LINE
+  5
+2EA
+100
+AcDbEntity
+  8
+WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9520.6
+ 20
+-8757.900000000001
+ 30
+0.0
+ 11
+9520.6
+ 21
+-8915.700000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+f0e9da68-b0a8-41d3-823f-62bd98ed0593
+  0
+LINE
+  5
+2EB
+100
+AcDbEntity
+  8
+WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+8639.550000000001
+ 20
+-8797.35
+ 30
+0.0
+ 11
+9520.6
+ 21
+-8797.35
+ 31
+0.0
+1001
+HOUSE
+1000
+f0e9da68-b0a8-41d3-823f-62bd98ed0593
+  0
+LINE
+  5
+2EC
+100
+AcDbEntity
+  8
+WINDOWS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 8639.550000000001
  20
 -8836.800000000001
@@ -30685,7 +30937,7 @@ f0e9da68-b0a8-41d3-823f-62bd98ed0593
   0
 LINE
   5
-2E7
+2ED
 100
 AcDbEntity
   8
@@ -30723,234 +30975,6 @@ f0e9da68-b0a8-41d3-823f-62bd98ed0593
   0
 LINE
   5
-2E8
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16187.65
- 20
--10552.4
- 30
-0.0
- 11
-16029.85
- 21
--10552.4
- 31
-0.0
-1001
-HOUSE
-1000
-24a31300-284d-45b2-900e-99d8a56f1068
-  0
-LINE
-  5
-2E9
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16187.65
- 20
--12381.200000000001
- 30
-0.0
- 11
-16029.85
- 21
--12381.200000000001
- 31
-0.0
-1001
-HOUSE
-1000
-24a31300-284d-45b2-900e-99d8a56f1068
-  0
-LINE
-  5
-2EA
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16148.200000000001
- 20
--10552.4
- 30
-0.0
- 11
-16148.200000000001
- 21
--11558.24
- 31
-0.0
-1001
-HOUSE
-1000
-24a31300-284d-45b2-900e-99d8a56f1068
-  0
-LINE
-  5
-2EB
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16148.200000000001
- 20
--11558.24
- 30
-0.0
- 11
-16120.584999999999
- 21
--11558.24
- 31
-0.0
-1001
-HOUSE
-1000
-24a31300-284d-45b2-900e-99d8a56f1068
-  0
-LINE
-  5
-2EC
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16120.584999999999
- 20
--11558.24
- 30
-0.0
- 11
-16120.584999999999
- 21
--10552.4
- 31
-0.0
-1001
-HOUSE
-1000
-24a31300-284d-45b2-900e-99d8a56f1068
-  0
-LINE
-  5
-2ED
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16120.584999999999
- 20
--10552.4
- 30
-0.0
- 11
-16148.200000000001
- 21
--10552.4
- 31
-0.0
-1001
-HOUSE
-1000
-24a31300-284d-45b2-900e-99d8a56f1068
-  0
-LINE
-  5
 2EE
 100
 AcDbEntity
@@ -30971,15 +30995,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16096.915000000001
+16187.65
  20
--11375.360000000001
+-10552.4
  30
 0.0
  11
-16096.915000000001
+16029.85
  21
--12381.200000000001
+-10552.4
  31
 0.0
 1001
@@ -31009,13 +31033,13 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-16096.915000000001
+16187.65
  20
 -12381.200000000001
  30
 0.0
  11
-16069.299999999999
+16029.85
  21
 -12381.200000000001
  31
@@ -31047,6 +31071,234 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+16148.200000000001
+ 20
+-10552.4
+ 30
+0.0
+ 11
+16148.200000000001
+ 21
+-11558.24
+ 31
+0.0
+1001
+HOUSE
+1000
+24a31300-284d-45b2-900e-99d8a56f1068
+  0
+LINE
+  5
+2F1
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16148.200000000001
+ 20
+-11558.24
+ 30
+0.0
+ 11
+16120.584999999999
+ 21
+-11558.24
+ 31
+0.0
+1001
+HOUSE
+1000
+24a31300-284d-45b2-900e-99d8a56f1068
+  0
+LINE
+  5
+2F2
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16120.584999999999
+ 20
+-11558.24
+ 30
+0.0
+ 11
+16120.584999999999
+ 21
+-10552.4
+ 31
+0.0
+1001
+HOUSE
+1000
+24a31300-284d-45b2-900e-99d8a56f1068
+  0
+LINE
+  5
+2F3
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16120.584999999999
+ 20
+-10552.4
+ 30
+0.0
+ 11
+16148.200000000001
+ 21
+-10552.4
+ 31
+0.0
+1001
+HOUSE
+1000
+24a31300-284d-45b2-900e-99d8a56f1068
+  0
+LINE
+  5
+2F4
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16096.915000000001
+ 20
+-11375.360000000001
+ 30
+0.0
+ 11
+16096.915000000001
+ 21
+-12381.200000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+24a31300-284d-45b2-900e-99d8a56f1068
+  0
+LINE
+  5
+2F5
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16096.915000000001
+ 20
+-12381.200000000001
+ 30
+0.0
+ 11
+16069.299999999999
+ 21
+-12381.200000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+24a31300-284d-45b2-900e-99d8a56f1068
+  0
+LINE
+  5
+2F6
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 16069.299999999999
  20
 -12381.200000000001
@@ -31065,7 +31317,7 @@ HOUSE
   0
 LINE
   5
-2F1
+2F7
 100
 AcDbEntity
   8
@@ -31103,7 +31355,7 @@ HOUSE
   0
 LINE
   5
-2F2
+2F8
 100
 AcDbEntity
   8
@@ -31141,7 +31393,7 @@ HOUSE
   0
 LINE
   5
-2F3
+2F9
 100
 AcDbEntity
   8
@@ -31179,7 +31431,7 @@ HOUSE
   0
 LINE
   5
-2F4
+2FA
 100
 AcDbEntity
   8
@@ -31217,234 +31469,6 @@ HOUSE
   0
 LINE
   5
-2F5
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20461.399999999998
- 20
--2761.5
- 30
-0.0
- 11
-20356.200000000001
- 21
--2761.5
- 31
-0.0
-1001
-HOUSE
-1000
-862d92a8-b4be-4526-b8c9-f2461f36b83a
-  0
-LINE
-  5
-2F6
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20461.399999999998
- 20
--3826.650000000001
- 30
-0.0
- 11
-20356.200000000001
- 21
--3826.650000000001
- 31
-0.0
-1001
-HOUSE
-1000
-862d92a8-b4be-4526-b8c9-f2461f36b83a
-  0
-LINE
-  5
-2F7
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20423.264999999999
- 20
--3294.075
- 30
-0.0
- 11
-20423.264999999999
- 21
--4359.225
- 31
-0.0
-1001
-HOUSE
-1000
-862d92a8-b4be-4526-b8c9-f2461f36b83a
-  0
-LINE
-  5
-2F8
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20423.264999999999
- 20
--4359.225
- 30
-0.0
- 11
-20394.334999999999
- 21
--4359.225
- 31
-0.0
-1001
-HOUSE
-1000
-862d92a8-b4be-4526-b8c9-f2461f36b83a
-  0
-LINE
-  5
-2F9
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20394.334999999999
- 20
--4359.225
- 30
-0.0
- 11
-20394.334999999999
- 21
--3294.075
- 31
-0.0
-1001
-HOUSE
-1000
-862d92a8-b4be-4526-b8c9-f2461f36b83a
-  0
-LINE
-  5
-2FA
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-20394.334999999999
- 20
--3294.075
- 30
-0.0
- 11
-20423.264999999999
- 21
--3294.075
- 31
-0.0
-1001
-HOUSE
-1000
-862d92a8-b4be-4526-b8c9-f2461f36b83a
-  0
-LINE
-  5
 2FB
 100
 AcDbEntity
@@ -31465,15 +31489,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20435.099999999999
+20461.399999999998
  20
--3826.650000000001
+-2761.5
  30
 0.0
  11
-20435.099999999999
+20356.200000000001
  21
--3899.8790625
+-2761.5
  31
 0.0
 1001
@@ -31503,15 +31527,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20382.5
+20461.399999999998
  20
 -3826.650000000001
  30
 0.0
  11
-20382.5
+20356.200000000001
  21
--3899.8790625
+-3826.650000000001
  31
 0.0
 1001
@@ -31541,15 +31565,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20435.099999999999
+20423.264999999999
  20
--3959.79375
+-3294.075
  30
 0.0
  11
-20435.099999999999
+20423.264999999999
  21
--4033.0228125
+-4359.225
  31
 0.0
 1001
@@ -31579,15 +31603,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20382.5
+20423.264999999999
  20
--3959.79375
+-4359.225
  30
 0.0
  11
-20382.5
+20394.334999999999
  21
--4033.0228125
+-4359.225
  31
 0.0
 1001
@@ -31617,15 +31641,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20435.099999999999
+20394.334999999999
  20
--4092.9375
+-4359.225
  30
 0.0
  11
-20435.099999999999
+20394.334999999999
  21
--4166.166562500001
+-3294.075
  31
 0.0
 1001
@@ -31655,15 +31679,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-20382.5
+20394.334999999999
  20
--4092.9375
+-3294.075
  30
 0.0
  11
-20382.5
+20423.264999999999
  21
--4166.166562500001
+-3294.075
  31
 0.0
 1001
@@ -31695,13 +31719,13 @@ AcDbLine
  10
 20435.099999999999
  20
--4226.08125
+-3826.650000000001
  30
 0.0
  11
 20435.099999999999
  21
--4299.3103125
+-3899.8790625
  31
 0.0
 1001
@@ -31733,13 +31757,13 @@ AcDbLine
  10
 20382.5
  20
--4226.08125
+-3826.650000000001
  30
 0.0
  11
 20382.5
  21
--4299.3103125
+-3899.8790625
  31
 0.0
 1001
@@ -31771,13 +31795,13 @@ AcDbLine
  10
 20435.099999999999
  20
--4359.225
+-3959.79375
  30
 0.0
  11
 20435.099999999999
  21
--4432.454062500001
+-4033.0228125
  31
 0.0
 1001
@@ -31809,13 +31833,13 @@ AcDbLine
  10
 20382.5
  20
--4359.225
+-3959.79375
  30
 0.0
  11
 20382.5
  21
--4432.454062500001
+-4033.0228125
  31
 0.0
 1001
@@ -31847,13 +31871,13 @@ AcDbLine
  10
 20435.099999999999
  20
--4492.36875
+-4092.9375
  30
 0.0
  11
 20435.099999999999
  21
--4565.5978125
+-4166.166562500001
  31
 0.0
 1001
@@ -31885,13 +31909,13 @@ AcDbLine
  10
 20382.5
  20
--4492.36875
+-4092.9375
  30
 0.0
  11
 20382.5
  21
--4565.5978125
+-4166.166562500001
  31
 0.0
 1001
@@ -31923,13 +31947,13 @@ AcDbLine
  10
 20435.099999999999
  20
--4625.512500000001
+-4226.08125
  30
 0.0
  11
 20435.099999999999
  21
--4698.7415625
+-4299.3103125
  31
 0.0
 1001
@@ -31961,13 +31985,13 @@ AcDbLine
  10
 20382.5
  20
--4625.512500000001
+-4226.08125
  30
 0.0
  11
 20382.5
  21
--4698.7415625
+-4299.3103125
  31
 0.0
 1001
@@ -31999,13 +32023,13 @@ AcDbLine
  10
 20435.099999999999
  20
--4758.65625
+-4359.225
  30
 0.0
  11
 20435.099999999999
  21
--4831.885312500001
+-4432.454062500001
  31
 0.0
 1001
@@ -32037,6 +32061,234 @@ AcDbLine
  10
 20382.5
  20
+-4359.225
+ 30
+0.0
+ 11
+20382.5
+ 21
+-4432.454062500001
+ 31
+0.0
+1001
+HOUSE
+1000
+862d92a8-b4be-4526-b8c9-f2461f36b83a
+  0
+LINE
+  5
+30B
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20435.099999999999
+ 20
+-4492.36875
+ 30
+0.0
+ 11
+20435.099999999999
+ 21
+-4565.5978125
+ 31
+0.0
+1001
+HOUSE
+1000
+862d92a8-b4be-4526-b8c9-f2461f36b83a
+  0
+LINE
+  5
+30C
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20382.5
+ 20
+-4492.36875
+ 30
+0.0
+ 11
+20382.5
+ 21
+-4565.5978125
+ 31
+0.0
+1001
+HOUSE
+1000
+862d92a8-b4be-4526-b8c9-f2461f36b83a
+  0
+LINE
+  5
+30D
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20435.099999999999
+ 20
+-4625.512500000001
+ 30
+0.0
+ 11
+20435.099999999999
+ 21
+-4698.7415625
+ 31
+0.0
+1001
+HOUSE
+1000
+862d92a8-b4be-4526-b8c9-f2461f36b83a
+  0
+LINE
+  5
+30E
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20382.5
+ 20
+-4625.512500000001
+ 30
+0.0
+ 11
+20382.5
+ 21
+-4698.7415625
+ 31
+0.0
+1001
+HOUSE
+1000
+862d92a8-b4be-4526-b8c9-f2461f36b83a
+  0
+LINE
+  5
+30F
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20435.099999999999
+ 20
+-4758.65625
+ 30
+0.0
+ 11
+20435.099999999999
+ 21
+-4831.885312500001
+ 31
+0.0
+1001
+HOUSE
+1000
+862d92a8-b4be-4526-b8c9-f2461f36b83a
+  0
+LINE
+  5
+310
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+20382.5
+ 20
 -4758.65625
  30
 0.0
@@ -32053,7 +32305,7 @@ HOUSE
   0
 LINE
   5
-30B
+311
 100
 AcDbEntity
   8
@@ -32091,7 +32343,7 @@ HOUSE
   0
 LINE
   5
-30C
+312
 100
 AcDbEntity
   8
@@ -32129,7 +32381,7 @@ HOUSE
   0
 LINE
   5
-30D
+313
 100
 AcDbEntity
   8
@@ -32167,7 +32419,7 @@ HOUSE
   0
 LINE
   5
-30E
+314
 100
 AcDbEntity
   8
@@ -32205,234 +32457,6 @@ HOUSE
   0
 LINE
   5
-30F
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17358.0
- 20
--5437.05
- 30
-0.0
- 11
-17200.199999999997
- 21
--5437.05
- 31
-0.0
-1001
-HOUSE
-1000
-9150da68-b336-4060-bdae-30eb0d80deca
-  0
-LINE
-  5
-310
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17358.0
- 20
--6351.45
- 30
-0.0
- 11
-17200.199999999997
- 21
--6351.45
- 31
-0.0
-1001
-HOUSE
-1000
-9150da68-b336-4060-bdae-30eb0d80deca
-  0
-LINE
-  5
-311
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17300.797499999997
- 20
--5894.25
- 30
-0.0
- 11
-17300.797499999997
- 21
--4979.85
- 31
-0.0
-1001
-HOUSE
-1000
-9150da68-b336-4060-bdae-30eb0d80deca
-  0
-LINE
-  5
-312
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17300.797499999997
- 20
--4979.85
- 30
-0.0
- 11
-17257.4025
- 21
--4979.85
- 31
-0.0
-1001
-HOUSE
-1000
-9150da68-b336-4060-bdae-30eb0d80deca
-  0
-LINE
-  5
-313
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17257.4025
- 20
--4979.85
- 30
-0.0
- 11
-17257.4025
- 21
--5894.25
- 31
-0.0
-1001
-HOUSE
-1000
-9150da68-b336-4060-bdae-30eb0d80deca
-  0
-LINE
-  5
-314
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17257.4025
- 20
--5894.25
- 30
-0.0
- 11
-17300.797499999997
- 21
--5894.25
- 31
-0.0
-1001
-HOUSE
-1000
-9150da68-b336-4060-bdae-30eb0d80deca
-  0
-LINE
-  5
 315
 100
 AcDbEntity
@@ -32453,15 +32477,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17318.549999999999
+17358.0
  20
 -5437.05
  30
 0.0
  11
-17318.549999999999
+17200.199999999997
  21
--5374.184999999999
+-5437.05
  31
 0.0
 1001
@@ -32491,15 +32515,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17239.649999999998
+17358.0
  20
--5437.05
+-6351.45
  30
 0.0
  11
-17239.649999999998
+17200.199999999997
  21
--5374.184999999999
+-6351.45
  31
 0.0
 1001
@@ -32529,15 +32553,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17318.549999999999
+17300.797499999997
  20
--5322.75
+-5894.25
  30
 0.0
  11
-17318.549999999999
+17300.797499999997
  21
--5259.885
+-4979.85
  31
 0.0
 1001
@@ -32567,15 +32591,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17239.649999999998
+17300.797499999997
  20
--5322.75
+-4979.85
  30
 0.0
  11
-17239.649999999998
+17257.4025
  21
--5259.885
+-4979.85
  31
 0.0
 1001
@@ -32605,15 +32629,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17318.549999999999
+17257.4025
  20
--5208.45
+-4979.85
  30
 0.0
  11
-17318.549999999999
+17257.4025
  21
--5145.585
+-5894.25
  31
 0.0
 1001
@@ -32643,15 +32667,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17239.649999999998
+17257.4025
  20
--5208.45
+-5894.25
  30
 0.0
  11
-17239.649999999998
+17300.797499999997
  21
--5145.585
+-5894.25
  31
 0.0
 1001
@@ -32683,13 +32707,13 @@ AcDbLine
  10
 17318.549999999999
  20
--5094.15
+-5437.05
  30
 0.0
  11
 17318.549999999999
  21
--5031.285
+-5374.184999999999
  31
 0.0
 1001
@@ -32721,13 +32745,13 @@ AcDbLine
  10
 17239.649999999998
  20
--5094.15
+-5437.05
  30
 0.0
  11
 17239.649999999998
  21
--5031.285
+-5374.184999999999
  31
 0.0
 1001
@@ -32759,13 +32783,13 @@ AcDbLine
  10
 17318.549999999999
  20
--4979.85
+-5322.75
  30
 0.0
  11
 17318.549999999999
  21
--4916.985
+-5259.885
  31
 0.0
 1001
@@ -32797,13 +32821,13 @@ AcDbLine
  10
 17239.649999999998
  20
--4979.85
+-5322.75
  30
 0.0
  11
 17239.649999999998
  21
--4916.985
+-5259.885
  31
 0.0
 1001
@@ -32835,13 +32859,13 @@ AcDbLine
  10
 17318.549999999999
  20
--4865.55
+-5208.45
  30
 0.0
  11
 17318.549999999999
  21
--4802.684999999999
+-5145.585
  31
 0.0
 1001
@@ -32873,13 +32897,13 @@ AcDbLine
  10
 17239.649999999998
  20
--4865.55
+-5208.45
  30
 0.0
  11
 17239.649999999998
  21
--4802.684999999999
+-5145.585
  31
 0.0
 1001
@@ -32911,13 +32935,13 @@ AcDbLine
  10
 17318.549999999999
  20
--4751.25
+-5094.15
  30
 0.0
  11
 17318.549999999999
  21
--4688.385
+-5031.285
  31
 0.0
 1001
@@ -32949,13 +32973,13 @@ AcDbLine
  10
 17239.649999999998
  20
--4751.25
+-5094.15
  30
 0.0
  11
 17239.649999999998
  21
--4688.385
+-5031.285
  31
 0.0
 1001
@@ -32987,13 +33011,13 @@ AcDbLine
  10
 17318.549999999999
  20
--4636.95
+-4979.85
  30
 0.0
  11
 17318.549999999999
  21
--4574.085
+-4916.985
  31
 0.0
 1001
@@ -33025,6 +33049,234 @@ AcDbLine
  10
 17239.649999999998
  20
+-4979.85
+ 30
+0.0
+ 11
+17239.649999999998
+ 21
+-4916.985
+ 31
+0.0
+1001
+HOUSE
+1000
+9150da68-b336-4060-bdae-30eb0d80deca
+  0
+LINE
+  5
+325
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17318.549999999999
+ 20
+-4865.55
+ 30
+0.0
+ 11
+17318.549999999999
+ 21
+-4802.684999999999
+ 31
+0.0
+1001
+HOUSE
+1000
+9150da68-b336-4060-bdae-30eb0d80deca
+  0
+LINE
+  5
+326
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17239.649999999998
+ 20
+-4865.55
+ 30
+0.0
+ 11
+17239.649999999998
+ 21
+-4802.684999999999
+ 31
+0.0
+1001
+HOUSE
+1000
+9150da68-b336-4060-bdae-30eb0d80deca
+  0
+LINE
+  5
+327
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17318.549999999999
+ 20
+-4751.25
+ 30
+0.0
+ 11
+17318.549999999999
+ 21
+-4688.385
+ 31
+0.0
+1001
+HOUSE
+1000
+9150da68-b336-4060-bdae-30eb0d80deca
+  0
+LINE
+  5
+328
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17239.649999999998
+ 20
+-4751.25
+ 30
+0.0
+ 11
+17239.649999999998
+ 21
+-4688.385
+ 31
+0.0
+1001
+HOUSE
+1000
+9150da68-b336-4060-bdae-30eb0d80deca
+  0
+LINE
+  5
+329
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17318.549999999999
+ 20
+-4636.95
+ 30
+0.0
+ 11
+17318.549999999999
+ 21
+-4574.085
+ 31
+0.0
+1001
+HOUSE
+1000
+9150da68-b336-4060-bdae-30eb0d80deca
+  0
+LINE
+  5
+32A
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17239.649999999998
+ 20
 -4636.95
  30
 0.0
@@ -33041,7 +33293,7 @@ HOUSE
   0
 LINE
   5
-325
+32B
 100
 AcDbEntity
   8
@@ -33079,7 +33331,7 @@ HOUSE
   0
 LINE
   5
-326
+32C
 100
 AcDbEntity
   8
@@ -33117,7 +33369,7 @@ HOUSE
   0
 LINE
   5
-327
+32D
 100
 AcDbEntity
   8
@@ -33155,7 +33407,7 @@ HOUSE
   0
 LINE
   5
-328
+32E
 100
 AcDbEntity
   8
@@ -33193,234 +33445,6 @@ HOUSE
   0
 LINE
   5
-329
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-19383.099999999999
- 20
--10869.0
- 30
-0.0
- 11
-19277.900000000001
- 21
--10869.0
- 31
-0.0
-1001
-HOUSE
-1000
-9c1b496b-4286-48cf-8f83-344c38e44935
-  0
-LINE
-  5
-32A
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-19383.099999999999
- 20
--11631.0
- 30
-0.0
- 11
-19277.900000000001
- 21
--11631.0
- 31
-0.0
-1001
-HOUSE
-1000
-9c1b496b-4286-48cf-8f83-344c38e44935
-  0
-LINE
-  5
-32B
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-19344.965
- 20
--11250.0
- 30
-0.0
- 11
-19344.965
- 21
--12012.0
- 31
-0.0
-1001
-HOUSE
-1000
-9c1b496b-4286-48cf-8f83-344c38e44935
-  0
-LINE
-  5
-32C
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-19344.965
- 20
--12012.0
- 30
-0.0
- 11
-19316.035
- 21
--12012.0
- 31
-0.0
-1001
-HOUSE
-1000
-9c1b496b-4286-48cf-8f83-344c38e44935
-  0
-LINE
-  5
-32D
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-19316.035
- 20
--12012.0
- 30
-0.0
- 11
-19316.035
- 21
--11250.0
- 31
-0.0
-1001
-HOUSE
-1000
-9c1b496b-4286-48cf-8f83-344c38e44935
-  0
-LINE
-  5
-32E
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-19316.035
- 20
--11250.0
- 30
-0.0
- 11
-19344.965
- 21
--11250.0
- 31
-0.0
-1001
-HOUSE
-1000
-9c1b496b-4286-48cf-8f83-344c38e44935
-  0
-LINE
-  5
 32F
 100
 AcDbEntity
@@ -33441,15 +33465,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19356.799999999999
+19383.099999999999
  20
--11631.0
+-10869.0
  30
 0.0
  11
-19356.799999999999
+19277.900000000001
  21
--11683.387500000001
+-10869.0
  31
 0.0
 1001
@@ -33479,15 +33503,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19304.200000000001
+19383.099999999999
  20
 -11631.0
  30
 0.0
  11
-19304.200000000001
+19277.900000000001
  21
--11683.387500000001
+-11631.0
  31
 0.0
 1001
@@ -33517,15 +33541,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19356.799999999999
+19344.965
  20
--11726.25
+-11250.0
  30
 0.0
  11
-19356.799999999999
+19344.965
  21
--11778.637500000001
+-12012.0
  31
 0.0
 1001
@@ -33555,15 +33579,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19304.200000000001
+19344.965
  20
--11726.25
+-12012.0
  30
 0.0
  11
-19304.200000000001
+19316.035
  21
--11778.637500000001
+-12012.0
  31
 0.0
 1001
@@ -33593,15 +33617,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19356.799999999999
+19316.035
  20
--11821.5
+-12012.0
  30
 0.0
  11
-19356.799999999999
+19316.035
  21
--11873.887500000001
+-11250.0
  31
 0.0
 1001
@@ -33631,15 +33655,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-19304.200000000001
+19316.035
  20
--11821.5
+-11250.0
  30
 0.0
  11
-19304.200000000001
+19344.965
  21
--11873.887500000001
+-11250.0
  31
 0.0
 1001
@@ -33671,13 +33695,13 @@ AcDbLine
  10
 19356.799999999999
  20
--11916.75
+-11631.0
  30
 0.0
  11
 19356.799999999999
  21
--11969.137500000001
+-11683.387500000001
  31
 0.0
 1001
@@ -33709,13 +33733,13 @@ AcDbLine
  10
 19304.200000000001
  20
--11916.75
+-11631.0
  30
 0.0
  11
 19304.200000000001
  21
--11969.137500000001
+-11683.387500000001
  31
 0.0
 1001
@@ -33747,13 +33771,13 @@ AcDbLine
  10
 19356.799999999999
  20
--12012.0
+-11726.25
  30
 0.0
  11
 19356.799999999999
  21
--12064.387500000001
+-11778.637500000001
  31
 0.0
 1001
@@ -33785,13 +33809,13 @@ AcDbLine
  10
 19304.200000000001
  20
--12012.0
+-11726.25
  30
 0.0
  11
 19304.200000000001
  21
--12064.387500000001
+-11778.637500000001
  31
 0.0
 1001
@@ -33823,13 +33847,13 @@ AcDbLine
  10
 19356.799999999999
  20
--12107.25
+-11821.5
  30
 0.0
  11
 19356.799999999999
  21
--12159.637500000001
+-11873.887500000001
  31
 0.0
 1001
@@ -33861,13 +33885,13 @@ AcDbLine
  10
 19304.200000000001
  20
--12107.25
+-11821.5
  30
 0.0
  11
 19304.200000000001
  21
--12159.637500000001
+-11873.887500000001
  31
 0.0
 1001
@@ -33899,13 +33923,13 @@ AcDbLine
  10
 19356.799999999999
  20
--12202.5
+-11916.75
  30
 0.0
  11
 19356.799999999999
  21
--12254.887500000001
+-11969.137500000001
  31
 0.0
 1001
@@ -33937,13 +33961,13 @@ AcDbLine
  10
 19304.200000000001
  20
--12202.5
+-11916.75
  30
 0.0
  11
 19304.200000000001
  21
--12254.887500000001
+-11969.137500000001
  31
 0.0
 1001
@@ -33975,13 +33999,13 @@ AcDbLine
  10
 19356.799999999999
  20
--12297.75
+-12012.0
  30
 0.0
  11
 19356.799999999999
  21
--12350.137500000001
+-12064.387500000001
  31
 0.0
 1001
@@ -34013,6 +34037,234 @@ AcDbLine
  10
 19304.200000000001
  20
+-12012.0
+ 30
+0.0
+ 11
+19304.200000000001
+ 21
+-12064.387500000001
+ 31
+0.0
+1001
+HOUSE
+1000
+9c1b496b-4286-48cf-8f83-344c38e44935
+  0
+LINE
+  5
+33F
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+19356.799999999999
+ 20
+-12107.25
+ 30
+0.0
+ 11
+19356.799999999999
+ 21
+-12159.637500000001
+ 31
+0.0
+1001
+HOUSE
+1000
+9c1b496b-4286-48cf-8f83-344c38e44935
+  0
+LINE
+  5
+340
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+19304.200000000001
+ 20
+-12107.25
+ 30
+0.0
+ 11
+19304.200000000001
+ 21
+-12159.637500000001
+ 31
+0.0
+1001
+HOUSE
+1000
+9c1b496b-4286-48cf-8f83-344c38e44935
+  0
+LINE
+  5
+341
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+19356.799999999999
+ 20
+-12202.5
+ 30
+0.0
+ 11
+19356.799999999999
+ 21
+-12254.887500000001
+ 31
+0.0
+1001
+HOUSE
+1000
+9c1b496b-4286-48cf-8f83-344c38e44935
+  0
+LINE
+  5
+342
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+19304.200000000001
+ 20
+-12202.5
+ 30
+0.0
+ 11
+19304.200000000001
+ 21
+-12254.887500000001
+ 31
+0.0
+1001
+HOUSE
+1000
+9c1b496b-4286-48cf-8f83-344c38e44935
+  0
+LINE
+  5
+343
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+19356.799999999999
+ 20
+-12297.75
+ 30
+0.0
+ 11
+19356.799999999999
+ 21
+-12350.137500000001
+ 31
+0.0
+1001
+HOUSE
+1000
+9c1b496b-4286-48cf-8f83-344c38e44935
+  0
+LINE
+  5
+344
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+19304.200000000001
+ 20
 -12297.75
  30
 0.0
@@ -34029,7 +34281,7 @@ HOUSE
   0
 LINE
   5
-33F
+345
 100
 AcDbEntity
   8
@@ -34067,7 +34319,7 @@ HOUSE
   0
 LINE
   5
-340
+346
 100
 AcDbEntity
   8
@@ -34105,7 +34357,7 @@ HOUSE
   0
 LINE
   5
-341
+347
 100
 AcDbEntity
   8
@@ -34143,7 +34395,7 @@ HOUSE
   0
 LINE
   5
-342
+348
 100
 AcDbEntity
   8
@@ -34181,234 +34433,6 @@ HOUSE
   0
 LINE
   5
-343
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16890.168750000001
- 20
--6351.45
- 30
-0.0
- 11
-16890.168750000001
- 21
--6456.650000000001
- 31
-0.0
-1001
-HOUSE
-1000
-a7b3e93c-b39c-4986-80a4-2aa7550e9a38
-  0
-LINE
-  5
-344
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-18718.96875
- 20
--6351.45
- 30
-0.0
- 11
-18718.96875
- 21
--6456.650000000001
- 31
-0.0
-1001
-HOUSE
-1000
-a7b3e93c-b39c-4986-80a4-2aa7550e9a38
-  0
-LINE
-  5
-345
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16890.168750000001
- 20
--6377.75
- 30
-0.0
- 11
-17896.008750000001
- 21
--6377.75
- 31
-0.0
-1001
-HOUSE
-1000
-a7b3e93c-b39c-4986-80a4-2aa7550e9a38
-  0
-LINE
-  5
-346
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17896.008750000001
- 20
--6377.75
- 30
-0.0
- 11
-17896.008750000001
- 21
--6396.16
- 31
-0.0
-1001
-HOUSE
-1000
-a7b3e93c-b39c-4986-80a4-2aa7550e9a38
-  0
-LINE
-  5
-347
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-17896.008750000001
- 20
--6396.16
- 30
-0.0
- 11
-16890.168750000001
- 21
--6396.16
- 31
-0.0
-1001
-HOUSE
-1000
-a7b3e93c-b39c-4986-80a4-2aa7550e9a38
-  0
-LINE
-  5
-348
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-16890.168750000001
- 20
--6396.16
- 30
-0.0
- 11
-16890.168750000001
- 21
--6377.75
- 31
-0.0
-1001
-HOUSE
-1000
-a7b3e93c-b39c-4986-80a4-2aa7550e9a38
-  0
-LINE
-  5
 349
 100
 AcDbEntity
@@ -34429,15 +34453,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-17713.12875
+16890.168750000001
  20
--6411.940000000001
+-6351.45
  30
 0.0
  11
-18718.96875
+16890.168750000001
  21
--6411.940000000001
+-6456.650000000001
  31
 0.0
 1001
@@ -34469,13 +34493,13 @@ AcDbLine
  10
 18718.96875
  20
--6411.940000000001
+-6351.45
  30
 0.0
  11
 18718.96875
  21
--6430.35
+-6456.650000000001
  31
 0.0
 1001
@@ -34505,6 +34529,234 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+16890.168750000001
+ 20
+-6377.75
+ 30
+0.0
+ 11
+17896.008750000001
+ 21
+-6377.75
+ 31
+0.0
+1001
+HOUSE
+1000
+a7b3e93c-b39c-4986-80a4-2aa7550e9a38
+  0
+LINE
+  5
+34C
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17896.008750000001
+ 20
+-6377.75
+ 30
+0.0
+ 11
+17896.008750000001
+ 21
+-6396.16
+ 31
+0.0
+1001
+HOUSE
+1000
+a7b3e93c-b39c-4986-80a4-2aa7550e9a38
+  0
+LINE
+  5
+34D
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17896.008750000001
+ 20
+-6396.16
+ 30
+0.0
+ 11
+16890.168750000001
+ 21
+-6396.16
+ 31
+0.0
+1001
+HOUSE
+1000
+a7b3e93c-b39c-4986-80a4-2aa7550e9a38
+  0
+LINE
+  5
+34E
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+16890.168750000001
+ 20
+-6396.16
+ 30
+0.0
+ 11
+16890.168750000001
+ 21
+-6377.75
+ 31
+0.0
+1001
+HOUSE
+1000
+a7b3e93c-b39c-4986-80a4-2aa7550e9a38
+  0
+LINE
+  5
+34F
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+17713.12875
+ 20
+-6411.940000000001
+ 30
+0.0
+ 11
+18718.96875
+ 21
+-6411.940000000001
+ 31
+0.0
+1001
+HOUSE
+1000
+a7b3e93c-b39c-4986-80a4-2aa7550e9a38
+  0
+LINE
+  5
+350
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+18718.96875
+ 20
+-6411.940000000001
+ 30
+0.0
+ 11
+18718.96875
+ 21
+-6430.35
+ 31
+0.0
+1001
+HOUSE
+1000
+a7b3e93c-b39c-4986-80a4-2aa7550e9a38
+  0
+LINE
+  5
+351
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 18718.96875
  20
 -6430.35
@@ -34523,7 +34775,7 @@ a7b3e93c-b39c-4986-80a4-2aa7550e9a38
   0
 LINE
   5
-34C
+352
 100
 AcDbEntity
   8
@@ -34561,7 +34813,7 @@ a7b3e93c-b39c-4986-80a4-2aa7550e9a38
   0
 LINE
   5
-34D
+353
 100
 AcDbEntity
   8
@@ -34599,7 +34851,7 @@ a7b3e93c-b39c-4986-80a4-2aa7550e9a38
   0
 LINE
   5
-34E
+354
 100
 AcDbEntity
   8
@@ -34637,7 +34889,7 @@ a7b3e93c-b39c-4986-80a4-2aa7550e9a38
   0
 LINE
   5
-34F
+355
 100
 AcDbEntity
   8
@@ -34675,234 +34927,6 @@ a7b3e93c-b39c-4986-80a4-2aa7550e9a38
   0
 LINE
   5
-350
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-986.25
- 20
--2813.625
- 30
-0.0
- 11
-828.45
- 21
--2813.625
- 31
-0.0
-1001
-HOUSE
-1000
-bb72351a-bcc9-44a1-b4b2-0566824f56e9
-  0
-LINE
-  5
-351
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-986.25
- 20
--4642.425
- 30
-0.0
- 11
-828.45
- 21
--4642.425
- 31
-0.0
-1001
-HOUSE
-1000
-bb72351a-bcc9-44a1-b4b2-0566824f56e9
-  0
-LINE
-  5
-352
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-946.8
- 20
--2813.625
- 30
-0.0
- 11
-946.8
- 21
--3819.465
- 31
-0.0
-1001
-HOUSE
-1000
-bb72351a-bcc9-44a1-b4b2-0566824f56e9
-  0
-LINE
-  5
-353
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-946.8
- 20
--3819.465
- 30
-0.0
- 11
-919.185
- 21
--3819.465
- 31
-0.0
-1001
-HOUSE
-1000
-bb72351a-bcc9-44a1-b4b2-0566824f56e9
-  0
-LINE
-  5
-354
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-919.185
- 20
--3819.465
- 30
-0.0
- 11
-919.185
- 21
--2813.625
- 31
-0.0
-1001
-HOUSE
-1000
-bb72351a-bcc9-44a1-b4b2-0566824f56e9
-  0
-LINE
-  5
-355
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-919.185
- 20
--2813.625
- 30
-0.0
- 11
-946.8
- 21
--2813.625
- 31
-0.0
-1001
-HOUSE
-1000
-bb72351a-bcc9-44a1-b4b2-0566824f56e9
-  0
-LINE
-  5
 356
 100
 AcDbEntity
@@ -34923,15 +34947,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-895.515
+986.25
  20
--3636.585
+-2813.625
  30
 0.0
  11
-895.515
+828.45
  21
--4642.425
+-2813.625
  31
 0.0
 1001
@@ -34961,13 +34985,13 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-895.515
+986.25
  20
 -4642.425
  30
 0.0
  11
-867.9
+828.45
  21
 -4642.425
  31
@@ -34999,6 +35023,234 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
+946.8
+ 20
+-2813.625
+ 30
+0.0
+ 11
+946.8
+ 21
+-3819.465
+ 31
+0.0
+1001
+HOUSE
+1000
+bb72351a-bcc9-44a1-b4b2-0566824f56e9
+  0
+LINE
+  5
+359
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+946.8
+ 20
+-3819.465
+ 30
+0.0
+ 11
+919.185
+ 21
+-3819.465
+ 31
+0.0
+1001
+HOUSE
+1000
+bb72351a-bcc9-44a1-b4b2-0566824f56e9
+  0
+LINE
+  5
+35A
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+919.185
+ 20
+-3819.465
+ 30
+0.0
+ 11
+919.185
+ 21
+-2813.625
+ 31
+0.0
+1001
+HOUSE
+1000
+bb72351a-bcc9-44a1-b4b2-0566824f56e9
+  0
+LINE
+  5
+35B
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+919.185
+ 20
+-2813.625
+ 30
+0.0
+ 11
+946.8
+ 21
+-2813.625
+ 31
+0.0
+1001
+HOUSE
+1000
+bb72351a-bcc9-44a1-b4b2-0566824f56e9
+  0
+LINE
+  5
+35C
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+895.515
+ 20
+-3636.585
+ 30
+0.0
+ 11
+895.515
+ 21
+-4642.425
+ 31
+0.0
+1001
+HOUSE
+1000
+bb72351a-bcc9-44a1-b4b2-0566824f56e9
+  0
+LINE
+  5
+35D
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+895.515
+ 20
+-4642.425
+ 30
+0.0
+ 11
+867.9
+ 21
+-4642.425
+ 31
+0.0
+1001
+HOUSE
+1000
+bb72351a-bcc9-44a1-b4b2-0566824f56e9
+  0
+LINE
+  5
+35E
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
 867.9
  20
 -4642.425
@@ -35017,7 +35269,7 @@ bb72351a-bcc9-44a1-b4b2-0566824f56e9
   0
 LINE
   5
-359
+35F
 100
 AcDbEntity
   8
@@ -35055,7 +35307,7 @@ bb72351a-bcc9-44a1-b4b2-0566824f56e9
   0
 LINE
   5
-35A
+360
 100
 AcDbEntity
   8
@@ -35093,7 +35345,7 @@ bb72351a-bcc9-44a1-b4b2-0566824f56e9
   0
 LINE
   5
-35B
+361
 100
 AcDbEntity
   8
@@ -35131,7 +35383,7 @@ bb72351a-bcc9-44a1-b4b2-0566824f56e9
   0
 LINE
   5
-35C
+362
 100
 AcDbEntity
   8
@@ -35169,234 +35421,6 @@ bb72351a-bcc9-44a1-b4b2-0566824f56e9
   0
 LINE
   5
-35D
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-9770.450000000001
- 20
--999.4
- 30
-0.0
- 11
-9612.650000000001
- 21
--999.4
- 31
-0.0
-1001
-HOUSE
-1000
-e80c0bfc-988b-46cc-aefd-52c4227fab91
-  0
-LINE
-  5
-35E
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-9770.450000000001
- 20
--5430.95
- 30
-0.0
- 11
-9612.650000000001
- 21
--5430.95
- 31
-0.0
-1001
-HOUSE
-1000
-e80c0bfc-988b-46cc-aefd-52c4227fab91
-  0
-LINE
-  5
-35F
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-9754.670000000002
- 20
--999.4
- 30
-0.0
- 11
-9754.670000000002
- 21
--5430.95
- 31
-0.0
-1001
-HOUSE
-1000
-e80c0bfc-988b-46cc-aefd-52c4227fab91
-  0
-LINE
-  5
-360
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-9754.670000000002
- 20
--5430.95
- 30
-0.0
- 11
-9628.43
- 21
--5430.95
- 31
-0.0
-1001
-HOUSE
-1000
-e80c0bfc-988b-46cc-aefd-52c4227fab91
-  0
-LINE
-  5
-361
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-9628.43
- 20
--5430.95
- 30
-0.0
- 11
-9628.43
- 21
--999.4
- 31
-0.0
-1001
-HOUSE
-1000
-e80c0bfc-988b-46cc-aefd-52c4227fab91
-  0
-LINE
-  5
-362
-100
-AcDbEntity
-  8
-DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
-347
-0
-370
-     0
-430
-
-440
- 33554687
-390
-0
-284
-     0
-100
-AcDbLine
- 10
-9628.43
- 20
--999.4
- 30
-0.0
- 11
-9754.670000000002
- 21
--999.4
- 31
-0.0
-1001
-HOUSE
-1000
-e80c0bfc-988b-46cc-aefd-52c4227fab91
-  0
-LINE
-  5
 363
 100
 AcDbEntity
@@ -35417,15 +35441,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9754.670000000002
+9770.450000000001
  20
--2107.2875
+-999.4
  30
 0.0
  11
-9628.43
+9612.650000000001
  21
--2107.2875
+-999.4
  31
 0.0
 1001
@@ -35455,15 +35479,15 @@ DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
 100
 AcDbLine
  10
-9754.670000000002
+9770.450000000001
  20
--3215.175
+-5430.95
  30
 0.0
  11
-9628.43
+9612.650000000001
  21
--3215.175
+-5430.95
  31
 0.0
 1001
@@ -35495,6 +35519,234 @@ AcDbLine
  10
 9754.670000000002
  20
+-999.4
+ 30
+0.0
+ 11
+9754.670000000002
+ 21
+-5430.95
+ 31
+0.0
+1001
+HOUSE
+1000
+e80c0bfc-988b-46cc-aefd-52c4227fab91
+  0
+LINE
+  5
+366
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9754.670000000002
+ 20
+-5430.95
+ 30
+0.0
+ 11
+9628.43
+ 21
+-5430.95
+ 31
+0.0
+1001
+HOUSE
+1000
+e80c0bfc-988b-46cc-aefd-52c4227fab91
+  0
+LINE
+  5
+367
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9628.43
+ 20
+-5430.95
+ 30
+0.0
+ 11
+9628.43
+ 21
+-999.4
+ 31
+0.0
+1001
+HOUSE
+1000
+e80c0bfc-988b-46cc-aefd-52c4227fab91
+  0
+LINE
+  5
+368
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9628.43
+ 20
+-999.4
+ 30
+0.0
+ 11
+9754.670000000002
+ 21
+-999.4
+ 31
+0.0
+1001
+HOUSE
+1000
+e80c0bfc-988b-46cc-aefd-52c4227fab91
+  0
+LINE
+  5
+369
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9754.670000000002
+ 20
+-2107.2875
+ 30
+0.0
+ 11
+9628.43
+ 21
+-2107.2875
+ 31
+0.0
+1001
+HOUSE
+1000
+e80c0bfc-988b-46cc-aefd-52c4227fab91
+  0
+LINE
+  5
+36A
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9754.670000000002
+ 20
+-3215.175
+ 30
+0.0
+ 11
+9628.43
+ 21
+-3215.175
+ 31
+0.0
+1001
+HOUSE
+1000
+e80c0bfc-988b-46cc-aefd-52c4227fab91
+  0
+LINE
+  5
+36B
+100
+AcDbEntity
+  8
+DOORS_Architecture_bc63b5af8736466d9628b6e9f2fabd26
+347
+0
+370
+     0
+430
+
+440
+ 33554687
+390
+0
+284
+     0
+100
+AcDbLine
+ 10
+9754.670000000002
+ 20
 -4323.0625
  30
 0.0
@@ -35511,7 +35763,7 @@ e80c0bfc-988b-46cc-aefd-52c4227fab91
   0
 LINE
   5
-366
+36C
 100
 AcDbEntity
   8
@@ -35549,7 +35801,7 @@ e80c0bfc-988b-46cc-aefd-52c4227fab91
   0
 LINE
   5
-367
+36D
 100
 AcDbEntity
   8
@@ -35587,7 +35839,7 @@ e80c0bfc-988b-46cc-aefd-52c4227fab91
   0
 LINE
   5
-368
+36E
 100
 AcDbEntity
   8
@@ -35625,7 +35877,7 @@ e80c0bfc-988b-46cc-aefd-52c4227fab91
   0
 LINE
   5
-369
+36F
 100
 AcDbEntity
   8
@@ -35663,7 +35915,7 @@ e80c0bfc-988b-46cc-aefd-52c4227fab91
   0
 TEXT
   5
-36A
+370
 100
 AcDbEntity
   8
@@ -35711,7 +35963,7 @@ HOUSE
   0
 TEXT
   5
-36B
+371
 100
 AcDbEntity
   8
@@ -35759,7 +36011,7 @@ HOUSE
   0
 TEXT
   5
-36C
+372
 100
 AcDbEntity
   8
@@ -35807,7 +36059,7 @@ HOUSE
   0
 TEXT
   5
-36D
+373
 100
 AcDbEntity
   8
@@ -35855,7 +36107,7 @@ HOUSE
   0
 TEXT
   5
-36E
+374
 100
 AcDbEntity
   8
@@ -35903,7 +36155,7 @@ HOUSE
   0
 TEXT
   5
-36F
+375
 100
 AcDbEntity
   8
@@ -35951,7 +36203,7 @@ HOUSE
   0
 TEXT
   5
-370
+376
 100
 AcDbEntity
   8
@@ -35999,7 +36251,7 @@ HOUSE
   0
 TEXT
   5
-371
+377
 100
 AcDbEntity
   8
@@ -36047,7 +36299,7 @@ HOUSE
   0
 TEXT
   5
-372
+378
 100
 AcDbEntity
   8
@@ -36095,7 +36347,7 @@ HOUSE
   0
 TEXT
   5
-373
+379
 100
 AcDbEntity
   8
@@ -36143,7 +36395,7 @@ HOUSE
   0
 TEXT
   5
-374
+37A
 100
 AcDbEntity
   8
@@ -36191,7 +36443,7 @@ HOUSE
   0
 TEXT
   5
-375
+37B
 100
 AcDbEntity
   8
@@ -36239,7 +36491,7 @@ HOUSE
   0
 TEXT
   5
-376
+37C
 100
 AcDbEntity
   8
@@ -36287,7 +36539,7 @@ HOUSE
   0
 TEXT
   5
-377
+37D
 100
 AcDbEntity
   8
@@ -36335,7 +36587,7 @@ b7f5ab79-3c59-45d5-a74a-7c0772766b94
   0
 TEXT
   5
-378
+37E
 100
 AcDbEntity
   8
@@ -36383,7 +36635,7 @@ bc2d57e0-5e82-45c0-9992-b78ad27fa2a8
   0
 TEXT
   5
-379
+37F
 100
 AcDbEntity
   8
@@ -36431,7 +36683,7 @@ c2f308a6-9e93-477b-8b3e-cbf8e6485169
   0
 TEXT
   5
-37A
+380
 100
 AcDbEntity
   8
@@ -36479,7 +36731,7 @@ d144252a-7903-48ca-95f1-2d308bc3fe01
   0
 TEXT
   5
-37B
+381
 100
 AcDbEntity
   8
@@ -36527,7 +36779,7 @@ f2febc00-c0cd-4dd3-8062-a495f23a2076
   0
 TEXT
   5
-37C
+382
 100
 AcDbEntity
   8

@@ -29,7 +29,10 @@ pub fn fixture_contains(f: &Fixture, p: Point) -> bool {
     let dy = p.y - f.origin.y;
     let x = dx * cos + dy * sin;
     let y = -dx * sin + dy * cos;
-    x >= 0.0 && x <= f.width && y >= 0.0 && y <= f.depth
+    x >= 0.0
+        && x <= f.width
+        && y >= 0.0
+        && y <= f.depth
         && (f.kind != FixtureKind::QuarterRoundShelves
             || (x / f.width).powi(2) + (y / f.depth).powi(2) <= 1.0)
 }
@@ -47,19 +50,32 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
             for i in 0..32 {
                 let a = i as f64 * std::f64::consts::FRAC_PI_2 / 32.0;
                 let b = (i + 1) as f64 * std::f64::consts::FRAC_PI_2 / 32.0;
-                lines.push((transform(f, f.width * a.cos(), f.depth * a.sin()),
-                            transform(f, f.width * b.cos(), f.depth * b.sin())));
+                lines.push((
+                    transform(f, f.width * a.cos(), f.depth * a.sin()),
+                    transform(f, f.width * b.cos(), f.depth * b.sin()),
+                ));
             }
-            symbols.push(PlanSymbol { id: f.id, layer: f.layer, lines });
+            symbols.push(PlanSymbol {
+                id: f.id,
+                layer: f.layer,
+                lines,
+            });
             continue;
         }
         if f.kind == FixtureKind::Wardrobe {
             let mut lines = rectangle(fixture_corners(f));
             // Two bypass fronts and a fixed hanging rail, unlike the overhead symbol.
             for (x1, x2, y) in [(0.02, 0.54, 0.94), (0.46, 0.98, 0.98), (0.08, 0.92, 0.48)] {
-                lines.push((transform(f, f.width*x1, f.depth*y), transform(f, f.width*x2, f.depth*y)));
+                lines.push((
+                    transform(f, f.width * x1, f.depth * y),
+                    transform(f, f.width * x2, f.depth * y),
+                ));
             }
-            symbols.push(PlanSymbol { id: f.id, layer: f.layer, lines });
+            symbols.push(PlanSymbol {
+                id: f.id,
+                layer: f.layer,
+                lines,
+            });
             continue;
         }
         if f.kind == FixtureKind::Sink && f.style.as_deref() == Some("farmhouse_apron_front") {
@@ -187,13 +203,21 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
                 }
             }
             if f.kind == FixtureKind::WasteCabinet {
-                // Separate trash and recycling bins within the pull-out cabinet.
-                for (left, right) in [(0.08, 0.46), (0.54, 0.92)] {
+                let tandem = f
+                    .style
+                    .as_deref()
+                    .is_some_and(|s| s.starts_with("single_pullout_tandem_bins"));
+                let bins = if tandem {
+                    [(0.12, 0.32, 0.88, 0.64), (0.12, 0.66, 0.88, 0.98)]
+                } else {
+                    [(0.08, 0.12, 0.46, 0.78), (0.54, 0.12, 0.92, 0.78)]
+                };
+                for (left, top, right, bottom) in bins {
                     lines.extend(rectangle([
-                        transform(f, f.width * left, f.depth * 0.12),
-                        transform(f, f.width * right, f.depth * 0.12),
-                        transform(f, f.width * right, f.depth * 0.78),
-                        transform(f, f.width * left, f.depth * 0.78),
+                        transform(f, f.width * left, f.depth * top),
+                        transform(f, f.width * right, f.depth * top),
+                        transform(f, f.width * right, f.depth * bottom),
+                        transform(f, f.width * left, f.depth * bottom),
                     ]));
                 }
             }
@@ -238,7 +262,16 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
                 }
             }
             if f.kind == FixtureKind::ApplianceGarage {
-                for y in [0.84, 0.88, 0.92] {
+                let front_lines: &[f64] = if f
+                    .style
+                    .as_deref()
+                    .is_some_and(|s| s.starts_with("low_pantry_single_pullout"))
+                {
+                    &[0.92]
+                } else {
+                    &[0.84, 0.88, 0.92]
+                };
+                for y in front_lines {
                     lines.push((
                         transform(f, 0.0, f.depth * y),
                         transform(f, f.width, f.depth * y),
@@ -541,18 +574,14 @@ mod tests {
             let points: Vec<_> = symbol.lines.iter().flat_map(|(a, b)| [a, b]).collect();
             let tip_x = if swing == Swing::Left { 400.0 } else { 1600.0 };
             for y in [300.0, 1500.0] {
-                assert!(
-                    points
-                        .iter()
-                        .any(|p| (p.x - tip_x).abs() < 0.001 && (p.y - y).abs() < 0.001)
-                );
+                assert!(points
+                    .iter()
+                    .any(|p| (p.x - tip_x).abs() < 0.001 && (p.y - y).abs() < 0.001));
             }
             // Both arcs reach the closed meeting point, with glazing contained in each leaf.
-            assert!(
-                points
-                    .iter()
-                    .any(|p| (p.x - 1000.0).abs() < 0.001 && (p.y - 900.0).abs() < 0.001)
-            );
+            assert!(points
+                .iter()
+                .any(|p| (p.x - 1000.0).abs() < 0.001 && (p.y - 900.0).abs() < 0.001));
             for p in points {
                 assert!(p.y >= 250.0 && p.y <= 1550.0);
                 if swing == Swing::Left {
@@ -628,18 +657,23 @@ mod tests {
     fn quarter_round_shelves_exclude_the_square_corner_after_rotation() {
         let mut d = Document::default();
         let f = Fixture {
-            material: None, style: None, id: Id::new_v4(),
+            material: None,
+            style: None,
+            id: Id::new_v4(),
             kind: FixtureKind::QuarterRoundShelves,
-            origin: Point::new(100.0, 200.0), width: 600.0, depth: 600.0,
-            rotation: 90.0, layer: *d.layers.keys().next().unwrap(),
+            origin: Point::new(100.0, 200.0),
+            width: 600.0,
+            depth: 600.0,
+            rotation: 90.0,
+            layer: *d.layers.keys().next().unwrap(),
         };
         assert!(fixture_contains(&f, transform(&f, 300.0, 300.0)));
         assert!(!fixture_contains(&f, transform(&f, 550.0, 550.0)));
         d.fixtures.insert(f.id, f.clone());
         let symbols = plan_symbols(&d);
-        for (a,b) in &symbols[0].lines {
-            for p in [a,b] {
-                assert!((p.x-f.origin.x).hypot(p.y-f.origin.y) <= 600.00001);
+        for (a, b) in &symbols[0].lines {
+            for p in [a, b] {
+                assert!((p.x - f.origin.x).hypot(p.y - f.origin.y) <= 600.00001);
             }
         }
     }

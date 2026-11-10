@@ -1,12 +1,13 @@
 Fixture ID,Type,Width (mm),Depth (mm),Material,Style
-0a136254-797b-44fe-b369-8f6e98f33bc0,ApplianceGarage,812.8,457.2,Natural oak cabinet with honed charcoal soapstone worktop,left_facing_tambour_appliance_garage_aligned_with_refrigerator_height_2260mm
+0a136254-797b-44fe-b369-8f6e98f33bc0,ApplianceGarage,660.4,457.2,Natural oak cabinet with honed charcoal soapstone worktop,left_facing_tambour_appliance_garage_aligned_with_refrigerator_height_2260mm
 1b621dde-f0da-44d7-90a1-3a31bb2ed549,Bed,1930.4,2032.0,,floor_mattress_no_headboard
 38ef2eef-84c6-449f-8e20-a1cd630d0cb6,WasherDryer,685.8,841.375,Warm white enamel,all_in_one_front_loading
-48ec0675-2eeb-408b-8963-b812d1d37be3,WasteCabinet,609.6,889.0,Natural oak cabinet with pale worktop,separate_trash_and_recycling_pullouts
+48ec0675-2eeb-408b-8963-b812d1d37be3,WasteCabinet,381.0,889.0,Natural oak cabinet with pale worktop,single_pullout_tandem_bins_recycling_front_trash_rear_extension_610mm
 4be42708-ac78-437e-8895-9042270f0235,Sink,838.2,635.0,White fireclay,farmhouse_apron_front
 6a7fcd08-0a59-4502-a677-383252e0ad4b,Wardrobe,1676.4,609.6,Warm ivory lacquer and natural oak,floor_standing_bypass_wardrobe_height_2286mm
 9795d0d2-7db7-411f-91b8-ecbebec3fb30,DishwasherDrawer,609.6,635.0,Natural oak cabinet front,panel_ready_single_drawer
 c08078d4-006c-4eba-8032-0bf18c432cec,Countertop,635.0,2665.65,Honed charcoal soapstone with pale veining,
 c0c93320-283f-4d94-bc6e-b11ec56a989a,Countertop,2363.2,635.0,Honed charcoal soapstone with pale veining,
-e291dd5c-2063-4410-bae0-dbe79733ffe6,ApplianceGarage,533.4,889.0,Natural oak full-height pantry,floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
+d3200e76-5060-41a2-b8c6-527fa6d33ef1,ApplianceGarage,152.4,889.0,Natural oak pantry pullout with pale worktop,low_pantry_single_pullout_3_shelves_height_932.5mm_extension_610mm
+e291dd5c-2063-4410-bae0-dbe79733ffe6,ApplianceGarage,673.1,889.0,Natural oak full-height pantry,floor_to_ceiling_pantry_height_2438.4mm_adjustable_shelves_paired_doors
 fcdf6c81-87d2-4953-b726-0e756a8cfa00,QuarterRoundShelves,609.6,609.6,Warm ivory lacquer and natural oak,attached_quarter_round_open_shelves_height_2286mm_6_levels
