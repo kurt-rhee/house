@@ -1,7 +1,7 @@
 use super::*;
 
 impl HouseApp {
-    pub(super) fn canvas(&mut self, ui: &mut egui::Ui, d: &Document) {
+    fn plan_viewport(&mut self, ui: &mut egui::Ui) -> (egui::Response, egui::Painter) {
         let (response, painter) = ui.allocate_painter(ui.available_size(), Sense::click_and_drag());
         let rect = response.rect;
         let origin = rect.min;
@@ -22,6 +22,30 @@ impl HouseApp {
         {
             self.pan += ui.input(|i| i.pointer.delta());
         }
+        (response, painter)
+    }
+
+    pub(super) fn before_canvas(&mut self, ui: &mut egui::Ui) {
+        let (response, painter) = self.plan_viewport(ui);
+        let Some(reference) = &self.before_reference else {
+            return;
+        };
+        // Align the reference approximately to the exterior wall centers in the CAD plan.
+        let start = Point::new(-10.0, -10.0);
+        let end = Point::new(start.x + reference.width_mm, start.y + reference.height_mm);
+        let origin = response.rect.min;
+        painter.image(
+            reference.texture.id(),
+            egui::Rect::from_min_max(self.screen(start, origin), self.screen(end, origin)),
+            egui::Rect::from_min_max(Pos2::ZERO, Pos2::new(1.0, 1.0)),
+            Color32::WHITE,
+        );
+    }
+
+    pub(super) fn canvas(&mut self, ui: &mut egui::Ui, d: &Document) {
+        let (response, painter) = self.plan_viewport(ui);
+        let rect = response.rect;
+        let origin = rect.min;
         let low = self.world(rect.min, origin);
         let high = self.world(rect.max, origin);
         let grid = if self.scale > 0.15 { 254.0 } else { 1000.0 };
@@ -100,13 +124,34 @@ impl HouseApp {
         }
         self.draw_plan_symbols(d, &painter, origin);
         for label in d.room_labels.values() {
+            let ink = Color32::from_gray(45);
             painter.text(
                 self.screen(label.position, origin),
                 egui::Align2::CENTER_CENTER,
                 &label.name,
                 egui::FontId::proportional((220.0 * self.scale).clamp(6.0, 14.0)),
-                Color32::from_gray(45),
+                ink,
             );
+            if let Some(size) = room_label_size(d, label) {
+                let position =
+                    Point::new(label.position.x, label.position.y + ROOM_SIZE_TEXT_OFFSET);
+                painter.text(
+                    self.screen(position, origin),
+                    egui::Align2::CENTER_CENTER,
+                    size.text,
+                    egui::FontId::proportional(
+                        (ROOM_SIZE_TEXT_HEIGHT as f32 * self.scale).clamp(5.0, 13.0),
+                    ),
+                    ink,
+                );
+                for triangle in size.arrows {
+                    painter.add(egui::Shape::convex_polygon(
+                        triangle.map(|point| self.screen(point, origin)).to_vec(),
+                        ink,
+                        Stroke::NONE,
+                    ));
+                }
+            }
         }
         for r in d.rooms.values() {
             if let Ok(b) = room_bounds(d, r) {
@@ -179,6 +224,9 @@ impl HouseApp {
                         FixtureKind::Shower => (inches(36.0), inches(36.0)),
                         FixtureKind::Toilet => (inches(15.0), inches(28.0)),
                         FixtureKind::Sink => (inches(24.0), inches(18.0)),
+                        FixtureKind::Cabinet | FixtureKind::OverheadCabinet => {
+                            (inches(30.0), inches(24.0))
+                        }
                         FixtureKind::Countertop => (inches(60.0), inches(25.0)),
                         FixtureKind::Stove => (inches(30.0), inches(25.0)),
                         FixtureKind::Refrigerator => (inches(36.0), inches(32.0)),

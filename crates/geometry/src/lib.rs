@@ -75,6 +75,79 @@ pub fn dimension_value(d: &Document, dim: &Dimension) -> Result<f64, String> {
         DimensionKind::Height => b.height,
     })
 }
+pub const ROOM_SIZE_TEXT_HEIGHT: f64 = 170.0;
+pub const ROOM_SIZE_TEXT_OFFSET: f64 = 215.0;
+
+pub struct RoomSize {
+    pub text: String,
+    pub arrows: [[Point; 3]; 4],
+}
+
+/// Measure the inside faces along explicit sections, including rooms with open
+/// sides or stepped outlines. A section outside a moved wall has no reading.
+pub fn room_label_size(d: &Document, label: &RoomLabel) -> Option<RoomSize> {
+    let spans = label.clear_spans.as_ref()?;
+    let (w, e, n, s) = (
+        d.walls.get(&spans.west)?,
+        d.walls.get(&spans.east)?,
+        d.walls.get(&spans.north)?,
+        d.walls.get(&spans.south)?,
+    );
+    let contains = |station: f64, a: f64, b: f64| (a.min(b)..=a.max(b)).contains(&station);
+    let (x, y) = (spans.depth_at_x, spans.width_at_y);
+    if [w, e]
+        .iter()
+        .any(|wall| wall.start.x != wall.end.x || !contains(y, wall.start.y, wall.end.y))
+        || [n, s]
+            .iter()
+            .any(|wall| wall.start.y != wall.end.y || !contains(x, wall.start.x, wall.end.x))
+    {
+        return None;
+    }
+    let west = w.start.x + w.thickness / 2.0;
+    let east = e.start.x - e.thickness / 2.0;
+    let north = n.start.y + n.thickness / 2.0;
+    let south = s.start.y - s.thickness / 2.0;
+    if east <= west || south <= north {
+        return None;
+    }
+    let feet_inches = |mm: f64| {
+        let total_inches = (mm / 25.4).round() as u64;
+        format!("{}′ {}″", total_inches / 12, total_inches % 12)
+    };
+    let suffix = if spans.overall { " overall" } else { "" };
+    let text = format!(
+        "{} × {}{suffix}",
+        feet_inches(east - west),
+        feet_inches(south - north)
+    );
+    let horizontal = |tip: f64, direction: f64| {
+        let base = tip + direction * 72.0;
+        [
+            Point::new(tip, y),
+            Point::new(base, y - 48.0),
+            Point::new(base, y + 48.0),
+        ]
+    };
+    let vertical = |tip: f64, direction: f64| {
+        let base = tip + direction * 72.0;
+        [
+            Point::new(x, tip),
+            Point::new(x - 48.0, base),
+            Point::new(x + 48.0, base),
+        ]
+    };
+    Some(RoomSize {
+        text,
+        arrows: [
+            horizontal(west, 1.0),
+            horizontal(east, -1.0),
+            vertical(north, 1.0),
+            vertical(south, -1.0),
+        ],
+    })
+}
+
 pub fn validate(d: &Document) -> Result<(), String> {
     if d.layers.is_empty() {
         return Err("At least one layer is required".into());
@@ -101,7 +174,13 @@ pub fn validate(d: &Document) -> Result<(), String> {
     for label in d.room_labels.values() {
         if label.name.trim().is_empty()
             || ![label.position.x, label.position.y]
-                .iter()
+                .into_iter()
+                .chain(
+                    label
+                        .clear_spans
+                        .iter()
+                        .flat_map(|span| [span.width_at_y, span.depth_at_x]),
+                )
                 .all(|v| v.is_finite() && v.abs() < 1e9)
         {
             return Err("Invalid room label".into());

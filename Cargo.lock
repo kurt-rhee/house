@@ -1074,6 +1074,7 @@ dependencies = [
  "house-geometry",
  "house-io",
  "house-mcp",
+ "image",
  "uuid",
 ]
 

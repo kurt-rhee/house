@@ -60,7 +60,7 @@ pub struct DoorInput {
 pub struct DoorUpdate {
     /// True places the hinge at the opening end; omit to preserve the current hinge.
     pub hinge_at_end: Option<bool>,
-    /// Omit to preserve the existing type; "hinged", "sliding_glass", "french_glass", "garage", or "pocket".
+    /// Omit to preserve the existing type; "hinged", "sliding_glass", "french_glass", "garage", "pocket", or "rounded_arch".
     pub kind: Option<String>,
     /// Optional revision returned by get_document. A stale revision rejects the edit without changes.
     pub expected_revision: Option<u64>,
@@ -314,6 +314,7 @@ impl CadServer {
             Some("french_glass") => DoorKind::FrenchGlass,
             Some("garage") => DoorKind::Garage,
             Some("pocket") => DoorKind::Pocket,
+            Some("rounded_arch") => DoorKind::RoundedArch,
             None => match parse_id(&p.id)
                 .ok()
                 .and_then(|id| self.handle.snapshot().doors.get(&id).map(|v| v.kind))
@@ -323,7 +324,7 @@ impl CadServer {
             },
             _ => {
                 return result(Err(
-                    "Door kind must be hinged, sliding_glass, french_glass, garage, or pocket"
+                    "Door kind must be hinged, sliding_glass, french_glass, garage, pocket, or rounded_arch"
                         .into(),
                 ));
             }
@@ -617,6 +618,7 @@ impl CadServer {
                     id,
                     name: p.name,
                     position: Point::new(p.x, p.y),
+                    clear_spans: None,
                 }),
                 p.expected_revision,
             )

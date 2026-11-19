@@ -11,7 +11,10 @@ use dxf::{
     tables::{AppId, Layer as CadLayer},
 };
 use house_core::{DimensionKind, Document, DoorKind, Id, Layer, Point, Swing, Wall};
-use house_geometry::{dimension_value, length, room_bounds, validate, wall_polygon};
+use house_geometry::{
+    ROOM_SIZE_TEXT_HEIGHT, ROOM_SIZE_TEXT_OFFSET, dimension_value, length, room_bounds,
+    room_label_size, validate, wall_polygon,
+};
 use std::path::Path;
 mod compatibility;
 
@@ -112,6 +115,20 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
     }
     for label in document.room_labels.values() {
         output.text(&label.name, label.position, 160.0, "ROOMS", label.id);
+        if let Some(size) = room_label_size(document, label) {
+            output.text(
+                &size.text,
+                Point::new(label.position.x, label.position.y + ROOM_SIZE_TEXT_OFFSET),
+                ROOM_SIZE_TEXT_HEIGHT,
+                "DIMENSIONS",
+                label.id,
+            );
+            for [a, b, c] in size.arrows {
+                for (start, end) in [(a, b), (b, c), (c, a)] {
+                    output.line(start, end, "DIMENSIONS", label.id);
+                }
+            }
+        }
     }
     for room in document.rooms.values() {
         let b = room_bounds(document, room)?;

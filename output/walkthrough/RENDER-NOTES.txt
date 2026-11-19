@@ -1,0 +1,57 @@
+Kitchen finish refinement — drawing revision 35
+
+Panoramic sink window: 2388.6 mm wide x 374 mm high, sill 1476 mm, head 1850 mm. One continuous wall-to-wall floating white oak shelf beneath it, 2998.2 x 220 x 32 mm, top 1476 mm, concealed warm LED below. Previous two sink shelves removed. Window elevations recorded in 2D room note and Blender object properties; window footprint and shelf footprint synchronized with plan.
+
+Minimal kitchen cabinet hardware: projecting bar pulls removed; recessed top-edge finger grips modeled into oak fronts. Dishwasher panel follows matching treatment. Fridge and appliance handles retained. Microwave and associated cabinets remain aligned to fridge front at 660.4 mm depth, upper cabinets reach 2438.4 mm ceiling.
+
+Architectural tapered warm ivory plaster hood to ceiling, concealing extractor, filters and task lights. Base 850 x 480 mm, upper 600 x 300 mm. Bottom 1805 mm, top 2438.4 mm. Stove-side floating shelf retained at top 1450 mm; knife bar removed.
+
+Honed charcoal soapstone: stove/prep backsplash top 2100 mm, aligned with west window head, stepping down at window to low 53.5 mm band, top 986 mm. Band wraps corner and continues along sink counter. All stone uses same honed countertop material. Induction range, integrated dishwasher drawer, white fireclay apron sink, rounded nickel faucet. Sink centered on panoramic window, dishwasher immediately to right.
+
+Photographed white oak PBR maps and Residential Garden HDRI are packed in both Blender files. Attribution: textures/CREDITS.txt. EEVEE remains active for live navigation. Revision 31 photographic previews: Cycles CPU, 48 adaptive samples, denoising, 75% of 1800 x 1300.
+
+Frame 1: oven and dishwasher closed. Frame 40: oven and dishwasher drawer open for clearance demonstration. Web walkthrough remains postponed.
+
+Revision 32: sink center X18857.1 mm matches panoramic window and full-wall shelf; sink origin X18438 mm, dishwasher origin X19276.2 mm. North cabinet and soapstone cutout rebuilt. 445 mm left storage and 470.4 mm right storage; recessed grips retained.
+
+Revision 33: warm ribbed paper lantern pendant added, diameter 560 mm, height 300 mm, bottom 2020 mm. HDRI daylight strength raised from 0.55 to 1.65, low-haze glazing clarified and reflections reduced, kitchen daylight fill 110 W. Wider camera includes ceiling fixture. Pendant location noted in 2D plan.
+
+Revision 34: microwave upper cabinets recessed to 350 mm depth, mounted over 21 mm rear stone finish offset; front 289.4 mm behind counter edge. Full-height 20 mm soapstone rear-wall slab runs from countertop 932.5 mm to ceiling 2438.4 mm, continuing behind upper cabinets. Base and microwave remain at fridge depth.
+
+Revision 35: centered horizontal kitchen window narrowed to 2388.6 mm to leave 304.8 mm (one foot) wall at each end of kitchen wall. Sill, head, centered sink and wall-to-wall shelf retained.
+
+Revision 36: window height increased 1.5x, 374 to 561 mm, keeping sill at 1476 and raising head to 2037. Width 2388.6 and one-foot wall margins retained. Top-hinged outward/upward awning sash animated open at frame 60 (32 degrees); concealed recessed linen roller shade lowered at frame 100. Frame 1 closed/retracted. Full-wall shelf remains.
+
+Revision 38: removed stove-wall window and all trim, restored full-height plaster wall. Stove-wall soapstone confined to hood-width panel between countertop and hood underside. No stone behind stove-side shelf.
+
+Revision 38 drawing export: the current validator rejects the pre-existing 42-inch laundry pocket leaf reservation (82.35 mm beyond host partition). SVG/DXF generated using an isolated exporter copy with the earlier opening-only validation. Canonical pocket door and application source left unchanged. Published web tour remains revision 36 until its next render/deployment.
+
+Revision 39: added real circular daylight opening right of range facing stove wall. 450 mm overall bronze frame, 410 mm clear glazing, center 1860 mm AFF; world Y7830 mm. 2D plan window and elevation note synchronized. Hood-only soapstone retained.
+
+Lighting refinement: warmer afternoon environment tint (1, .83, .64); warmer daylight fill, 42 W amber paper lantern, 4 W hood task lights, 18 W shelf lighting. Saved to source and walkthrough Blender files; geometry unchanged.
+
+Revision 40: continuous stove-wall soapstone raised to hood underside at 1805 mm; full 2863.3 mm counter run. Round window lifted 200 mm to center 2060 mm, leaving 30 mm plaster between stone and frame. Warm lighting retained.
+
+Revision 41: full-width 2863.3 x 380 mm white oak wall uppers, bottom 1805 / ceiling 2438.4 mm. Concealed existing extractor, filters and warm task lights; exposed plaster hood removed. Stove shelf and accessories removed. Bronze circular reveal extends through fixed oak window panel. Full-height-to-hood soapstone and warm lighting retained. 2D fixture and notes synchronized.
+
+Revision 42: side oak cabinets extended down 329 mm to align underside with sink shelf top at 1476 mm. Concealed hood bay stays at 1805 mm above cooktop, with stepped underside and side panels. Round window remains unobstructed; 2D notes updated.
+
+Revision 43: continuous stove-wall shelf/ledge, cabinet lower edge and concealed hood at 1476 mm, matching sink shelf. Removed raised hood bay. Shelf front continuous with filter opening behind it. Soapstone ends at this line. Round window lowered to center 1756.5 mm, aligned with rectangular sink window center; wall and oak openings rebuilt. Appliance-specific construction clearances have not been verified.
+
+Revision 44: stove-wall oak upper cabinetry removed, continuous floating oak shelf retained at 1476 mm. Restored ceiling-height warm plaster hood, underside aligned at 1476 mm, existing extractor and task lights retained. Round bronze window reveal shortened to wall depth; center remains aligned to sink window at 1756.5 mm. Other cabinetry unchanged.
+
+Revision 45: stove-wall shelf, side boards and front rail removed. Sink-window shelf retained. Plaster hood, soapstone top and aligned round/rectangular windows unchanged. Removed shelf footprint from 2D plan.
+
+Revision 46: stove soapstone shortened to centered 1200 mm panel, approximately 175 mm beyond hood each side. Top 1476 mm, countertop bottom 932.5 mm retained; plaster exposed on both sides.
+
+Revision 47: reference-style soft sculptural plaster hood with rounded plan corners and smooth curved taper from 850 mm base to 430 mm ceiling neck. Backsplash changed to warm greige honed stone with arched top/300 mm rounded shoulders, still 1200 mm wide and top 1476 mm. Countertop stone, windows, sink shelf and warm lighting retained.
+
+Revision 48: hood changed to straight-sided rectangular plaster enclosure 1250 mm wide x 400 mm deep, 50 mm rounded corners, underside1476 mm / ceiling2438.4 mm. Hood and integrated extractor shifted100 mm left facingstove. Arched warm stone backsplash unchanged.
+
+Revision 49: broadened hood corner radius from 50 to 150 mm. Arched backsplash widened to 1250 mm and centered under hood. Range moved 100 mm left to same centerline; adjoining base cabinets, door fronts, end panels and stone counters refitted to new range opening.
+
+Revision 50: corrected hood to round only the four vertical side edges (150 mm radius), leaving horizontal top and bottom edges flat. Width and centered range/backsplash retained.
+
+Revision 51: added flush plaster header across existing dining/living opening piers, 304.8 mm deep below ceiling, 2133.6 mm clear height. Forms a continuous three-sided rectangular portal. No floor plan footprint change.
+
+Added fitted 406 mm circular pleated linen blind with slim bronze guide to the small stove-side round window. Independent control; frame 150 closed, frame 1/180 open. Additive web asset round-blind.glb preserves the baked main-house model and lighting.

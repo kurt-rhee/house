@@ -4,3 +4,6 @@
 /bathroom.house.svg
 /bathroom.house.dxf
 *.tmp
+/.playwright-cli/
+/output/playwright/
+/sites/house-walkthrough/

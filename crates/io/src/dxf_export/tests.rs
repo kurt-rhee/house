@@ -15,6 +15,31 @@ fn near(a: f64, b: f64) {
 }
 
 #[test]
+fn rounded_arch_exports_as_open_jambs_and_overhead_projection_without_a_leaf() {
+    let mut document = bathroom();
+    let door = document.doors.values_mut().next().unwrap();
+    door.kind = DoorKind::RoundedArch;
+    let id = door.id;
+    let host = document.walls[&door.wall].clone();
+    let restored = crate::from_json(&crate::to_json(&document).unwrap()).unwrap();
+    assert_eq!(restored.doors[&id].kind, DoorKind::RoundedArch);
+    let drawing = parsed(&restored);
+    let entities: Vec<_> = drawing.entities().filter(|e| has_id(e, id)).collect();
+    assert!(entities.len() > 2);
+    for entity in entities {
+        let EntityType::Line(line) = &entity.specific else {
+            panic!("Arch must not have a swing arc or door leaf");
+        };
+        for p in [&line.p1, &line.p2] {
+            assert!(
+                house_geometry::distance(&host, Point::new(p.x, -p.y))
+                    <= host.thickness / 2.0 + 1e-6
+            );
+        }
+    }
+}
+
+#[test]
 fn sample_units_outlines_annotations_and_identity() {
     let original = bathroom();
     let snapshot = original.clone();

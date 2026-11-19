@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 6,
+  "revision": 51,
   "walls": {
     "03c0d967-f904-48cc-b581-56eb4b700823": {
       "id": "03c0d967-f904-48cc-b581-56eb4b700823",
@@ -799,10 +799,10 @@
       "hinge_at_end": false,
       "id": "862d92a8-b4be-4526-b8c9-f2461f36b83a",
       "wall": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
-      "position": 1084.875,
-      "width": 1065.15,
+      "position": 1413.8999999999996,
+      "width": 1400.0,
       "swing": "Left",
-      "kind": "Pocket"
+      "kind": "RoundedArch"
     },
     "8c5607bb-19e7-46e0-8b67-e9f3e7f843d9": {
       "hinge_at_end": false,
@@ -817,8 +817,8 @@
       "hinge_at_end": false,
       "id": "9150da68-b336-4060-bdae-30eb0d80deca",
       "wall": "743fa984-048d-48a9-923a-a99198a7c60e",
-      "position": 1594.25,
-      "width": 914.4,
+      "position": 1518.05,
+      "width": 1066.8,
       "swing": "Right",
       "kind": "Pocket"
     },
@@ -944,12 +944,6 @@
       "position": 749.5500000000001,
       "width": 1104.6000000000001
     },
-    "90a8284d-b202-41a7-a59f-ccc40a2822fa": {
-      "id": "90a8284d-b202-41a7-a59f-ccc40a2822fa",
-      "wall": "ad218721-76be-4635-81dc-048de2d8bdae",
-      "position": 650.0,
-      "width": 775.85
-    },
     "95713936-a61e-4b4c-815a-e2a1fb1c524d": {
       "id": "95713936-a61e-4b4c-815a-e2a1fb1c524d",
       "wall": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
@@ -965,8 +959,8 @@
     "9b44bb93-1dea-42b1-98cd-26466e14a447": {
       "id": "9b44bb93-1dea-42b1-98cd-26466e14a447",
       "wall": "746ae532-71e5-438a-bc40-f8907c28fcae",
-      "position": 1895.5,
-      "width": 1828.8
+      "position": 1578.0,
+      "width": 2388.6
     },
     "a97e8375-a032-44f7-aaae-53391169fefb": {
       "id": "a97e8375-a032-44f7-aaae-53391169fefb",
@@ -1027,21 +1021,27 @@
       "wall": "625a2c30-d92e-4474-816b-d387a75c9f65",
       "position": 5161.375,
       "width": 881.0500000000001
+    },
+    "c0d5528e-44b1-507c-8696-229d74db36a0": {
+      "id": "c0d5528e-44b1-507c-8696-229d74db36a0",
+      "wall": "ad218721-76be-4635-81dc-048de2d8bdae",
+      "position": 743.8000000000002,
+      "width": 450.0
     }
   },
   "fixtures": {
     "0a136254-797b-44fe-b369-8f6e98f33bc0": {
-      "material": "Natural oak cabinet with honed charcoal soapstone worktop",
-      "style": "left_facing_tambour_appliance_garage_aligned_with_refrigerator_height_2260mm",
+      "material": "Natural oak with honed charcoal soapstone countertop and stainless microwave surround",
+      "style": "counter_height_932.5mm_integrated_microwave_vented_surround_depth_660.4mm_flush_to_fridge_recessed_edge_grips",
       "id": "0a136254-797b-44fe-b369-8f6e98f33bc0",
-      "kind": "ApplianceGarage",
+      "kind": "Cabinet",
       "origin": {
         "x": 19517.6,
-        "y": 4928.35
+        "y": 5588.75
       },
-      "width": 660.4,
-      "depth": 457.2,
-      "rotation": 90.0,
+      "width": 622.1125,
+      "depth": 660.4,
+      "rotation": 180.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "1b621dde-f0da-44d7-90a1-3a31bb2ed549": {
@@ -1099,11 +1099,11 @@
     },
     "4be42708-ac78-437e-8895-9042270f0235": {
       "material": "White fireclay",
-      "style": "farmhouse_apron_front",
+      "style": "farmhouse_apron_sink_centered_on_panoramic_window",
       "id": "4be42708-ac78-437e-8895-9042270f0235",
       "kind": "Sink",
       "origin": {
-        "x": 18755.5,
+        "x": 18438.000000000004,
         "y": 2313.5
       },
       "width": 838.2,
@@ -1151,17 +1151,18 @@
     },
     "9795d0d2-7db7-411f-91b8-ecbebec3fb30": {
       "material": "Natural oak cabinet front",
-      "style": "panel_ready_single_drawer",
+      "style": "panel_ready_single_drawer_recessed_edge_grips",
       "id": "9795d0d2-7db7-411f-91b8-ecbebec3fb30",
       "kind": "DishwasherDrawer",
       "origin": {
-        "x": 18145.9,
+        "x": 19276.200000000004,
         "y": 2288.1
       },
       "width": 609.6,
       "depth": 635.0,
       "rotation": 0.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "clearance_note": "Immediately right of centered sink; open drawer remains clear of oven."
     },
     "99d32ea4-059c-446d-88e9-0b9d8f0ce016": {
       "id": "99d32ea4-059c-446d-88e9-0b9d8f0ce016",
@@ -1208,9 +1209,10 @@
         "y": 2288.1
       },
       "width": 635.0,
-      "depth": 2665.65,
+      "depth": 2863.25,
       "rotation": 0.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "_recessed_edge_grips"
     },
     "c0c93320-283f-4d94-bc6e-b11ec56a989a": {
       "material": "Honed charcoal soapstone with pale veining",
@@ -1223,7 +1225,8 @@
       "width": 2363.2,
       "depth": 635.0,
       "rotation": 0.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "_recessed_edge_grips"
     },
     "c40f5550-c32f-446b-8617-900a1695731a": {
       "id": "c40f5550-c32f-446b-8617-900a1695731a",
@@ -1294,12 +1297,15 @@
       "kind": "Stove",
       "origin": {
         "x": 17358.0,
-        "y": 4001.925
+        "y": 4451.925
       },
       "width": 762.0,
       "depth": 635.0,
       "rotation": 270.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "induction_range_four_zones_electric_oven",
+      "material": "Black ceramic induction glass, satin nickel oven",
+      "clearance_note": "Range centered under hood; shifted another 100 mm left, increasing dishwasher clearance."
     },
     "fcdf6c81-87d2-4953-b726-0e756a8cfa00": {
       "material": "Warm ivory lacquer and natural oak",
@@ -1314,6 +1320,90 @@
       "depth": 609.6,
       "rotation": 0.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "43a9d8fc-e111-5b5c-9d22-ac21f0e3e169": {
+      "id": "43a9d8fc-e111-5b5c-9d22-ac21f0e3e169",
+      "kind": "Cabinet",
+      "origin": {
+        "x": 20335,
+        "y": 5588.75
+      },
+      "width": 18,
+      "depth": 620,
+      "rotation": 180,
+      "style": "refrigerator_side_panel_height_2438.4mm_12mm_appliance_gap",
+      "material": "Natural oak",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "dc8f582a-f56c-566c-ac94-510c5d5b7e53": {
+      "id": "dc8f582a-f56c-566c-ac94-510c5d5b7e53",
+      "kind": "Cabinet",
+      "origin": {
+        "x": 19505.6,
+        "y": 5588.75
+      },
+      "width": 18,
+      "depth": 620,
+      "rotation": 180,
+      "style": "refrigerator_side_panel_height_2438.4mm_12mm_appliance_gap",
+      "material": "Natural oak",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "d7fa9c10-7151-51e9-ac2f-0f54d81ddcef": {
+      "id": "d7fa9c10-7151-51e9-ac2f-0f54d81ddcef",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 20335,
+        "y": 5588.75
+      },
+      "width": 847.4,
+      "depth": 620,
+      "rotation": 180,
+      "style": "two_doors_above_refrigerator_bottom_2036mm_top_2438.4mm_recessed_edge_grips",
+      "material": "Natural oak",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "e1928df0-155f-546e-b491-516387590509": {
+      "id": "e1928df0-155f-546e-b491-516387590509",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 18895.4875,
+        "y": 5217.75
+      },
+      "width": 622.1125,
+      "depth": 350,
+      "rotation": 0,
+      "style": "two_stacked_recessed_oak_uppers_depth_350mm_bottom_1444mm_top_2438.4mm_ceiling_height_recessed_edge_grips",
+      "material": "Natural white oak, concealed edge grips, full-height soapstone behind",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "90d62899-1317-5cc7-a110-a6c6b9d14fbb": {
+      "id": "90d62899-1317-5cc7-a110-a6c6b9d14fbb",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 17358,
+        "y": 2288.1
+      },
+      "width": 2998.2,
+      "depth": 220,
+      "rotation": 0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "material": "Natural white oak, matte clear finish",
+      "style": "single_wall_to_wall_floating_oak_shelf_top_1476mm_below_panoramic_window_warm_LED"
+    },
+    "cc99b809-cb08-51b4-a631-7c1eae3d9db0": {
+      "id": "cc99b809-cb08-51b4-a631-7c1eae3d9db0",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 17358.0,
+        "y": 4695.925
+      },
+      "width": 1250,
+      "depth": 400,
+      "rotation": 270,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "rectangular_plaster_hood_150mm_vertical_side_edges_only_flat_top_bottom",
+      "material": "Warm ivory mineral plaster, rounded vertical sides, flat top and bottom"
     }
   },
   "rooms": {},
@@ -1468,6 +1558,86 @@
       "position": {
         "x": 17550.0,
         "y": 7990.0
+      }
+    },
+    "b5c832b1-8f9c-5f95-acd2-7b1c2572df39": {
+      "id": "b5c832b1-8f9c-5f95-acd2-7b1c2572df39",
+      "name": "1400 mm rounded arch / no door",
+      "position": {
+        "x": 22400,
+        "y": 4200
+      }
+    },
+    "23ab38b2-e52c-51f8-9bdc-2988aa8b37bd": {
+      "id": "23ab38b2-e52c-51f8-9bdc-2988aa8b37bd",
+      "name": "Crown 2180 / spring 1780 mm",
+      "position": {
+        "x": 22400,
+        "y": 4400
+      }
+    },
+    "64bdcae0-ddd6-5593-867e-2ffffebd9e8d": {
+      "id": "64bdcae0-ddd6-5593-867e-2ffffebd9e8d",
+      "name": "Fridge: oak surround + upper cabinets",
+      "position": {
+        "x": 22400,
+        "y": 5350
+      }
+    },
+    "952c00f3-ff81-5877-94ff-58aa9e997580": {
+      "id": "952c00f3-ff81-5877-94ff-58aa9e997580",
+      "name": "Microwave: recessed uppers / full-height soapstone",
+      "position": {
+        "x": 22400,
+        "y": 5600
+      }
+    },
+    "75fcfc7e-ed03-5c11-a838-f36654d81c29": {
+      "id": "75fcfc7e-ed03-5c11-a838-f36654d81c29",
+      "name": "Stove wall: plaster above soapstone / no shelf",
+      "position": {
+        "x": 18900,
+        "y": 4400
+      }
+    },
+    "0c00a33d-4153-58cb-8e2e-4f0d862be984": {
+      "id": "0c00a33d-4153-58cb-8e2e-4f0d862be984",
+      "name": "Arched warm stone: 1250 mm / same width as hood",
+      "position": {
+        "x": 22400,
+        "y": 5850
+      }
+    },
+    "b73fc414-fd85-5730-9627-fba281382872": {
+      "id": "b73fc414-fd85-5730-9627-fba281382872",
+      "name": "Plaster hood: rounded vertical sides / flat top and bottom",
+      "position": {
+        "x": 22400,
+        "y": 6100
+      }
+    },
+    "a096f6e5-9a22-5c6b-b0b5-2240c01a0906": {
+      "id": "a096f6e5-9a22-5c6b-b0b5-2240c01a0906",
+      "name": "Sink window: 2389 x 561 mm / sill 1476 / head 2037 / awning + concealed shade / 1 ft ends",
+      "position": {
+        "x": 22550,
+        "y": 6400
+      }
+    },
+    "c467516f-0df5-5a08-8cfb-96b290a0e429": {
+      "id": "c467516f-0df5-5a08-8cfb-96b290a0e429",
+      "name": "Ceiling pendant / paper lantern 560 mm",
+      "position": {
+        "x": 19173.1,
+        "y": 3633
+      }
+    },
+    "bd963517-7d8b-5e28-bb34-d919224288d9": {
+      "id": "bd963517-7d8b-5e28-bb34-d919224288d9",
+      "name": "Round window: \u00d8450 mm / center 1756.5 mm aligned sink",
+      "position": {
+        "x": 16470.0,
+        "y": 2820.0
       }
     }
   },

@@ -2,7 +2,10 @@
 mod dxf_export;
 pub use dxf_export::{dxf_bytes, export_dxf};
 use house_core::*;
-use house_geometry::{dimension_value, length, room_bounds, validate, wall_polygon};
+use house_geometry::{
+    ROOM_SIZE_TEXT_HEIGHT, ROOM_SIZE_TEXT_OFFSET, dimension_value, length, room_bounds,
+    room_label_size, validate, wall_polygon,
+};
 use std::{fmt::Write as _, path::Path};
 pub fn to_json(d: &Document) -> Result<String, String> {
     validate(d)?;
@@ -194,6 +197,17 @@ pub fn svg(d: &Document) -> Result<String, String> {
     }
     for label in d.room_labels.values() {
         writeln!(s, "<text x=\"{}\" y=\"{}\" font-family=\"sans-serif\" font-size=\"160\" text-anchor=\"middle\">{}</text>", label.position.x, label.position.y, escape(&label.name)).unwrap();
+        if let Some(size) = room_label_size(d, label) {
+            writeln!(s, "<text x=\"{}\" y=\"{}\" font-family=\"sans-serif\" font-size=\"{ROOM_SIZE_TEXT_HEIGHT}\" text-anchor=\"middle\">{}</text>", label.position.x, label.position.y + ROOM_SIZE_TEXT_OFFSET, escape(&size.text)).unwrap();
+            for [a, b, c] in size.arrows {
+                writeln!(
+                    s,
+                    "<polygon points=\"{},{} {},{} {},{}\" fill=\"#222\"/>",
+                    a.x, a.y, b.x, b.y, c.x, c.y
+                )
+                .unwrap();
+            }
+        }
     }
     for r in d.rooms.values() {
         let b = room_bounds(d, r)?;
@@ -388,6 +402,7 @@ mod room_label_tests {
                 id,
                 name: "Kitchen & dining".into(),
                 position: Point::new(150.0, 200.0),
+                clear_spans: None,
             },
         );
         assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
@@ -401,5 +416,41 @@ mod room_label_tests {
         std::fs::remove_file(path).unwrap();
         let drawing = dxf_bytes(&d).unwrap();
         assert!(String::from_utf8_lossy(&drawing).contains("Kitchen & dining"));
+    }
+
+    #[test]
+    fn clear_room_spans_export_in_feet_and_inches() {
+        let mut d = bathroom();
+        let room = d
+            .rooms
+            .values()
+            .find(|room| room.name == "Bathroom")
+            .unwrap();
+        let id = Id::new_v4();
+        let label = RoomLabel {
+            id,
+            name: room.name.clone(),
+            position: Point::new(800.0, 1200.0),
+            clear_spans: Some(RoomClearSpans {
+                west: room.west,
+                east: room.east,
+                north: room.north,
+                south: room.south,
+                width_at_y: 1400.0,
+                depth_at_x: 800.0,
+                overall: false,
+            }),
+        };
+        d.room_labels.insert(id, label);
+        assert_eq!(from_json(&to_json(&d).unwrap()).unwrap(), d);
+        let expected = "5′ 4″ × 8′ 0″";
+        let image = svg(&d).unwrap();
+        assert!(image.contains(expected));
+        assert_eq!(image.matches("fill=\"#222\"").count(), 4);
+        let bytes = dxf_bytes(&d).unwrap();
+        let drawing = dxf::Drawing::load(&mut bytes.as_slice()).unwrap();
+        assert!(drawing.entities().any(|entity| matches!(
+            &entity.specific, dxf::entities::EntityType::Text(text) if text.value == expected
+        )));
     }
 }

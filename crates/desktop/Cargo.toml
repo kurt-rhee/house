@@ -11,4 +11,5 @@ house-commands.workspace = true
 house-io.workspace = true
 house-mcp.workspace = true
 eframe.workspace = true
+image = { version = "0.25", default-features = false, features = ["png"] }
 uuid.workspace = true

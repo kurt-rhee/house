@@ -36,6 +36,49 @@ fn barrier(app: &HouseApp) {
         .unwrap()
         .unwrap();
 }
+
+#[test]
+fn before_after_switch_keeps_the_live_document_and_camera() {
+    fn label_position(ctx: &egui::Context, app: &mut HouseApp, label: &str) -> Pos2 {
+        let mut output = ctx.run_ui(
+            egui::RawInput {
+                screen_rect: Some(egui::Rect::from_min_size(
+                    Pos2::ZERO,
+                    Vec2::new(1280.0, 850.0),
+                )),
+                ..Default::default()
+            },
+            |ui| app.show(ui),
+        );
+        output.textures_delta.clear();
+        output
+            .shapes
+            .iter()
+            .find_map(|clipped| match &clipped.shape {
+                egui::Shape::Text(text) if text.galley.text() == label => {
+                    Some(text.pos + text.galley.rect.center().to_vec2())
+                }
+                _ => None,
+            })
+            .expect("comparison tab is visible")
+    }
+
+    let ctx = egui::Context::default();
+    let mut app = HouseApp::with_context(ctx.clone(), 0);
+    app.before_reference = Some(BeforeReference::load(&ctx).expect("reference fits renderer"));
+    let before_tab = label_position(&ctx, &mut app, "Before");
+    let live = app.handle.snapshot();
+    let camera = (app.canvas_origin, app.pan, app.scale);
+    click(&ctx, &mut app, before_tab);
+    assert!(app.show_before);
+    assert_eq!((app.canvas_origin, app.pan, app.scale), camera);
+    let after_tab = label_position(&ctx, &mut app, "After");
+    click(&ctx, &mut app, after_tab);
+    assert!(!app.show_before);
+    assert_eq!((app.canvas_origin, app.pan, app.scale), camera);
+    assert!(std::sync::Arc::ptr_eq(&live, &app.handle.snapshot()));
+}
+
 #[test]
 fn select_drag_partition_and_undo() {
     let ctx = egui::Context::default();

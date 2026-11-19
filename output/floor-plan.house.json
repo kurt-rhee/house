@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 6,
+  "revision": 56,
   "walls": {
     "03c0d967-f904-48cc-b581-56eb4b700823": {
       "id": "03c0d967-f904-48cc-b581-56eb4b700823",
@@ -179,7 +179,7 @@
       },
       "end": {
         "x": 6180.5,
-        "y": 8836.800000000001
+        "y": 7179.900000000001
       },
       "thickness": 105.2,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
@@ -357,7 +357,7 @@
       "name": "Laundry pocket-door partition",
       "start": {
         "x": 17279.1,
-        "y": 4300.0
+        "y": 4217.8
       },
       "end": {
         "x": 17279.1,
@@ -529,7 +529,7 @@
       },
       "end": {
         "x": 17279.1,
-        "y": 4300.0
+        "y": 4217.8
       },
       "thickness": 157.8,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
@@ -750,15 +750,6 @@
       "swing": "Right",
       "kind": "Hinged"
     },
-    "41377aba-4800-4979-ba18-b9d5a31fe6a5": {
-      "hinge_at_end": false,
-      "id": "41377aba-4800-4979-ba18-b9d5a31fe6a5",
-      "wall": "625a2c30-d92e-4474-816b-d387a75c9f65",
-      "position": 1716.075,
-      "width": 775.85,
-      "swing": "Left",
-      "kind": "Hinged"
-    },
     "4c82f11d-cd5e-436b-ace2-09f490c87146": {
       "hinge_at_end": true,
       "id": "4c82f11d-cd5e-436b-ace2-09f490c87146",
@@ -799,10 +790,10 @@
       "hinge_at_end": false,
       "id": "862d92a8-b4be-4526-b8c9-f2461f36b83a",
       "wall": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
-      "position": 1084.875,
-      "width": 1065.15,
+      "position": 1413.8999999999996,
+      "width": 1400.0,
       "swing": "Left",
-      "kind": "Pocket"
+      "kind": "RoundedArch"
     },
     "8c5607bb-19e7-46e0-8b67-e9f3e7f843d9": {
       "hinge_at_end": false,
@@ -817,8 +808,8 @@
       "hinge_at_end": false,
       "id": "9150da68-b336-4060-bdae-30eb0d80deca",
       "wall": "743fa984-048d-48a9-923a-a99198a7c60e",
-      "position": 1594.25,
-      "width": 914.4,
+      "position": 1600.25,
+      "width": 1066.8,
       "swing": "Right",
       "kind": "Pocket"
     },
@@ -867,15 +858,6 @@
       "swing": "Left",
       "kind": "SlidingGlass"
     },
-    "bb72351a-bcc9-44a1-b4b2-0566824f56e9": {
-      "hinge_at_end": false,
-      "id": "bb72351a-bcc9-44a1-b4b2-0566824f56e9",
-      "wall": "9d64280f-e2ec-4e62-970c-d7a196e40478",
-      "position": 2373.5750000000003,
-      "width": 1828.8,
-      "swing": "Left",
-      "kind": "SlidingGlass"
-    },
     "e6cd9cd0-ed73-4318-8941-e660ca238c26": {
       "hinge_at_end": true,
       "id": "e6cd9cd0-ed73-4318-8941-e660ca238c26",
@@ -911,6 +893,15 @@
       "width": 683.8000000000001,
       "swing": "Left",
       "kind": "Hinged"
+    },
+    "2a731d8a-7acc-444b-b914-fe9f9015d2a7": {
+      "id": "2a731d8a-7acc-444b-b914-fe9f9015d2a7",
+      "wall": "daa8e24d-2421-4261-a5db-25f763ed86b8",
+      "position": 900.775,
+      "width": 775.85,
+      "kind": "Hinged",
+      "swing": "Right",
+      "hinge_at_end": false
     }
   },
   "windows": {
@@ -944,29 +935,17 @@
       "position": 749.5500000000001,
       "width": 1104.6000000000001
     },
-    "90a8284d-b202-41a7-a59f-ccc40a2822fa": {
-      "id": "90a8284d-b202-41a7-a59f-ccc40a2822fa",
-      "wall": "ad218721-76be-4635-81dc-048de2d8bdae",
-      "position": 650.0,
-      "width": 775.85
-    },
     "95713936-a61e-4b4c-815a-e2a1fb1c524d": {
       "id": "95713936-a61e-4b4c-815a-e2a1fb1c524d",
       "wall": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
       "position": 1268.9750000000001,
       "width": 881.0500000000001
     },
-    "95b45cc2-b038-4ced-9e3b-8baa13dae2e1": {
-      "id": "95b45cc2-b038-4ced-9e3b-8baa13dae2e1",
-      "wall": "daa8e24d-2421-4261-a5db-25f763ed86b8",
-      "position": 900.775,
-      "width": 775.85
-    },
     "9b44bb93-1dea-42b1-98cd-26466e14a447": {
       "id": "9b44bb93-1dea-42b1-98cd-26466e14a447",
       "wall": "746ae532-71e5-438a-bc40-f8907c28fcae",
-      "position": 1895.5,
-      "width": 1828.8
+      "position": 1578.0,
+      "width": 2388.6
     },
     "a97e8375-a032-44f7-aaae-53391169fefb": {
       "id": "a97e8375-a032-44f7-aaae-53391169fefb",
@@ -1027,21 +1006,39 @@
       "wall": "625a2c30-d92e-4474-816b-d387a75c9f65",
       "position": 5161.375,
       "width": 881.0500000000001
+    },
+    "c0d5528e-44b1-507c-8696-229d74db36a0": {
+      "id": "c0d5528e-44b1-507c-8696-229d74db36a0",
+      "wall": "ad218721-76be-4635-81dc-048de2d8bdae",
+      "position": 743.8000000000002,
+      "width": 450.0
+    },
+    "660394bb-bcf8-4c03-bc6b-24034fa74c0f": {
+      "id": "660394bb-bcf8-4c03-bc6b-24034fa74c0f",
+      "wall": "9d64280f-e2ec-4e62-970c-d7a196e40478",
+      "position": 2373.5750000000003,
+      "width": 1828.8
+    },
+    "68c7570b-a8e7-40d1-a4cb-2631a1e59514": {
+      "id": "68c7570b-a8e7-40d1-a4cb-2631a1e59514",
+      "wall": "625a2c30-d92e-4474-816b-d387a75c9f65",
+      "position": 1716.075,
+      "width": 775.85
     }
   },
   "fixtures": {
     "0a136254-797b-44fe-b369-8f6e98f33bc0": {
-      "material": "Natural oak cabinet with honed charcoal soapstone worktop",
-      "style": "left_facing_tambour_appliance_garage_aligned_with_refrigerator_height_2260mm",
+      "material": "Natural oak with honed charcoal soapstone countertop and stainless microwave surround",
+      "style": "counter_height_932.5mm_integrated_microwave_vented_surround_depth_660.4mm_flush_to_fridge_recessed_edge_grips",
       "id": "0a136254-797b-44fe-b369-8f6e98f33bc0",
-      "kind": "ApplianceGarage",
+      "kind": "Cabinet",
       "origin": {
         "x": 19517.6,
-        "y": 4928.35
+        "y": 5588.75
       },
-      "width": 660.4,
-      "depth": 457.2,
-      "rotation": 90.0,
+      "width": 622.1125,
+      "depth": 660.4,
+      "rotation": 180.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
     },
     "1b621dde-f0da-44d7-90a1-3a31bb2ed549": {
@@ -1099,11 +1096,11 @@
     },
     "4be42708-ac78-437e-8895-9042270f0235": {
       "material": "White fireclay",
-      "style": "farmhouse_apron_front",
+      "style": "farmhouse_apron_sink_centered_on_panoramic_window",
       "id": "4be42708-ac78-437e-8895-9042270f0235",
       "kind": "Sink",
       "origin": {
-        "x": 18755.5,
+        "x": 18438.000000000004,
         "y": 2313.5
       },
       "width": 838.2,
@@ -1151,17 +1148,18 @@
     },
     "9795d0d2-7db7-411f-91b8-ecbebec3fb30": {
       "material": "Natural oak cabinet front",
-      "style": "panel_ready_single_drawer",
+      "style": "panel_ready_single_drawer_recessed_edge_grips",
       "id": "9795d0d2-7db7-411f-91b8-ecbebec3fb30",
       "kind": "DishwasherDrawer",
       "origin": {
-        "x": 18145.9,
+        "x": 19276.200000000004,
         "y": 2288.1
       },
       "width": 609.6,
       "depth": 635.0,
       "rotation": 0.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "clearance_note": "Immediately right of centered sink; open drawer remains clear of oven."
     },
     "99d32ea4-059c-446d-88e9-0b9d8f0ce016": {
       "id": "99d32ea4-059c-446d-88e9-0b9d8f0ce016",
@@ -1208,9 +1206,10 @@
         "y": 2288.1
       },
       "width": 635.0,
-      "depth": 2665.65,
+      "depth": 2863.25,
       "rotation": 0.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "_recessed_edge_grips"
     },
     "c0c93320-283f-4d94-bc6e-b11ec56a989a": {
       "material": "Honed charcoal soapstone with pale veining",
@@ -1223,7 +1222,8 @@
       "width": 2363.2,
       "depth": 635.0,
       "rotation": 0.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "_recessed_edge_grips"
     },
     "c40f5550-c32f-446b-8617-900a1695731a": {
       "id": "c40f5550-c32f-446b-8617-900a1695731a",
@@ -1294,12 +1294,15 @@
       "kind": "Stove",
       "origin": {
         "x": 17358.0,
-        "y": 4001.925
+        "y": 4451.925
       },
       "width": 762.0,
       "depth": 635.0,
       "rotation": 270.0,
-      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "induction_range_four_zones_electric_oven",
+      "material": "Black ceramic induction glass, satin nickel oven",
+      "clearance_note": "Range centered under hood; shifted another 100 mm left, increasing dishwasher clearance."
     },
     "fcdf6c81-87d2-4953-b726-0e756a8cfa00": {
       "material": "Warm ivory lacquer and natural oak",
@@ -1314,6 +1317,90 @@
       "depth": 609.6,
       "rotation": 0.0,
       "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "43a9d8fc-e111-5b5c-9d22-ac21f0e3e169": {
+      "id": "43a9d8fc-e111-5b5c-9d22-ac21f0e3e169",
+      "kind": "Cabinet",
+      "origin": {
+        "x": 20335,
+        "y": 5588.75
+      },
+      "width": 18,
+      "depth": 620,
+      "rotation": 180,
+      "style": "refrigerator_side_panel_height_2438.4mm_12mm_appliance_gap",
+      "material": "Natural oak",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "dc8f582a-f56c-566c-ac94-510c5d5b7e53": {
+      "id": "dc8f582a-f56c-566c-ac94-510c5d5b7e53",
+      "kind": "Cabinet",
+      "origin": {
+        "x": 19505.6,
+        "y": 5588.75
+      },
+      "width": 18,
+      "depth": 620,
+      "rotation": 180,
+      "style": "refrigerator_side_panel_height_2438.4mm_12mm_appliance_gap",
+      "material": "Natural oak",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "d7fa9c10-7151-51e9-ac2f-0f54d81ddcef": {
+      "id": "d7fa9c10-7151-51e9-ac2f-0f54d81ddcef",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 20335,
+        "y": 5588.75
+      },
+      "width": 847.4,
+      "depth": 620,
+      "rotation": 180,
+      "style": "two_doors_above_refrigerator_bottom_2036mm_top_2438.4mm_recessed_edge_grips",
+      "material": "Natural oak",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "e1928df0-155f-546e-b491-516387590509": {
+      "id": "e1928df0-155f-546e-b491-516387590509",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 18895.4875,
+        "y": 5217.75
+      },
+      "width": 622.1125,
+      "depth": 350,
+      "rotation": 0,
+      "style": "two_stacked_recessed_oak_uppers_depth_350mm_bottom_1444mm_top_2438.4mm_ceiling_height_recessed_edge_grips",
+      "material": "Natural white oak, concealed edge grips, full-height soapstone behind",
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26"
+    },
+    "90d62899-1317-5cc7-a110-a6c6b9d14fbb": {
+      "id": "90d62899-1317-5cc7-a110-a6c6b9d14fbb",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 17358,
+        "y": 2288.1
+      },
+      "width": 2998.2,
+      "depth": 220,
+      "rotation": 0,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "material": "Natural white oak, matte clear finish",
+      "style": "single_wall_to_wall_floating_oak_shelf_top_1476mm_below_panoramic_window_warm_LED"
+    },
+    "cc99b809-cb08-51b4-a631-7c1eae3d9db0": {
+      "id": "cc99b809-cb08-51b4-a631-7c1eae3d9db0",
+      "kind": "OverheadCabinet",
+      "origin": {
+        "x": 17358.0,
+        "y": 4695.925
+      },
+      "width": 1250,
+      "depth": 400,
+      "rotation": 270,
+      "layer": "bc63b5af-8736-466d-9628-b6e9f2fabd26",
+      "style": "rectangular_plaster_hood_150mm_vertical_side_edges_only_flat_top_bottom",
+      "material": "Warm ivory mineral plaster, rounded vertical sides, flat top and bottom"
     }
   },
   "rooms": {},
@@ -1322,8 +1409,17 @@
       "id": "08f4249f-8ab1-4962-89bd-e0b4d7694356",
       "name": "ADU bedroom",
       "position": {
-        "x": 7930.0,
-        "y": 7520.0
+        "x": 7790,
+        "y": 7500
+      },
+      "clear_spans": {
+        "west": "80addeaa-577e-4307-90a9-f63d40230866",
+        "east": "ec330efe-86e7-4c41-b664-9ae847be48f2",
+        "north": "0bc03309-ec63-4353-b251-ff9c49d1eb83",
+        "south": "625a2c30-d92e-4474-816b-d387a75c9f65",
+        "width_at_y": 8060,
+        "depth_at_x": 8050,
+        "overall": true
       }
     },
     "1582df18-6fbd-44a4-b70d-eea821c05bf0": {
@@ -1332,6 +1428,15 @@
       "position": {
         "x": 17732.775,
         "y": 10700.0
+      },
+      "clear_spans": {
+        "west": "231ea206-9a1c-442f-9ff1-b29882656d79",
+        "east": "95a31876-8718-4029-aee7-31665058e3d2",
+        "north": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+        "south": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+        "width_at_y": 12500,
+        "depth_at_x": 17450,
+        "overall": false
       }
     },
     "284fef06-ac49-4657-a78d-47a81f28d2c0": {
@@ -1354,8 +1459,17 @@
       "id": "48777fc9-30b0-4498-b836-493dc3ff4844",
       "name": "Bathroom",
       "position": {
-        "x": 5050.0,
-        "y": 6540.0
+        "x": 5110,
+        "y": 6480
+      },
+      "clear_spans": {
+        "west": "80addeaa-577e-4307-90a9-f63d40230866",
+        "east": "3a3a7598-5322-4ab6-a443-eaf269caac69",
+        "north": "0bc03309-ec63-4353-b251-ff9c49d1eb83",
+        "south": "1230cb23-6639-4100-9778-7a72e750aa9c",
+        "width_at_y": 7040,
+        "depth_at_x": 5670,
+        "overall": false
       }
     },
     "51ce176b-e335-4ef0-8b98-3320a6fe1f22": {
@@ -1364,14 +1478,32 @@
       "position": {
         "x": 22300.0,
         "y": 7300.0
+      },
+      "clear_spans": {
+        "west": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
+        "east": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+        "north": "3a1045bf-ee6c-4c4c-9b53-7398fb585b9c",
+        "south": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+        "width_at_y": 8110,
+        "depth_at_x": 23650,
+        "overall": false
       }
     },
     "654a129b-e9f4-4e4b-b4fe-05d9702ebd22": {
       "id": "654a129b-e9f4-4e4b-b4fe-05d9702ebd22",
       "name": "Kitchen",
       "position": {
-        "x": 19000.0,
-        "y": 3700.0
+        "x": 18720,
+        "y": 3650
+      },
+      "clear_spans": {
+        "west": "743fa984-048d-48a9-923a-a99198a7c60e",
+        "east": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
+        "north": "746ae532-71e5-438a-bc40-f8907c28fcae",
+        "south": "b88afdbc-83c7-436b-a52b-374da2f48e67",
+        "width_at_y": 4500,
+        "depth_at_x": 18810,
+        "overall": false
       }
     },
     "6777ba24-d731-4a56-b140-22a9fb047204": {
@@ -1380,14 +1512,15 @@
       "position": {
         "x": 2413.0,
         "y": 4000.0
-      }
-    },
-    "6cc5782f-3983-41fe-8388-6ad2531bc4f7": {
-      "id": "6cc5782f-3983-41fe-8388-6ad2531bc4f7",
-      "name": "Utility",
-      "position": {
-        "x": 5050.0,
-        "y": 8010.0
+      },
+      "clear_spans": {
+        "west": "9d64280f-e2ec-4e62-970c-d7a196e40478",
+        "east": "2fb5ffe9-233e-4c78-9373-40de45874090",
+        "north": "53e51d28-7254-444d-8206-abe697b57939",
+        "south": "daa8e24d-2421-4261-a5db-25f763ed86b8",
+        "width_at_y": 4870,
+        "depth_at_x": 3040,
+        "overall": false
       }
     },
     "73b80b1f-5071-4d85-8950-716cbd706970": {
@@ -1396,6 +1529,15 @@
       "position": {
         "x": 6800.0,
         "y": 3100.0
+      },
+      "clear_spans": {
+        "west": "2fb5ffe9-233e-4c78-9373-40de45874090",
+        "east": "ec330efe-86e7-4c41-b664-9ae847be48f2",
+        "north": "6b84ccbb-2661-4258-b321-9080027afbe1",
+        "south": "0bc03309-ec63-4353-b251-ff9c49d1eb83",
+        "width_at_y": 5510,
+        "depth_at_x": 8270,
+        "overall": false
       }
     },
     "8bce27dc-6e4a-4eec-95ad-b64d80a697f9": {
@@ -1404,6 +1546,15 @@
       "position": {
         "x": 21951.225,
         "y": 11570.0
+      },
+      "clear_spans": {
+        "west": "10170a0b-df5f-47d1-9080-143f6e0c5578",
+        "east": "8071d128-b525-406b-b839-87b24230ca1c",
+        "north": "db42f8d2-7bac-4e61-ab4a-89b5a9209859",
+        "south": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+        "width_at_y": 11820,
+        "depth_at_x": 21760,
+        "overall": false
       }
     },
     "92a0e0a0-822c-4871-94b8-7988865e34da": {
@@ -1412,6 +1563,15 @@
       "position": {
         "x": 20254.875,
         "y": 11570.0
+      },
+      "clear_spans": {
+        "west": "95a31876-8718-4029-aee7-31665058e3d2",
+        "east": "10170a0b-df5f-47d1-9080-143f6e0c5578",
+        "north": "db42f8d2-7bac-4e61-ab4a-89b5a9209859",
+        "south": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+        "width_at_y": 12090,
+        "depth_at_x": 20760,
+        "overall": false
       }
     },
     "983adad7-8897-4386-8540-6e98ee8da8bb": {
@@ -1420,6 +1580,15 @@
       "position": {
         "x": 16200.0,
         "y": 5180.0
+      },
+      "clear_spans": {
+        "west": "d86510d8-aa5d-4f4d-9326-53e7b6a425d0",
+        "east": "743fa984-048d-48a9-923a-a99198a7c60e",
+        "north": "57466920-cd09-4ba8-ada2-1cce4354061f",
+        "south": "970ed9db-d98e-400f-8588-d7dbb8c6386f",
+        "width_at_y": 5240,
+        "depth_at_x": 16950,
+        "overall": false
       }
     },
     "b7f5ab79-3c59-45d5-a74a-7c0772766b94": {
@@ -1428,6 +1597,15 @@
       "position": {
         "x": 21000.0,
         "y": 10220.0
+      },
+      "clear_spans": {
+        "west": "95a31876-8718-4029-aee7-31665058e3d2",
+        "east": "8071d128-b525-406b-b839-87b24230ca1c",
+        "north": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+        "south": "db42f8d2-7bac-4e61-ab4a-89b5a9209859",
+        "width_at_y": 10675,
+        "depth_at_x": 21560,
+        "overall": false
       }
     },
     "bc2d57e0-5e82-45c0-9992-b78ad27fa2a8": {
@@ -1436,6 +1614,15 @@
       "position": {
         "x": 24412.975,
         "y": 10450.0
+      },
+      "clear_spans": {
+        "west": "8071d128-b525-406b-b839-87b24230ca1c",
+        "east": "5ba17380-0894-42c1-942e-547e0cb22819",
+        "north": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+        "south": "33407ad6-ccf9-441a-850c-218fe8112e4c",
+        "width_at_y": 11700,
+        "depth_at_x": 24760,
+        "overall": false
       }
     },
     "c2f308a6-9e93-477b-8b3e-cbf8e6485169": {
@@ -1452,6 +1639,15 @@
       "position": {
         "x": 22250.0,
         "y": 3590.0
+      },
+      "clear_spans": {
+        "west": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
+        "east": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+        "north": "746ae532-71e5-438a-bc40-f8907c28fcae",
+        "south": "3a1045bf-ee6c-4c4c-9b53-7398fb585b9c",
+        "width_at_y": 4450,
+        "depth_at_x": 23995,
+        "overall": false
       }
     },
     "f2febc00-c0cd-4dd3-8062-a495f23a2076": {
@@ -1466,8 +1662,34 @@
       "id": "fa73b556-4a54-415b-a32d-82e631cea826",
       "name": "Bedroom 3",
       "position": {
-        "x": 17550.0,
-        "y": 7990.0
+        "x": 18320,
+        "y": 8870
+      },
+      "clear_spans": {
+        "west": "c5f562a1-ccdd-40f5-8fdc-0e148e725094",
+        "east": "9d3f5626-ab84-4765-8db3-b1e78aa937d9",
+        "north": "b88afdbc-83c7-436b-a52b-374da2f48e67",
+        "south": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+        "width_at_y": 8480,
+        "depth_at_x": 18780,
+        "overall": false
+      }
+    },
+    "45b13eff-0954-50e3-9b93-b68893eb94c5": {
+      "id": "45b13eff-0954-50e3-9b93-b68893eb94c5",
+      "name": "Entrance",
+      "position": {
+        "x": 24685.0,
+        "y": 9300.0
+      },
+      "clear_spans": {
+        "west": "ca4606c9-fbbc-4e6a-8ff5-dc9cd33a7b11",
+        "east": "127f11b1-cdfd-4e4d-8510-ac32ff706aa6",
+        "north": "bac994e1-0176-404f-86b3-7a45ca7a96c6",
+        "south": "bd749d8f-0193-4fc9-a63a-567e6da048d9",
+        "width_at_y": 8416,
+        "depth_at_x": 25095,
+        "overall": false
       }
     }
   },

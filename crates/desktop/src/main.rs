@@ -3,12 +3,53 @@ mod fixtures;
 use eframe::egui::{self, Color32, Pos2, Sense, Stroke, Vec2};
 use house_commands::Command;
 use house_core::*;
-use house_geometry::{dimension_value, distance, length, room_bounds, wall_polygon};
+use house_geometry::{
+    ROOM_SIZE_TEXT_HEIGHT, ROOM_SIZE_TEXT_OFFSET, dimension_value, distance, length, room_bounds,
+    room_label_size, wall_polygon,
+};
 use house_mcp::{Action, DocumentHandle, LocalServer, Pending, PendingError};
+
+struct BeforeReference {
+    texture: egui::TextureHandle,
+    width_mm: f64,
+    height_mm: f64,
+}
+
+impl BeforeReference {
+    fn load(ctx: &egui::Context) -> image::ImageResult<Self> {
+        let mut image = image::load_from_memory_with_format(
+            include_bytes!("../../../docs/floor-plan-before-reference.png"),
+            image::ImageFormat::Png,
+        )?;
+        // Approximate scale from the exterior wall centers shared by both plans.
+        let mm_per_pixel = 11.44;
+        let width_mm = f64::from(image.width()) * mm_per_pixel;
+        let height_mm = f64::from(image.height()) * mm_per_pixel;
+        let limit = ctx.input(|input| input.max_texture_side) as u32;
+        if image.width().max(image.height()) > limit {
+            image = image.resize(limit, limit, image::imageops::FilterType::Lanczos3);
+        }
+        let pixels = image.into_rgba8();
+        let size = [pixels.width() as usize, pixels.height() as usize];
+        let texture = ctx.load_texture(
+            "Existing floor plan",
+            egui::ColorImage::from_rgba_unmultiplied(size, pixels.as_raw()),
+            egui::TextureOptions::LINEAR,
+        );
+        Ok(Self {
+            texture,
+            width_mm,
+            height_mm,
+        })
+    }
+}
+
 struct HouseApp {
     handle: DocumentHandle,
     pending: Vec<Pending>,
     server: Result<LocalServer, String>,
+    before_reference: Option<BeforeReference>,
+    show_before: bool,
     scale: f32,
     pan: Vec2,
     selected: Option<Id>,
@@ -31,6 +72,10 @@ struct HouseApp {
 impl HouseApp {
     fn new(cc: &eframe::CreationContext<'_>) -> Self {
         let mut app = Self::with_context(cc.egui_ctx.clone(), 3847);
+        match BeforeReference::load(&cc.egui_ctx) {
+            Ok(reference) => app.before_reference = Some(reference),
+            Err(error) => app.status = format!("Could not load Before plan: {error}"),
+        }
         let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
             .join("../../output/floor-plan.house.json");
         app.path = path.to_string_lossy().into_owned();
@@ -75,6 +120,8 @@ impl HouseApp {
             handle,
             pending: vec![],
             server,
+            before_reference: None,
+            show_before: false,
             scale: 0.22,
             pan: Vec2::new(100.0, 100.0),
             selected: None,
@@ -185,6 +232,7 @@ impl HouseApp {
                 ui.selectable_value(&mut v.kind, DoorKind::FrenchGlass, "Glass French doors");
                 ui.selectable_value(&mut v.kind, DoorKind::Garage, "Garage door");
                 ui.selectable_value(&mut v.kind, DoorKind::Pocket, "Pocket door");
+                ui.selectable_value(&mut v.kind, DoorKind::RoundedArch, "Rounded arch (no door)");
             });
             ui.horizontal(|ui| {
                 ui.selectable_value(&mut v.swing, Swing::Left, "Left");
@@ -277,7 +325,11 @@ impl HouseApp {
         ui.separator();
         ui.heading("Rooms");
         for label in d.room_labels.values() {
-            ui.label(&label.name);
+            if let Some(size) = room_label_size(d, label) {
+                ui.label(format!("{}\n{}", label.name, size.text));
+            } else {
+                ui.label(&label.name);
+            }
         }
         for r in d.rooms.values() {
             if let Ok(b) = room_bounds(d, r) {
@@ -311,15 +363,19 @@ impl HouseApp {
             Err(_) => true,
         });
         let ctx = ui.ctx().clone();
-        if ctx.input_mut(|i| {
-            i.consume_key(
-                egui::Modifiers::COMMAND | egui::Modifiers::SHIFT,
-                egui::Key::Z,
-            )
-        }) {
+        if !self.show_before
+            && ctx.input_mut(|i| {
+                i.consume_key(
+                    egui::Modifiers::COMMAND | egui::Modifiers::SHIFT,
+                    egui::Key::Z,
+                )
+            })
+        {
             self.send(Action::Redo);
         }
-        if ctx.input_mut(|i| i.consume_key(egui::Modifiers::COMMAND, egui::Key::Z)) {
+        if !self.show_before
+            && ctx.input_mut(|i| i.consume_key(egui::Modifiers::COMMAND, egui::Key::Z))
+        {
             self.send(Action::Undo);
         }
         if ctx.input(|i| i.key_pressed(egui::Key::Escape)) {
@@ -329,9 +385,30 @@ impl HouseApp {
         }
         let d = self.handle.snapshot();
         egui::Panel::top("toolbar").show(ui, |ui| {
-            ui.horizontal_wrapped(|ui| {
+            ui.horizontal(|ui| {
                 ui.heading("House");
-                ui.label(format!("rev {}", d.revision));
+                if self.before_reference.is_some() {
+                    if ui.selectable_label(self.show_before, "Before").clicked() {
+                        self.show_before = true;
+                        self.first = None;
+                        self.drag = None;
+                        self.placing = None;
+                        self.drawing = false;
+                    }
+                    if ui.selectable_label(!self.show_before, "After").clicked() {
+                        self.show_before = false;
+                    }
+                }
+                if self.show_before {
+                    ui.label("Existing conditions · reference drawing");
+                } else {
+                    ui.label(format!("rev {}", d.revision));
+                }
+            });
+            ui.horizontal_wrapped(|ui| {
+                if self.show_before {
+                    ui.disable();
+                }
                 if ui
                     .selectable_label(!self.drawing && self.placing.is_none(), "Select")
                     .clicked()
@@ -400,9 +477,20 @@ impl HouseApp {
         egui::Panel::right("inspector")
             .default_size(260.0)
             .show(ui, |ui| {
-                egui::ScrollArea::vertical().show(ui, |ui| self.inspector(ui, &d));
+                if self.show_before {
+                    ui.heading("Before");
+                    ui.label("Pan with middle or right drag. Scroll to zoom.");
+                } else {
+                    egui::ScrollArea::vertical().show(ui, |ui| self.inspector(ui, &d));
+                }
             });
-        egui::CentralPanel::default().show(ui, |ui| self.canvas(ui, &d));
+        egui::CentralPanel::default().show(ui, |ui| {
+            if self.show_before {
+                self.before_canvas(ui);
+            } else {
+                self.canvas(ui, &d);
+            }
+        });
     }
 }
 impl eframe::App for HouseApp {

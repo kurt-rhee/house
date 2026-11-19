@@ -36,6 +36,8 @@ pub enum DoorKind {
     FrenchGlass,
     Garage,
     Pocket,
+    /// Doorless opening with a rounded arch overhead.
+    RoundedArch,
 }
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Door {
@@ -70,6 +72,9 @@ pub enum FixtureKind {
     Stove,
     Refrigerator,
     ApplianceGarage,
+    Cabinet,
+    /// Storage above the plan cut plane, drawn with a dashed footprint.
+    OverheadCabinet,
     DishwasherDrawer,
     WasherDryer,
     WasteCabinet,
@@ -95,12 +100,26 @@ pub struct Fixture {
     pub rotation: f64,
     pub layer: Id,
 }
-/// A room name anchored on the plan without implying measured rectangular boundaries.
+/// A room name anchored on the plan, optionally with two clear measurements.
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct RoomLabel {
     pub id: Id,
     pub name: String,
     pub position: Point,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub clear_spans: Option<RoomClearSpans>,
+}
+/// Inside-face spans measured at two sections through a room.
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
+pub struct RoomClearSpans {
+    pub west: Id,
+    pub east: Id,
+    pub north: Id,
+    pub south: Id,
+    pub width_at_y: f64,
+    pub depth_at_x: f64,
+    #[serde(default)]
+    pub overall: bool,
 }
 /// Rectangular room bounded by the inside faces of axis-aligned walls.
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]

@@ -97,7 +97,10 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
             });
             continue;
         }
-        if f.kind == FixtureKind::OverheadWardrobe {
+        if matches!(
+            f.kind,
+            FixtureKind::OverheadWardrobe | FixtureKind::OverheadCabinet
+        ) {
             // Dashed perimeter marks storage above the occupied floor plane.
             let corners = fixture_corners(f);
             let mut lines = Vec::new();
@@ -112,6 +115,14 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
                         point((i as f64 + 0.55) / count as f64),
                     ));
                 }
+            }
+            if f.kind == FixtureKind::OverheadCabinet {
+                symbols.push(PlanSymbol {
+                    id: f.id,
+                    layer: f.layer,
+                    lines,
+                });
+                continue;
             }
             // Rail, two pivot arms and pull handle are schematic, not a motion envelope.
             for (a, b) in [
@@ -234,6 +245,7 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
                 | FixtureKind::Stove
                 | FixtureKind::Refrigerator
                 | FixtureKind::ApplianceGarage
+                | FixtureKind::Cabinet
         ) {
             let mut lines = rectangle(fixture_corners(f));
             if f.kind == FixtureKind::Stove {
@@ -368,6 +380,8 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
             | FixtureKind::WasteCabinet
             | FixtureKind::Wardrobe
             | FixtureKind::QuarterRoundShelves
+            | FixtureKind::Cabinet
+            | FixtureKind::OverheadCabinet
             | FixtureKind::OverheadWardrobe => (f.width / 2.0, f.depth / 2.0),
         };
         if f.kind == FixtureKind::Shower {
@@ -452,6 +466,14 @@ pub fn plan_symbols(d: &Document) -> Vec<PlanSymbol> {
                         ),
                     ));
                 }
+            }
+        } else if kind == Some(DoorKind::RoundedArch) {
+            // Dashed overhead projection; no door leaf, swing, track, or pocket.
+            let count = (width / 100.0).ceil() as usize;
+            for i in 0..count {
+                let from = a + width * i as f64 / count as f64;
+                let to = from + width * 0.55 / count as f64;
+                lines.push((p(from, 0.0), p(to, 0.0)));
             }
         } else if kind == Some(DoorKind::Pocket) {
             let sign = if d.doors[&id].swing == Swing::Left {
@@ -599,6 +621,8 @@ mod tests {
             (FixtureKind::WasherDryer, 54),
             (FixtureKind::WasteCabinet, 14),
             (FixtureKind::Countertop, 4),
+            (FixtureKind::Cabinet, 4),
+            (FixtureKind::OverheadCabinet, 30),
             (FixtureKind::Stove, 133),
             (FixtureKind::Refrigerator, 8),
             (FixtureKind::ApplianceGarage, 8),

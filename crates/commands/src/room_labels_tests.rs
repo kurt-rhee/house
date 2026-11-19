@@ -8,6 +8,7 @@ fn room_labels_validate_rename_and_undo_without_changing_walls() {
         id,
         name: "Living room".into(),
         position: Point::new(100.0, 200.0),
+        clear_spans: None,
     };
     engine
         .execute(Command::CreateRoomLabel(label.clone()))
