@@ -200,7 +200,8 @@ There is no paid service or model dependency inside House.
 
 ## DXF export
 
-Click **DXF** in the desktop toolbar, or call the MCP tool:
+Click **Export DXF** in the desktop toolbar to export the floor plan and its
+elevation drawings together. To export the floor plan alone, call the MCP tool:
 
 ```json
 {"name":"export_dxf","arguments":{"path":"/absolute/path/bathroom.dxf"}}
@@ -217,7 +218,7 @@ hidden source layers are omitted. Room/dimension annotations follow the desktop'
 visibility behavior.
 
 Dimensions are ordinary line/text entities, **not associative CAD DIMENSION
-objects**. All exported entities carry their source UUID in HOUSE extended data
+objects**. Floor-plan entities carry their source UUID in HOUSE extended data
 for identification, but the DXF is a drawing snapshot, not a parametric project.
 Continue using JSON to preserve the editable architectural relationships.
 DXF import is not implemented.

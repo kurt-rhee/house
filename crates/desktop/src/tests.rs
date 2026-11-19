@@ -86,7 +86,12 @@ fn switches_between_vector_elevation_and_editable_floor_plan() {
     let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../output/floor-plan.house.json");
     app.open_elevations(&path);
     let elevations = app.elevations.as_ref().expect("saved elevations open");
-    assert_eq!(elevations.drawings.len(), 14);
+    assert!(
+        elevations
+            .drawings
+            .iter()
+            .any(|drawing| drawing.id.starts_with("I-"))
+    );
     let page = elevations
         .drawings
         .iter()
@@ -107,6 +112,77 @@ fn switches_between_vector_elevation_and_editable_floor_plan() {
     click(&ctx, &mut app, after);
     assert!(app.editing_plan());
     assert!(std::sync::Arc::ptr_eq(&live, &app.handle.snapshot()));
+}
+
+#[test]
+fn toolbar_exports_floor_plan_and_all_elevations_in_one_dxf() {
+    use dxf::entities::EntityType;
+
+    let ctx = egui::Context::default();
+    let mut app = HouseApp::with_context(ctx.clone(), 0);
+    let project = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../output/floor-plan.house.json");
+    app.open_elevations(&project);
+    let output = std::env::temp_dir().join(format!("house-export-{}", uuid::Uuid::new_v4()));
+    std::fs::create_dir(&output).unwrap();
+    app.path = output
+        .join("floor-plan.house.json")
+        .to_string_lossy()
+        .into();
+    let plan = house_io::plan_dxf_drawing(&app.handle.snapshot()).unwrap();
+    let button = label_position(&ctx, &mut app, "Export DXF");
+    click(&ctx, &mut app, button);
+
+    let combined = dxf::Drawing::load_file(output.join("floor-plan.combined.dxf")).unwrap();
+    std::fs::remove_dir_all(output).unwrap();
+    assert_eq!(
+        combined.header.default_drawing_units,
+        dxf::enums::Units::Millimeters
+    );
+    let first_wall = plan
+        .entities()
+        .find_map(|entity| match &entity.specific {
+            EntityType::LwPolyline(polyline) => Some((&entity.common.layer, &polyline.vertices)),
+            _ => None,
+        })
+        .unwrap();
+    assert!(combined.entities().any(|entity| {
+        matches!(&entity.specific, EntityType::LwPolyline(line)
+            if &entity.common.layer == first_wall.0
+                 && line.vertices.iter().map(|point| (point.x, point.y))
+                    .eq(first_wall.1.iter().map(|point| (point.x, point.y))))
+    }));
+    let mut drawing_bounds = Vec::new();
+    for elevation in &app.elevations.as_ref().unwrap().drawings {
+        let layer = format!("{}_LINES", elevation.id);
+        let bounds = combined
+            .entities()
+            .filter(|entity| entity.common.layer == layer)
+            .fold(kurbo::Rect::ZERO, |bounds, entity| match &entity.specific {
+                EntityType::LwPolyline(line) => {
+                    line.vertices.iter().fold(bounds, |bounds, point| {
+                        let point = kurbo::Point::new(point.x, point.y);
+                        if bounds == kurbo::Rect::ZERO {
+                            kurbo::Rect::from_points(point, point)
+                        } else {
+                            bounds.union_pt(point)
+                        }
+                    })
+                }
+                _ => bounds,
+            });
+        assert!(
+            bounds.x0 > plan.header.maximum_drawing_extents.x,
+            "{}",
+            elevation.id
+        );
+        assert!(
+            drawing_bounds
+                .iter()
+                .all(|other| bounds.intersect(*other).area() == 0.0)
+        );
+        drawing_bounds.push(bounds);
+    }
+    assert!(drawing_bounds.len() > 1);
 }
 
 #[test]

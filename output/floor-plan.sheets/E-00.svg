@@ -121,22 +121,20 @@
 <text x="675.00" y="562.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Kitchen — Sink and range</text>
 <text x="610.00" y="577.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-02</text>
 <text x="675.00" y="577.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Kitchen — Appliance cabinetry and openings</text>
-<text x="610.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-03</text>
-<text x="675.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Dining room — Living room portal</text>
-<text x="610.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-04</text>
-<text x="675.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Laundry</text>
-<text x="610.00" y="622.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-05</text>
-<text x="675.00" y="622.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house — Bathroom 1</text>
-<text x="610.00" y="637.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-06</text>
-<text x="675.00" y="637.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house — Bathroom 2</text>
-<text x="902.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-08</text>
-<text x="967.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Bedroom 3 — Glazed partition and closet</text>
-<text x="902.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-09</text>
-<text x="967.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main bedroom — Wardrobe and exterior slider</text>
-<text x="902.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-13</text>
-<text x="967.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Office — New and enlarged windows</text>
-<text x="902.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-14</text>
-<text x="967.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">ADU bedroom — Door-to-window conversion</text>
-<text x="902.00" y="547.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">A-07–13</text>
-<text x="967.00" y="547.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Blender render views</text>
+<text x="610.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-04</text>
+<text x="675.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Laundry</text>
+<text x="610.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-05</text>
+<text x="675.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house — Bathroom 1</text>
+<text x="610.00" y="622.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-06</text>
+<text x="675.00" y="622.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house — Bathroom 2</text>
+<text x="610.00" y="637.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-08</text>
+<text x="675.00" y="637.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Bedroom 3 — Glazed partition and closet</text>
+<text x="902.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-09</text>
+<text x="967.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main bedroom — Wardrobe and exterior slider</text>
+<text x="902.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-13</text>
+<text x="967.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Office — New and enlarged windows</text>
+<text x="902.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-14</text>
+<text x="967.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">ADU bedroom — Door-to-window conversion</text>
+<text x="902.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">A-07–13</text>
+<text x="967.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Blender render views</text>
 </svg>
