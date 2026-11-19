@@ -54,6 +54,7 @@ struct HouseApp {
     before_reference: Option<BeforeReference>,
     show_before: bool,
     elevations: Option<Elevations>,
+    elevation_load_error: Option<String>,
     elevation: Option<usize>,
     scale: f32,
     pan: Vec2,
@@ -129,6 +130,7 @@ impl HouseApp {
             before_reference: None,
             show_before: false,
             elevations: None,
+            elevation_load_error: None,
             elevation: None,
             scale: 0.22,
             pan: Vec2::new(100.0, 100.0),
@@ -162,13 +164,37 @@ impl HouseApp {
     }
     fn open_elevations(&mut self, project: &Path) {
         self.elevation = None;
+        self.elevation_load_error = None;
         self.elevations = match Elevations::open(project) {
             Ok(elevations) => elevations,
             Err(error) => {
-                self.status = error;
+                self.status = error.clone();
+                self.elevation_load_error = Some(error);
                 None
             }
         };
+    }
+    fn export_project_dxf(&mut self, document: &Document) {
+        if let Some(error) = &self.elevation_load_error {
+            self.status = format!("DXF export requires the elevation drawings. {error}");
+            return;
+        }
+        let project = Path::new(&self.path);
+        if let (Some(elevations), Some(filename)) = (&self.elevations, project.file_name()) {
+            let filename = filename.to_string_lossy();
+            let stem = filename.strip_suffix(".house.json").unwrap_or(&filename);
+            let path = project.with_file_name(format!("{stem}.combined.dxf"));
+            self.status = match elevations.export_project(document, &path) {
+                Ok(()) => format!(
+                    "Exported floor plan and {} elevations to {}",
+                    elevations.drawings.len(),
+                    path.display()
+                ),
+                Err(error) => format!("DXF export failed: {error}"),
+            };
+        } else {
+            self.send(Action::ExportDxf(project.with_extension("dxf")));
+        }
     }
     fn select_view(&mut self, before: bool, elevation: Option<usize>) {
         self.show_before = before;
@@ -477,6 +503,13 @@ impl HouseApp {
                 } else {
                     ui.label(format!("rev {}", d.revision));
                 }
+                if ui
+                    .button("Export DXF")
+                    .on_hover_text("Export the floor plan and all elevation drawings")
+                    .clicked()
+                {
+                    self.export_project_dxf(&d);
+                }
             });
             ui.horizontal_wrapped(|ui| {
                 if !self.editing_plan() {
@@ -524,11 +557,6 @@ impl HouseApp {
                 if ui.button("SVG").clicked() {
                     self.send(Action::Export(
                         std::path::Path::new(&self.path).with_extension("svg"),
-                    ));
-                }
-                if ui.button("DXF").clicked() {
-                    self.send(Action::ExportDxf(
-                        std::path::Path::new(&self.path).with_extension("dxf"),
                     ));
                 }
             });

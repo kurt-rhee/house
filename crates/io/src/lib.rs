@@ -1,6 +1,6 @@
 //! Versioned JSON persistence and portable drawing exports.
 mod dxf_export;
-pub use dxf_export::{dxf_bytes, export_dxf, serialize_dxf};
+pub use dxf_export::{dxf_bytes, export_dxf, plan_dxf_drawing, serialize_dxf};
 use house_core::*;
 use house_geometry::{
     ROOM_SIZE_TEXT_HEIGHT, ROOM_SIZE_TEXT_OFFSET, dimension_value, length, room_bounds,

@@ -150,7 +150,7 @@ def face_box(c, face, x0, y0, width, style):
 
     op_index = 0
     for opening in face.openings:
-        changed = is_changed_opening(face, opening)
+        changed = is_changed_opening(opening)
         op_index += changed
         a,b = stations(opening.low,opening.high)
         provisional = opening.sill is None or opening.head is None
@@ -202,7 +202,7 @@ def face_box(c, face, x0, y0, width, style):
 
 def face_schedule(c,f,x,y,width,detail_columns=1):
     l = x + 4
-    for index,op in enumerate((op for op in f.openings if is_changed_opening(f, op)),1):
+    for index,op in enumerate((op for op in f.openings if is_changed_opening(op)),1):
         height = ('verify sill/head' if op.sill is None else
                   'verify head' if op.head is None else
                   f'CL {ft((op.sill+op.head)/2)} AFF' if op.kind=='Round' else

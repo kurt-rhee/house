@@ -25,6 +25,14 @@ pub struct Elevation {
 }
 
 impl Elevations {
+    pub fn export_project(
+        &self,
+        document: &house_core::Document,
+        path: &Path,
+    ) -> Result<(), String> {
+        cad::export_project(document, &self.drawings, path)
+    }
+
     pub fn open(project: &Path) -> Result<Option<Self>, String> {
         let Some(name) = project.file_name().and_then(|name| name.to_str()) else {
             return Ok(None);

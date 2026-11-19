@@ -19,9 +19,10 @@ With mise installed, `mise dev` runs the same desktop command.
 The app opens `output/floor-plan.house.json` by default, using the checkout path even when launched from another directory. If it cannot be loaded, the app shows the error and a sample bathroom. Save/open use the editable path in the toolbar
 (relative to the working directory or absolute). Open replaces the document and
 resets history; schema v1 projects migrate automatically to v2 on load. Save uses versioned JSON and an adjacent temporary file plus rename.
-**SVG** and **DXF** in the toolbar export beside the project with `.svg` and
-`.dxf` extensions. Both export the current committed document without changing
-undo history.
+**SVG** in the toolbar exports the current floor plan. **Export DXF** writes the
+floor plan and its elevation drawings together beside the project as
+`<project>.combined.dxf`. Projects with only a floor plan export to `.dxf`.
+Both export the current committed drawing data without changing undo history.
 
 ### Elevation drawings
 
@@ -36,6 +37,8 @@ and an `elevations.tsv` index. Keep it next to `floor-plan.house.json`. Each ind
 row contains a sheet ID, title, and model-to-print scale multiplier, separated
 by tabs. **Export elevation DXF** writes the selected drawing beside its SVG
 with 1:1 model-space linework and text in millimeters at the indexed scale.
+The combined export preserves the floor plan's coordinates and arranges the
+elevations in a grid to its right. Each elevation has layers named by sheet ID.
 Elevation drawings, the floor plan, and the published PDF are edited
 independently. Coordinate changes across affected drawings before reissuing
 the planset.

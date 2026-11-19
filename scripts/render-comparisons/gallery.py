@@ -31,14 +31,12 @@ sheets = [
          ('round-blind', 'Round window blind closed',
           'The remodel adds a round window to the cooking wall, which had no round opening on A-01. Its fitted pleated blind is shown closed.'),
      ]),
-    ('Kitchen and dining | Cabinetry and openings', 'A-01–02 floor plans  /  I-02–03 interior elevations',
+    ('Kitchen and dining | Cabinetry and arch', 'A-01–02 floor plans  /  I-02 interior elevations',
      [
          ('appliances', 'Refrigerator and microwave wall',
           'The kitchen wall shown on A-01 gets a refrigerator surround, an integrated microwave and recessed oak upper cabinets.'),
          ('portal', 'Rounded kitchen-to-dining arch',
           'A 1,400 mm rounded arch replaces the original narrow kitchen-to-dining opening.'),
-         ('dining-header', 'Dining-to-living portal',
-          'The original opening between short wall returns becomes a rectangular portal with a plaster header.'),
      ]),
     ('Laundry | Entry and storage', 'A-01–02 floor plans  /  E-01 receptacle plan  /  I-04 laundry elevations',
      [

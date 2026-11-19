@@ -343,21 +343,15 @@ CHANGED_OPENINGS = {
     'db40b496', 'a97e8375', '9c1b496b', '7787ed89', 'aff1b521',
     '5cc81c53', '24a31300', '3a6af7b2', '660394bb', '68c7570b',
 }
-# Keep one documented side of a shared opening unless both faces carry
-# different proposed work, such as the kitchen and laundry cabinetry.
-CHANGED_PORTAL_FACES = {'D3'}
 
 
-def is_changed_opening(face, opening):
-    return opening.id in CHANGED_OPENINGS or (
-        opening.kind == 'Portal' and face.id in CHANGED_PORTAL_FACES
-    )
+def is_changed_opening(opening):
+    return opening.id in CHANGED_OPENINGS
 
 
 SHEETS = [
     ('I-01','Kitchen | Sink and range',['K1','K2']),
     ('I-02','Kitchen | Appliance cabinetry and openings',['K3','K4','K5']),
-    ('I-03','Dining room | Living room portal',['D3']),
     ('I-04','Laundry',['L1','L3']),
     ('I-05','Main house | Bathroom 1',['B2','B3','B4']),
     ('I-06','Main house | Bathroom 2',['C1','C3','C4']),
@@ -369,5 +363,5 @@ SHEETS = [
 
 DIRECTIONS = dict(S='South', W='West', N='North', E='East')
 shown_faces = [FACES[key] for _, _, keys in SHEETS for key in keys]
-assert all(f.details or any(is_changed_opening(f, o) for o in f.openings) for f in shown_faces)
+assert all(f.details or any(is_changed_opening(o) for o in f.openings) for f in shown_faces)
 assert CHANGED_OPENINGS <= {o.id for f in shown_faces for o in f.openings}

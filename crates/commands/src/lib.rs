@@ -35,10 +35,10 @@ impl Engine {
     pub fn document(&self) -> &Document {
         &self.document
     }
-    /// Opening a project resets history but retains a monotonically increasing live revision.
+    /// Opening a project keeps its saved revision when it is ahead of the live revision.
     pub fn replace(&mut self, mut d: Document) -> Result<(), String> {
         validate(&d)?;
-        d.revision = self.next_revision()?;
+        d.revision = d.revision.max(self.next_revision()?);
         self.document = d;
         self.undo.clear();
         self.redo.clear();

@@ -20,6 +20,11 @@ mod compatibility;
 
 /// Export drawing entities rather than a second editable architectural model.
 pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
+    serialize_dxf(&plan_dxf_drawing(document)?)
+}
+
+/// Build the floor plan as CAD entities for standalone or combined export.
+pub fn plan_dxf_drawing(document: &Document) -> Result<Drawing, String> {
     validate(document)?;
     let mut output = Export::new();
     for layer in document.layers.values().filter(|layer| layer.visible) {
@@ -200,7 +205,7 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
     }
     output.drawing.header.minimum_drawing_extents = output.min;
     output.drawing.header.maximum_drawing_extents = output.max;
-    serialize_dxf(&output.drawing)
+    Ok(output.drawing)
 }
 
 /// Serialize a DXF drawing with the symbol-table handles expected by CAD readers.
