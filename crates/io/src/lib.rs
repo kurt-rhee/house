@@ -1,6 +1,6 @@
 //! Versioned JSON persistence and portable drawing exports.
 mod dxf_export;
-pub use dxf_export::{dxf_bytes, export_dxf};
+pub use dxf_export::{dxf_bytes, export_dxf, serialize_dxf};
 use house_core::*;
 use house_geometry::{
     ROOM_SIZE_TEXT_HEIGHT, ROOM_SIZE_TEXT_OFFSET, dimension_value, length, room_bounds,
@@ -26,7 +26,8 @@ pub fn load(path: &Path) -> Result<Document, String> {
 pub fn save(d: &Document, path: &Path) -> Result<(), String> {
     atomic_write(path, to_json(d)?.as_bytes())
 }
-fn atomic_write(path: &Path, data: &[u8]) -> Result<(), String> {
+/// Write bytes beside the destination and rename the completed file into place.
+pub fn atomic_write(path: &Path, data: &[u8]) -> Result<(), String> {
     let tmp = path.with_extension(format!("{}.tmp", Id::new_v4()));
     let result = (|| {
         use std::io::Write;

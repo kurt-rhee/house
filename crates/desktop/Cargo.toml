@@ -13,3 +13,8 @@ house-mcp.workspace = true
 eframe.workspace = true
 image = { version = "0.25", default-features = false, features = ["png"] }
 uuid.workspace = true
+roxmltree = "0.21.2"
+svgtypes = "0.16.2"
+lyon_tessellation = "1.0.23"
+kurbo.workspace = true
+dxf.workspace = true

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17in" height="11in" viewBox="0 0 1224 792">
+<rect x="0.00" y="0.00" width="1224.00" height="792.00" fill="white" stroke="none" stroke-width="1"/>
+<text x="34.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#005d84" font-weight="700" text-anchor="start">214 N KATHERINE DRIVE  /  VENTURA, CA 93003</text>
+<text x="1190.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="700" text-anchor="end">ELECTRICAL COORDINATION</text>
+<text x="34.00" y="68.00" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c2934" font-weight="700" text-anchor="start">Electrical criteria and branch circuit intent</text>
+<text x="35.00" y="89.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="400" text-anchor="start">Read with the proposed electrical floor plans on E-01 and E-02.</text>
+<path d="M34.00,103.00 L1190.00,103.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<path d="M34.00,739.00 L1190.00,739.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<text x="35.00" y="759.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">PROPOSED REMODEL  /  BUILDER COORDINATION</text>
+<text x="35.00" y="775.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Field-verify existing work and all rough-ins.  |  CAD rev. 57  |  November 2026</text>
+<text x="1190.00" y="771.00" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1c2934" font-weight="700" text-anchor="end">E-00</text>
+<text x="35.00" y="134.00" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1c2934" font-weight="700" text-anchor="start">Electrical layout criteria</text>
+<text x="35.00" y="156.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Code basis</text>
+<text x="35.00" y="171.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">2025 California Electrical Code (CEC), Title 24 Part 3, with City of Ventura amendments</text>
+<text x="35.00" y="183.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">under Municipal Code chapter 12.125. Assumes a new permit application in 2026.</text>
+<text x="35.00" y="218.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">General wall space · CEC 210.52(A), (H)</text>
+<text x="35.00" y="233.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Cover qualifying wall space 2 ft or wider so no point measured along the floor line is</text>
+<text x="35.00" y="245.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">more than 6 ft from a receptacle. Include wall space below glazing, with doors and</text>
+<text x="35.00" y="258.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">similar openings breaking the run. Provide a hall receptacle where length is 10 ft or</text>
+<text x="35.00" y="270.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">more.</text>
+<text x="35.00" y="305.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Kitchen and dining · CEC 210.11(C)(1), 210.52(B), (C)</text>
+<text x="35.00" y="320.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Use two 20 A small-appliance branches. Cover wall-counter spaces 12 in or wider within</text>
+<text x="35.00" y="332.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">24 in of a receptacle along the wall line. Counter outlets are 44 in AFF at center,</text>
+<text x="35.00" y="345.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">about 7¼ in above the 36¾ in worktop, within the 20 in limit.</text>
+<text x="35.00" y="379.50" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Baths, laundry and garage · CEC 210.11(C), 210.52(D), (F), (G)</text>
+<text x="35.00" y="394.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Provide a basin receptacle within 3 ft of each basin edge. Keep boxes out of the tub</text>
+<text x="35.00" y="407.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">and shower zone under 406.9(C). Provide the designated 20 A bath, laundry, and garage</text>
+<text x="35.00" y="419.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">branches. Field-check each garage vehicle bay.</text>
+<text x="35.00" y="454.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Protection · CEC 210.8, 210.12, 406.12</text>
+<text x="35.00" y="469.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Provide GFCI in kitchens, baths, laundry and garage, plus other required locations and</text>
+<text x="35.00" y="481.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">appliances. Locate GFCI reset controls where readily accessible. Provide AFCI where</text>
+<text x="35.00" y="494.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">required. Use listed tamper-resistant receptacles where required.</text>
+<text x="35.00" y="520.50" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">Before submitting to Ventura</text>
+<text x="35.00" y="537.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Field-survey existing devices, service rating and panel location. Complete lighting and</text>
+<text x="35.00" y="550.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">switch layouts, actual circuiting, panel schedule, load calculations, and one-line</text>
+<text x="35.00" y="562.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">diagram to match City checklist BS-007.</text>
+<text x="35.00" y="582.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Confirm detached-wing permit classification, ADU supply and any kitchen scope. Check</text>
+<text x="35.00" y="594.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">outdoor and service receptacle requirements and lighting or energy-code scope as</text>
+<text x="35.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">applicable.</text>
+<text x="35.00" y="632.50" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">Rough-in coordination</text>
+<text x="35.00" y="646.50" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">Keep boxes clear of pockets, built-ins and window framing. Verify appliance connection</text>
+<text x="35.00" y="659.00" font-family="Helvetica, Arial, sans-serif" font-size="9.9" fill="#4e606c" font-weight="400" text-anchor="start">height, accessibility, voltage and cord reach.</text>
+<text x="35.00" y="684.50" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">Official references</text>
+<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.cityofventura.ca.gov/DocumentCenter/View/38220/BS-007-Minimum-Plan-Submittal-Requirements_V2">
+<text x="35.00" y="697.50" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">Ventura Building &amp; Safety BS-007</text>
+</a>
+<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.cityofventura.ca.gov/DocumentCenter/View/46991/04">
+<text x="35.00" y="710.50" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">Ventura 2025 code adoption</text>
+</a>
+<a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://www.dgs.ca.gov/BSC/Codes.aspx">
+<text x="35.00" y="723.50" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">California Building Standards Code</text>
+</a>
+<text x="610.00" y="134.00" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#1c2934" font-weight="700" text-anchor="start">Branch circuit intent</text>
+<text x="610.00" y="151.00" font-family="Helvetica, Arial, sans-serif" font-size="9.4" fill="#4e606c" font-weight="400" text-anchor="start">Circuit IDs on E-01 and E-02. Verify panel, circuits and loads in the field.</text>
+<rect x="610.00" y="164.00" width="577.00" height="23.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="615.00" y="174.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">S1 / S2</text>
+<text x="698.00" y="174.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Main kitchen counters and dining</text>
+<text x="698.00" y="184.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">Two 120 V, 20 A</text>
+<text x="1180.00" y="177.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI + GFCI in kitchen</text>
+<text x="615.00" y="197.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">DW</text>
+<text x="698.00" y="197.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Dishwasher in adjacent sink base</text>
+<text x="698.00" y="207.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">Individual, per nameplate</text>
+<text x="1180.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI + GFCI</text>
+<rect x="610.00" y="210.00" width="577.00" height="23.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="615.00" y="220.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">RG</text>
+<text x="698.00" y="220.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Induction range</text>
+<text x="698.00" y="230.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">240 V class, per nameplate</text>
+<text x="1180.00" y="223.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">GFCI, connection per listing</text>
+<text x="615.00" y="243.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">HD</text>
+<text x="698.00" y="243.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Range hood connection</text>
+<text x="698.00" y="253.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">Per nameplate / listing</text>
+<text x="1180.00" y="246.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI and GFCI if receptacle</text>
+<rect x="610.00" y="256.00" width="577.00" height="23.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="615.00" y="266.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">MW</text>
+<text x="698.00" y="266.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Built-in microwave</text>
+<text x="698.00" y="276.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">Individual, per nameplate</text>
+<text x="1180.00" y="269.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI + GFCI</text>
+<text x="615.00" y="289.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">RF</text>
+<text x="698.00" y="289.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Refrigerator</text>
+<text x="698.00" y="299.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">Individual 120 V, 15 A min.</text>
+<text x="1180.00" y="292.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI + GFCI</text>
+<rect x="610.00" y="302.00" width="577.00" height="23.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="615.00" y="312.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">LA</text>
+<text x="698.00" y="312.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Laundry receptacles</text>
+<text x="698.00" y="322.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">120 V, 20 A min.</text>
+<text x="1180.00" y="315.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI + GFCI</text>
+<text x="615.00" y="335.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">BM</text>
+<text x="698.00" y="335.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Main bath basin receptacles</text>
+<text x="698.00" y="345.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">120 V, 20 A, baths only</text>
+<text x="1180.00" y="338.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">GFCI</text>
+<rect x="610.00" y="348.00" width="577.00" height="23.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="615.00" y="358.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">BR1–3 / LV</text>
+<text x="698.00" y="358.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Main bedrooms, living and hall</text>
+<text x="698.00" y="368.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">120 V, 15 or 20 A</text>
+<text x="1180.00" y="361.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI</text>
+<text x="615.00" y="381.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">OF / AD</text>
+<text x="698.00" y="381.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Office / detached living-area power</text>
+<text x="698.00" y="391.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">120 V, 15 or 20 A</text>
+<text x="1180.00" y="384.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">AFCI, verify ADU feed</text>
+<rect x="610.00" y="394.00" width="577.00" height="23.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="615.00" y="404.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">BA</text>
+<text x="698.00" y="404.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Detached bath basin receptacle</text>
+<text x="698.00" y="414.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">120 V, 20 A, bath only</text>
+<text x="1180.00" y="407.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">GFCI, verify ADU feed</text>
+<text x="615.00" y="427.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">GA</text>
+<text x="698.00" y="427.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="start">Garage receptacles</text>
+<text x="698.00" y="437.00" font-family="Helvetica, Arial, sans-serif" font-size="8.5" fill="#4e606c" font-weight="400" text-anchor="start">120 V, 20 A min.</text>
+<text x="1180.00" y="430.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="end">GFCI</text>
+<text x="610.00" y="469.00" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">Sheet index</text>
+<text x="610.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">A-00–06</text>
+<text x="675.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Site, floor plans and exterior elevations</text>
+<text x="610.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">E-00</text>
+<text x="675.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Electrical criteria and branch circuit intent</text>
+<text x="610.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">E-01</text>
+<text x="675.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house receptacle plan</text>
+<text x="610.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">E-02</text>
+<text x="675.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Detached wing receptacle plan</text>
+<text x="610.00" y="547.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">P-01–03</text>
+<text x="675.00" y="547.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Plumbing fixture plan, utilities and DWV</text>
+<text x="610.00" y="562.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-01</text>
+<text x="675.00" y="562.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Kitchen — Sink and range</text>
+<text x="610.00" y="577.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-02</text>
+<text x="675.00" y="577.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Kitchen — Appliance cabinetry and openings</text>
+<text x="610.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-03</text>
+<text x="675.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Dining room — Living room portal</text>
+<text x="610.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-04</text>
+<text x="675.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Laundry</text>
+<text x="610.00" y="622.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-05</text>
+<text x="675.00" y="622.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house — Bathroom 1</text>
+<text x="610.00" y="637.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-06</text>
+<text x="675.00" y="637.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main house — Bathroom 2</text>
+<text x="902.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-08</text>
+<text x="967.00" y="487.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Bedroom 3 — Glazed partition and closet</text>
+<text x="902.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-09</text>
+<text x="967.00" y="502.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Main bedroom — Wardrobe and exterior slider</text>
+<text x="902.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-13</text>
+<text x="967.00" y="517.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Office — New and enlarged windows</text>
+<text x="902.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">I-14</text>
+<text x="967.00" y="532.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">ADU bedroom — Door-to-window conversion</text>
+<text x="902.00" y="547.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="start">A-07–13</text>
+<text x="967.00" y="547.00" font-family="Helvetica, Arial, sans-serif" font-size="8.7" fill="#1c2934" font-weight="400" text-anchor="start">Blender render views</text>
+</svg>

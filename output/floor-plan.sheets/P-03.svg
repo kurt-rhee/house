@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17in" height="11in" viewBox="0 0 1224 792">
+<rect x="0.00" y="0.00" width="1224.00" height="792.00" fill="white" stroke="none" stroke-width="1"/>
+<text x="34.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#005d84" font-weight="700" text-anchor="start">214 N KATHERINE DRIVE  /  VENTURA, CA 93003</text>
+<text x="1190.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="700" text-anchor="end">PLUMBING  /  FIELD COORDINATION</text>
+<text x="34.00" y="68.00" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c2934" font-weight="700" text-anchor="start">Drain, waste and vent schematic</text>
+<text x="35.00" y="89.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="400" text-anchor="start">Schematic only. Fixture tags match P-01. Sewer tie points match P-02. Sizes are proposed coordination values.</text>
+<path d="M34.00,103.00 L1190.00,103.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<path d="M34.00,739.00 L1190.00,739.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<text x="35.00" y="759.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">PROPOSED REMODEL  /  BUILDER COORDINATION</text>
+<text x="35.00" y="775.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Field-verify existing work and all rough-ins.  |  CAD rev. 57  |  November 2026</text>
+<text x="1190.00" y="771.00" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1c2934" font-weight="700" text-anchor="end">P-03</text>
+<text x="42.00" y="129.00" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1c2934" font-weight="700" text-anchor="start">MAIN HOUSE  /  INDIVIDUALLY VENTED FIXTURE CONCEPT</text>
+<text x="949.00" y="129.00" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#886027" font-weight="700" text-anchor="start">DETACHED WING  /  VERIFY EXISTING</text>
+<path d="M42.00,153.00 L70.00,153.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<text x="77.00" y="157.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1c2934" font-weight="400" text-anchor="start">Sanitary drain / waste</text>
+<path d="M208.00,153.00 L236.00,153.00" stroke="#237264" stroke-width="1.6" fill="none" stroke-dasharray="4 2"/>
+<text x="243.00" y="157.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1c2934" font-weight="400" text-anchor="start">Dry vent</text>
+<text x="341.00" y="157.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1c2934" font-weight="400" text-anchor="start">* WC integral trap, 3″ fixture drain</text>
+<text x="611.00" y="157.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#1c2934" font-weight="400" text-anchor="start">DFU = drainage fixture units</text>
+<rect x="42.00" y="182.00" width="202.00" height="206.00" fill="#f8faf9" stroke="#a7b2b9" stroke-width="0.7"/>
+<text x="52.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Kitchen</text>
+<text x="235.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">2 DFU</text>
+<path d="M160.00,259.00 L160.00,221.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M163.11,227.27 L160.00,221.00 L156.89,227.27" stroke="#237264" stroke-width="1.4" fill="none"/>
+<text x="160.00" y="216.00" font-family="Helvetica, Arial, sans-serif" font-size="7.8" fill="#237264" font-weight="700" text-anchor="middle">VENT TO ROOF</text>
+<path d="M53.00,374.00 L233.00,374.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<path d="M226.73,377.11 L233.00,374.00 L226.73,370.89" stroke="#734329" stroke-width="1.4" fill="none"/>
+<rect x="119.00" y="270.00" width="34.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="136.00" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">KS-1</text>
+<text x="126.00" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">1½″</text>
+<path d="M126.0,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L160.0,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M160.00,326.00 L160.00,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M160.00,326.00 L160.00,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="160.00" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="160.00" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="59.00" y="287.00" width="34.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="76.00" y="298.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">DW-1</text>
+<path d="M76.00,303.00 L76.00,310.00 L126.00,310.00" stroke="#734329" stroke-width="0.9" fill="none" stroke-dasharray="2 2"/>
+<text x="76.00" y="323.00" font-family="Helvetica, Arial, sans-serif" font-size="7.7" fill="#734329" font-weight="700" text-anchor="middle">Air gap</text>
+<path d="M233.00,374.00 L233.00,423.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<text x="227.00" y="408.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">2″ branch</text>
+<rect x="256.00" y="182.00" width="171.00" height="206.00" fill="#f8faf9" stroke="#a7b2b9" stroke-width="0.7"/>
+<text x="266.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Laundry</text>
+<text x="418.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">3 DFU</text>
+<path d="M358.50,259.00 L358.50,221.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M361.61,227.27 L358.50,221.00 L355.39,227.27" stroke="#237264" stroke-width="1.4" fill="none"/>
+<text x="358.50" y="216.00" font-family="Helvetica, Arial, sans-serif" font-size="7.8" fill="#237264" font-weight="700" text-anchor="middle">VENT TO ROOF</text>
+<path d="M267.00,374.00 L416.00,374.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<path d="M409.73,377.11 L416.00,374.00 L409.73,370.89" stroke="#734329" stroke-width="1.4" fill="none"/>
+<rect x="317.50" y="270.00" width="34.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="334.50" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">WM-1</text>
+<text x="324.50" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">2″</text>
+<path d="M324.5,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L358.5,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M358.50,326.00 L358.50,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M358.50,326.00 L358.50,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="358.50" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="358.50" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<text x="266.00" y="300.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#4e606c" font-weight="400" text-anchor="start">Standpipe</text>
+<path d="M416.00,374.00 L416.00,423.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<text x="410.00" y="408.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">2″ branch</text>
+<rect x="439.00" y="182.00" width="223.00" height="206.00" fill="#f8faf9" stroke="#a7b2b9" stroke-width="0.7"/>
+<text x="449.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Bathroom 1</text>
+<text x="653.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">6 DFU</text>
+<path d="M567.50,259.00 L567.50,221.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M570.61,227.27 L567.50,221.00 L564.39,227.27" stroke="#237264" stroke-width="1.4" fill="none"/>
+<text x="567.50" y="216.00" font-family="Helvetica, Arial, sans-serif" font-size="7.8" fill="#237264" font-weight="700" text-anchor="middle">VENT TO ROOF</text>
+<path d="M493.17,259.00 L641.83,259.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M450.00,374.00 L651.00,374.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<path d="M644.73,377.11 L651.00,374.00 L644.73,370.89" stroke="#734329" stroke-width="1.4" fill="none"/>
+<rect x="453.67" y="270.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="469.17" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">L-1</text>
+<text x="459.17" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">1¼″</text>
+<path d="M459.1666666666667,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L493.1666666666667,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M493.17,326.00 L493.17,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M493.17,326.00 L493.17,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="493.17" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="493.17" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="526.50" y="270.00" width="34.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="543.50" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">WC-1</text>
+<text x="533.50" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">3″*</text>
+<path d="M533.50,289.00 L533.50,319.00 L567.50,326.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M567.50,326.00 L567.50,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M567.50,326.00 L567.50,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="567.50" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="567.50" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="602.33" y="270.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="617.83" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">T-1</text>
+<text x="607.83" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">1½″</text>
+<path d="M607.8333333333334,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L641.8333333333334,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M641.83,326.00 L641.83,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M641.83,326.00 L641.83,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="641.83" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="641.83" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<path d="M651.00,374.00 L651.00,423.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<text x="645.00" y="408.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">3″ branch</text>
+<rect x="674.00" y="182.00" width="247.00" height="206.00" fill="#f8faf9" stroke="#a7b2b9" stroke-width="0.7"/>
+<text x="684.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Bathroom 2</text>
+<text x="912.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">6 DFU</text>
+<path d="M814.50,259.00 L814.50,221.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M817.61,227.27 L814.50,221.00 L811.39,227.27" stroke="#237264" stroke-width="1.4" fill="none"/>
+<text x="814.50" y="216.00" font-family="Helvetica, Arial, sans-serif" font-size="7.8" fill="#237264" font-weight="700" text-anchor="middle">VENT TO ROOF</text>
+<path d="M732.17,259.00 L896.83,259.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M685.00,374.00 L910.00,374.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<path d="M903.73,377.11 L910.00,374.00 L903.73,370.89" stroke="#734329" stroke-width="1.4" fill="none"/>
+<rect x="692.67" y="270.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="708.17" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">L-2</text>
+<text x="698.17" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">1¼″</text>
+<path d="M698.1666666666666,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L732.1666666666666,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M732.17,326.00 L732.17,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M732.17,326.00 L732.17,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="732.17" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="732.17" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="773.50" y="270.00" width="34.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="790.50" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">WC-2</text>
+<text x="780.50" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">3″*</text>
+<path d="M780.50,289.00 L780.50,319.00 L814.50,326.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M814.50,326.00 L814.50,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M814.50,326.00 L814.50,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="814.50" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="814.50" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="857.33" y="270.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="872.83" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S-2</text>
+<text x="862.83" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">2″</text>
+<path d="M862.8333333333334,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L896.8333333333334,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M896.83,326.00 L896.83,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M896.83,326.00 L896.83,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="896.83" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="896.83" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<path d="M910.00,374.00 L910.00,423.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<text x="904.00" y="408.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">3″ branch</text>
+<rect x="949.00" y="182.00" width="238.00" height="206.00" fill="#f8faf9" stroke="#a7b2b9" stroke-width="0.7"/>
+<text x="959.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="start">Detached bath</text>
+<text x="1178.00" y="200.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">6 DFU</text>
+<path d="M1085.00,259.00 L1085.00,221.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M1088.11,227.27 L1085.00,221.00 L1081.89,227.27" stroke="#237264" stroke-width="1.4" fill="none"/>
+<text x="1085.00" y="216.00" font-family="Helvetica, Arial, sans-serif" font-size="7.8" fill="#237264" font-weight="700" text-anchor="middle">VENT TO ROOF</text>
+<path d="M1005.67,259.00 L1164.33,259.00" stroke="#237264" stroke-width="1.55" fill="none" stroke-dasharray="4 2"/>
+<path d="M960.00,374.00 L1176.00,374.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<path d="M1169.73,377.11 L1176.00,374.00 L1169.73,370.89" stroke="#734329" stroke-width="1.4" fill="none"/>
+<rect x="966.17" y="270.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="981.67" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">L-3</text>
+<text x="971.67" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">1¼″</text>
+<path d="M971.6666666666666,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L1005.6666666666666,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M1005.67,326.00 L1005.67,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M1005.67,326.00 L1005.67,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="1005.67" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="1005.67" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="1044.00" y="270.00" width="34.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="1061.00" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">WC-3</text>
+<text x="1051.00" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">3″*</text>
+<path d="M1051.00,289.00 L1051.00,319.00 L1085.00,326.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M1085.00,326.00 L1085.00,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M1085.00,326.00 L1085.00,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="1085.00" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="1085.00" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<rect x="1124.83" y="270.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="1140.33" y="281.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">T-3</text>
+<text x="1130.33" y="352.00" font-family="Helvetica, Arial, sans-serif" font-size="8.2" fill="#734329" font-weight="700" text-anchor="start">1½″</text>
+<path d="M1130.3333333333333,289 V318 q0,8 7,8 q7,0 7,-8 v-4 L1164.3333333333333,326" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M1164.33,326.00 L1164.33,374.00" stroke="#734329" stroke-width="1.5" fill="none"/>
+<path d="M1164.33,326.00 L1164.33,259.00" stroke="#237264" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+<circle cx="1164.33" cy="326.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="1164.33" cy="374.00" r="2.10" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<path d="M1176.00,374.00 L1176.00,423.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<text x="1170.00" y="408.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="end">3″ branch</text>
+<text x="42.00" y="411.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="start">Drain flow →</text>
+<path d="M42.00,423.00 L922.00,423.00" stroke="#734329" stroke-width="2" fill="none"/>
+<path d="M960.00,423.00 L1176.00,423.00" stroke="#734329" stroke-width="2" fill="none"/>
+<circle cx="233.00" cy="423.00" r="2.30" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="416.00" cy="423.00" r="2.30" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="651.00" cy="423.00" r="2.30" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<circle cx="910.00" cy="423.00" r="2.30" fill="#734329" stroke="#734329" stroke-width="0.6"/>
+<text x="282.00" y="445.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#734329" font-weight="700" text-anchor="start">3″ main building drain  /  17 DFU</text>
+<text x="976.00" y="445.00" font-family="Helvetica, Arial, sans-serif" font-size="9.4" fill="#734329" font-weight="700" text-anchor="start">3″ detached building drain  /  6 DFU</text>
+<path d="M922.00,423.00 L922.00,460.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<path d="M960.00,423.00 L960.00,460.00" stroke="#734329" stroke-width="1.7" fill="none"/>
+<rect x="906.50" y="461.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="922.00" y="472.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S1</text>
+<rect x="944.50" y="461.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="960.00" y="472.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S2</text>
+<text x="895.00" y="474.00" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#734329" font-weight="700" text-anchor="end">CO</text>
+<text x="985.00" y="474.00" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#734329" font-weight="700" text-anchor="start">CO</text>
+<path d="M922.00,477.00 L922.00,502.00 L841.00,502.00" stroke="#734329" stroke-width="1.7" fill="none" stroke-dasharray="7 4"/>
+<path d="M960.00,477.00 L960.00,502.00 L922.00,502.00" stroke="#734329" stroke-width="1.7" fill="none" stroke-dasharray="7 4"/>
+<path d="M849.27,498.89 L843.00,502.00 L849.27,505.11" stroke="#734329" stroke-width="1.4" fill="none"/>
+<rect x="802.50" y="494.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="818.00" y="505.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S0</text>
+<text x="794.00" y="506.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#734329" font-weight="700" text-anchor="end">To verified lateral   /   23 DFU shown</text>
+<text x="42.00" y="501.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#4e606c" font-weight="400" text-anchor="start">Design slope ¼″ per foot on horizontal drainage and sewer. Confirm fall to verified inverts.</text>
+<path d="M42.00,519.00 L1187.00,519.00" stroke="#a7b2b9" stroke-width="0.8" fill="none"/>
+<text x="42.00" y="543.00" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1c2934" font-weight="700" text-anchor="start">Fixture connections</text>
+<text x="42.00" y="562.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Kitchen and laundry</text>
+<text x="42.00" y="576.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Connect DW-1 through a listed dishwasher air gap to the sink tailpiece upstream of the trap.</text>
+<text x="42.00" y="588.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">KS-1 carries the combined load. WM-1 discharges into a trapped, vented 2″ standpipe per CPC</text>
+<text x="42.00" y="600.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">§804.1.</text>
+<text x="42.00" y="619.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Bathroom groups</text>
+<text x="42.00" y="633.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">DFU basis assumes private-use gravity-tank WCs at 1.6 gpf or less and a single showerhead per</text>
+<text x="42.00" y="645.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">assembly. Verify retained fixtures, final outlets and actual water-heater discharges.</text>
+<text x="42.00" y="664.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Materials</text>
+<text x="42.00" y="678.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Proposed listed ABS DWV for new sanitary branches subject to approved transitions. Select</text>
+<text x="42.00" y="690.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">underground piping after confirming existing lateral material and utility requirements.</text>
+<text x="626.00" y="543.00" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1c2934" font-weight="700" text-anchor="start">Vents, cleanouts and final sizing</text>
+<text x="626.00" y="562.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Vents</text>
+<text x="626.00" y="576.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Keep trap arms within CPC Table 1002.2. Rise before offsetting or joining per §905.3. Coordinate</text>
+<text x="626.00" y="588.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">roof terminals, opening clearances per §906, and vent sizing and aggregate area per §§703.2 and</text>
+<text x="626.00" y="600.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">904.</text>
+<text x="626.00" y="619.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Drainage</text>
+<text x="626.00" y="633.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Provide accessible cleanouts at building drain exits (CO) and as required by CPC §§707 and 719.</text>
+<text x="626.00" y="645.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Size sewer and vents after measuring developed lengths and confirming the lateral and invert</text>
+<text x="626.00" y="657.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">elevations.</text>
+<text x="626.00" y="676.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Basis</text>
+<text x="626.00" y="690.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">2025 California Plumbing Code, with Ventura Municipal Code Ch. 12.120. Drainage loads from CPC</text>
+<text x="626.00" y="702.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Table 702.1. City Building &amp; Safety checklist BS-007, page 4.</text>
+</svg>

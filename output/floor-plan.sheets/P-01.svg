@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17in" height="11in" viewBox="0 0 1224 792">
+<rect x="0.00" y="0.00" width="1224.00" height="792.00" fill="white" stroke="none" stroke-width="1"/>
+<text x="34.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#005d84" font-weight="700" text-anchor="start">214 N KATHERINE DRIVE  /  VENTURA, CA 93003</text>
+<text x="1190.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="700" text-anchor="end">PLUMBING  /  FIELD COORDINATION</text>
+<text x="34.00" y="68.00" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c2934" font-weight="700" text-anchor="start">Plumbing fixture floor plan and count</text>
+<text x="35.00" y="89.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="400" text-anchor="start">Proposed top-down plans. See P-02 for service routing and P-03 for drainage and vents.</text>
+<path d="M34.00,103.00 L1190.00,103.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<path d="M34.00,739.00 L1190.00,739.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<text x="35.00" y="759.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">PROPOSED REMODEL  /  BUILDER COORDINATION</text>
+<text x="35.00" y="775.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Field-verify existing work and all rough-ins.  |  CAD rev. 57  |  November 2026</text>
+<text x="1190.00" y="771.00" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1c2934" font-weight="700" text-anchor="end">P-01</text>
+<text x="40.00" y="128.00" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">MAIN HOUSE</text>
+<text x="40.00" y="146.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">3⁄16″ = 1′–0″ at 11 × 17</text>
+<text x="678.00" y="128.00" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">DETACHED WING</text>
+<text x="678.00" y="146.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">3⁄16″ = 1′–0″ at 11 × 17</text>
+<path d="M648.00,119.00 L648.00,712.00" stroke="#a7b2b9" stroke-width="0.8" fill="none"/>
+<rect x="311.71" y="286.23" width="27.96" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="343.50" y="555.90" width="4.66" height="110.08" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="525.46" y="453.39" width="4.66" height="57.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="117.76" y="511.05" width="6.99" height="154.93" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="117.76" y="548.01" width="6.99" height="81.00" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M121.25,548.01 L121.25,629.01" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="242.35" y="330.49" width="4.66" height="33.78" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="121.25" y="662.48" width="443.81" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="287.54" y="662.48" width="27.96" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M287.54,665.98 L315.49,665.98" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="362.67" y="662.48" width="27.96" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M362.67,665.98 L390.63,665.98" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="447.42" y="286.23" width="27.96" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="77.57" y="250.12" width="95.52" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="85.73" y="250.12" width="51.57" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M85.73,253.61 L137.30,253.61" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="561.57" y="453.39" width="6.99" height="212.59" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="244.68" y="361.95" width="67.03" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="270.36" y="361.95" width="33.78" height="4.66" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M304.14,364.28 L303.97,367.59 L303.49,370.87 L302.68,374.08 L301.57,377.20 L300.15,380.20 L298.44,383.04 L296.47,385.71 L294.24,388.16 L291.79,390.39 L289.12,392.36 L286.28,394.07 L283.28,395.49 L280.16,396.60 L276.95,397.41 L273.67,397.89 L270.36,398.06" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M270.36,364.28 L270.36,398.06" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="169.60" y="267.44" width="6.99" height="98.00" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="169.60" y="314.70" width="6.99" height="47.25" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M173.09,314.70 L173.09,361.95" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="173.09" y="174.99" width="302.28" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="436.35" y="174.99" width="29.12" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M436.35,178.48 L465.47,178.48" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="319.28" y="174.99" width="29.70" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M319.28,178.48 L348.98,178.48" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="190.08" y="174.99" width="105.79" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M190.08,178.48 L295.88,178.48" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="411.89" y="511.05" width="4.66" height="154.93" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="411.89" y="515.71" width="4.66" height="35.53" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M414.22,551.24 L417.70,551.07 L421.15,550.55 L424.53,549.71 L427.81,548.53 L430.96,547.04 L433.95,545.25 L436.76,543.17 L439.34,540.83 L441.68,538.25 L443.76,535.45 L445.55,532.46 L447.04,529.30 L448.21,526.02 L449.06,522.64 L449.57,519.19 L449.74,515.71" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M414.22,515.71 L449.74,515.71" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="261.62" y="511.05" width="4.66" height="154.93" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="261.62" y="515.71" width="4.66" height="35.53" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M263.95,551.24 L260.47,551.07 L257.02,550.55 L253.64,549.71 L250.35,548.53 L247.20,547.04 L244.21,545.25 L241.41,543.17 L238.83,540.83 L236.49,538.25 L234.41,535.45 L232.62,532.46 L231.13,529.30 L229.95,526.02 L229.10,522.64 L228.59,519.19 L228.42,515.71" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M263.95,515.71 L228.42,515.71" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="261.62" y="562.03" width="4.66" height="33.75" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M263.95,562.03 L263.95,595.78" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="77.57" y="361.95" width="97.85" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="102.03" y="361.95" width="48.92" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M102.03,365.44 L150.96,365.44" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="309.38" y="178.48" width="4.66" height="332.57" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="309.38" y="210.10" width="4.66" height="62.01" fill="white" stroke="none" stroke-width="0.7"/>
+<rect x="244.68" y="328.17" width="67.03" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="169.60" y="178.48" width="6.99" height="88.96" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="169.60" y="201.46" width="6.99" height="19.93" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M173.09,201.46 L173.09,221.39" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="148.05" y="361.95" width="96.64" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="155.86" y="361.95" width="81.00" height="4.66" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M155.86,364.28 L236.86,364.28" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="475.37" y="449.89" width="89.69" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="479.45" y="449.89" width="36.11" height="6.99" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M479.45,453.39 L479.62,456.93 L480.14,460.43 L481.00,463.87 L482.20,467.21 L483.71,470.41 L485.53,473.45 L487.65,476.30 L490.03,478.92 L492.65,481.30 L495.50,483.41 L498.54,485.23 L501.74,486.75 L505.08,487.94 L508.51,488.80 L512.02,489.32 L515.56,489.50" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M515.56,453.39 L515.56,489.50" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="121.25" y="508.14" width="443.81" height="5.82" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="315.20" y="508.14" width="35.53" height="5.82" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M350.73,511.05 L350.56,507.57 L350.05,504.12 L349.20,500.74 L348.03,497.45 L346.54,494.30 L344.74,491.31 L342.67,488.51 L340.33,485.93 L337.74,483.58 L334.94,481.51 L331.95,479.72 L328.80,478.22 L325.52,477.05 L322.13,476.20 L318.69,475.69 L315.20,475.52" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M315.20,511.05 L315.20,475.52" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="534.78" y="508.14" width="24.46" height="5.82" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M534.78,511.05 L534.90,513.45 L535.25,515.82 L535.83,518.15 L536.64,520.41 L537.67,522.58 L538.90,524.64 L540.33,526.57 L541.94,528.35 L543.72,529.96 L545.65,531.39 L547.71,532.62 L549.88,533.65 L552.14,534.46 L554.47,535.04 L556.84,535.39 L559.24,535.51" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M559.24,511.05 L559.24,535.51" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="271.52" y="508.14" width="35.53" height="5.82" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M271.52,511.05 L271.69,507.57 L272.20,504.12 L273.05,500.74 L274.23,497.45 L275.72,494.30 L277.51,491.31 L279.59,488.51 L281.93,485.93 L284.51,483.58 L287.31,481.51 L290.30,479.72 L293.45,478.22 L296.74,477.05 L300.12,476.20 L303.57,475.69 L307.05,475.52" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M307.05,511.05 L307.05,475.52" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="144.55" y="365.44" width="6.99" height="145.61" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="144.55" y="469.11" width="6.99" height="34.36" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M148.05,469.11 L148.05,503.48" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="144.55" y="376.51" width="6.99" height="34.95" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M148.05,376.51 L148.05,411.45" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="471.88" y="178.48" width="6.99" height="274.91" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="471.88" y="215.17" width="6.99" height="39.02" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M475.37,215.17 L475.37,254.20" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="471.88" y="385.24" width="6.99" height="40.19" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M475.37,385.24 L475.37,425.43" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="471.88" y="312.44" width="6.99" height="39.61" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M475.37,312.44 L475.37,352.04" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="74.08" y="253.61" width="6.99" height="111.83" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="74.08" y="323.51" width="6.99" height="34.36" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M77.57,323.51 L80.94,323.67 L84.28,324.17 L87.55,324.99 L90.72,326.12 L93.77,327.56 L96.66,329.30 L99.37,331.31 L101.87,333.57 L104.13,336.07 L106.14,338.78 L107.88,341.67 L109.32,344.72 L110.46,347.89 L111.27,351.17 L111.77,354.50 L111.93,357.87" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M77.57,357.87 L111.93,357.87" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="74.08" y="262.35" width="6.99" height="48.92" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M77.57,262.35 L77.57,311.27" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="263.95" y="553.57" width="150.27" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="375.05" y="553.57" width="33.75" height="4.66" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M375.05,555.90 L375.22,559.20 L375.70,562.48 L376.51,565.69 L377.62,568.81 L379.04,571.81 L380.74,574.65 L382.72,577.31 L384.94,579.76 L387.39,581.98 L390.05,583.96 L392.89,585.66 L395.89,587.08 L399.01,588.19 L402.22,589.00 L405.50,589.48 L408.80,589.65" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M408.80,555.90 L408.80,589.65" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<path d="M272.24,328.17 L244.68,328.17 L244.68,298.92 L272.24,298.92 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M307.11,328.17 L272.24,328.17 L272.24,298.92 L307.11,298.92 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M82.75,259.36 L113.13,259.36 L113.13,296.62 L82.75,296.62 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M114.82,257.11 L131.69,257.11 L131.69,296.48 L114.82,296.48 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M224.42,183.10 L261.54,183.10 L261.54,211.22 L224.42,211.22 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M125.87,513.96 L200.12,513.96 L200.12,540.96 L125.87,540.96 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M261.54,181.97 L288.54,181.97 L288.54,210.10 L261.54,210.10 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M271.14,628.73 L338.64,628.73 L338.64,662.48 L271.14,662.48 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M348.16,588.60 L348.16,561.60 L368.41,561.60 L368.41,588.60 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M348.16,615.79 L348.16,598.92 L379.66,598.92 L379.66,615.79 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M343.50,598.92 L343.50,615.79 L312.00,615.79 L312.00,598.92 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M131.69,257.11 L138.44,257.11 L138.44,296.48 L131.69,296.48 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M348.16,624.23 L411.89,624.23 L411.89,662.48 L348.16,662.48 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M139.00,257.11 L168.82,257.11 L168.82,296.48 L139.00,296.48 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M343.50,561.60 L343.50,588.60 L323.25,588.60 L323.25,561.60 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M176.58,277.81 L176.58,244.06 L204.71,244.06 L204.71,277.81 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M200.12,513.96 L227.12,513.96 L227.12,540.96 L200.12,540.96 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M308.44,328.17 L307.64,328.17 L307.64,300.70 L308.44,300.70 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<path d="M271.70,328.17 L270.91,328.17 L270.91,300.70 L271.70,300.70 Z" stroke="#a7b2b9" stroke-width="0.6" fill="#f3eee6"/>
+<text x="193.18" y="554.55" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Main bedroom</text>
+<text x="395.47" y="403.96" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Living room</text>
+<text x="236.91" y="253.30" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Kitchen</text>
+<text x="125.30" y="321.06" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Laundry</text>
+<text x="337.89" y="544.29" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Hallway</text>
+<text x="489.06" y="543.48" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Guest bedroom</text>
+<text x="393.26" y="239.64" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Dining room</text>
+<text x="219.19" y="473.50" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Bedroom 3</text>
+<text x="501.11" y="492.54" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Entrance</text>
+<rect x="826.56" y="395.57" width="255.69" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="826.56" y="452.65" width="100.18" height="4.66" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="824.23" y="166.67" width="4.66" height="232.39" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="824.23" y="268.60" width="4.66" height="33.78" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M826.56,302.38 L823.25,302.22 L819.97,301.73 L816.75,300.92 L813.63,299.81 L810.64,298.39 L807.79,296.69 L805.13,294.71 L802.67,292.48 L800.45,290.03 L798.47,287.37 L796.77,284.52 L795.35,281.53 L794.23,278.40 L793.43,275.19 L792.94,271.91 L792.78,268.60" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M826.56,268.60 L792.78,268.60" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="924.41" y="397.90" width="4.66" height="57.08" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="924.41" y="400.81" width="4.66" height="30.29" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M926.74,431.10 L923.77,430.95 L920.83,430.51 L917.95,429.79 L915.15,428.79 L912.46,427.52 L909.91,425.99 L907.53,424.22 L905.32,422.23 L903.33,420.02 L901.56,417.64 L900.03,415.09 L898.76,412.40 L897.76,409.60 L897.03,406.72 L896.60,403.78 L896.45,400.81" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M926.74,400.81 L896.45,400.81" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="693.18" y="193.46" width="133.38" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="742.69" y="193.46" width="34.36" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M742.69,196.96 L777.05,196.96" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="826.56" y="524.87" width="255.69" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="1035.65" y="524.87" width="39.02" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M1035.65,528.36 L1074.68,528.36" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="885.39" y="524.87" width="34.36" height="6.99" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M885.39,528.36 L919.75,528.36" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="826.56" y="163.18" width="255.69" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="823.07" y="397.90" width="6.99" height="130.46" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="823.07" y="415.37" width="6.99" height="22.71" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M826.56,415.37 L826.56,438.09" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="689.69" y="196.96" width="6.99" height="210.26" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="689.69" y="261.59" width="6.99" height="81.00" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M693.18,261.59 L693.18,342.59" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<rect x="693.18" y="403.72" width="133.38" height="6.99" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="715.90" y="403.72" width="34.36" height="6.99" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M750.26,407.22 L750.10,403.85 L749.60,400.51 L748.78,397.24 L747.65,394.07 L746.20,391.02 L744.47,388.13 L742.46,385.42 L740.20,382.92 L737.70,380.65 L734.99,378.64 L732.10,376.91 L729.05,375.47 L725.87,374.33 L722.60,373.51 L719.27,373.02 L715.90,372.85" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M715.90,407.22 L715.90,372.85" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="1078.75" y="166.67" width="6.99" height="361.69" fill="#1c2934" stroke="none" stroke-width="0.7"/>
+<rect x="1078.75" y="410.71" width="6.99" height="34.36" fill="white" stroke="none" stroke-width="0.7"/>
+<path d="M1082.25,445.07 L1078.88,444.91 L1075.54,444.41 L1072.27,443.59 L1069.10,442.46 L1066.05,441.02 L1063.16,439.28 L1060.45,437.27 L1057.95,435.01 L1055.68,432.51 L1053.68,429.80 L1051.94,426.91 L1050.50,423.86 L1049.36,420.69 L1048.54,417.42 L1048.05,414.08 L1047.88,410.71" stroke="#4e606c" stroke-width="0.55" fill="none"/>
+<path d="M1082.25,410.71 L1047.88,410.71" stroke="#4e606c" stroke-width="0.8" fill="none"/>
+<rect x="1078.75" y="181.23" width="6.99" height="196.28" fill="white" stroke="none" stroke-width="0.7"/>
+<rect x="1078.75" y="482.35" width="6.99" height="40.19" fill="#e3eef1" stroke="none" stroke-width="0.7"/>
+<path d="M1082.25,482.35 L1082.25,522.54" stroke="#718e9c" stroke-width="0.7" fill="none"/>
+<text x="759.87" y="314.13" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Office</text>
+<text x="954.18" y="274.27" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">Garage</text>
+<text x="291.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#4e606c" font-weight="700" text-anchor="middle">Bath 1</text>
+<text x="391.00" y="592.00" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#4e606c" font-weight="700" text-anchor="middle">Bath 2</text>
+<text x="994.00" y="488.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#1c2934" font-weight="700" text-anchor="middle">ADU bedroom</text>
+<text x="867.00" y="392.00" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#886027" font-weight="700" text-anchor="middle">Existing bath</text>
+<path d="M224.42,183.10 L261.54,183.10 L261.54,211.22 L224.42,211.22 L224.42,183.10" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M242.98,197.16 L227.00,153.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="242.98" cy="197.16" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="210.00" y="145.00" width="34.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="227.00" y="156.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">KS-1</text>
+<path d="M261.54,181.97 L288.54,181.97 L288.54,210.10 L261.54,210.10 L261.54,181.97" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M275.04,196.04 L290.00,153.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="275.04" cy="196.04" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="273.00" y="145.00" width="34.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="290.00" y="156.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">DW-1</text>
+<path d="M82.75,259.36 L113.13,259.36 L113.13,296.62 L82.75,296.62 L82.75,259.36" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M97.94,277.99 L75.00,255.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="97.94" cy="277.99" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="58.00" y="247.00" width="34.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="75.00" y="258.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">WM-1</text>
+<path d="M343.50,561.60 L343.50,588.60 L323.25,588.60 L323.25,561.60 L343.50,561.60" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M333.38,575.10 L288.00,571.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="333.38" cy="575.10" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="272.50" y="563.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="288.00" y="574.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">L-1</text>
+<path d="M343.50,598.92 L343.50,615.79 L312.00,615.79 L312.00,598.92 L343.50,598.92" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M327.75,607.36 L288.00,605.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="327.75" cy="607.36" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="271.00" y="597.00" width="34.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="288.00" y="608.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">WC-1</text>
+<path d="M271.14,628.73 L338.64,628.73 L338.64,662.48 L271.14,662.48 L271.14,628.73" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M304.89,645.61 L289.00,672.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="304.89" cy="645.61" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="273.50" y="664.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="289.00" y="675.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">T-1</text>
+<path d="M348.16,588.60 L348.16,561.60 L368.41,561.60 L368.41,588.60 L348.16,588.60" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M358.29,575.10 L405.00,571.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="358.29" cy="575.10" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="389.50" y="563.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="405.00" y="574.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">L-2</text>
+<path d="M348.16,615.79 L348.16,598.92 L379.66,598.92 L379.66,615.79 L348.16,615.79" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M363.91,607.36 L410.00,605.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="363.91" cy="607.36" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="393.00" y="597.00" width="34.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="410.00" y="608.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">WC-2</text>
+<path d="M348.16,624.23 L411.89,624.23 L411.89,662.48 L348.16,662.48 L348.16,624.23" stroke="#005d84" stroke-width="0.85" fill="none"/>
+<path d="M380.02,643.36 L396.00,672.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="380.02" cy="643.36" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="380.50" y="664.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="396.00" y="675.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">S-2</text>
+<path d="M900.14,432.39 L923.62,432.39 L923.62,451.88 L900.14,451.88 L900.14,432.39" stroke="#886027" stroke-width="0.85" fill="none" stroke-dasharray="3 2"/>
+<path d="M911.88,442.14 L960.00,463.00" stroke="#886027" stroke-width="0.9" fill="none"/>
+<circle cx="911.88" cy="442.14" r="2.70" fill="white" stroke="#886027" stroke-width="1"/>
+<rect x="944.50" y="455.00" width="31.00" height="16.00" fill="white" stroke="#886027" stroke-width="0.8"/>
+<text x="960.00" y="466.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#886027" font-weight="700" text-anchor="middle">L-3</text>
+<path d="M869.14,422.65 L886.85,422.65 L886.85,451.88 L869.14,451.88 L869.14,422.65" stroke="#886027" stroke-width="0.85" fill="none" stroke-dasharray="3 2"/>
+<path d="M878.00,437.26 L891.00,500.00" stroke="#886027" stroke-width="0.9" fill="none"/>
+<circle cx="878.00" cy="437.26" r="2.70" fill="white" stroke="#886027" stroke-width="1"/>
+<rect x="874.00" y="492.00" width="34.00" height="16.00" fill="white" stroke="#886027" stroke-width="0.8"/>
+<text x="891.00" y="503.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#886027" font-weight="700" text-anchor="middle">WC-3</text>
+<path d="M830.06,400.23 L861.17,400.23 L861.17,452.65 L830.06,452.65 L830.06,400.23" stroke="#886027" stroke-width="0.85" fill="none" stroke-dasharray="3 2"/>
+<path d="M845.61,426.44 L797.00,447.00" stroke="#886027" stroke-width="0.9" fill="none"/>
+<circle cx="845.61" cy="426.44" r="2.70" fill="white" stroke="#886027" stroke-width="1"/>
+<rect x="781.50" y="439.00" width="31.00" height="16.00" fill="white" stroke="#886027" stroke-width="0.8"/>
+<text x="797.00" y="450.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#886027" font-weight="700" text-anchor="middle">T-3</text>
+<text x="71.00" y="652.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="middle">N</text>
+<path d="M71.00,658.00 L71.00,683.00" stroke="#1c2934" stroke-width="1" fill="none"/>
+<path d="M67.89,677.73 L71.00,684.00 L74.11,677.73" stroke="#1c2934" stroke-width="1.4" fill="none"/>
+<text x="87.00" y="678.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">North down on both floor plans</text>
+<text x="680.00" y="544.00" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">Fixture and appliance count</text>
+<text x="687.00" y="564.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="700" text-anchor="start">TYPE</text>
+<text x="977.00" y="564.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="700" text-anchor="start">MAIN</text>
+<text x="1060.00" y="564.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="700" text-anchor="start">DETACHED</text>
+<text x="1150.00" y="564.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="700" text-anchor="start">TOTAL</text>
+<rect x="680.00" y="569.00" width="507.00" height="14.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="687.00" y="579.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Water closets</text>
+<text x="977.00" y="579.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">2</text>
+<text x="1060.00" y="579.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1150.00" y="579.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">3</text>
+<text x="687.00" y="593.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Lavatories</text>
+<text x="977.00" y="593.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">2</text>
+<text x="1060.00" y="593.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1150.00" y="593.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">3</text>
+<rect x="680.00" y="597.00" width="507.00" height="14.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="687.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Bathtubs / tub-shower</text>
+<text x="977.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1060.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1150.00" y="607.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">2</text>
+<text x="687.00" y="621.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Separate shower</text>
+<text x="977.00" y="621.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1060.00" y="621.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">0</text>
+<text x="1150.00" y="621.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">1</text>
+<rect x="680.00" y="625.00" width="507.00" height="14.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="687.00" y="635.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Kitchen sink</text>
+<text x="977.00" y="635.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1060.00" y="635.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">0</text>
+<text x="1150.00" y="635.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">1</text>
+<text x="687.00" y="649.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Dishwasher</text>
+<text x="977.00" y="649.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1060.00" y="649.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">0</text>
+<text x="1150.00" y="649.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">1</text>
+<rect x="680.00" y="653.00" width="507.00" height="14.00" fill="#ecf1f4" stroke="none" stroke-width="1"/>
+<text x="687.00" y="663.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">Clothes washer</text>
+<text x="977.00" y="663.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">1</text>
+<text x="1060.00" y="663.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="400" text-anchor="start">0</text>
+<text x="1150.00" y="663.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">1</text>
+<path d="M680.00,670.00 L1187.00,670.00" stroke="#a7b2b9" stroke-width="0.7" fill="none"/>
+<text x="687.00" y="684.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">TOTAL</text>
+<text x="977.00" y="684.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">9</text>
+<text x="1060.00" y="684.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">3</text>
+<text x="1150.00" y="684.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">12</text>
+<text x="680.00" y="704.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Blue tags use CAD fixture locations. Brown tags trace retained fixtures. Verify on site.</text>
+<text x="41.00" y="719.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#4e606c" font-weight="400" text-anchor="start">Count covers shown fixtures and appliance connections. Confirm water-heater scope, exterior hose bibbs and any refrigerator ice-maker feed.</text>
+</svg>

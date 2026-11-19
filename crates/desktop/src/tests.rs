@@ -37,32 +37,32 @@ fn barrier(app: &HouseApp) {
         .unwrap();
 }
 
+fn label_position(ctx: &egui::Context, app: &mut HouseApp, label: &str) -> Pos2 {
+    let mut output = ctx.run_ui(
+        egui::RawInput {
+            screen_rect: Some(egui::Rect::from_min_size(
+                Pos2::ZERO,
+                Vec2::new(1280.0, 850.0),
+            )),
+            ..Default::default()
+        },
+        |ui| app.show(ui),
+    );
+    output.textures_delta.clear();
+    output
+        .shapes
+        .iter()
+        .find_map(|clipped| match &clipped.shape {
+            egui::Shape::Text(text) if text.galley.text() == label => {
+                Some(text.pos + text.galley.rect.center().to_vec2())
+            }
+            _ => None,
+        })
+        .expect("comparison tab is visible")
+}
+
 #[test]
 fn before_after_switch_keeps_the_live_document_and_camera() {
-    fn label_position(ctx: &egui::Context, app: &mut HouseApp, label: &str) -> Pos2 {
-        let mut output = ctx.run_ui(
-            egui::RawInput {
-                screen_rect: Some(egui::Rect::from_min_size(
-                    Pos2::ZERO,
-                    Vec2::new(1280.0, 850.0),
-                )),
-                ..Default::default()
-            },
-            |ui| app.show(ui),
-        );
-        output.textures_delta.clear();
-        output
-            .shapes
-            .iter()
-            .find_map(|clipped| match &clipped.shape {
-                egui::Shape::Text(text) if text.galley.text() == label => {
-                    Some(text.pos + text.galley.rect.center().to_vec2())
-                }
-                _ => None,
-            })
-            .expect("comparison tab is visible")
-    }
-
     let ctx = egui::Context::default();
     let mut app = HouseApp::with_context(ctx.clone(), 0);
     app.before_reference = Some(BeforeReference::load(&ctx).expect("reference fits renderer"));
@@ -76,6 +76,36 @@ fn before_after_switch_keeps_the_live_document_and_camera() {
     click(&ctx, &mut app, after_tab);
     assert!(!app.show_before);
     assert_eq!((app.canvas_origin, app.pan, app.scale), camera);
+    assert!(std::sync::Arc::ptr_eq(&live, &app.handle.snapshot()));
+}
+
+#[test]
+fn switches_between_vector_elevation_and_editable_floor_plan() {
+    let ctx = egui::Context::default();
+    let mut app = HouseApp::with_context(ctx.clone(), 0);
+    let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../output/floor-plan.house.json");
+    app.open_elevations(&path);
+    let elevations = app.elevations.as_ref().expect("saved elevations open");
+    assert_eq!(elevations.drawings.len(), 14);
+    let page = elevations
+        .drawings
+        .iter()
+        .position(|drawing| drawing.id == "A-03")
+        .expect("exterior elevation is indexed");
+    let title = elevations.drawings[page].title.clone();
+    let live = app.handle.snapshot();
+    let switcher = label_position(&ctx, &mut app, "Elevations");
+    click(&ctx, &mut app, switcher);
+    let choice = label_position(&ctx, &mut app, &title);
+    click(&ctx, &mut app, choice);
+    assert_eq!(app.elevation, Some(page));
+    assert!(!app.editing_plan());
+    let label = label_position(&ctx, &mut app, "North exterior elevation");
+    click(&ctx, &mut app, label);
+    label_position(&ctx, &mut app, "Save move");
+    let after = label_position(&ctx, &mut app, "After");
+    click(&ctx, &mut app, after);
+    assert!(app.editing_plan());
     assert!(std::sync::Arc::ptr_eq(&live, &app.handle.snapshot()));
 }
 

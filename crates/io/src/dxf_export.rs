@@ -200,9 +200,14 @@ pub fn dxf_bytes(document: &Document) -> Result<Vec<u8>, String> {
     }
     output.drawing.header.minimum_drawing_extents = output.min;
     output.drawing.header.maximum_drawing_extents = output.max;
+    serialize_dxf(&output.drawing)
+}
+
+/// Serialize a DXF drawing with the symbol-table handles expected by CAD readers.
+pub fn serialize_dxf(drawing: &Drawing) -> Result<Vec<u8>, String> {
     let mut bytes = Vec::new();
-    output.drawing.save(&mut bytes).map_err(|e| e.to_string())?;
-    compatibility::table_handles(bytes, output.drawing.header.next_available_handle)
+    drawing.save(&mut bytes).map_err(|e| e.to_string())?;
+    compatibility::table_handles(bytes, drawing.header.next_available_handle)
 }
 pub fn export_dxf(document: &Document, path: &Path) -> Result<(), String> {
     atomic_write(path, &dxf_bytes(document)?)

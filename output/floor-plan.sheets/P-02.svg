@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17in" height="11in" viewBox="0 0 1224 792">
+<rect x="0.00" y="0.00" width="1224.00" height="792.00" fill="white" stroke="none" stroke-width="1"/>
+<text x="34.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#005d84" font-weight="700" text-anchor="start">214 N KATHERINE DRIVE  /  VENTURA, CA 93003</text>
+<text x="1190.00" y="33.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="700" text-anchor="end">PLUMBING  /  FIELD COORDINATION</text>
+<text x="34.00" y="68.00" font-family="Helvetica, Arial, sans-serif" font-size="27" fill="#1c2934" font-weight="700" text-anchor="start">Domestic water and sanitary sewer</text>
+<text x="35.00" y="89.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="400" text-anchor="start">Site corridors and building connections are proposed for coordination. Field-locate all existing utility points before routing.</text>
+<path d="M34.00,103.00 L1190.00,103.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<path d="M34.00,739.00 L1190.00,739.00" stroke="#1c2934" stroke-width="1.2" fill="none"/>
+<text x="35.00" y="759.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">PROPOSED REMODEL  /  BUILDER COORDINATION</text>
+<text x="35.00" y="775.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Field-verify existing work and all rough-ins.  |  CAD rev. 57  |  November 2026</text>
+<text x="1190.00" y="771.00" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#1c2934" font-weight="700" text-anchor="end">P-02</text>
+<text x="42.00" y="133.00" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">PROPOSED UTILITY ROUTING</text>
+<text x="42.00" y="151.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">APN 074-0-115-120  /  1″ = 15′ at 11 × 17  /  parcel and footprints from A-00</text>
+<path d="M42.80,485.00 L95.60,485.00 L95.60,245.00 L42.80,245.00 L42.80,485.00" stroke="#a7b2b9" stroke-width="0.8" fill="#ecf1f4"/>
+<path d="M110.00,485.00 L710.00,485.00 L710.00,245.00 L110.00,245.00 L110.00,485.00" stroke="#1c2934" stroke-width="0.8" fill="#f9f8f2"/>
+<path d="M110.00,478.28 L230.00,478.28 L330.80,480.68 L435.44,480.68 L435.44,383.24 L374.00,383.24 L350.00,414.92 L321.20,441.32 L225.20,443.72 L110.00,443.72 L110.00,478.28" stroke="#a7b2b9" stroke-width="0.8" fill="#e8e3dc"/>
+<path d="M303.39,450.73 L193.47,450.73 L193.47,353.00 L161.55,353.00 L161.55,274.90 L321.82,274.90 L321.82,332.26 L312.32,332.26 L312.32,381.75 L337.38,381.75 L337.38,423.99 L303.39,423.99 L303.39,450.73" stroke="#4e606c" stroke-width="0.8" fill="#e0e8ec"/>
+<path d="M530.19,459.61 L437.22,459.61 L437.22,328.52 L530.62,328.52 L530.62,371.58 L578.05,371.58 L578.05,448.81 L530.19,448.81 L530.19,459.61" stroke="#4e606c" stroke-width="0.8" fill="#e0e8ec"/>
+<g transform="rotate(-90 69 338)">
+<text x="69.00" y="338.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4e606c" font-weight="700" text-anchor="middle">N KATHERINE DRIVE</text>
+</g>
+<text x="244.40" y="341.00" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="middle">MAIN HOUSE</text>
+<text x="503.60" y="403.40" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1c2934" font-weight="700" text-anchor="middle">GARAGE / ADU</text>
+<text x="369.20" y="437.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Driveway</text>
+<text x="686.00" y="220.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="middle">N</text>
+<path d="M680.00,249.00 L684.00,227.00" stroke="#1c2934" stroke-width="1" fill="none"/>
+<path d="M685.97,233.72 L684.00,227.00 L679.85,232.64" stroke="#1c2934" stroke-width="1.4" fill="none"/>
+<path d="M70.83,415.88 L134.00,415.88 L134.00,256.52 L489.20,256.52 L489.20,328.52" stroke="#005d84" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<path d="M134.00,321.80 L161.55,321.80" stroke="#005d84" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<path d="M297.20,274.90 L297.20,249.80 L508.40,249.80 L508.40,328.52" stroke="#a43c32" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<path d="M470.00,328.52 L470.00,267.80 L110.00,267.80" stroke="#734329" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<path d="M254.00,274.90 L254.00,267.80" stroke="#734329" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<path d="M415.73,259.63 L422.00,256.52 L415.73,253.41" stroke="#005d84" stroke-width="1.4" fill="none"/>
+<path d="M146.93,324.91 L153.20,321.80 L146.93,318.69" stroke="#005d84" stroke-width="1.4" fill="none"/>
+<path d="M391.73,252.91 L398.00,249.80 L391.73,246.69" stroke="#a43c32" stroke-width="1.4" fill="none"/>
+<path d="M178.67,264.69 L172.40,267.80 L178.67,270.91" stroke="#734329" stroke-width="1.4" fill="none"/>
+<path d="M70.83,415.88 L91.00,434.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="70.83" cy="415.88" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="75.50" y="426.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="91.00" y="437.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">W0</text>
+<path d="M110.00,267.80 L134.00,284.00" stroke="#734329" stroke-width="0.9" fill="none"/>
+<circle cx="110.00" cy="267.80" r="2.70" fill="white" stroke="#734329" stroke-width="1"/>
+<rect x="118.50" y="276.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="134.00" y="287.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S0</text>
+<path d="M161.55,321.80 L181.00,304.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="161.55" cy="321.80" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="165.50" y="296.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="181.00" y="307.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">W1</text>
+<path d="M254.00,274.90 L247.00,313.00" stroke="#734329" stroke-width="0.9" fill="none"/>
+<circle cx="254.00" cy="274.90" r="2.70" fill="white" stroke="#734329" stroke-width="1"/>
+<rect x="231.50" y="305.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="247.00" y="316.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S1</text>
+<path d="M489.20,328.52 L510.00,347.00" stroke="#005d84" stroke-width="0.9" fill="none"/>
+<circle cx="489.20" cy="328.52" r="2.70" fill="white" stroke="#005d84" stroke-width="1"/>
+<rect x="494.50" y="339.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="510.00" y="350.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">W2</text>
+<path d="M470.00,328.52 L463.00,347.00" stroke="#734329" stroke-width="0.9" fill="none"/>
+<circle cx="470.00" cy="328.52" r="2.70" fill="white" stroke="#734329" stroke-width="1"/>
+<rect x="447.50" y="339.00" width="31.00" height="16.00" fill="white" stroke="#734329" stroke-width="0.8"/>
+<text x="463.00" y="350.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#734329" font-weight="700" text-anchor="middle">S2</text>
+<text x="113.00" y="504.00" font-family="Helvetica, Arial, sans-serif" font-size="9.2" fill="#886027" font-weight="400" text-anchor="start">W0 uses Ventura Water GIS. S0 and building entries are schematic. Confirm actual utility locations on site.</text>
+<path d="M43.00,524.00 L79.00,524.00" stroke="#005d84" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<text x="90.00" y="528.00" font-family="Helvetica, Arial, sans-serif" font-size="9.5" fill="#1c2934" font-weight="400" text-anchor="start">Proposed cold water</text>
+<path d="M250.00,524.00 L286.00,524.00" stroke="#a43c32" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<text x="297.00" y="528.00" font-family="Helvetica, Arial, sans-serif" font-size="9.5" fill="#1c2934" font-weight="400" text-anchor="start">Potential shared hot water</text>
+<path d="M480.00,524.00 L516.00,524.00" stroke="#734329" stroke-width="2" fill="none" stroke-dasharray="7 4"/>
+<text x="527.00" y="528.00" font-family="Helvetica, Arial, sans-serif" font-size="9.5" fill="#1c2934" font-weight="400" text-anchor="start">Proposed sanitary sewer</text>
+<text x="42.00" y="558.00" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1c2934" font-weight="700" text-anchor="start">Service points and sizing inputs</text>
+<text x="42.00" y="578.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">W0</text>
+<text x="113.00" y="578.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#4e606c" font-weight="400" text-anchor="start">Field-verify GIS service point, meter, shutoff, service size, available pressure and developed lengths.</text>
+<text x="42.00" y="598.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">W1 / W2</text>
+<text x="113.00" y="598.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#4e606c" font-weight="400" text-anchor="start">Verify building entries. Provide accessible isolation to each building on the shared-service concept.</text>
+<text x="42.00" y="618.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">S0</text>
+<text x="113.00" y="618.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#4e606c" font-weight="400" text-anchor="start">Locate and camera the private lateral. Verify approved tap, diameter, material, condition and invert.</text>
+<text x="42.00" y="638.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">S1 / S2</text>
+<text x="113.00" y="638.00" font-family="Helvetica, Arial, sans-serif" font-size="9.3" fill="#4e606c" font-weight="400" text-anchor="start">Confirm drain exits and tie-in with surveyed inverts. Verify gravity fall and cleanouts on P-03.</text>
+<path d="M735.00,118.00 L735.00,712.00" stroke="#a7b2b9" stroke-width="0.8" fill="none"/>
+<text x="758.00" y="133.00" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1c2934" font-weight="700" text-anchor="start">Domestic water distribution</text>
+<text x="758.00" y="151.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Branch diagram  /  H = hot water  /  C = cold water</text>
+<rect x="766.50" y="179.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="782.00" y="190.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">W0</text>
+<path d="M803.00,187.00 L827.00,187.00" stroke="#005d84" stroke-width="1.5" fill="none"/>
+<path d="M827.00,187.00 L827.00,237.00" stroke="#005d84" stroke-width="1.5" fill="none"/>
+<path d="M827.00,187.00 L853.00,187.00" stroke="#005d84" stroke-width="1.5" fill="none"/>
+<path d="M827.00,237.00 L853.00,237.00" stroke="#005d84" stroke-width="1.5" fill="none"/>
+<rect x="859.50" y="179.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="875.00" y="190.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">W1</text>
+<rect x="859.50" y="229.00" width="31.00" height="16.00" fill="white" stroke="#005d84" stroke-width="0.8"/>
+<text x="875.00" y="240.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#005d84" font-weight="700" text-anchor="middle">W2</text>
+<text x="900.00" y="191.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">Main house isolation</text>
+<text x="900.00" y="241.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">Detached wing isolation</text>
+<text x="758.00" y="273.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#005d84" font-weight="700" text-anchor="start">W1 cold feed → main cold distribution + electric WH</text>
+<text x="758.00" y="293.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#a43c32" font-weight="700" text-anchor="start">Electric WH outlet → main hot distribution + detached bath*</text>
+<text x="758.00" y="313.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#005d84" font-weight="700" text-anchor="start">W2 cold feed → detached bath cold fixtures</text>
+<text x="758.00" y="341.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#1c2934" font-weight="700" text-anchor="start">Kitchen</text>
+<text x="858.00" y="341.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">KS-1  H/C    DW-1  H</text>
+<path d="M758.00,347.00 L1184.00,347.00" stroke="#a7b2b9" stroke-width="0.5" fill="none"/>
+<text x="758.00" y="364.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#1c2934" font-weight="700" text-anchor="start">Laundry</text>
+<text x="858.00" y="364.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">WM-1  H/C</text>
+<path d="M758.00,370.00 L1184.00,370.00" stroke="#a7b2b9" stroke-width="0.5" fill="none"/>
+<text x="758.00" y="387.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#1c2934" font-weight="700" text-anchor="start">Bathroom 1</text>
+<text x="858.00" y="387.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">L-1  H/C    WC-1  C    T-1  H/C</text>
+<path d="M758.00,393.00 L1184.00,393.00" stroke="#a7b2b9" stroke-width="0.5" fill="none"/>
+<text x="758.00" y="410.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#1c2934" font-weight="700" text-anchor="start">Bathroom 2</text>
+<text x="858.00" y="410.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">L-2  H/C    WC-2  C    S-2  H/C</text>
+<path d="M758.00,416.00 L1184.00,416.00" stroke="#a7b2b9" stroke-width="0.5" fill="none"/>
+<text x="758.00" y="433.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#1c2934" font-weight="700" text-anchor="start">Detached bath</text>
+<text x="858.00" y="433.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">L-3  H/C    WC-3  C    T-3  H/C</text>
+<path d="M758.00,439.00 L1184.00,439.00" stroke="#a7b2b9" stroke-width="0.5" fill="none"/>
+<text x="758.00" y="480.00" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1c2934" font-weight="700" text-anchor="start">Field coordination</text>
+<text x="758.00" y="499.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">* Hot-water service</text>
+<text x="758.00" y="513.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">The red route applies if both buildings share an electric heater.</text>
+<text x="758.00" y="525.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Confirm heater location, capacity and detached hot-water service.</text>
+<text x="758.00" y="537.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Confirm condensate, pan and relief discharges as applicable.</text>
+<text x="758.00" y="556.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Water and sewer sizing</text>
+<text x="758.00" y="570.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Size water service and branches under CPC §610. Coordinate separate</text>
+<text x="758.00" y="582.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">trench routes, crossings, materials and cover under CPC §609.2 and</text>
+<text x="758.00" y="594.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Ventura Water standards.</text>
+<text x="758.00" y="613.00" font-family="Helvetica, Arial, sans-serif" font-size="9.8" fill="#1c2934" font-weight="700" text-anchor="start">Utility approval</text>
+<text x="758.00" y="627.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">Confirm allowable service arrangement for the detached wing. Use the</text>
+<text x="758.00" y="639.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">verified lateral and meter locations to finalize routes, sizes, slopes,</text>
+<text x="758.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="9.7" fill="#4e606c" font-weight="400" text-anchor="start">and invert elevations.</text>
+<text x="42.00" y="673.00" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#4e606c" font-weight="400" text-anchor="start">Sources  /  Site sheet A-00 and Ventura Water public Service Line Inventory</text>
+<text x="42.00" y="713.00" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1c2934" font-weight="700" text-anchor="start">Gas service and piping  /  N/A. Proposed design is all-electric.</text>
+</svg>

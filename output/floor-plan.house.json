@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "revision": 56,
+  "revision": 57,
   "walls": {
     "03c0d967-f904-48cc-b581-56eb4b700823": {
       "id": "03c0d967-f904-48cc-b581-56eb4b700823",
@@ -769,7 +769,7 @@
       "kind": "Hinged"
     },
     "6c88355d-3d3e-495b-867b-e437bedc835d": {
-      "hinge_at_end": false,
+      "hinge_at_end": true,
       "id": "6c88355d-3d3e-495b-867b-e437bedc835d",
       "wall": "d86510d8-aa5d-4f4d-9326-53e7b6a425d0",
       "position": 1965.925,

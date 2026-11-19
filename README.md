@@ -23,6 +23,25 @@ resets history; schema v1 projects migrate automatically to v2 on load. Save use
 `.dxf` extensions. Both export the current committed document without changing
 undo history.
 
+### Elevation drawings
+
+Choose **Elevations** to open the exterior and interior elevation drawings
+in the House canvas. Click **After** to return to the floor plan. Elevations
+are drawn from vector geometry and text. Middle/right drag pans and
+scrolling zooms. Select linework or a label, enter the move in millimeters,
+and click **Save move** to update the elevation SVG.
+
+The project’s `floor-plan.sheets/` directory holds the editable elevation SVGs
+and an `elevations.tsv` index. Keep it next to `floor-plan.house.json`. Each index
+row contains a sheet ID, title, and model-to-print scale multiplier, separated
+by tabs. **Export elevation DXF** writes the selected drawing beside its SVG
+with 1:1 model-space linework and text in millimeters at the indexed scale.
+Elevation drawings, the floor plan, and the published PDF are edited
+independently. Coordinate changes across affected drawings before reissuing
+the planset.
+
+### Floor-plan controls
+
 - Middle/right drag to pan; scroll over the canvas to zoom about the pointer.
 - Click a wall, opening, bath or shower to select it. The inspector edits wall
   endpoints/thickness/name, opening station/width, door type (hinged, sliding glass, garage)/swing, and fixture

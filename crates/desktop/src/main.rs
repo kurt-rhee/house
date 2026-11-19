@@ -1,6 +1,8 @@
 mod canvas;
+mod elevations;
 mod fixtures;
 use eframe::egui::{self, Color32, Pos2, Sense, Stroke, Vec2};
+use elevations::Elevations;
 use house_commands::Command;
 use house_core::*;
 use house_geometry::{
@@ -8,6 +10,7 @@ use house_geometry::{
     room_label_size, wall_polygon,
 };
 use house_mcp::{Action, DocumentHandle, LocalServer, Pending, PendingError};
+use std::path::{Path, PathBuf};
 
 struct BeforeReference {
     texture: egui::TextureHandle,
@@ -46,10 +49,12 @@ impl BeforeReference {
 
 struct HouseApp {
     handle: DocumentHandle,
-    pending: Vec<Pending>,
+    pending: Vec<(Pending, Option<PathBuf>)>,
     server: Result<LocalServer, String>,
     before_reference: Option<BeforeReference>,
     show_before: bool,
+    elevations: Option<Elevations>,
+    elevation: Option<usize>,
     scale: f32,
     pan: Vec2,
     selected: Option<Id>,
@@ -81,12 +86,13 @@ impl HouseApp {
         app.path = path.to_string_lossy().into_owned();
         match app
             .handle
-            .submit(Action::Open(path))
+            .submit(Action::Open(path.clone()))
             .and_then(|rx| rx.blocking_recv().map_err(|e| e.to_string())?)
         {
             Ok(_) => {
                 app.scale = 0.034;
                 app.pan = Vec2::new(20.0, 20.0);
+                app.open_elevations(&path);
             }
             Err(error) => app.status = format!("Could not open saved floor plan: {error}"),
         }
@@ -122,6 +128,8 @@ impl HouseApp {
             server,
             before_reference: None,
             show_before: false,
+            elevations: None,
+            elevation: None,
             scale: 0.22,
             pan: Vec2::new(100.0, 100.0),
             selected: None,
@@ -143,10 +151,40 @@ impl HouseApp {
         }
     }
     fn send(&mut self, a: Action) {
+        let opened = match &a {
+            Action::Open(path) => Some(path.clone()),
+            _ => None,
+        };
         match self.handle.submit(a) {
-            Ok(rx) => self.pending.push(rx),
+            Ok(rx) => self.pending.push((rx, opened)),
             Err(e) => self.status = e,
         }
+    }
+    fn open_elevations(&mut self, project: &Path) {
+        self.elevation = None;
+        self.elevations = match Elevations::open(project) {
+            Ok(elevations) => elevations,
+            Err(error) => {
+                self.status = error;
+                None
+            }
+        };
+    }
+    fn select_view(&mut self, before: bool, elevation: Option<usize>) {
+        self.show_before = before;
+        if self.elevation != elevation
+            && let Some(elevations) = &mut self.elevations
+        {
+            elevations.switch_view();
+        }
+        self.elevation = elevation;
+        self.first = None;
+        self.drag = None;
+        self.placing = None;
+        self.drawing = false;
+    }
+    fn editing_plan(&self) -> bool {
+        !self.show_before && self.elevation.is_none()
     }
     fn edit(&mut self, c: Command) {
         self.send(Action::Edit(c))
@@ -348,10 +386,16 @@ impl HouseApp {
 }
 impl HouseApp {
     fn show(&mut self, ui: &mut egui::Ui) {
-        self.pending.retain_mut(|rx| match rx.try_recv() {
+        let mut opened_project = None;
+        self.pending.retain_mut(|(rx, opened)| match rx.try_recv() {
             Ok(r) => {
                 self.status = match r {
-                    Ok(v) => v.to_string(),
+                    Ok(v) => {
+                        if let Some(path) = opened.take() {
+                            opened_project = Some(path);
+                        }
+                        v.to_string()
+                    }
                     Err(e) => format!("Rejected: {e}"),
                 };
                 false
@@ -362,8 +406,13 @@ impl HouseApp {
             }
             Err(_) => true,
         });
+        if let Some(project) = opened_project {
+            self.select_view(false, None);
+            self.selected = None;
+            self.open_elevations(&project);
+        }
         let ctx = ui.ctx().clone();
-        if !self.show_before
+        if self.editing_plan()
             && ctx.input_mut(|i| {
                 i.consume_key(
                     egui::Modifiers::COMMAND | egui::Modifiers::SHIFT,
@@ -373,7 +422,7 @@ impl HouseApp {
         {
             self.send(Action::Redo);
         }
-        if !self.show_before
+        if self.editing_plan()
             && ctx.input_mut(|i| i.consume_key(egui::Modifiers::COMMAND, egui::Key::Z))
         {
             self.send(Action::Undo);
@@ -389,24 +438,48 @@ impl HouseApp {
                 ui.heading("House");
                 if self.before_reference.is_some() {
                     if ui.selectable_label(self.show_before, "Before").clicked() {
-                        self.show_before = true;
-                        self.first = None;
-                        self.drag = None;
-                        self.placing = None;
-                        self.drawing = false;
-                    }
-                    if ui.selectable_label(!self.show_before, "After").clicked() {
-                        self.show_before = false;
+                        self.select_view(true, None);
                     }
                 }
-                if self.show_before {
+                if ui.selectable_label(self.editing_plan(), "After").clicked()
+                    && !self.editing_plan()
+                {
+                    self.select_view(false, None);
+                }
+                if let Some(elevations) = &self.elevations {
+                    let label = self.elevation.map_or("Elevations", |index| {
+                        elevations.drawings[index].title.as_str()
+                    });
+                    let mut selected = self.elevation;
+                    egui::ComboBox::from_id_salt("elevation drawings")
+                        .selected_text(label)
+                        .height(460.0)
+                        .show_ui(ui, |ui| {
+                            let mut section = None;
+                            for (index, drawing) in elevations.drawings.iter().enumerate() {
+                                let exterior = drawing.id.starts_with("A-");
+                                if section != Some(exterior) {
+                                    section = Some(exterior);
+                                    ui.separator();
+                                    ui.strong(if exterior { "Exterior" } else { "Interior" });
+                                }
+                                ui.selectable_value(&mut selected, Some(index), &drawing.title);
+                            }
+                        });
+                    if selected != self.elevation {
+                        self.select_view(false, selected);
+                    }
+                }
+                if self.elevation.is_some() {
+                    ui.label("Elevation drawing");
+                } else if self.show_before {
                     ui.label("Existing conditions · reference drawing");
                 } else {
                     ui.label(format!("rev {}", d.revision));
                 }
             });
             ui.horizontal_wrapped(|ui| {
-                if self.show_before {
+                if !self.editing_plan() {
                     ui.disable();
                 }
                 if ui
@@ -477,7 +550,9 @@ impl HouseApp {
         egui::Panel::right("inspector")
             .default_size(260.0)
             .show(ui, |ui| {
-                if self.show_before {
+                if let (Some(index), Some(elevations)) = (self.elevation, &mut self.elevations) {
+                    elevations.inspector(ui, index, &mut self.status);
+                } else if self.show_before {
                     ui.heading("Before");
                     ui.label("Pan with middle or right drag. Scroll to zoom.");
                 } else {
@@ -485,7 +560,9 @@ impl HouseApp {
                 }
             });
         egui::CentralPanel::default().show(ui, |ui| {
-            if self.show_before {
+            if let (Some(index), Some(elevations)) = (self.elevation, &mut self.elevations) {
+                elevations.show(ui, index);
+            } else if self.show_before {
                 self.before_canvas(ui);
             } else {
                 self.canvas(ui, &d);
